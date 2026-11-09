@@ -1,0 +1,16 @@
+---
+import { getEntry } from 'astro:content';
+const site = (await getEntry('site', 'site'))!.data;
+---
+<div class="topbar">
+  <div class="container inner">
+    <a class="hit" href={site.phone.href}>{site.phone.label}</a>
+    <a class="hit" href={`mailto:${site.email}`}>{site.email}</a>
+  </div>
+</div>
+
+<style>
+  .topbar { background: var(--c-bg); border-bottom: 1px solid var(--c-line); font-size: 13px; font-weight: 500; }
+  .inner { padding-top: 10px; padding-bottom: 10px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 24px; }
+  a { color: var(--c-text); }
+</style>

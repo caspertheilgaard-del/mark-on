@@ -1,0 +1,108 @@
+---
+import { getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Media from '../components/Media.astro';
+import Process from '../components/Process.astro';
+import Faq from '../components/Faq.astro';
+import NextSteps from '../components/NextSteps.astro';
+import { rich } from '../lib/rich';
+
+// URL /firmajulegaver/ bevares fra det nuværende site.
+const page = (await getEntry('sider', 'firmajulegaver'))!.data;
+const { hero, solutions, process } = page;
+---
+<Base title={page.seo.title} description={page.seo.description} current={page.menu}>
+  <Breadcrumbs items={page.breadcrumbs} />
+
+  <section class="container hero">
+    <div class="hero-text">
+      <h1 class="h1" set:html={rich(hero.heading)} />
+      {hero.body.map((p) => <p class="lead">{p}</p>)}
+      <a class="btn hero-cta" href={hero.cta.href}>{hero.cta.label}</a>
+    </div>
+    <div class="hero-media">
+      <div class="hero-pic"><Media {...hero.image} eager shadow /></div>
+    </div>
+  </section>
+
+  <section class="container solutions">
+    <div class="text-col intro">
+      <h2 class="h2" set:html={rich(solutions.heading)} />
+      {solutions.body.map((p) => <p class="body">{p}</p>)}
+    </div>
+    <div class="cards">
+      {solutions.cards.map((card) => (
+        <div class="card">
+          <h3>{card.heading}</h3>
+          {card.body.map((p) => <p>{p}</p>)}
+          {card.link && <p class="card-link"><a class="go" href={card.link.href}>{card.link.label} <span class="arr" aria-hidden="true">→</span></a></p>}
+        </div>
+      ))}
+    </div>
+    <div class="gallery">
+      {solutions.images.map((img) => <Media {...img} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" />)}
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="container band-inner">
+      <div class="text-col">
+        <h2 class="h2" set:html={rich(process.heading)} />
+        {process.body.map((p) => <p class="body">{p}</p>)}
+      </div>
+      <p class="lead-in">{process.lead}</p>
+      <Process steps={process.steps} />
+      <div class="text-col after">
+        {process.after.map((p) => <p class="body">{p}</p>)}
+        <a class="btn" href={process.cta.href}>{process.cta.label}</a>
+      </div>
+    </div>
+  </section>
+
+  <Faq {...page.faq} />
+  <NextSteps items={page.next} />
+</Base>
+
+<style>
+  .hero {
+    padding-top: 56px; padding-bottom: var(--section);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 80px;
+  }
+  .hero-text { flex: 1 1 560px; min-width: 0; max-width: 680px; }
+  .lead { margin: 18px 0 0; font-size: var(--fs-lead); line-height: var(--lh-body); }
+  .h1 + .lead { margin-top: 32px; }
+  .hero-cta { margin-top: 40px; }
+  .hero-media { flex: 1 1 360px; min-width: 0; }
+  .hero-pic { max-width: 440px; margin-left: auto; position: relative; }
+
+  .solutions { padding-bottom: var(--section); }
+  .intro { margin-bottom: 56px; }
+  .body { margin: 16px 0 0; font-size: var(--fs-body); line-height: var(--lh-body); }
+  .h2 + .body { margin-top: 24px; }
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .card { background: var(--c-surface); border-radius: var(--radius); padding: 36px 36px 40px; }
+  .card h3 { margin: 0 0 12px; font-size: 22px; font-weight: 600; color: var(--c-text); }
+  .card p { margin: 12px 0 0; font-size: 16px; line-height: var(--lh-body); }
+  .card h3 + p { margin-top: 0; }
+  .card .card-link { margin-top: 20px; }
+  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 32px; }
+
+  .band { background: var(--c-bg); border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); }
+  .band-inner { padding-top: 120px; padding-bottom: 120px; }
+  .band .text-col:first-child { margin-bottom: 32px; }
+  .lead-in { margin: 0 0 24px; font-size: var(--fs-body); font-weight: 600; }
+  .after { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--c-line); }
+  .after .body:first-child { margin-top: 0; }
+  .after .btn { margin-top: 28px; }
+
+  @media (max-width: 1100px) {
+    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 640px) {
+    /* Som i designet: alle sektioner får 64 px luft over og under på mobil */
+    .hero, .solutions { padding-top: 64px; }
+    .cards, .gallery { grid-template-columns: minmax(0, 1fr); }
+    .band-inner { padding-top: 72px; padding-bottom: 72px; }
+  }
+</style>

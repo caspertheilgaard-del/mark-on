@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Midlertidigt: forsiden er ikke bygget endnu, så roden sender videre til julegavesiden.
+# Fjernes, når forsiden findes.
+[[redirects]]
+  from = "/"
+  to = "/firmajulegaver/"
+  status = 302
+
+# Preview-links skal ikke indekseres af Google før lancering.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

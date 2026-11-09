@@ -1,0 +1,26 @@
+{
+  "logo": "../../assets/images/65329b41fce4aac70a33a76ab86b8ff5.png",
+  "tagline": "Vi gør brands nærværende.",
+  "phone": { "label": "86 19 86 86", "href": "tel:+4586198686" },
+  "email": "salg@markon.as",
+  "menu": [
+    { "label": "Merchandise", "href": "/merchandise/" },
+    { "label": "Firmagaver", "href": "/firmagaver/" },
+    { "label": "Firmatøj", "href": "/firmatoej/" },
+    { "label": "Inspiration", "href": "/inspiration/" },
+    { "label": "Om os", "href": "/om-os/" },
+    { "label": "Kontakt", "href": "/kontakt/" }
+  ],
+  "cta": { "label": "Få et tilbud", "href": "/kontakt/" },
+  "locations": [
+    { "name": "Lystrup", "lines": ["Sønderskovvej 7 A", "8520 Lystrup"], "phone": "86 19 86 86", "email": "salg@markon.as" },
+    { "name": "Ikast", "lines": ["Merkurvej 4 B", "7430 Ikast"], "email": "lagerikast@markon.as" }
+  ],
+  "legal": [
+    { "label": "CVR 73302315" },
+    { "label": "Handelsbetingelser" },
+    { "label": "Privatlivspolitik" },
+    { "label": "CSR" },
+    { "label": "Code of conduct" }
+  ]
+}

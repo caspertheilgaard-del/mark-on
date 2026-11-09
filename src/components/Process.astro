@@ -1,0 +1,70 @@
+---
+// Proceslinje ("Hele vejen"): linjen tegnes, prikkerne popper op, trinene toner frem.
+// Vandret på desktop/tablet, lodret på mobil. Respekterer prefers-reduced-motion.
+interface Props { steps: { title: string; text: string }[] }
+const { steps } = Astro.props;
+const n = steps.length;
+const x0 = 16, x1 = 1286, y = 40;
+// Som i designet: prikkerne står med fast afstand, og linjen løber et stykke videre efter sidste prik.
+const step = (x1 - x0) / (n - 0.125);
+const xs = steps.map((_, i) => x0 + step * i);
+const points = [...xs, x1];
+let d = `M${x0} ${y}`;
+for (let i = 0; i < points.length - 1; i++) {
+  const from = points[i], to = points[i + 1];
+  const up = i % 2 === 0;
+  const c1 = from + (to - from) / 3, c2 = from + ((to - from) * 2) / 3;
+  d += ` C ${c1.toFixed(0)} ${up ? 0 : 80}, ${c2.toFixed(0)} ${up ? 80 : 0}, ${to.toFixed(0)} ${y}`;
+}
+const delays = steps.map((_, i) => (-0.5 + (2.9 * i) / Math.max(n - 1, 1)).toFixed(2) + 's');
+---
+<svg class="pline" viewBox="0 0 1300 80" aria-hidden="true">
+  <path d={d} fill="none" stroke="var(--c-line-process)" stroke-width="3" stroke-linecap="round"></path>
+  <path class="draw" pathLength="1000" d={d} fill="none" stroke="var(--c-red)" stroke-width="3" stroke-linecap="round"></path>
+  {xs.map((x, i) => <circle class="pop" cx={x.toFixed(0)} cy={y} r="12" fill="var(--c-red)" style={`animation-delay:${delays[i]}`}></circle>)}
+</svg>
+<ol class="steps" style={`--n:${n}`}>
+  {steps.map((s, i) => (
+    <li class="stepin" style={`animation-delay:${delays[i]}`}>
+      <p class="t">{s.title}</p>
+      <p class="x">{s.text}</p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .pline { width: 100%; height: auto; display: block; }
+  .steps {
+    list-style: none; margin: 24px 0 0; padding: 0; display: grid;
+    grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 32px;
+  }
+  .t { margin: 0; font-size: 20px; font-weight: 600; color: var(--c-red); }
+  .x { margin: 8px 0 0; font-size: 15px; line-height: var(--lh-body); }
+
+  @keyframes draw { 0% { stroke-dashoffset: 1000; } 55%, 100% { stroke-dashoffset: 0; } }
+  .draw { stroke-dasharray: 1000; animation: draw 7s ease-in-out infinite; }
+  @keyframes pop { 0%, 8% { transform: scale(0); } 14%, 100% { transform: scale(1); } }
+  .pop { transform-box: fill-box; transform-origin: center; animation: pop 7s cubic-bezier(0.2, 1.6, 0.4, 1) infinite; }
+  @keyframes stepin { 0%, 6% { opacity: 0.3; transform: translateY(8px); } 14%, 100% { opacity: 1; transform: none; } }
+  .stepin { animation: stepin 7s ease infinite; }
+
+  @media (max-width: 1100px) { .steps { gap: 20px; } }
+  @media (max-width: 760px) {
+    .pline { display: none; }
+    .steps { grid-template-columns: minmax(0, 1fr); position: relative; padding-left: 40px; gap: 28px; }
+    .steps::before, .steps::after {
+      content: ''; position: absolute; left: 10px; top: 8px; bottom: 8px; width: 3px; border-radius: 3px; background: var(--c-line-process);
+    }
+    .steps::after { background: var(--c-red); transform-origin: top; animation: vgrow 7s ease-in-out infinite; }
+    .steps > li { position: relative; }
+    .steps > li::before {
+      content: ''; position: absolute; left: -38px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--c-red);
+    }
+  }
+  @keyframes vgrow { 0% { transform: scaleY(0); } 55%, 100% { transform: scaleY(1); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .draw, .pop, .stepin, .steps::after { animation: none; }
+    .draw { stroke-dasharray: none; }
+  }
+</style>

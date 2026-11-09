@@ -1,0 +1,104 @@
+---
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+interface Props { current?: string }
+const { current } = Astro.props;
+const site = (await getEntry('site', 'site'))!.data;
+---
+<header class="container header">
+  <a class="logo" href="/" aria-label="MarkOn, til forsiden">
+    <Image src={site.logo} alt="MarkOn, tøj, gaver, merchandise" width={200} densities={[1, 2]} loading="eager" />
+  </a>
+  <nav class="nav" aria-label="Hovedmenu">
+    {site.menu.map((item) => (
+      <a href={item.href} aria-current={item.label === current ? 'page' : undefined}>{item.label}</a>
+    ))}
+  </nav>
+  <div class="actions">
+    <a class="hcta" href={site.cta.href}>{site.cta.label}</a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="mobilmenu" aria-label="Åbn menu" data-burger>
+      <svg class="i-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      <svg class="i-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+  </div>
+</header>
+
+<div class="container mmenu" id="mobilmenu" hidden>
+  <nav aria-label="Menu">
+    {site.menu.map((item) => (
+      <a class="mlink" href={item.href} aria-current={item.label === current ? 'page' : undefined}>
+        {item.label}<span aria-hidden="true">→</span>
+      </a>
+    ))}
+    <div class="mcta"><a class="btn" href={site.cta.href}>{site.cta.label}</a></div>
+    <p class="mcontact">
+      <a href={site.phone.href}>{site.phone.label}</a> · <a href={`mailto:${site.email}`}>{site.email}</a>
+    </p>
+  </nav>
+</div>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('[data-burger]');
+  const menu = document.getElementById('mobilmenu');
+  if (btn && menu) {
+    const set = (open: boolean) => {
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Luk menu' : 'Åbn menu');
+      menu.hidden = !open;
+    };
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); }
+    });
+    matchMedia('(min-width: 1101px)').addEventListener('change', (e) => { if (e.matches) set(false); });
+  }
+</script>
+
+<style>
+  .header { padding-top: 22px; padding-bottom: 22px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .logo { display: block; }
+  .logo img { width: 200px; height: auto; display: block; }
+
+  .nav { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+  .nav a {
+    color: var(--c-text); font-weight: 700; font-size: 16px; padding: 12px 0;
+    background: linear-gradient(var(--c-red), var(--c-red)) left calc(100% - 4px) / 0% 2px no-repeat;
+    transition: background-size 0.3s;
+  }
+  .nav a:hover, .nav a[aria-current] { background-size: 100% 2px; color: var(--c-text); }
+
+  .actions { display: flex; align-items: center; gap: 12px; }
+  .hcta { background: var(--c-red); color: #fff; padding: 14px 24px; border-radius: var(--radius-pill); font-size: 15px; font-weight: 700; }
+  .hcta:hover { background: var(--c-red-hover); color: #fff; }
+
+  .burger {
+    display: none; width: 48px; height: 48px; border-radius: 50%; border: 0; padding: 0;
+    background: var(--c-sand); color: var(--c-text); cursor: pointer; align-items: center; justify-content: center;
+  }
+  .burger .i-close { display: none; }
+  .burger[aria-expanded='true'] .i-open { display: none; }
+  .burger[aria-expanded='true'] .i-close { display: block; }
+
+  .mmenu { padding-bottom: 24px; }
+  .mmenu nav { background: var(--c-surface); border-radius: 40px; padding: 12px 28px 28px; box-shadow: var(--shadow-menu); }
+  .mlink {
+    display: flex; justify-content: space-between; align-items: center; padding: 18px 0;
+    border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: var(--c-text);
+  }
+  .mlink[aria-current] { color: var(--c-red); }
+  .mlink span { color: var(--c-red); }
+  .mcta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .mcta .btn { padding: 15px 24px; }
+  .mcontact { margin: 20px 0 0; font-size: 15px; }
+  .mcontact a { color: var(--c-text); font-weight: 600; display: inline-flex; align-items: center; min-height: var(--tap); }
+
+  @media (min-width: 1101px) { .mmenu { display: none; } }
+  @media (max-width: 1100px) {
+    .nav { display: none; }
+    .burger { display: inline-flex; }
+  }
+  @media (max-width: 640px) {
+    .hcta { display: none; }
+    .logo img { width: 150px; }
+  }
+</style>
