@@ -1,0 +1,116 @@
+{
+  "seo": {
+    "title": "Firmajulegaver til medarbejdere og kunder | MarkOn",
+    "description": "Julegaver til medarbejdere, kunder og samarbejdspartnere. MarkOn hjælper med fællesgaver, gaveshop, indpakning, julehilsen og levering."
+  },
+  "menu": "Firmagaver",
+  "breadcrumbs": [
+    { "label": "Forside", "href": "/" },
+    { "label": "Firmagaver", "href": "/firmagaver/" },
+    { "label": "Julegaver" }
+  ],
+  "hero": {
+    "heading": "Julegaver til medarbejdere, kunder og **samarbejdspartnere**",
+    "body": [
+      "Sig tak for årets indsats og det gode samarbejde med en julegave, der passer til modtageren. Måske vil I give alle den samme gave. Måske vil I lade den enkelte vælge selv.",
+      "Hos MarkOn hjælper vi jer med begge dele. I får personlig rådgivning om firmajulegaver og gaveshopløsninger, samt hjælp til indpakning og levering. Sammen finder vi en løsning, der passer til jeres ønsker, budget og tidsplan."
+    ],
+    "cta": { "label": "Få et tilbud på julegaver", "href": "/kontakt/" },
+    "image": { "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg", "alt": "Gavesæt med drikkedunk, krus og æske" }
+  },
+  "solutions": {
+    "heading": "Find en julegaveløsning, der **passer til jer**",
+    "body": [
+      "Der er mange måder at give en god julegave på. Det vigtigste er, hvem I vil glæde, og hvordan I gerne vil sige tak.",
+      "Vi hjælper jer med at vælge mellem en fællesgave, et udvalg i en gaveshop eller forskellige løsninger til medarbejdere og kunder. I behøver ikke have besluttet jer, før vi tager den første snak."
+    ],
+    "cards": [
+      {
+        "heading": "Julegaver til medarbejdere",
+        "body": [
+          "En julegave er en anledning til at vise medarbejderne, at I sætter pris på deres indsats gennem året. Det kan være noget til hjemmet, fritiden eller en gave med noget godt at spise og dele.",
+          "Vi hjælper jer med at finde gaver, der passer til medarbejderne og jeres budget. Ønsker I at give alle den samme gave, kommer vi med konkrete forslag og tænker gerne en personlig julehilsen med i løsningen."
+        ]
+      },
+      {
+        "heading": "Gaveshop med frit valg blandt udvalgte julegaver",
+        "body": [
+          "Giv medarbejderne mulighed for at vælge den julegave, de selv har mest glæde af. Med vores gaveshopløsninger kan modtagerne vælge fra et udvalg, vi sammensætter sammen med jer.",
+          "Vi hjælper med at finde gaver inden for den aftalte ramme og afklarer forløbet omkring gavevalg, bestillingsfrist og levering. Så ved I, hvad I skal tage stilling til, og hvad modtagerne skal have besked om."
+        ],
+        "link": { "label": "Læs om vores gaveshopløsninger", "href": "#" }
+      },
+      {
+        "heading": "Julegaver til kunder og samarbejdspartnere",
+        "body": [
+          "Send en personlig tak for årets samarbejde. En julegave kan være en anledning til at vise, at I værdsætter relationen og ønsker god jul.",
+          "Vi rådgiver om gavevalg ud fra modtageren og det samarbejde I gerne vil anerkende. Det kan være en gave til en bestemt kontaktperson eller noget, der kan deles på kontoret."
+        ]
+      },
+      {
+        "heading": "Indpakning og julehilsen",
+        "body": [
+          "En hilsen fra jer kan gøre gaven mere personlig. Brug kortet til at takke for indsatsen, sætte ord på et godt samarbejde eller ønske medarbejderen og familien en god jul.",
+          "Vi hjælper med at tænke gave, kort og indpakning sammen. Ønsker I jeres logo med, rådgiver vi om, hvor det passer bedst ind – på gaven, kortet eller indpakningen."
+        ],
+        "link": { "label": "Få inspiration til julegaver", "href": "#" }
+      }
+    ],
+    "images": [
+      { "alt": "[BILLEDE: JULEGAVE TIL MEDARBEJDERE]", "placeholder": "[BILLEDE: JULEGAVE TIL MEDARBEJDERE]" },
+      { "alt": "[BILLEDE: GAVESHOP PÅ MOBIL]", "placeholder": "[BILLEDE: GAVESHOP PÅ MOBIL]" },
+      { "alt": "[BILLEDE: INDPAKNING OG JULEKORT]", "placeholder": "[BILLEDE: INDPAKNING OG JULEKORT]" }
+    ]
+  },
+  "process": {
+    "heading": "Vi hjælper med at få julegaverne **på plads**",
+    "body": [
+      "Julegaver skal passe ind i en travl tid. Derfor afklarer vi de praktiske detaljer sammen med jer og lægger en plan for gavevalg, pakning og levering."
+    ],
+    "lead": "Fortæl os gerne:",
+    "steps": [
+      { "title": "Hvem gaverne er til", "text": "Medarbejdere, kunder eller samarbejdspartnere." },
+      { "title": "Antal og budget", "text": "Hvor mange modtagere I har, og hvad budgettet er pr. gave." },
+      { "title": "Gaveformen", "text": "Om I ønsker en fælles gave eller en gaveshop med flere valgmuligheder." },
+      { "title": "Den personlige hilsen", "text": "Om der skal følge et kort eller særlig indpakning med." },
+      { "title": "Leveringen", "text": "Hvornår og hvor gaverne skal være fremme." }
+    ],
+    "after": [
+      "Har I erfaringer fra tidligere år, tager vi dem med i overvejelserne. Måske var en bestemt gavetype populær, eller måske vil I prøve en anden løsning i år.",
+      "Vi kommer med forslag og hjælper jer med at finde en retning, så I kan træffe valget på et godt grundlag."
+    ],
+    "cta": { "label": "Tal med os om årets julegaver", "href": "/kontakt/" }
+  },
+  "faq": {
+    "heading": "Spørgsmål om **firmajulegaver**",
+    "items": [
+      {
+        "question": "Hvornår skal vi bestille julegaver?",
+        "answer": [
+          "Det afhænger af gaverne, antallet og jeres ønsker til indpakning og levering. Ved en gaveshop skal der også være tid til, at modtagerne vælger deres gaver.",
+          "Kontakt os gerne tidligt med jeres ønskede leveringsdato. Så undersøger vi mulighederne og aftaler en tidsplan."
+        ]
+      },
+      {
+        "question": "Kan medarbejderne selv vælge deres julegave?",
+        "answer": [
+          "Ja. Med en gaveshop kan medarbejderne vælge blandt de gaver, der indgår i jeres udvalg. Vi sammensætter udvalget sammen med jer ud fra budget og ønsker, så der er en aftalt ramme om gavevalget."
+        ]
+      },
+      {
+        "question": "Kan I hjælpe med både få og mange julegaver?",
+        "answer": [
+          "Fortæl os, hvor mange gaver I har brug for. Mulighederne afhænger af gavevalget og eventuelle ønsker til tilpasning og pakning.",
+          "Vi undersøger, hvilke løsninger der passer til jeres antal, budget og tidsplan."
+        ]
+      }
+    ],
+    "link": { "label": "Se alle muligheder for firmagaver", "href": "/firmagaver/" }
+  },
+  "next": [
+    { "title": "Få et tilbud på julegaver", "text": "Skriv antal og deadline", "href": "/kontakt/", "primary": true },
+    { "title": "Kundegaver", "text": "Tak for samarbejdet", "href": "/firmagaver/kundegaver/" },
+    { "title": "Sæsongaver", "text": "Påske og sommer", "href": "/firmagaver/saesongaver/" },
+    { "title": "Alle firmagaver", "text": "Firmagaver", "href": "/firmagaver/" }
+  ]
+}

@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+const site = (await getEntry('site', 'site'))!.data;
+const tel = (n: string) => `tel:+45${n.replace(/\s/g, '')}`;
+---
+<footer class="footer">
+  <div class="container cols">
+    <div>
+      <Image src={site.logo} alt="MarkOn" width={190} densities={[1, 2]} />
+      <p class="tagline">{site.tagline}</p>
+    </div>
+    {site.locations.map((loc) => (
+      <div>
+        <p class="ttl">{loc.name}</p>
+        <address>
+          {loc.lines.map((l) => <>{l}<br /></>)}
+          {loc.phone && <><a class="hit" href={tel(loc.phone)}>{loc.phone}</a><br /></>}
+          {loc.email && <a class="hit" href={`mailto:${loc.email}`}>{loc.email}</a>}
+        </address>
+      </div>
+    ))}
+    <nav aria-label="Genveje">
+      <p class="ttl">Genveje</p>
+      <ul>
+        {site.menu.map((item) => <li><a class="hit" href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </nav>
+  </div>
+  <div class="container legal">
+    {site.legal.map((item, i) => (
+      <span>{i > 0 && ' · '}{item.href ? <a class="hit" href={item.href}>{item.label}</a> : item.label}</span>
+    ))}
+  </div>
+</footer>
+
+<style>
+  .footer { background: var(--c-sand); }
+  .cols {
+    padding-top: 72px; padding-bottom: 40px; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; font-size: 15px; line-height: 1.8;
+  }
+  .cols img { width: 190px; height: auto; display: block; }
+  .tagline { margin: 18px 0 0; }
+  .ttl { margin: 0; font-weight: 700; }
+  address { font-style: normal; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  .legal { padding-top: 20px; padding-bottom: 40px; font-size: 13px; white-space: pre-wrap; }
+</style>

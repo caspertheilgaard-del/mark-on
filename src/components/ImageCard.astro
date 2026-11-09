@@ -1,0 +1,58 @@
+---
+// Billedkort med pille: overskrift i lys pille på billedet. Ved hover/fokus et rødligt lag
+// med tekst og link. På touch står teksten under billedet.
+import type { ImageMetadata } from 'astro';
+import Media from './Media.astro';
+interface Props {
+  title: string;
+  text: string;
+  href: string;
+  linkLabel: string;
+  image: { src?: ImageMetadata; alt: string; placeholder?: string };
+  headingLevel?: 'h2' | 'h3';
+}
+const { title, text, href, linkLabel, image, headingLevel = 'h3' } = Astro.props;
+const H = headingLevel;
+---
+<div class="lt">
+  <div class="pic">
+    <Media {...image} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" />
+    <H class="ttl">{title}</H>
+  </div>
+  <a class="cover" href={href} aria-label={title} tabindex="-1"></a>
+  <div class="ov">
+    <p>{text}</p>
+    <a href={href}>{linkLabel} <span aria-hidden="true">→</span></a>
+  </div>
+</div>
+
+<style>
+  .lt { position: relative; display: block; }
+  .pic { position: relative; }
+  .cover { position: absolute; inset: 0; z-index: 1; }
+  .ttl {
+    position: absolute; left: 20px; bottom: 20px; z-index: 3; margin: 0; max-width: calc(100% - 40px);
+    background: var(--c-cream); color: var(--c-text); padding: 10px 18px; border-radius: var(--radius-pill);
+    font-weight: 700; font-size: 17px; white-space: nowrap; pointer-events: none;
+  }
+  .ov {
+    position: absolute; inset: 0; z-index: 2; border-radius: var(--radius); background: var(--c-overlay); color: var(--c-cream);
+    opacity: 0; transition: opacity 0.35s; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+    gap: 18px; padding: 36px 32px 80px; font-size: 16px; line-height: 1.6; pointer-events: none;
+  }
+  .lt:hover .ov, .lt:focus-within .ov { opacity: 1; }
+  .ov p { margin: 0; }
+  .ov a {
+    color: var(--c-cream); font-weight: 700; pointer-events: none;
+    border-bottom: 2px solid rgba(255, 250, 245, 0.6); padding: 10px 0 2px;
+  }
+  .lt:hover .ov a, .lt:focus-within .ov a { pointer-events: auto; }
+  .ov a:hover { border-color: var(--c-cream); }
+
+  @media (max-width: 1100px) { .ov { padding: 28px 24px 72px; font-size: 15px; } }
+  @media (max-width: 640px) { .ttl { white-space: normal; font-size: 15px; } }
+  @media (hover: none) {
+    .ov { position: static; opacity: 1; background: none; color: var(--c-text); padding: 16px 0 0; border-radius: 0; gap: 10px; font-size: 15px; }
+    .ov a { pointer-events: auto; color: var(--c-red); border-color: #d9b9b0; position: relative; z-index: 3; }
+  }
+</style>
