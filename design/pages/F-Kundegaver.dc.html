@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>MarkOn kundegaver</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f1ea}
+a{color:#9d5656;text-decoration:none}a:hover{color:#7a3f3f}
+.nav a{color:#6b3a3a;font-weight:700;font-size:16px;padding:8px 0;background:linear-gradient(#9d5656,#9d5656) left bottom/0% 2px no-repeat;transition:background-size .3s}
+.nav a:hover,.nav a[aria-current]{background-size:100% 2px;color:#6b3a3a}
+.go .arr{display:inline-block;transition:transform .3s}
+.go:hover .arr{transform:translateX(6px)}
+details{border-bottom:1px solid #e3d2c1}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:#f0e5d9;display:grid;place-items:center;font-size:20px;transition:transform .3s}
+details[open] summary .pl{transform:rotate(45deg);background:#9d5656;color:#fff}
+.lt{position:relative;display:block}
+.lt .pic{position:relative}
+.lt img{display:block;width:100%;aspect-ratio:4 / 5;object-fit:cover;border-radius:24px;background:#f0e5d9}
+.lt .cover{position:absolute;inset:0;z-index:1}
+.lt .ttl{position:absolute;left:20px;bottom:20px;z-index:3;margin:0;background:#fffaf5;color:#6b3a3a;padding:10px 18px;border-radius:999px;font-weight:700;font-size:17px;white-space:nowrap;pointer-events:none}
+.lt .ov{position:absolute;inset:0;z-index:2;border-radius:24px;background:rgba(157,86,86,.92);color:#fffaf5;opacity:0;transition:opacity .35s;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:18px;padding:36px 32px 80px;font-size:16px;line-height:1.6;pointer-events:none}
+.lt:hover .ov,.lt:focus-within .ov{opacity:1}
+.lt .ov p{margin:0}
+.lt .ov a{color:#fffaf5;font-weight:700;pointer-events:none;border-bottom:2px solid rgba(255,250,245,.6);padding-bottom:2px}
+.lt:hover .ov a,.lt:focus-within .ov a{pointer-events:auto}
+.lt .ov a:hover{border-color:#fffaf5}
+@keyframes draw{0%{stroke-dashoffset:1000}55%,100%{stroke-dashoffset:0}}
+.draw{stroke-dasharray:1000;animation:draw 7s ease-in-out infinite}
+@keyframes pop{0%,8%{transform:scale(0)}14%,100%{transform:scale(1)}}
+.pop{transform-box:fill-box;transform-origin:center;animation:pop 7s cubic-bezier(.2,1.6,.4,1) infinite}
+@keyframes stepin{0%,6%{opacity:.3;transform:translateY(8px)}14%,100%{opacity:1;transform:none}}
+.stepin{animation:stepin 7s ease infinite}
+.burger{display:none}
+@media (min-width:1101px){.mmenu{display:none}}
+@media (hover:none){.lt .ov{position:static;opacity:1;background:none;color:#6b3a3a;padding:16px 0 0;border-radius:0;gap:10px;font-size:15px}.lt .ov a{pointer-events:auto;color:#9d5656;border-color:#d9b9b0;position:relative;z-index:3}}
+@media (max-width:1100px){.nav{display:none !important}.burger{display:inline-flex}.four{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.pline{display:none !important}.cats,.cards{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.lt .ov{padding:28px 24px 72px;font-size:15px}}
+@media (max-width:640px){.four,.cats,.cards{grid-template-columns:minmax(0,1fr) !important}.hcta{display:none !important}.logo img{width:150px !important}h1{font-size:38px !important}h2{font-size:30px !important}section[style*="padding"]{padding-top:64px !important;padding-bottom:64px !important}section > div[style*="padding: 1"]{padding-top:72px !important;padding-bottom:72px !important}[style*="max-width: 1280px"]{padding-left:20px !important;padding-right:20px !important}.lt .ttl{white-space:normal;font-size:15px !important}.casepic{aspect-ratio:4 / 3 !important}}
+@media (prefers-reduced-motion: reduce){.draw,.pop,.stepin{animation:none}.draw{stroke-dasharray:none}}
+.swap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;animation:swap 10s ease-in-out infinite}
+@keyframes swap{0%{opacity:0}5%{opacity:1}20%{opacity:1}25%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.swap img{animation:none}.swap img:first-child{opacity:1}}
+@media (max-width:1100px){svg.pline{display:block !important}.four.steps{grid-template-columns:repeat(var(--n,4),minmax(0,1fr)) !important;gap:20px !important}}
+@media (max-width:760px){svg.pline{display:none !important}.four.steps{grid-template-columns:minmax(0,1fr) !important;position:relative;padding-left:40px !important;gap:28px !important}.steps::before,.steps::after{content:"";position:absolute;left:10px;top:8px;bottom:8px;width:3px;border-radius:3px;background:#dcc6b2}.steps::after{background:#9d5656;transform-origin:top;animation:vgrow 7s ease-in-out infinite}.steps > *{position:relative}.steps > *::before{content:"";position:absolute;left:-38px;top:3px;width:20px;height:20px;border-radius:50%;background:#9d5656}}
+@keyframes vgrow{0%{transform:scaleY(0)}55%,100%{transform:scaleY(1)}}
+@media (prefers-reduced-motion: reduce){.steps::after{animation:none}}
+.dot{position:absolute;z-index:-1;border-radius:50%;background:#c29a93;filter:blur(1.5px);box-shadow:0 30px 70px -10px rgba(157,86,86,.35);pointer-events:none}
+*:has(> .dot){isolation:isolate}
+.collage img{box-shadow:0 34px 60px -28px rgba(90,40,40,.45)}
+@media (max-width:640px){.dot{transform:scale(.7)}}
+</style>
+</helmet>
+<div style="font-family: Montserrat, system-ui, sans-serif; color: #6b3a3a; background: #f7f1ea; overflow: hidden">
+
+<div style="background: #f7f1ea; border-bottom: 1px solid #efe5da; font-size: 13px; font-weight: 500">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px">
+<span style="display: flex; gap: 24px; flex-wrap: wrap"><a href="tel:+4586198686" style="color: #6b3a3a">86 19 86 86</a><a href="mailto:salg@markon.as" style="color: #6b3a3a">salg@markon.as</a></span>
+</div>
+</div>
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a class="logo" href="S-Forside.dc.html" aria-label="MarkOn, til forsiden" style="display: block"><img src="../images/65329b41fce4aac70a33a76ab86b8ff5.png" alt="MarkOn, tøj, gaver, merchandise" style="width: 200px; height: auto; display: block"></a>
+<nav class="nav" aria-label="Hovedmenu" style="display: flex; gap: 28px; flex-wrap: wrap; align-items: center">
+<a href="S-Merchandise.dc.html">Merchandise</a>
+<a href="F-Forside.dc.html" aria-current="page">Firmagaver</a>
+<a href="#">Firmatøj</a>
+<a href="#">Inspiration</a>
+<a href="S-OmOs.dc.html">Om os</a>
+<a href="S-Kontakt.dc.html">Kontakt</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px">
+<a class="hcta" href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 700">Få et tilbud</a>
+<button class="burger" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExp }}" aria-label="{{ menuLabel }}" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: #f0e5d9; color: #6b3a3a; cursor: pointer; align-items: center; justify-content: center; padding: 0"><sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if><sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if></button>
+</div>
+</header>
+<sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+<div class="mmenu" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 24px">
+<nav aria-label="Menu" style="background: #ffffff;border-radius: 40px; padding: 12px 28px 28px; box-shadow: 0 40px 80px -50px rgba(90,40,40,.4)">
+<a href="S-Merchandise.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Merchandise<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="F-Forside.dc.html" aria-current="page" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #9d5656">Firmagaver<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Firmatøj<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Inspiration<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="S-OmOs.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Om os<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="S-Kontakt.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Kontakt<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px"><a href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; padding: 15px 24px; border-radius: 999px; font-weight: 700">Få et tilbud</a></div>
+<p style="margin: 20px 0 0; font-size: 15px"><a href="tel:+4586198686" style="color: #6b3a3a; font-weight: 600">86 19 86 86</a> · <a href="mailto:salg@markon.as" style="color: #6b3a3a; font-weight: 600">salg@markon.as</a></p>
+</nav>
+</div>
+</sc-if>
+
+<nav aria-label="Brødkrummer" style="max-width: 1280px; margin: 0 auto; padding: 8px 32px 0; font-size: 14px"><a href="S-Forside.dc.html" style="color: #6b3a3a">Forside</a> <span aria-hidden="true" style="margin: 0 8px">/</span> <a href="F-Forside.dc.html" style="color: #6b3a3a">Firmagaver</a> <span aria-hidden="true" style="margin: 0 8px">/</span> <span aria-current="page" style="font-weight: 600">Kundegaver</span></nav>
+<section style="max-width: 1280px; margin: 0 auto; padding: 56px 32px 128px; display: flex; flex-wrap: wrap; align-items: center; gap: 80px">
+<div style="flex: 1 1 560px; min-width: 0; max-width: 680px">
+<h1 style="margin: 0; font-weight: 300; font-size: 56px; line-height: 1.1; letter-spacing: -2px; color: #9d5656">Kundegaver, der siger tak <b style="font-weight: 700">for samarbejdet</b></h1>
+<p style="margin: 32px 0 0; font-size: 18px; line-height: 1.6">Et godt samarbejde fortjener en tak. En kundegave kan markere et fælles resultat, fejre en milepæl eller vise, at I sætter pris på relationen.</p>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6">Hos MarkOn hjælper vi jer med at finde kundegaver, der passer til modtageren og anledningen. I får personlig rådgivning om gavevalg og hjælp fra den første idé til indpakning og levering.</p>
+<a href="S-Kontakt.dc.html" style="display: inline-block; margin-top: 36px; background: #9d5656; color: #fff; padding: 17px 30px; border-radius: 999px; font-weight: 700; margin-top: 40px">Få et tilbud på kundegaver</a>
+</div>
+<div style="flex: 1 1 360px; min-width: 0"><div style="max-width: 440px; margin-left: auto; position: relative"><img src="../images/b544b0965caa3888485ba28f507ac933.jpg" alt="Pastilæsker med kundens logo" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 24px; box-shadow: 0 34px 60px -28px rgba(90,40,40,.45)"></div></div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 32px 128px">
+<div>
+<div style="max-width: 720px; margin-bottom: 56px">
+<h2 style="margin: 0; font-weight: 300; font-size: 44px; line-height: 1.12; letter-spacing: -1.5px; color: #9d5656">Find en kundegave, der passer <b style="font-weight: 700">til relationen</b></h2>
+<p style="margin: 24px 0 0; font-size: 17px; line-height: 1.6">Den rette kundegave tager udgangspunkt i den, der skal have den. Skal gaven glæde en bestemt kontaktperson, eller skal den kunne deles af et helt team? Og hvad vil I gerne sige med den?</p>
+<p style="margin: 16px 0 0; font-size: 17px; line-height: 1.6">Vi hjælper jer med at vælge ud fra modtageren, anledningen og jeres budget. Det kan være noget til arbejdsdagen, hjemmet, fritiden eller noget godt at spise, som kan deles på kontoret.</p>
+</div>
+<div class="cards" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch">
+<div style="background: #ffffff; border-radius: 24px; padding: 36px 36px 40px">
+<h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; color: #6b3a3a">En tak for et godt samarbejde</h3>
+<p style="margin: 0px 0 0; font-size: 16px; line-height: 1.6">Når et projekt er afsluttet, eller I har nået et fælles mål, kan en gave være en personlig måde at sige tak på. En hilsen, der nævner det konkrete samarbejde, gør det tydeligt, hvorfor I har tænkt på modtageren.</p>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6">Vi hjælper jer med at finde en gave, der passer til relationen. Det kan være en gave til den person, I har arbejdet tæt sammen med, eller en fælles gave til alle, der har bidraget.</p>
+</div>
+<div style="background: #ffffff; border-radius: 24px; padding: 36px 36px 40px">
+<h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; color: #6b3a3a">Kundegaver til mærkedage og milepæle</h3>
+<p style="margin: 0px 0 0; font-size: 16px; line-height: 1.6">Et jubilæum, en åbning eller en flytning kan være en anledning til at sende en hilsen. Her kan kundegaven vise, at I følger med og glæder jer på kundens vegne.</p>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6">Vi rådgiver om gaver, der passer til begivenheden og modtageren. Kort og indpakning kan tænkes med, så gaven er klar til at blive overrakt eller sendt.</p>
+</div>
+<div style="background: #ffffff; border-radius: 24px; padding: 36px 36px 40px">
+<h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; color: #6b3a3a">Gaver, der kan bruges eller deles</h3>
+<p style="margin: 0px 0 0; font-size: 16px; line-height: 1.6">En drikkedunk, en taske eller et produkt til hjemmet kan give modtageren glæde i hverdagen. En gave med chokolade eller andre spiselige produkter kan være oplagt, når I vil takke flere personer på én gang.</p>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6">Vi hjælper jer med at vurdere mulighederne. Skal gaven deles, tager vi blandt andet højde for antallet af modtagere og eventuelle ønsker til indholdet.</p>
+</div>
+<div style="background: #ffffff; border-radius: 24px; padding: 36px 36px 40px">
+<h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; color: #6b3a3a">Logo og en personlig hilsen</h3>
+<p style="margin: 0px 0 0; font-size: 16px; line-height: 1.6">Jeres logo kan være en del af kundegaven, men det behøver ikke stå på selve produktet. Nogle gange passer det bedre på kortet eller indpakningen.</p>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.6">Vi rådgiver om, hvordan jeres brand kan indgå naturligt. En personlig tekst kan samtidig sætte ord på det I gerne vil sige, og gøre gaven relevant for netop den kunde.</p>
+<p style="margin: 20px 0 0"><a class="go" href="#" style="font-weight: 700">Få inspiration til kundegaver <span class="arr" aria-hidden="true">→</span></a></p>
+</div>
+</div>
+<div class="cats" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 32px">
+<div role="img" aria-label="[BILLEDE: KUNDEGAVE MED KORT]" style="aspect-ratio: 4 / 5; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 16px; box-sizing: border-box">[BILLEDE: KUNDEGAVE MED KORT]</div>
+<div role="img" aria-label="[BILLEDE: GAVE TIL ET HELT TEAM]" style="aspect-ratio: 4 / 5; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 16px; box-sizing: border-box">[BILLEDE: GAVE TIL ET HELT TEAM]</div>
+<div role="img" aria-label="[BILLEDE: LOGO PÅ INDPAKNING]" style="aspect-ratio: 4 / 5; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 16px; box-sizing: border-box">[BILLEDE: LOGO PÅ INDPAKNING]</div>
+</div>
+</div>
+</section>
+
+<section style="background: #f7f1ea; border-top: 1px solid #efe5da; border-bottom: 1px solid #efe5da">
+<div style="max-width: 1280px; margin: 0 auto; padding: 120px 32px">
+<div style="max-width: 720px; margin-bottom: 32px">
+<h2 style="margin: 0; font-weight: 300; font-size: 44px; line-height: 1.12; letter-spacing: -1.5px; color: #9d5656">Fra gaveidé til <b style="font-weight: 700">levering hos kunden</b></h2>
+<p style="margin: 24px 0 0; font-size: 17px; line-height: 1.6">I behøver ikke have valgt gaven, før I kontakter os. Fortæl os om modtageren og anledningen, så hjælper vi med konkrete forslag.</p>
+</div>
+<p style="margin: 0 0 24px; font-size: 17px; font-weight: 600">Sammen afklarer vi:</p>
+<svg class="pline" viewBox="0 0 1300 80" aria-hidden="true" style="width: 100%; height: auto; display: block">
+<path d="M16 40 C 103 0, 189 80, 276 40 C 363 80, 450 0, 537 40 C 624 0, 710 80, 797 40 C 884 80, 970 0, 1057 40 C 1133 0, 1210 80, 1286 40" fill="none" stroke="#dcc6b2" stroke-width="3" stroke-linecap="round"></path>
+<path class="draw" pathLength="1000" d="M16 40 C 103 0, 189 80, 276 40 C 363 80, 450 0, 537 40 C 624 0, 710 80, 797 40 C 884 80, 970 0, 1057 40 C 1133 0, 1210 80, 1286 40" fill="none" stroke="#9d5656" stroke-width="3" stroke-linecap="round"></path>
+<circle class="pop" cx="16" cy="40" r="12" fill="#9d5656" style="animation-delay: -0.50s"></circle><circle class="pop" cx="276" cy="40" r="12" fill="#9d5656" style="animation-delay: 0.22s"></circle><circle class="pop" cx="537" cy="40" r="12" fill="#9d5656" style="animation-delay: 0.95s"></circle><circle class="pop" cx="797" cy="40" r="12" fill="#9d5656" style="animation-delay: 1.67s"></circle><circle class="pop" cx="1057" cy="40" r="12" fill="#9d5656" style="animation-delay: 2.40s"></circle>
+</svg>
+<ul class="four steps" style="--n: 5; list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px">
+<li class="stepin" style="animation-delay: -0.50s"><p style="margin: 0; font-size: 20px; font-weight: 600; color: #9d5656">Modtagerne</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6">Er gaven til én person, flere kontaktpersoner eller et helt team?</p></li>
+<li class="stepin" style="animation-delay: 0.22s"><p style="margin: 0; font-size: 20px; font-weight: 600; color: #9d5656">Anledningen</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6">Hvad vil I gerne markere eller sige tak for?</p></li>
+<li class="stepin" style="animation-delay: 0.95s"><p style="margin: 0; font-size: 20px; font-weight: 600; color: #9d5656">Budget og antal</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6">Hvad er budgettet pr. gave, og hvor mange har I brug for?</p></li>
+<li class="stepin" style="animation-delay: 1.67s"><p style="margin: 0; font-size: 20px; font-weight: 600; color: #9d5656">Det personlige udtryk</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6">Skal der være logo, et kort eller særlig indpakning?</p></li>
+<li class="stepin" style="animation-delay: 2.40s"><p style="margin: 0; font-size: 20px; font-weight: 600; color: #9d5656">Leveringen</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.6">Skal I selv overrække gaverne, eller skal de sendes til modtagerne?</p></li>
+</ul>
+<div style="max-width: 720px; margin-top: 56px; padding-top: 40px; border-top: 1px solid #efe5da">
+<p style="margin: 0px 0 0; font-size: 17px; line-height: 1.6">Vi hjælper med at tænke gavevalg, pakning og levering sammen, så løsningen passer til jeres behov og tidsplan.</p>
+<p style="margin: 16px 0 0; font-size: 17px; line-height: 1.6">Leder I efter kundegaver til en bestemt sæson? Vi hjælper også med julegaver og hilsner til påske og sommer.</p>
+<p style="margin: 16px 0 0"><a class="go" href="F-Julegaver.dc.html" style="font-weight: 700">Se julegaver til kunder og samarbejdspartnere <span class="arr" aria-hidden="true">→</span></a></p>
+<p style="margin: 16px 0 0"><a class="go" href="F-Saesongaver.dc.html" style="font-weight: 700">Se sæsongaver til påske og sommer <span class="arr" aria-hidden="true">→</span></a></p>
+<a href="S-Kontakt.dc.html" style="display: inline-block; margin-top: 36px; background: #9d5656; color: #fff; padding: 17px 30px; border-radius: 999px; font-weight: 700; margin-top: 28px">Tal med os om jeres kundegaver</a>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 128px 32px 64px">
+<div style="max-width: 860px">
+<h2 style="margin: 0; font-weight: 300; font-size: 44px; line-height: 1.12; letter-spacing: -1.5px; color: #9d5656; margin-bottom: 32px">Spørgsmål om <b style="font-weight: 700">kundegaver</b></h2>
+<div style="border-top: 1px solid #e3d2c1">
+<details open><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Hvad er en god kundegave?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 12px 0; font-size: 16px; line-height: 1.6">En god kundegave passer til modtageren og den relation I har. Til en fast kontaktperson kan en gave til hjemmet eller fritiden være relevant. Til et team kan noget, der kan deles på arbejdspladsen, være en god løsning.</p><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Vi hjælper jer med at vælge en gave, der giver mening ud fra anledningen og jeres budget.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Kan vi få kundegaver med logo?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 12px 0; font-size: 16px; line-height: 1.6">Ja, på udvalgte produkter er der mulighed for at tilføje logo. Metoden afhænger af produktet og materialet.</p><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Vi rådgiver om placering og udtryk og hjælper også med alternativer, hvor logoet indgår på kortet eller indpakningen.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Kan I hjælpe med at sende gaverne til kunderne?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 12px 0; font-size: 16px; line-height: 1.6">Ja, vi hjælper med at planlægge pakning og forsendelse til jeres kunder. Fortæl os, hvor mange modtagere der er, hvor gaverne skal sendes hen, og hvornår de skal være fremme.</p><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Så afklarer vi de praktiske detaljer og aftaler en løsning med jer.</p></details>
+</div>
+<p style="margin: 28px 0 0"><a class="go" href="F-Forside.dc.html" style="font-weight: 700">Se alle muligheder for firmagaver <span class="arr" aria-hidden="true">→</span></a></p>
+</div>
+</section>
+
+<section aria-label="Videre herfra" style="max-width: 1280px; margin: 0 auto; padding: 64px 32px 128px">
+<p style="margin: 0 0 24px; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: #9d5656">Hvor vil du hen nu?</p>
+<div class="four" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<a class="go" href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 22px; font-weight: 600; line-height: 1.25">Få et tilbud på kundegaver</span><span style="font-size: 15px">Skriv antal og deadline <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="F-Julegaver.dc.html" style="background: #ffffff; color: #6b3a3a; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 22px; font-weight: 600; line-height: 1.25">Julegaver</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Til kunder og medarbejdere <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="F-Jubilaeum.dc.html" style="background: #ffffff; color: #6b3a3a; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 22px; font-weight: 600; line-height: 1.25">Jubilæumsgaver</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Fejr en milepæl <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="F-Forside.dc.html" style="background: #ffffff; color: #6b3a3a; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 22px; font-weight: 600; line-height: 1.25">Alle firmagaver</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Firmagaver <span class="arr" aria-hidden="true">→</span></span></a>
+</div>
+</section>
+
+<footer style="background: #f0e5d9">
+<div style="max-width: 1280px; margin: 0 auto; padding: 72px 32px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; font-size: 15px; line-height: 1.8">
+<div><img src="../images/65329b41fce4aac70a33a76ab86b8ff5.png" alt="MarkOn" style="width: 190px; height: auto; display: block"><p style="margin: 18px 0 0">Vi gør brands nærværende.</p></div>
+<div><div style="font-weight: 700">Lystrup</div>Sønderskovvej 7 A<br>8520 Lystrup<br><a href="tel:+4586198686">86 19 86 86</a><br><a href="mailto:salg@markon.as">salg@markon.as</a></div>
+<div><div style="font-weight: 700">Ikast</div>Merkurvej 4 B<br>7430 Ikast<br><a href="mailto:lagerikast@markon.as">lagerikast@markon.as</a></div>
+<div><div style="font-weight: 700">Genveje</div><a href="S-Merchandise.dc.html">Merchandise</a><br><a href="F-Forside.dc.html">Firmagaver</a><br><a href="#">Firmatøj</a><br><a href="#">Inspiration</a><br><a href="S-OmOs.dc.html">Om os</a><br><a href="S-Kontakt.dc.html">Kontakt</a></div>
+</div>
+<div style="max-width: 1280px; margin: 0 auto; padding: 20px 32px 40px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 24px">CVR 73302315 · Handelsbetingelser · Privatlivspolitik · CSR · Code of conduct</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"menuStart":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { menu: !!props.menuStart }; }
+  renderVals() {
+    const m = this.state.menu;
+    return { menu: m, closed: !m, menuExp: String(m), menuLabel: m ? 'Luk menu' : 'Åbn menu', toggleMenu: () => this.setState(s => ({ menu: !s.menu })) };
+  }
+}
+</script>
+</body>
+</html>

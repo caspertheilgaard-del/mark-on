@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>Om MarkOn</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f1ea}
+a{color:#9d5656;text-decoration:none}a:hover{color:#7a3f3f}
+.nav a{color:#6b3a3a;font-weight:700;font-size:16px;padding:8px 0;background:linear-gradient(#9d5656,#9d5656) left bottom/0% 2px no-repeat;transition:background-size .3s}
+.nav a:hover,.nav a[aria-current]{background-size:100% 2px;color:#6b3a3a}
+.go .arr{display:inline-block;transition:transform .3s}
+.go:hover .arr{transform:translateX(6px)}
+details{border-bottom:1px solid #e3d2c1}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:#f0e5d9;display:grid;place-items:center;font-size:20px;transition:transform .3s}
+details[open] summary .pl{transform:rotate(45deg);background:#9d5656;color:#fff}
+@keyframes vdraw{0%{stroke-dashoffset:1000}55%,100%{stroke-dashoffset:0}}
+.vdraw{stroke-dasharray:1000;animation:vdraw 7s ease-in-out infinite}
+@keyframes stepin{0%,6%{opacity:.3;transform:translateX(-8px)}14%,100%{opacity:1;transform:none}}
+.stepin{animation:stepin 7s ease infinite}
+@media (max-width:760px){.four,.three,.two{grid-template-columns:minmax(0,1fr) !important}.four > *{margin-top:0 !important}h1{font-size:44px !important}}
+@media (prefers-reduced-motion: reduce){.vdraw,.stepin{animation:none}.vdraw{stroke-dasharray:none}}
+.burger{display:none}
+@media (min-width:1101px){.mmenu{display:none}}
+@media (max-width:1100px){.nav{display:none !important}.burger{display:inline-flex}.four{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media (max-width:640px){.four{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:20px !important}.four > *{margin-top:0 !important}.hcta{display:none !important}.logo img{width:150px !important}h1{font-size:40px !important}h2{font-size:32px !important}section[style*="padding"]{padding-top:64px !important;padding-bottom:64px !important}section > div[style*="padding: 1"]{padding-top:72px !important;padding-bottom:72px !important}[style*="max-width: 1280px"]{padding-left:20px !important;padding-right:20px !important}[style*="border-radius: 40px; padding: 4"]{padding:28px !important}}
+.dot{position:absolute;z-index:-1;border-radius:50%;background:#c29a93;filter:blur(1.5px);box-shadow:0 30px 70px -10px rgba(157,86,86,.35);pointer-events:none}
+*:has(> .dot){isolation:isolate}
+.collage img{box-shadow:0 34px 60px -28px rgba(90,40,40,.45)}
+@media (max-width:640px){.dot{transform:scale(.7)}}
+</style>
+</helmet>
+<div style="font-family: Montserrat, system-ui, sans-serif; color: #6b3a3a; background: #f7f1ea; overflow: hidden">
+
+<div style="background: #f7f1ea; border-bottom: 1px solid #efe5da; font-size: 13px; font-weight: 500">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px">
+<span style="display: flex; gap: 24px; flex-wrap: wrap"><a href="tel:+4586198686" style="color: #6b3a3a">86 19 86 86</a><a href="mailto:salg@markon.as" style="color: #6b3a3a">salg@markon.as</a></span>
+</div>
+</div>
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a class="logo" href="S-Forside.dc.html" aria-label="MarkOn, til forsiden" style="display: block"><img src="../images/65329b41fce4aac70a33a76ab86b8ff5.png" alt="MarkOn, tøj, gaver, merchandise" style="width: 200px; height: auto; display: block"></a>
+<nav class="nav" aria-label="Hovedmenu" style="display: flex; gap: 28px; flex-wrap: wrap; align-items: center">
+<a href="S-Merchandise.dc.html">Merchandise</a>
+<a href="F-Forside.dc.html">Firmagaver</a>
+<a href="#">Firmatøj</a>
+<a href="#">Inspiration</a>
+<a href="S-OmOs.dc.html" aria-current="page">Om os</a>
+<a href="S-Kontakt.dc.html">Kontakt</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px">
+<a class="hcta" href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 700">Få et tilbud</a>
+<button class="burger" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExp }}" aria-label="{{ menuLabel }}" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: #f0e5d9; color: #6b3a3a; cursor: pointer; align-items: center; justify-content: center; padding: 0"><sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if><sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if></button>
+</div>
+</header>
+<sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+<div class="mmenu" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 24px">
+<nav aria-label="Menu" style="background: #ffffff;border-radius: 40px; padding: 12px 28px 28px; box-shadow: 0 40px 80px -50px rgba(90,40,40,.4)">
+<a href="S-Merchandise.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Merchandise<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="F-Forside.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Firmagaver<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Firmatøj<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Inspiration<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="S-OmOs.dc.html" aria-current="page" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #9d5656">Om os<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="S-Kontakt.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Kontakt<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px"><a href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; padding: 15px 24px; border-radius: 999px; font-weight: 700">Få et tilbud</a></div>
+<p style="margin: 20px 0 0; font-size: 15px"><a href="tel:+4586198686" style="color: #6b3a3a; font-weight: 600">86 19 86 86</a> · <a href="mailto:salg@markon.as" style="color: #6b3a3a; font-weight: 600">salg@markon.as</a></p>
+</nav>
+</div>
+</sc-if>
+
+<nav aria-label="Brødkrummer" style="max-width: 1280px; margin: 0 auto; padding: 8px 32px 0; font-size: 14px"><a href="S-Forside.dc.html" style="color: #6b3a3a">Forside</a> <span aria-hidden="true" style="margin: 0 8px">/</span> <span aria-current="page" style="font-weight: 600">Om os</span></nav>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 56px 32px 128px; display: flex; flex-wrap: wrap; align-items: center; gap: 72px">
+<div style="flex: 1 1 520px; min-width: 0">
+<h1 style="margin: 0; font-weight: 300; font-size: 68px; line-height: 1.06; letter-spacing: -2.5px; color: #9d5656">Om <b style="font-weight: 700">MarkOn</b></h1>
+<p style="margin: 32px 0 0; font-size: 18px; line-height: 1.6; max-width: 520px">Vi er rådgivere, designere og lagerfolk i Lystrup og Ikast. Siden [ÅRSTAL] har vi hjulpet virksomheder med tøj, gaver og merchandise, som folk faktisk bruger.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 40px">
+<div><div style="font-size: 40px; font-weight: 300; color: #9d5656">[ANTAL]</div><div style="font-size: 14px; font-weight: 600">år i branchen</div></div>
+<div><div style="font-size: 40px; font-weight: 300; color: #9d5656">[ANTAL]</div><div style="font-size: 14px; font-weight: 600">kunder om året</div></div>
+<div><div style="font-size: 40px; font-weight: 300; color: #9d5656">[ANTAL]</div><div style="font-size: 14px; font-weight: 600">medarbejdere</div></div>
+</div>
+</div>
+<div style="flex: 1 1 400px; min-width: 0; display: flex; gap: 24px; align-items: flex-end">
+<div style="flex: 1.3; aspect-ratio: 3 / 4; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 16px">[BILLEDE: HOLDET I SHOWROOMET]</div>
+<div style="flex: 1; aspect-ratio: 1 / 1; border-radius: 50%; background: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 16px; margin-bottom: 72px">[BILLEDE: LAGERET I IKAST]</div>
+</div>
+</section>
+
+<section style="background: #f7f1ea; border-top: 1px solid #efe5da; border-bottom: 1px solid #efe5da">
+<div style="max-width: 1280px; margin: 0 auto; padding: 120px 32px; display: flex; flex-wrap: wrap; gap: 72px">
+<div style="flex: 1 1 420px; min-width: 0">
+<h2 style="margin: 0; font-weight: 300; font-size: 48px; line-height: 1.1; letter-spacing: -1.5px; color: #9d5656">Vi gør brands <b style="font-weight: 700">nærværende</b></h2>
+<p style="margin: 20px 0 0; font-size: 18px; line-height: 1.6">Vi hjælper dig med at finde den rette løsning, sammen. Det betyder én kontakt, ærlige anbefalinger og et design, I godkender, før noget bliver lavet.</p>
+<h3 style="margin: 40px 0 10px; font-size: 22px; font-weight: 600">Vores historie</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6">[KORT HISTORIE: HVEM STARTEDE MARKON, HVORNÅR OG HVORFOR. 2 TIL 3 SÆTNINGER.]</p>
+</div>
+<div style="flex: 1 1 520px; min-width: 0">
+<h3 style="margin: 0 0 20px; font-size: 22px; font-weight: 600">MarkOn og processen</h3>
+<div style="position: relative; padding-left: 40px">
+<svg aria-hidden="true" viewBox="0 0 8 400" preserveAspectRatio="none" style="position: absolute; left: 10px; top: 30px; bottom: 30px; width: 8px; height: calc(100% - 60px)">
+<line x1="4" y1="0" x2="4" y2="400" stroke="#dcc6b2" stroke-width="3" vector-effect="non-scaling-stroke"></line>
+<line class="vdraw" pathLength="1000" x1="4" y1="0" x2="4" y2="400" stroke="#9d5656" stroke-width="3" vector-effect="non-scaling-stroke"></line>
+</svg>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; gap: 14px">
+<li class="stepin" style="animation-delay: -.5s; background: #ffffff;border-radius: 24px; padding: 22px 26px; display: flex; gap: 18px; align-items: baseline"><span style="font-weight: 700; color: #9d5656">1</span><span><b>Rådgivning.</b> Anledning, budget, antal og tidsplan.</span></li>
+<li class="stepin" style="animation-delay: .6s; background: #ffffff;border-radius: 24px; padding: 22px 26px; display: flex; gap: 18px; align-items: baseline"><span style="font-weight: 700; color: #9d5656">2</span><span><b>Design.</b> I ser produkterne med jeres logo, før I siger ja.</span></li>
+<li class="stepin" style="animation-delay: 1.7s; background: #ffffff;border-radius: 24px; padding: 22px 26px; display: flex; gap: 18px; align-items: baseline"><span style="font-weight: 700; color: #9d5656">3</span><span><b>Produktion.</b> Tryk, broderi og pakning med kvalitetstjek.</span></li>
+<li class="stepin" style="animation-delay: 2.8s; background: #ffffff;border-radius: 24px; padding: 22px 26px; display: flex; gap: 18px; align-items: baseline"><span style="font-weight: 700; color: #9d5656">4</span><span><b>Levering.</b> Samlet, til flere adresser eller hjem til hver medarbejder.</span></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 136px 32px 120px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px">
+<h2 style="margin: 0; font-weight: 300; font-size: 48px; line-height: 1.1; letter-spacing: -1.5px; color: #9d5656">Mød <b style="font-weight: 700">os</b></h2>
+<p style="margin: 0; max-width: 380px; font-size: 17px; line-height: 1.6">Rådgiverne, der hjælper jer fra første snak til levering.</p>
+</div>
+<div class="four" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; align-items: start">
+<div><div style="aspect-ratio: 3 / 4; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600">[FOTO]</div><h4 style="margin: 18px 0 2px; font-size: 18px; font-weight: 600">[NAVN]</h4><p style="margin: 0 0 10px; font-size: 14px">Rådgiver · Merchandise</p><a class="go" href="S-Kontakt.dc.html" style="font-size: 14px; font-weight: 700">Skriv til os <span class="arr" aria-hidden="true">→</span></a></div>
+<div style="margin-top: 56px"><div style="aspect-ratio: 3 / 4; border-radius: 24px; background: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 600">[FOTO]</div><h4 style="margin: 18px 0 2px; font-size: 18px; font-weight: 600">[NAVN]</h4><p style="margin: 0 0 10px; font-size: 14px">Rådgiver · Firmagaver</p><a class="go" href="S-Kontakt.dc.html" style="font-size: 14px; font-weight: 700">Skriv til os <span class="arr" aria-hidden="true">→</span></a></div>
+<div><div style="aspect-ratio: 3 / 4; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600">[FOTO]</div><h4 style="margin: 18px 0 2px; font-size: 18px; font-weight: 600">[NAVN]</h4><p style="margin: 0 0 10px; font-size: 14px">Rådgiver · Firmatøj</p><a class="go" href="S-Kontakt.dc.html" style="font-size: 14px; font-weight: 700">Skriv til os <span class="arr" aria-hidden="true">→</span></a></div>
+<div style="margin-top: 56px"><div style="aspect-ratio: 3 / 4; border-radius: 24px; background: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 600">[FOTO]</div><h4 style="margin: 18px 0 2px; font-size: 18px; font-weight: 600">[NAVN]</h4><p style="margin: 0 0 10px; font-size: 14px">Design og produktion</p><a class="go" href="S-Kontakt.dc.html" style="font-size: 14px; font-weight: 700">Skriv til os <span class="arr" aria-hidden="true">→</span></a></div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 32px 120px">
+<div class="two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="background: #ffffff;border-radius: 40px; padding: 40px">
+<h3 style="margin: 0 0 10px; font-size: 22px; font-weight: 600">Besøg vores showroom i Lystrup</h3>
+<p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6">Se og mærk produkterne, før I vælger. Skriv til os, så aftaler vi et tidspunkt.</p>
+<p style="margin: 0 0 20px; font-size: 15px; line-height: 1.6">Sønderskovvej 7 A, 8520 Lystrup</p>
+<a href="S-Kontakt.dc.html" style="display: inline-block; background: #9d5656; color: #fff; padding: 15px 26px; border-radius: 999px; font-weight: 700">Kontakt os om et besøg</a>
+</div>
+<div style="background: #ffffff;border-radius: 40px; padding: 40px">
+<h3 style="margin: 0 0 10px; font-size: 22px; font-weight: 600">Kataloger</h3>
+<p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6">Bladr i udvalget i ro og mag. Kataloget viser produkter og priser uden logo.</p>
+<div style="display: grid; gap: 10px">
+<a class="go" href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #e3d2c1; font-weight: 600; color: #6b3a3a"><span>Merchandise [ÅR]</span><span class="arr" aria-hidden="true" style="color: #9d5656">→</span></a>
+<a class="go" href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #e3d2c1; font-weight: 600; color: #6b3a3a"><span>Firmagaver og julegaver [ÅR]</span><span class="arr" aria-hidden="true" style="color: #9d5656">→</span></a>
+<a class="go" href="#" style="display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid #e3d2c1; font-weight: 600; color: #6b3a3a"><span>Firmatøj [ÅR]</span><span class="arr" aria-hidden="true" style="color: #9d5656">→</span></a>
+</div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 32px 32px 64px; display: flex; flex-wrap: wrap; gap: 64px">
+<div style="flex: 1 1 340px; min-width: 0">
+<h2 style="margin: 0; font-weight: 300; font-size: 48px; line-height: 1.1; letter-spacing: -1.5px; color: #9d5656">Det spørger I <b style="font-weight: 700">tit om</b></h2>
+</div>
+<div style="flex: 1 1 620px; min-width: 0; border-top: 1px solid #e3d2c1">
+<details open><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Kan vi besøge jeres showroom?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Ja. Skriv til os, så aftaler vi et tidspunkt, og en rådgiver viser jer rundt i showroomet i Lystrup.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Hvem bliver vores kontaktperson?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">I får én fast rådgiver fra første snak til levering.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Hvor sidder I?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Salg og showroom ligger i Lystrup ved Aarhus. Lageret ligger i Ikast.</p></details>
+</div>
+</section>
+
+<section aria-label="Videre herfra" style="max-width: 1280px; margin: 0 auto; padding: 72px 32px 128px">
+<p style="margin: 0 0 32px; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: #9d5656">Hvor vil du hen nu?</p>
+<div class="three" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<a class="go" href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Få et tilbud</span><span style="font-size: 15px">Skriv antal og deadline <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="#" style="background: #ffffff;color: #6b3a3a; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Se hvad vi har lavet</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Inspiration <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="S-Merchandise.dc.html" style="background: #ffffff;color: #6b3a3a; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 180px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Find det rette produkt</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Merchandise <span class="arr" aria-hidden="true">→</span></span></a>
+</div>
+</section>
+
+<footer style="background: #f0e5d9">
+<div style="max-width: 1280px; margin: 0 auto; padding: 72px 32px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; font-size: 15px; line-height: 1.8">
+<div><img src="../images/65329b41fce4aac70a33a76ab86b8ff5.png" alt="MarkOn" style="width: 190px; height: auto; display: block"><p style="margin: 18px 0 0">Vi gør brands nærværende.</p></div>
+<div><div style="font-weight: 700">Lystrup</div>Sønderskovvej 7 A<br>8520 Lystrup<br><a href="tel:+4586198686">86 19 86 86</a><br><a href="mailto:salg@markon.as">salg@markon.as</a></div>
+<div><div style="font-weight: 700">Ikast</div>Merkurvej 4 B<br>7430 Ikast<br><a href="mailto:lagerikast@markon.as">lagerikast@markon.as</a></div>
+<div><div style="font-weight: 700">Genveje</div><a href="S-Merchandise.dc.html">Merchandise</a><br><a href="F-Forside.dc.html">Firmagaver</a><br><a href="#">Firmatøj</a><br><a href="#">Inspiration</a><br><a href="S-OmOs.dc.html">Om os</a><br><a href="S-Kontakt.dc.html">Kontakt</a></div>
+</div>
+<div style="max-width: 1280px; margin: 0 auto; padding: 20px 32px 40px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 24px">CVR 73302315 · Handelsbetingelser · Privatlivspolitik · CSR · Code of conduct</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"menuStart":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":3700}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { menu: !!props.menuStart }; }
+  renderVals() {
+    const m = this.state.menu;
+    return { menu: m, closed: !m, menuExp: String(m), menuLabel: m ? 'Luk menu' : 'Åbn menu', toggleMenu: () => this.setState(s => ({ menu: !s.menu })) };
+  }
+}
+</script>
+</body>
+</html>

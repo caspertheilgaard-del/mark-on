@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>MarkOn produktside, krus med logo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f7f1ea}
+a{color:#9d5656;text-decoration:none}a:hover{color:#7a3f3f}
+.nav a{color:#6b3a3a;font-weight:700;font-size:16px;padding:8px 0;background:linear-gradient(#9d5656,#9d5656) left bottom/0% 2px no-repeat;transition:background-size .3s}
+.nav a:hover,.nav a[aria-current]{background-size:100% 2px;color:#6b3a3a}
+.go .arr{display:inline-block;transition:transform .3s}
+.go:hover .arr{transform:translateX(6px)}
+.fld{display:grid;gap:6px;font-size:13px;font-weight:700}
+.fld input{font:500 16px Montserrat,system-ui,sans-serif;color:#6b3a3a;border:1px solid #d9c4b1;border-radius:999px;padding:13px 18px;background:#fff;min-height:48px;box-sizing:border-box;width:100%}
+details{border-bottom:1px solid #e3d2c1}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary .pl{flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:#f0e5d9;display:grid;place-items:center;font-size:20px;transition:transform .3s}
+details[open] summary .pl{transform:rotate(45deg);background:#9d5656;color:#fff}
+@media (max-width:760px){.four,.two,.three{grid-template-columns:minmax(0,1fr) !important}h1{font-size:44px !important}}
+.burger{display:none}
+@media (min-width:1101px){.mmenu{display:none}}
+@media (max-width:1100px){.nav{display:none !important}.burger{display:inline-flex}.four{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+@media (max-width:640px){.four{grid-template-columns:minmax(0,1fr) !important}.hcta{display:none !important}.logo img{width:150px !important}h1{font-size:40px !important}h2{font-size:32px !important}section[style*="padding"]{padding-top:64px !important;padding-bottom:64px !important}section > div[style*="padding: 1"]{padding-top:72px !important;padding-bottom:72px !important}[style*="max-width: 1280px"]{padding-left:20px !important;padding-right:20px !important}form[style*="border-radius: 40px"]{padding:24px !important}}
+.dot{position:absolute;z-index:-1;border-radius:50%;background:#c29a93;filter:blur(1.5px);box-shadow:0 30px 70px -10px rgba(157,86,86,.35);pointer-events:none}
+*:has(> .dot){isolation:isolate}
+.collage img{box-shadow:0 34px 60px -28px rgba(90,40,40,.45)}
+@media (max-width:640px){.dot{transform:scale(.7)}}
+</style>
+</helmet>
+<div style="font-family: Montserrat, system-ui, sans-serif; color: #6b3a3a; background: #f7f1ea; overflow: hidden">
+
+<div style="background: #f7f1ea; border-bottom: 1px solid #efe5da; font-size: 13px; font-weight: 500">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 32px; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px">
+<span style="display: flex; gap: 24px; flex-wrap: wrap"><a href="tel:+4586198686" style="color: #6b3a3a">86 19 86 86</a><a href="mailto:salg@markon.as" style="color: #6b3a3a">salg@markon.as</a></span>
+</div>
+</div>
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+<a class="logo" href="S-Forside.dc.html" aria-label="MarkOn, til forsiden" style="display: block"><img src="../images/65329b41fce4aac70a33a76ab86b8ff5.png" alt="MarkOn, tøj, gaver, merchandise" style="width: 200px; height: auto; display: block"></a>
+<nav class="nav" aria-label="Hovedmenu" style="display: flex; gap: 28px; flex-wrap: wrap; align-items: center">
+<a href="S-Merchandise.dc.html" aria-current="true">Merchandise</a>
+<a href="F-Forside.dc.html">Firmagaver</a>
+<a href="#">Firmatøj</a>
+<a href="#">Inspiration</a>
+<a href="S-OmOs.dc.html">Om os</a>
+<a href="S-Kontakt.dc.html">Kontakt</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px">
+<a class="hcta" href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; padding: 14px 24px; border-radius: 999px; font-size: 15px; font-weight: 700">Få et tilbud</a>
+<button class="burger" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExp }}" aria-label="{{ menuLabel }}" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: #f0e5d9; color: #6b3a3a; cursor: pointer; align-items: center; justify-content: center; padding: 0"><sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if><sc-if value="{{ closed }}" hint-placeholder-val="{{ true }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if></button>
+</div>
+</header>
+<sc-if value="{{ menu }}" hint-placeholder-val="{{ false }}">
+<div class="mmenu" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 24px">
+<nav aria-label="Menu" style="background: #ffffff;border-radius: 40px; padding: 12px 28px 28px; box-shadow: 0 40px 80px -50px rgba(90,40,40,.4)">
+<a href="S-Merchandise.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #9d5656">Merchandise<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="F-Forside.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Firmagaver<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Firmatøj<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="#" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Inspiration<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="S-OmOs.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Om os<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<a href="S-Kontakt.dc.html" style="display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: #6b3a3a">Kontakt<span aria-hidden="true" style="color: #9d5656">→</span></a>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px"><a href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; padding: 15px 24px; border-radius: 999px; font-weight: 700">Få et tilbud</a></div>
+<p style="margin: 20px 0 0; font-size: 15px"><a href="tel:+4586198686" style="color: #6b3a3a; font-weight: 600">86 19 86 86</a> · <a href="mailto:salg@markon.as" style="color: #6b3a3a; font-weight: 600">salg@markon.as</a></p>
+</nav>
+</div>
+</sc-if>
+
+<nav aria-label="Brødkrummer" style="max-width: 1280px; margin: 0 auto; padding: 8px 32px 0; font-size: 14px"><a href="S-Forside.dc.html" style="color: #6b3a3a">Forside</a> <span aria-hidden="true" style="margin: 0 8px">/</span> <a href="S-Merchandise.dc.html" style="color: #6b3a3a">Merchandise</a> <span aria-hidden="true" style="margin: 0 8px">/</span> <span aria-current="page" style="font-weight: 600">Krus med logo</span></nav>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 48px 32px 128px; display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start">
+<div style="flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<img src="../images/f05a367bff5d383692ffbf90bed6b80e.jpg" alt="Stålkrus med logo" style="grid-column: span 3; width: 100%; aspect-ratio: 4 / 4; object-fit: cover; display: block; border-radius: 24px">
+<img src="../images/faef2588aada4d1845fca61180e61b99.jpg" alt="Krus i et gavesæt" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 24px">
+<div style="aspect-ratio: 1 / 1; border-radius: 50%; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 12px">[BILLEDE: LOGO TÆT PÅ]</div>
+<div style="aspect-ratio: 1 / 1; border-radius: 24px; background: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 600; text-align: center; padding: 12px">[BILLEDE: I BRUG]</div>
+</div>
+<div style="flex: 1 1 420px; min-width: 0">
+<h1 style="margin: 0; font-weight: 300; font-size: 64px; line-height: 1.06; letter-spacing: -2.5px; color: #9d5656">Krus <b style="font-weight: 700">med logo</b></h1>
+<p style="margin: 24px 0 0; font-size: 18px; line-height: 1.6">Et krus bliver brugt hver dag, på kontoret og derhjemme. Det gør det til en af de mest synlige måder at vise jeres logo på. Til velkomstpakken, messen eller som tak.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; margin: 32px 0; padding: 24px 0; border-top: 1px solid #e3d2c1; border-bottom: 1px solid #e3d2c1">
+<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase">Fra</div><div style="font-size: 26px; font-weight: 700; color: #9d5656">[PRIS] kr.</div></div>
+<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase">Minimum</div><div style="font-size: 26px; font-weight: 700; color: #9d5656">[ANTAL] stk.</div></div>
+<div><div style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase">Levering</div><div style="font-size: 26px; font-weight: 700; color: #9d5656">ca. [X] dage</div></div>
+</div>
+<form style="background: #ffffff;border-radius: 40px; padding: 32px; display: grid; gap: 16px">
+<p style="margin: 0; font-size: 20px; font-weight: 600">Få et tilbud på krus</p>
+<div class="two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<label class="fld">Antal<input type="text" inputmode="numeric" placeholder="Fx 250"></label>
+<label class="fld">Deadline<input type="text" placeholder="Fx uge 12"></label>
+</div>
+<label class="fld">Din mail<input type="email" placeholder="navn@virksomhed.dk"></label>
+<button type="button" style="background: #9d5656; color: #fff; border: 0; border-radius: 999px; padding: 17px; font: 700 15px Montserrat, sans-serif; cursor: pointer; min-height: 48px">Send forespørgsel</button>
+<p style="margin: 0; font-size: 14px">Eller ring på <a href="tel:+4586198686" style="font-weight: 700">86 19 86 86</a>.</p>
+</form>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 32px 136px">
+<h2 style="margin: 0 0 14px; font-weight: 300; font-size: 48px; line-height: 1.1; letter-spacing: -1.5px; color: #9d5656">Vælg jeres <b style="font-weight: 700">krus</b></h2>
+<p style="margin: 0 0 56px; font-size: 18px; line-height: 1.6; max-width: 560px">Tre typer, der dækker de fleste behov. Vi hjælper jer gerne med at vælge.</p>
+<div class="three" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px">
+<div>
+<img src="../images/f05a367bff5d383692ffbf90bed6b80e.jpg" alt="Stålkrus" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 24px">
+<h3 style="margin: 22px 0 6px; font-size: 22px; font-weight: 600">Stålkrus</h3>
+<p style="margin: 0 0 12px; font-size: 15px; line-height: 1.6">Holder til hverdagen og tur ud af huset. Logoet graveres.</p>
+<h4 style="margin: 0; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #9d5656">Fra [PRIS] kr. · min. [ANTAL] stk.</h4>
+</div>
+<div>
+<div style="width: 100%; aspect-ratio: 4 / 5; border-radius: 24px; background: #f0e5d9; display: grid; place-items: center; font-size: 13px; font-weight: 600">[BILLEDE: TERMOKRUS]</div>
+<h3 style="margin: 22px 0 6px; font-size: 22px; font-weight: 600">Termokrus</h3>
+<p style="margin: 0 0 12px; font-size: 15px; line-height: 1.6">Holder kaffen varm på vej til arbejde. God til velkomstpakken.</p>
+<h4 style="margin: 0; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #9d5656">Fra [PRIS] kr. · min. [ANTAL] stk.</h4>
+</div>
+<div>
+<div style="width: 100%; aspect-ratio: 4 / 5; border-radius: 24px; background: #ffffff; display: grid; place-items: center; font-size: 13px; font-weight: 600">[BILLEDE: KERAMIKKOP]</div>
+<h3 style="margin: 22px 0 6px; font-size: 22px; font-weight: 600">Kaffekopper i keramik</h3>
+<p style="margin: 0 0 12px; font-size: 15px; line-height: 1.6">Klassikeren til kontoret og mødelokalet. Logoet trykkes.</p>
+<h4 style="margin: 0; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: #9d5656">Fra [PRIS] kr. · min. [ANTAL] stk.</h4>
+</div>
+</div>
+</section>
+
+<section style="background: #f7f1ea; border-top: 1px solid #efe5da; border-bottom: 1px solid #efe5da">
+<div style="max-width: 1280px; margin: 0 auto; padding: 112px 32px; display: flex; flex-wrap: wrap; gap: 64px">
+<div style="flex: 1 1 380px; min-width: 0">
+<h2 style="margin: 0 0 14px; font-weight: 300; font-size: 48px; line-height: 1.1; letter-spacing: -1.5px; color: #9d5656">Sådan kommer <b style="font-weight: 700">logoet på</b></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6">Vi anbefaler metoden ud fra kruset og jeres logo. I ser altid et design, før vi går i gang.</p>
+</div>
+<div class="two" style="flex: 1 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<div style="background: #ffffff;border-radius: 40px; padding: 32px"><p style="margin: 0; font-size: 22px; font-weight: 600">Gravering</p><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6">Logoet skæres ind i stålet med laser. Det kan ikke slides af.</p></div>
+<div style="background: #ffffff;border-radius: 40px; padding: 32px"><p style="margin: 0; font-size: 22px; font-weight: 600">Tryk</p><p style="margin: 10px 0 0; font-size: 15px; line-height: 1.6">Logoet trykkes i jeres farver. Godt til keramik og logoer med flere farver.</p></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 136px 32px 64px; display: flex; flex-wrap: wrap; gap: 64px">
+<div style="flex: 1 1 340px; min-width: 0">
+<h2 style="margin: 0; font-weight: 300; font-size: 48px; line-height: 1.1; letter-spacing: -1.5px; color: #9d5656">Det spørger I <b style="font-weight: 700">tit om</b></h2>
+<p style="margin: 20px 0 0; font-size: 17px; line-height: 1.6; max-width: 340px">Har du spørgsmål? Vi sidder klar til at hjælpe dig.</p>
+</div>
+<div style="flex: 1 1 620px; min-width: 0; border-top: 1px solid #e3d2c1">
+<details open><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Hvor mange krus skal vi mindst bestille?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Minimum er [ANTAL] stk. Er I i tvivl om antallet, så hjælper vi jer med at regne det ud.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Kan vi få en prøve, før vi bestiller?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">Ja. I får altid et design med logo, og vi kan sende en fysisk prøve, hvis I ønsker det.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Hvilke farver findes kruset i?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">De fleste krus findes i [ANTAL] farver. Vi sender gerne et udvalg sammen med tilbuddet.</p></details>
+<details><summary><h3 style="margin: 0; font-size: 19px; font-weight: 600">Kan kruset komme i opvaskemaskinen?</h3><span class="pl" aria-hidden="true">+</span></summary><p style="margin: 0; padding: 0 56px 24px 0; font-size: 16px; line-height: 1.6">[SVAR PR. MODEL]. Graveret logo tåler opvask.</p></details>
+</div>
+</section>
+
+<section aria-label="Videre herfra" style="max-width: 1280px; margin: 0 auto; padding: 72px 32px 128px">
+<p style="margin: 0 0 32px; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: #9d5656">Passer godt sammen med</p>
+<div class="four" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<a class="go" href="#" style="background: #ffffff;color: #6b3a3a; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 200px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Vandflasker med logo</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Se produktet <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="#" style="background: #ffffff;color: #6b3a3a; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 200px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Welcome kits</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Krus i velkomstpakken <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="S-Messer.dc.html" style="background: #ffffff;color: #6b3a3a; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 200px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Messer og events</span><span style="font-size: 15px; color: #9d5656; font-weight: 700">Krus til standen <span class="arr" aria-hidden="true">→</span></span></a>
+<a class="go" href="S-Kontakt.dc.html" style="background: #9d5656; color: #fff; border-radius: 40px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; min-height: 200px"><span style="font-size: 24px; font-weight: 600; line-height: 1.25">Få et tilbud</span><span style="font-size: 15px">Svar inden for [ANTAL] timer <span class="arr" aria-hidden="true">→</span></span></a>
+</div>
+</section>
+
+<footer style="background: #f0e5d9">
+<div style="max-width: 1280px; margin: 0 auto; padding: 72px 32px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; font-size: 15px; line-height: 1.8">
+<div><img src="../images/65329b41fce4aac70a33a76ab86b8ff5.png" alt="MarkOn" style="width: 190px; height: auto; display: block"><p style="margin: 18px 0 0">Vi gør brands nærværende.</p></div>
+<div><div style="font-weight: 700">Lystrup</div>Sønderskovvej 7 A<br>8520 Lystrup<br><a href="tel:+4586198686">86 19 86 86</a><br><a href="mailto:salg@markon.as">salg@markon.as</a></div>
+<div><div style="font-weight: 700">Ikast</div>Merkurvej 4 B<br>7430 Ikast<br><a href="mailto:lagerikast@markon.as">lagerikast@markon.as</a></div>
+<div><div style="font-weight: 700">Genveje</div><a href="S-Merchandise.dc.html">Merchandise</a><br><a href="F-Forside.dc.html">Firmagaver</a><br><a href="#">Firmatøj</a><br><a href="#">Inspiration</a><br><a href="S-OmOs.dc.html">Om os</a><br><a href="S-Kontakt.dc.html">Kontakt</a></div>
+</div>
+<div style="max-width: 1280px; margin: 0 auto; padding: 20px 32px 40px; font-size: 13px; display: flex; flex-wrap: wrap; gap: 24px">CVR 73302315 · Handelsbetingelser · Privatlivspolitik · CSR · Code of conduct</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"menuStart":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":3900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { menu: !!props.menuStart }; }
+  renderVals() {
+    const m = this.state.menu;
+    return { menu: m, closed: !m, menuExp: String(m), menuLabel: m ? 'Luk menu' : 'Åbn menu', toggleMenu: () => this.setState(s => ({ menu: !s.menu })) };
+  }
+}
+</script>
+</body>
+</html>
