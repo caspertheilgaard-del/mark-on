@@ -1,29 +1,36 @@
 ---
 // Billedkort med pille: overskrift i lys pille på billedet. Ved hover/fokus et rødligt lag
-// med tekst og link. På touch står teksten under billedet.
+// med tekst og link. På touch står teksten under billedet. Uden tekst er kortet kun billede og pille.
 import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 import Media from './Media.astro';
 interface Props {
   title: string;
-  text: string;
-  href: string;
-  linkLabel: string;
-  image: { src?: ImageMetadata; alt: string; placeholder?: string };
-  headingLevel?: 'h2' | 'h3';
+  text?: string;
+  href?: string;
+  linkLabel?: string;
+  image?: { src?: ImageMetadata; alt: string; placeholder?: string; background?: 'sand' | 'white' };
+  swap?: { alt: string; images: ImageMetadata[] };
 }
-const { title, text, href, linkLabel, image, headingLevel = 'h3' } = Astro.props;
-const H = headingLevel;
+const { title, text, href, linkLabel, image, swap } = Astro.props;
+const sizes = '(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px';
 ---
 <div class="lt">
   <div class="pic">
-    <Media {...image} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" />
-    <H class="ttl">{title}</H>
+    {swap
+      ? <div class="swap4" role="img" aria-label={swap.alt}>
+          {swap.images.map((src, i) => <Image src={src} alt="" widths={[400, 800]} sizes={sizes} style={`animation-delay:${i * 2 - 0.5}s`} />)}
+        </div>
+      : image && <Media {...image} sizes={sizes} />}
+    <h3 class="ttl">{title}</h3>
   </div>
-  <a class="cover" href={href} aria-label={title} tabindex="-1"></a>
-  <div class="ov">
-    <p>{text}</p>
-    <a href={href}>{linkLabel} <span aria-hidden="true">→</span></a>
-  </div>
+  {href && <a class="cover" href={href} aria-label={title} tabindex="-1"></a>}
+  {text && (
+    <div class="ov">
+      <p>{text}</p>
+      {href && <a href={href}>{linkLabel} <span aria-hidden="true">→</span></a>}
+    </div>
+  )}
 </div>
 
 <style>
@@ -48,6 +55,17 @@ const H = headingLevel;
   }
   .lt:hover .ov a, .lt:focus-within .ov a { pointer-events: auto; }
   .ov a:hover { border-color: var(--c-cream); }
+
+  .swap4 { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; background: var(--c-sand); }
+  .swap4 img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0;
+    animation: swap4 8s ease-in-out infinite;
+  }
+  @keyframes swap4 { 0% { opacity: 0; } 6% { opacity: 1; } 25% { opacity: 1; } 31% { opacity: 0; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .swap4 img { animation: none; }
+    .swap4 img:first-child { opacity: 1; }
+  }
 
   @media (max-width: 1100px) { .ov { padding: 28px 24px 72px; font-size: 15px; } }
   @media (max-width: 640px) { .ttl { white-space: normal; font-size: 15px; } }

@@ -1,0 +1,26 @@
+{
+  "url": "/inspiration/",
+  "seo": { "title": "Inspiration og cases | MarkOn", "description": "Se eksempler på firmatøj, firmagaver og merchandise, som MarkOn har lavet sammen med kunderne. Siden er på vej." },
+  "menu": "Inspiration",
+  "breadcrumbs": [{ "label": "Forside", "href": "/" }, { "label": "Inspiration" }],
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Det har vi lavet **sammen**",
+      "body": [
+        "Siden med cases og inspiration er på vej. Indtil da viser vi gerne eksempler på løsninger, vi har lavet til andre virksomheder.",
+        "Skriv eller ring, så finder vi eksempler, der passer til jeres opgave."
+      ],
+      "ctas": [{ "label": "Få et tilbud", "href": "/kontakt/" }]
+    },
+    {
+      "type": "next",
+      "items": [
+        { "title": "Få et tilbud", "text": "Skriv antal og deadline", "href": "/kontakt/", "primary": true },
+        { "title": "Merchandise", "text": "Med jeres logo", "href": "/merchandise/" },
+        { "title": "Firmagaver", "text": "Til medarbejdere og kunder", "href": "/firmagaver/" },
+        { "title": "Om os", "text": "Mød rådgiverne", "href": "/om-os/" }
+      ]
+    }
+  ]
+}

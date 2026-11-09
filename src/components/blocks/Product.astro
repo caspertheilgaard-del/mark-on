@@ -1,0 +1,60 @@
+---
+// Produktside: billeder til venstre, tekst, nøgletal og en kort tilbudsformular til højre.
+import Media from '../Media.astro';
+import { getEntry } from 'astro:content';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'product'> }
+const { block } = Astro.props;
+const site = (await getEntry('site', 'site'))!.data;
+const [main, ...thumbs] = block.gallery;
+---
+<section class="container sec wrap" style="--pt:48px;--pb:128px">
+  <div class="gallery">
+    {main && <Media {...main} ratio="1 / 1" class="main-img" eager sizes="(max-width: 640px) 100vw, 600px" widths={[600, 1200]} />}
+    {thumbs.map((t) => <Media {...t} ratio="1 / 1" circle={t.shape === 'circle'} sizes="200px" widths={[200, 400]} style="padding:12px" />)}
+  </div>
+  <div class="info">
+    <h1 class="h1" set:html={rich(block.heading)} />
+    <p class="lead">{block.body}</p>
+    <dl class="facts">
+      {block.facts.map((f) => <div><dt>{f.label}</dt><dd>{f.value}</dd></div>)}
+    </dl>
+    <form class="box form" name="produkt-tilbud" method="POST" action="/tak/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="produkt-tilbud" />
+      <input type="hidden" name="produkt" value={block.heading.replace(/\*\*/g, '')} />
+      <p class="hp"><label>Udfyld ikke dette felt <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <p class="ft">{block.formHeading}</p>
+      <div class="two">
+        <label class="fld">Antal<input type="text" name="antal" inputmode="numeric" placeholder="Fx 250" /></label>
+        <label class="fld">Deadline<input type="text" name="deadline" placeholder="Fx uge 12" /></label>
+      </div>
+      <label class="fld">Din mail<input type="email" name="mail" placeholder="navn@virksomhed.dk" autocomplete="email" required /></label>
+      <button class="form-btn" type="submit">Send forespørgsel</button>
+      <p class="call">Eller ring på <a class="hit" href={site.phone.href}>{site.phone.label}</a>.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+  .wrap { display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start; }
+  .gallery { flex: 1 1 520px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .gallery :global(.main-img) { grid-column: span 3; padding: 0 !important; }
+  .gallery :global(img) { padding: 0 !important; }
+  .info { flex: 1 1 420px; min-width: 0; }
+  .h1 { --fs-h1: 64px; }
+  @media (max-width: 760px) { .h1 { --fs-h1: 44px; } }
+  @media (max-width: 640px) { .h1 { --fs-h1: 40px; } }
+  .lead { margin: 24px 0 0; font-size: var(--fs-lead); line-height: var(--lh-body); }
+  .facts { display: flex; flex-wrap: wrap; gap: 32px; margin: 32px 0; padding: 24px 0; border-top: 1px solid var(--c-line-strong); border-bottom: 1px solid var(--c-line-strong); }
+  dt { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+  dd { margin: 0; font-size: 26px; font-weight: 700; color: var(--c-red); }
+  .form { padding: 32px; display: grid; gap: 16px; }
+  .hp { position: absolute; left: -9999px; }
+  .ft { margin: 0; font-size: 20px; font-weight: 600; }
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .form :global(.fld input) { border-radius: var(--radius-pill); }
+  .call { margin: 0; font-size: 14px; }
+  @media (max-width: 760px) { .two { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 640px) { .form { padding: 24px; } }
+</style>

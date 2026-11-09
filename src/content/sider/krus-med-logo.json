@@ -1,0 +1,177 @@
+{
+  "url": "/merchandise/krus-med-logo/",
+  "seo": {
+    "title": "Krus med logo | MarkOn",
+    "description": "Krus med logo til kontoret, velkomstpakken og messen. Vælg mellem stålkrus, termokrus og kaffekopper i keramik."
+  },
+  "scale": "large",
+  "menu": "Merchandise",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Merchandise",
+      "href": "/merchandise/"
+    },
+    {
+      "label": "Krus med logo"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "heading": "Krus **med logo**",
+      "body": "Et krus bliver brugt hver dag, på kontoret og derhjemme. Det gør det til en af de mest synlige måder at vise jeres logo på. Til velkomstpakken, messen eller som tak.",
+      "gallery": [
+        {
+          "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
+          "alt": "Stålkrus med logo",
+          "shape": "square"
+        },
+        {
+          "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+          "alt": "Krus i et gavesæt",
+          "shape": "square"
+        },
+        {
+          "alt": "[BILLEDE: LOGO TÆT PÅ]",
+          "placeholder": "[BILLEDE: LOGO TÆT PÅ]",
+          "shape": "circle"
+        },
+        {
+          "alt": "[BILLEDE: I BRUG]",
+          "placeholder": "[BILLEDE: I BRUG]",
+          "background": "white",
+          "shape": "square"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Fra",
+          "value": "[PRIS] kr."
+        },
+        {
+          "label": "Minimum",
+          "value": "[ANTAL] stk."
+        },
+        {
+          "label": "Levering",
+          "value": "ca. [X] dage"
+        }
+      ],
+      "formHeading": "Få et tilbud på krus"
+    },
+    {
+      "type": "products",
+      "heading": "Vælg jeres **krus**",
+      "text": "Tre typer, der dækker de fleste behov. Vi hjælper jer gerne med at vælge.",
+      "items": [
+        {
+          "image": {
+            "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
+            "alt": "Stålkrus"
+          },
+          "title": "Stålkrus",
+          "text": "Holder til hverdagen og tur ud af huset. Logoet graveres.",
+          "meta": "Fra [PRIS] kr. · min. [ANTAL] stk."
+        },
+        {
+          "image": {
+            "alt": "[BILLEDE: TERMOKRUS]",
+            "placeholder": "[BILLEDE: TERMOKRUS]"
+          },
+          "title": "Termokrus",
+          "text": "Holder kaffen varm på vej til arbejde. God til velkomstpakken.",
+          "meta": "Fra [PRIS] kr. · min. [ANTAL] stk."
+        },
+        {
+          "image": {
+            "alt": "[BILLEDE: KERAMIKKOP]",
+            "placeholder": "[BILLEDE: KERAMIKKOP]",
+            "background": "white"
+          },
+          "title": "Kaffekopper i keramik",
+          "text": "Klassikeren til kontoret og mødelokalet. Logoet trykkes.",
+          "meta": "Fra [PRIS] kr. · min. [ANTAL] stk."
+        }
+      ]
+    },
+    {
+      "type": "split",
+      "heading": "Sådan kommer **logoet på**",
+      "text": "Vi anbefaler metoden ud fra kruset og jeres logo. I ser altid et design, før vi går i gang.",
+      "cards": [
+        {
+          "title": "Gravering",
+          "text": "Logoet skæres ind i stålet med laser. Det kan ikke slides af."
+        },
+        {
+          "title": "Tryk",
+          "text": "Logoet trykkes i jeres farver. Godt til keramik og logoer med flere farver."
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I **tit om**",
+      "items": [
+        {
+          "question": "Hvor mange krus skal vi mindst bestille?",
+          "answer": [
+            "Minimum er [ANTAL] stk. Er I i tvivl om antallet, så hjælper vi jer med at regne det ud."
+          ]
+        },
+        {
+          "question": "Kan vi få en prøve, før vi bestiller?",
+          "answer": [
+            "Ja. I får altid et design med logo, og vi kan sende en fysisk prøve, hvis I ønsker det."
+          ]
+        },
+        {
+          "question": "Hvilke farver findes kruset i?",
+          "answer": [
+            "De fleste krus findes i [ANTAL] farver. Vi sender gerne et udvalg sammen med tilbuddet."
+          ]
+        },
+        {
+          "question": "Kan kruset komme i opvaskemaskinen?",
+          "answer": [
+            "[SVAR PR. MODEL]. Graveret logo tåler opvask."
+          ]
+        }
+      ],
+      "variant": "split",
+      "intro": "Har du spørgsmål? Vi sidder klar til at hjælpe dig."
+    },
+    {
+      "type": "next",
+      "variant": "large",
+      "kicker": "Passer godt sammen med",
+      "items": [
+        {
+          "title": "Vandflasker med logo",
+          "text": "Se produktet",
+          "href": "#"
+        },
+        {
+          "title": "Welcome kits",
+          "text": "Krus i velkomstpakken",
+          "href": "#"
+        },
+        {
+          "title": "Messer og events",
+          "text": "Krus til standen",
+          "href": "/merchandise/messer-og-events/"
+        },
+        {
+          "title": "Få et tilbud",
+          "text": "Svar inden for [ANTAL] timer",
+          "href": "/kontakt/",
+          "primary": true
+        }
+      ]
+    }
+  ]
+}

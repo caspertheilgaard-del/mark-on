@@ -1,0 +1,83 @@
+---
+// Forsidens "Hvad skal I bruge?": tre store billedkort i forskudt rytme og genveje for marketing og HR.
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'categories'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:136px;--pb:120px">
+  <div class="head">
+    <h2 class="h2" set:html={rich(block.heading)} />
+    <p>{block.text}</p>
+  </div>
+  <div class="three">
+    {block.items.map((item) => (
+      <div class="flt" style={`margin-top:${item.offset}px`}>
+        <Media {...item.image} ratio={item.ratio === 'tall' ? '4 / 5' : '3 / 4'} sizes="(max-width: 760px) 100vw, 400px" />
+        <a class="cover" href={item.href} aria-label={item.title} tabindex="-1"></a>
+        <h3 class:list={['ttl', item.pill]}>{item.title}</h3>
+        <div class="ov">
+          <p>{item.text}</p>
+          <div class="pills">{item.links.map((l) => <a class="pill" href={l.href}>{l.label}</a>)}</div>
+          <a class="more" href={item.href}>{item.more} <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    ))}
+  </div>
+  {block.audiences.length > 0 && (
+    <div class="aud">
+      {block.audiences.map((a) => (
+        <a class="go box audience" href={a.href}>
+          <span><span class="kicker">{a.kicker}</span><span class="aud-title">{a.title}</span></span>
+          <span class="arr" aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  )}
+</section>
+
+<style>
+  .head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 64px; }
+  .head .h2 { max-width: 620px; }
+  .head p { margin: 0; max-width: 380px; font-size: var(--fs-body); line-height: var(--lh-body); }
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; align-items: start; }
+
+  .flt { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--c-sand); }
+  .flt :global(.media) { border-radius: 0; }
+  .cover { position: absolute; inset: 0; z-index: 1; }
+  .ttl {
+    position: absolute; left: 24px; z-index: 3; margin: 0; background: var(--c-cream); color: var(--c-text);
+    padding: 10px 20px; border-radius: var(--radius-pill); font-weight: 700; font-size: 18px; pointer-events: none; white-space: nowrap;
+  }
+  .ttl.bottom { bottom: 24px; }
+  .ttl.top { top: 24px; }
+  .ov {
+    position: absolute; inset: 0; z-index: 2; background: rgba(157, 86, 86, 0.9); color: var(--c-cream); opacity: 0;
+    transition: opacity 0.35s; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+    gap: 16px; padding: 40px; pointer-events: none; font-size: 17px; line-height: 1.55;
+  }
+  .flt:hover .ov, .flt:focus-within .ov { opacity: 1; pointer-events: auto; }
+  .ov p { margin: 0; }
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    color: var(--c-cream); border: 1px solid rgba(255, 250, 245, 0.7); padding: 8px 14px; border-radius: var(--radius-pill);
+    font-size: 14px; font-weight: 600; min-height: var(--tap); display: inline-flex; align-items: center;
+  }
+  .pill:hover { background: var(--c-cream); color: var(--c-red); }
+  .more { color: var(--c-cream); font-weight: 700; }
+  .more:hover { color: var(--c-cream); text-decoration: underline; }
+
+  .aud { margin-top: 88px; display: flex; flex-wrap: wrap; gap: 20px; }
+  .audience { flex: 1 1 452px; /* 380 px + padding */ padding: 32px 36px; color: var(--c-text); display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+  .audience .kicker { display: block; }
+  .aud-title { display: block; margin-top: 8px; font-size: 20px; font-weight: 600; }
+  .audience .arr { font-size: 24px; color: var(--c-red); }
+
+  @media (hover: none) { .ov { display: none; } }
+  @media (max-width: 760px) {
+    .three { grid-template-columns: minmax(0, 1fr); }
+    .flt { margin-top: 0 !important; }
+  }
+  @media (max-width: 640px) { .ttl { white-space: normal; font-size: 14px; } }
+</style>

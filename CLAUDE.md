@@ -14,6 +14,10 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Ét `<h1>` pr. side. Semantisk HTML, `lang="da"`, alt-tekster, synligt fokus, knapper/links mindst 44 px.
 - Billeder via Astros billedkomponent (moderne formater, korrekte størrelser, lazy loading under folden).
 - `npm run build` skal gå igennem uden fejl før hver commit.
+- Sideopbygning: hver side er en JSON-fil i `src/content/sider/` med `url`, `seo`, `breadcrumbs` og en liste af sektioner (`blocks`). Hver sektionstype har et skema i `src/content.config.ts` og en komponent i `src/components/blocks/`. Menu, kontakt og footer ligger i `src/content/site/site.json`.
+- `scripts/convert-design.py` lavede sidernes JSON ud fra designfilerne (kræver Python med BeautifulSoup). Kør den kun igen, hvis designet ændres, og tjek forskellen bagefter: den overskriver sidernes JSON. Firmatøj, Inspiration og Tak er skrevet i hånden.
+- Formularer (Kontakt og produktsiden) sendes via Netlify Forms og viser `/tak/` bagefter.
+- Muleposerne i toppen af Merchandise skifter blødt; tempoet sættes med `interval` (sek. pr. billede) i `merchandise.json`.
 
 ## Design (besluttet)
 - Font: Montserrat overalt. Overskrifter Light 300 med nøgleord i Bold 700. Menu Bold 700.
@@ -34,6 +38,9 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Firmatøj: Profiltøj, Arbejdstøj, Sport og fritid, Jakker og overtøj, Accessories, Logo og broderi
 - Inspiration (cases: Bech-Bruun, Systematic, Norlys Energy, Keepit), Om os (MarkOn og processen, Kataloger, Besøg vores showroom), Kontakt (formular og direkte kontakt)
 - URL'er: små bogstaver, danske ord uden æøå (ae, oe, aa), bindestreger. Redirects fra det nuværende site laves efter Sigurds migreringsplan.
+- Foreløbige URL'er (afstemmes med migreringsplanen): `/merchandise/`, `/merchandise/messer-og-events/`, `/merchandise/den-lille-ekstra/`, `/merchandise/krus-med-logo/`, `/firmagaver/`, `/firmajulegaver/`, `/firmagaver/kundegaver/`, `/firmagaver/saesongaver/`, `/firmagaver/barselsgaver/`, `/firmagaver/jubilaeumsgaver/`, `/firmatoej/`, `/inspiration/`, `/om-os/`, `/kontakt/`.
+- Firmatøj og Inspiration er ikke tegnet endnu og vises som korte "på vej"-sider (besluttet af Casper).
+- F-versionerne af Julegaver, Barselsgaver og Jubilæum bruges, ikke V-varianterne (besluttet af Casper).
 
 ## Tekst
 - Tone: en dygtig, imødekommende og jordnær rådgiver. Du/I og vi/MarkOn. Bestil frem for køb, kan frem for skal. Ingen humor, emojis eller buzzwords.

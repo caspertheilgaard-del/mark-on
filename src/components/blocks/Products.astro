@@ -1,0 +1,32 @@
+---
+// Produktvarianter i tre kolonner (produktside).
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'products'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:136px">
+  <h2 class="h2" set:html={rich(block.heading)} />
+  <p class="intro">{block.text}</p>
+  <div class="three">
+    {block.items.map((item) => (
+      <div>
+        <Media {...item.image} sizes="(max-width: 760px) 100vw, 400px" />
+        <h3>{item.title}</h3>
+        <p class="txt">{item.text}</p>
+        <p class="kicker meta">{item.meta}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .h2 { margin-bottom: 14px; }
+  .intro { margin: 0 0 56px; font-size: var(--fs-lead); line-height: var(--lh-body); max-width: 560px; }
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+  h3 { margin: 22px 0 6px; font-size: 22px; font-weight: 600; }
+  .txt { margin: 0 0 12px; font-size: 15px; line-height: var(--lh-body); }
+  .meta { letter-spacing: 2px; }
+  @media (max-width: 760px) { .three { grid-template-columns: minmax(0, 1fr); } }
+</style>

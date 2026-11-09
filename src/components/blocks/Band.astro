@@ -1,0 +1,54 @@
+---
+// Bånd på tværs med overskrift, evt. proceslinje ("Hele vejen"), tekst og knap.
+import Process from '../Process.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'band'> }
+const { block } = Astro.props;
+const large = block.variant === 'large';
+const hasAfter = Boolean(block.steps && (block.after.length || block.cta || block.links.length));
+---
+<section class="band">
+  <div class:list={['container', 'band-inner', block.variant]} style={large ? '--pt:120px;--pb:112px' : ''}>
+    <div class="text-col intro" style={block.steps && !large ? 'margin-bottom:32px' : ''}>
+      <h2 class="h2" set:html={rich(block.heading)} />
+      {block.body.map((p) => <p class="body-text">{p}</p>)}
+    </div>
+    {block.lead && <p class="lead-in">{block.lead}</p>}
+
+    {block.steps && <Process steps={block.steps} size={large ? 22 : 20} />}
+
+    {hasAfter && (
+      <div class="text-col after">
+        {block.after.map((p) => <p class="body-text">{p}</p>)}
+        {block.links.map((l) => <p class="link"><a class="go" href={l.href}>{l.label} <span class="arr" aria-hidden="true">→</span></a></p>)}
+        {block.cta && <a class="btn cta" href={block.cta.href}>{block.cta.label}</a>}
+      </div>
+    )}
+
+    {!block.steps && (
+      <>
+        {block.cta && <a class="btn solo-cta" href={block.cta.href}>{block.cta.label}</a>}
+        {block.links.map((l) => <p class="solo-link"><a class="go" href={l.href}>{l.label} <span class="arr" aria-hidden="true">→</span></a></p>)}
+      </>
+    )}
+
+    {block.link && <p class="after-steps"><a class="go" href={block.link.href}>{block.link.label} <span class="arr" aria-hidden="true">→</span></a></p>}
+  </div>
+</section>
+
+<style>
+  .lead-in { margin: 0 0 24px; font-size: var(--fs-body); font-weight: 600; }
+  .after { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--c-line); }
+  .after > :first-child { margin-top: 0; }
+  .link { margin: 16px 0 0; }
+  .cta { margin-top: 28px; }
+  .solo-cta { margin-top: 36px; }
+  .solo-link { margin: 28px 0 0; }
+  .after-steps { margin: 48px 0 0; }
+
+  /* Stor variant (forside, messer): overskrift med tekst lige under, større proceslinje */
+  .large .intro { max-width: none; }
+  .large .h2 { margin-bottom: 14px; }
+  .large .body-text { margin: 0 0 48px; font-size: var(--fs-lead); max-width: 600px; }
+</style>

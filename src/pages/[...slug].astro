@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Blocks from '../components/Blocks.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('sider');
+  return pages.map((page) => ({
+    params: { slug: page.data.url.replace(/^\/|\/$/g, '') || undefined },
+    props: { page: page.data },
+  }));
+}
+
+const { page } = Astro.props;
+---
+<Base title={page.seo.title} description={page.seo.description} current={page.menu} scale={page.scale}>
+  {page.breadcrumbs && <Breadcrumbs items={page.breadcrumbs} />}
+  <Blocks blocks={page.blocks} />
+</Base>

@@ -1,0 +1,51 @@
+---
+// Case-mosaik på forsiden: ét stort billede og tre mindre, i fuld bredde.
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'cases'> }
+const { block } = Astro.props;
+---
+<section aria-labelledby="cases-heading">
+  <div class="container band-inner head" style="--pt:120px;--pb:48px">
+    <h2 class="h2" id="cases-heading" set:html={rich(block.heading)} />
+    <a class="go" href={block.link.href}>{block.link.label} <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+  <div class="cases">
+    {block.items.map((c) => (
+      <a class:list={['case', c.size]} href={c.href}>
+        <Media {...c.image} ratio="auto" sizes={c.size === 'small' ? '(max-width: 760px) 100vw, 25vw' : '(max-width: 760px) 100vw, 50vw'} style={`height:100%`} />
+        <span class="ttl">{c.title}</span>
+        <span class="ov"><span>{c.text}</span><span class="more">Se casen →</span></span>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .head { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
+  .cases { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 340px; }
+  .case { position: relative; display: block; overflow: hidden; background: var(--c-sand); color: var(--c-text); }
+  .case :global(.media) { border-radius: 0; }
+  .large { grid-column: span 2; grid-row: span 2; }
+  .wide { grid-column: span 2; }
+  .ttl {
+    position: absolute; z-index: 3; left: 20px; bottom: 20px; background: var(--c-cream); color: var(--c-text);
+    padding: 10px 20px; border-radius: var(--radius-pill); font-weight: 700; font-size: 15px; white-space: nowrap;
+  }
+  .large .ttl { left: 24px; bottom: 24px; font-size: 18px; }
+  .ov {
+    position: absolute; inset: 0; z-index: 2; background: rgba(157, 86, 86, 0.9); color: var(--c-cream); opacity: 0;
+    transition: opacity 0.35s; display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+    gap: 16px; padding: 40px; font-size: 17px; line-height: 1.55;
+  }
+  .small .ov { padding: 28px; }
+  .case:hover .ov, .case:focus-visible .ov { opacity: 1; }
+  .more { font-weight: 700; }
+  @media (hover: none) { .ov { display: none; } }
+  @media (max-width: 760px) {
+    .cases { grid-template-columns: minmax(0, 1fr); }
+    .case { grid-column: auto; grid-row: auto; }
+  }
+  @media (max-width: 640px) { .ttl { white-space: normal; font-size: 14px; } }
+</style>

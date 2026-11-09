@@ -3,8 +3,8 @@ import '../styles/global.css';
 import Topbar from '../components/Topbar.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-interface Props { title: string; description: string; current?: string }
-const { title, description, current } = Astro.props;
+interface Props { title: string; description: string; current?: string; scale?: 'standard' | 'large' }
+const { title, description, current, scale = 'standard' } = Astro.props;
 ---
 <!doctype html>
 <html lang="da">
@@ -19,7 +19,7 @@ const { title, description, current } = Astro.props;
     <a class="skip-link" href="#indhold">Gå til indhold</a>
     <Topbar />
     <Header current={current} />
-    <main id="indhold">
+    <main id="indhold" data-scale={scale}>
       <slot />
     </main>
     <Footer />

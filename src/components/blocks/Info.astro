@@ -1,0 +1,37 @@
+---
+// To hvide kort side om side (showroom og kataloger).
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'info'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:120px">
+  <div class="two">
+    {block.cards.map((c) => (
+      <div class="box card">
+        <h2>{c.heading}</h2>
+        <p class="txt">{c.text}</p>
+        {c.extra && <p class="extra">{c.extra}</p>}
+        {c.cta && <a class="btn" href={c.cta.href}>{c.cta.label}</a>}
+        {c.links.length > 0 && (
+          <ul class="links">
+            {c.links.map((l) => <li><a class="go" href={l.href}><span>{l.label}</span><span class="arr" aria-hidden="true">→</span></a></li>)}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .card { padding: 40px; }
+  h2 { margin: 0 0 10px; font-size: 22px; font-weight: 600; color: var(--c-text); }
+  .txt { margin: 0 0 20px; font-size: 16px; line-height: var(--lh-body); }
+  .extra { margin: 0 0 20px; font-size: 15px; line-height: var(--lh-body); }
+  .btn { padding: 15px 26px; }
+  .links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .links a { display: flex; justify-content: space-between; padding: 14px 0; border-top: 1px solid var(--c-line-strong); font-weight: 600; color: var(--c-text); }
+  .links .arr { color: var(--c-red); }
+  @media (max-width: 760px) { .two { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 640px) { .card { padding: 28px; } }
+</style>

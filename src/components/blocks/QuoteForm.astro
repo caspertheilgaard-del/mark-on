@@ -1,0 +1,75 @@
+---
+// Kontakt: "Få et tilbud" med direkte kontakt til venstre og formular til højre.
+// Formularen sendes via Netlify Forms (navn: tilbud).
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'quoteForm'> }
+const { block } = Astro.props;
+---
+<section class="container sec wrap" style="--pt:48px;--pb:120px">
+  <div class="left">
+    <h1 class="h1" set:html={rich(block.heading)} />
+    <p class="lead">{block.body}</p>
+    <div class="channels">
+      {block.channels.map((c) => (
+        <a class="channel" href={c.href}>
+          <span class="icon" aria-hidden="true">
+            {c.icon === 'phone'
+              ? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
+              : <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>}
+          </span>
+          <span><span class="lbl">{c.label}</span><span class="val">{c.value}</span></span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <form class="box form" name="tilbud" method="POST" action="/tak/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="tilbud" />
+    <p class="hp"><label>Udfyld ikke dette felt <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+    <fieldset>
+      <legend>Hvad skal I bruge?</legend>
+      <div class="chips">
+        {block.needs.map((n) => <label class="chk"><input type="checkbox" name="behov" value={n.label} checked={n.checked} />{n.label}</label>)}
+      </div>
+    </fieldset>
+    <div class="two">
+      <label class="fld">Antal<input type="text" name="antal" placeholder="Fx 250 stk." /></label>
+      <label class="fld">Deadline<input type="text" name="deadline" placeholder="Fx 1. marts" /></label>
+      <label class="fld">Navn<input type="text" name="navn" autocomplete="name" required /></label>
+      <label class="fld">Virksomhed<input type="text" name="virksomhed" autocomplete="organization" /></label>
+      <label class="fld">Mail<input type="email" name="mail" autocomplete="email" required /></label>
+      <label class="fld">Telefon (valgfrit)<input type="tel" name="telefon" autocomplete="tel" /></label>
+    </div>
+    <label class="fld">Fortæl kort om opgaven (valgfrit)<textarea name="opgave" placeholder="Fx velkomstpakker til 40 nye medarbejdere"></textarea></label>
+    <button class="form-btn send" type="submit">Send forespørgsel</button>
+    <p class="note">{block.note}</p>
+  </form>
+</section>
+
+<style>
+  .wrap { display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start; }
+  .left { flex: 1 1 380px; min-width: 0; }
+  .lead { margin: 28px 0 0; font-size: var(--fs-lead); line-height: var(--lh-body); max-width: 440px; }
+  .channels { margin-top: 48px; display: grid; gap: 14px; }
+  .channel { display: flex; align-items: center; gap: 16px; background: var(--c-surface); border-radius: var(--radius); padding: 20px 24px; color: var(--c-text); }
+  .icon { width: 44px; height: 44px; border-radius: 50%; background: var(--c-sand); display: grid; place-items: center; color: var(--c-red); flex: 0 0 auto; }
+  .lbl { display: block; font-size: 13px; font-weight: 700; }
+  .val { display: block; font-size: 20px; font-weight: 600; }
+
+  .form { flex: 1 1 696px; /* 600 px + padding (content-box i designet) */ min-width: 0; padding: 48px; display: grid; gap: 20px; box-shadow: var(--shadow-menu); }
+  .hp { position: absolute; left: -9999px; }
+  fieldset { border: 0; margin: 0; padding: 0; }
+  legend { font-size: 13px; font-weight: 700; margin-bottom: 10px; padding: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chk {
+    display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #d9c4b1; border-radius: var(--radius-pill);
+    padding: 11px 18px; font-size: 14px; font-weight: 600; cursor: pointer; min-height: var(--tap);
+  }
+  .chk input { accent-color: var(--c-red); width: 16px; height: 16px; margin: 0; }
+  .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .send { padding: 18px; font-size: 16px; min-height: 52px; }
+  .note { margin: 0; font-size: 14px; line-height: 1.5; }
+  @media (max-width: 760px) { .two { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 640px) { .form { padding: 24px; } }
+</style>

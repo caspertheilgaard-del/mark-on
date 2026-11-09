@@ -1,8 +1,8 @@
 ---
 // Proceslinje ("Hele vejen"): linjen tegnes, prikkerne popper op, trinene toner frem.
 // Vandret på desktop/tablet, lodret på mobil. Respekterer prefers-reduced-motion.
-interface Props { steps: { title: string; text: string }[] }
-const { steps } = Astro.props;
+interface Props { steps: { kicker?: string; title: string; text: string }[]; size?: number }
+const { steps, size = 20 } = Astro.props;
 const n = steps.length;
 const x0 = 16, x1 = 1286, y = 40;
 // Som i designet: prikkerne står med fast afstand, og linjen løber et stykke videre efter sidste prik.
@@ -23,9 +23,10 @@ const delays = steps.map((_, i) => (-0.5 + (2.9 * i) / Math.max(n - 1, 1)).toFix
   <path class="draw" pathLength="1000" d={d} fill="none" stroke="var(--c-red)" stroke-width="3" stroke-linecap="round"></path>
   {xs.map((x, i) => <circle class="pop" cx={x.toFixed(0)} cy={y} r="12" fill="var(--c-red)" style={`animation-delay:${delays[i]}`}></circle>)}
 </svg>
-<ol class="steps" style={`--n:${n}`}>
+<ol class="steps" style={`--n:${n};--ts:${size}px`}>
   {steps.map((s, i) => (
     <li class="stepin" style={`animation-delay:${delays[i]}`}>
+      {s.kicker && <p class="k">{s.kicker}</p>}
       <p class="t">{s.title}</p>
       <p class="x">{s.text}</p>
     </li>
@@ -38,7 +39,8 @@ const delays = steps.map((_, i) => (-0.5 + (2.9 * i) / Math.max(n - 1, 1)).toFix
     list-style: none; margin: 24px 0 0; padding: 0; display: grid;
     grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 32px;
   }
-  .t { margin: 0; font-size: 20px; font-weight: 600; color: var(--c-red); }
+  .k { margin: 0 0 8px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
+  .t { margin: 0; font-size: var(--ts); font-weight: 600; color: var(--c-red); }
   .x { margin: 8px 0 0; font-size: 15px; line-height: var(--lh-body); }
 
   @keyframes draw { 0% { stroke-dashoffset: 1000; } 55%, 100% { stroke-dashoffset: 0; } }

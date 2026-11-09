@@ -1,0 +1,32 @@
+---
+// Bånd med overskrift til venstre og hvide kort til højre (fx logometoder).
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'split'> }
+const { block } = Astro.props;
+---
+<section class="band">
+  <div class="container band-inner wrap" style="--pt:112px;--pb:112px">
+    <div class="left">
+      <h2 class="h2" set:html={rich(block.heading)} />
+      <p class="intro">{block.text}</p>
+    </div>
+    <div class="two">
+      {block.cards.map((c) => (
+        <div class="box card"><p class="t">{c.title}</p><p class="x">{c.text}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .wrap { display: flex; flex-wrap: wrap; gap: 64px; }
+  .left { flex: 1 1 380px; min-width: 0; }
+  .h2 { margin-bottom: 14px; }
+  .intro { margin: 0; font-size: var(--fs-lead); line-height: var(--lh-body); }
+  .two { flex: 1 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .card { padding: 32px; }
+  .t { margin: 0; font-size: 22px; font-weight: 600; }
+  .x { margin: 10px 0 0; font-size: 15px; line-height: var(--lh-body); }
+  @media (max-width: 760px) { .two { grid-template-columns: minmax(0, 1fr); } }
+</style>
