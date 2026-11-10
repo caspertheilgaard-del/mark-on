@@ -1,0 +1,208 @@
+{
+  "url": "/firmagaver/kundegaver/",
+  "seo": {
+    "title": "Kundegaver med logo og personlig hilsen | MarkOn",
+    "description": "Kundegaver, der siger tak for samarbejdet. Få rådgivning om gavevalg, logo, indpakning og levering hos MarkOn."
+  },
+  "menu": "Firmagaver",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Firmagaver",
+      "href": "/firmagaver/"
+    },
+    {
+      "label": "Kundegaver"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "standard",
+      "heading": "Kundegaver, der siger tak **for samarbejdet**",
+      "body": [
+        "Et godt samarbejde fortjener en tak. En kundegave kan markere et fælles resultat, fejre en milepæl eller vise, at I sætter pris på relationen.",
+        "Hos MarkOn hjælper vi jer med at finde kundegaver, der passer til modtageren og anledningen. I får personlig rådgivning om gavevalg og hjælp fra den første idé til indpakning og levering."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud på kundegaver",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "image",
+        "image": {
+          "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
+          "alt": "Pastilæsker med kundens logo"
+        }
+      }
+    },
+    {
+      "type": "cards",
+      "heading": "Find en kundegave, der passer **til relationen**",
+      "body": [
+        "Den rette kundegave tager udgangspunkt i den, der skal have den. Skal gaven glæde en bestemt kontaktperson, eller skal den kunne deles af et helt team? Og hvad vil I gerne sige med den?",
+        "Vi hjælper jer med at vælge ud fra modtageren, anledningen og jeres budget. Det kan være noget til arbejdsdagen, hjemmet, fritiden eller noget godt at spise, som kan deles på kontoret."
+      ],
+      "cards": [
+        {
+          "heading": "En tak for et godt samarbejde",
+          "body": [
+            "Når et projekt er afsluttet, eller I har nået et fælles mål, kan en gave være en personlig måde at sige tak på. En hilsen, der nævner det konkrete samarbejde, gør det tydeligt, hvorfor I har tænkt på modtageren.",
+            "Vi hjælper jer med at finde en gave, der passer til relationen. Det kan være en gave til den person, I har arbejdet tæt sammen med, eller en fælles gave til alle, der har bidraget."
+          ]
+        },
+        {
+          "heading": "Kundegaver til mærkedage og milepæle",
+          "body": [
+            "Et jubilæum, en åbning eller en flytning kan være en anledning til at sende en hilsen. Her kan kundegaven vise, at I følger med og glæder jer på kundens vegne.",
+            "Vi rådgiver om gaver, der passer til begivenheden og modtageren. Kort og indpakning kan tænkes med, så gaven er klar til at blive overrakt eller sendt."
+          ]
+        },
+        {
+          "heading": "Gaver, der kan bruges eller deles",
+          "body": [
+            "En drikkedunk, en taske eller et produkt til hjemmet kan give modtageren glæde i hverdagen. En gave med chokolade eller andre spiselige produkter kan være oplagt, når I vil takke flere personer på én gang.",
+            "Vi hjælper jer med at vurdere mulighederne. Skal gaven deles, tager vi blandt andet højde for antallet af modtagere og eventuelle ønsker til indholdet."
+          ]
+        },
+        {
+          "heading": "Logo og en personlig hilsen",
+          "body": [
+            "Jeres logo kan være en del af kundegaven, men det behøver ikke stå på selve produktet. Nogle gange passer det bedre på kortet eller indpakningen.",
+            "Vi rådgiver om, hvordan jeres brand kan indgå naturligt. En personlig tekst kan samtidig sætte ord på det I gerne vil sige, og gøre gaven relevant for netop den kunde."
+          ],
+          "link": {
+            "label": "Få inspiration til kundegaver",
+            "href": "#"
+          }
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "[BILLEDE: KUNDEGAVE MED KORT]",
+          "placeholder": "[BILLEDE: KUNDEGAVE MED KORT]"
+        },
+        {
+          "alt": "[BILLEDE: GAVE TIL ET HELT TEAM]",
+          "placeholder": "[BILLEDE: GAVE TIL ET HELT TEAM]"
+        },
+        {
+          "alt": "[BILLEDE: LOGO PÅ INDPAKNING]",
+          "placeholder": "[BILLEDE: LOGO PÅ INDPAKNING]"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "variant": "standard",
+      "heading": "Fra gaveidé til **levering hos kunden**",
+      "body": [
+        "I behøver ikke have valgt gaven, før I kontakter os. Fortæl os om modtageren og anledningen, så hjælper vi med konkrete forslag."
+      ],
+      "lead": "Sammen afklarer vi:",
+      "steps": [
+        {
+          "title": "Modtagerne",
+          "text": "Er gaven til én person, flere kontaktpersoner eller et helt team?"
+        },
+        {
+          "title": "Anledningen",
+          "text": "Hvad vil I gerne markere eller sige tak for?"
+        },
+        {
+          "title": "Budget og antal",
+          "text": "Hvad er budgettet pr. gave, og hvor mange har I brug for?"
+        },
+        {
+          "title": "Det personlige udtryk",
+          "text": "Skal der være logo, et kort eller særlig indpakning?"
+        },
+        {
+          "title": "Leveringen",
+          "text": "Skal I selv overrække gaverne, eller skal de sendes til modtagerne?"
+        }
+      ],
+      "after": [
+        "Vi hjælper med at tænke gavevalg, pakning og levering sammen, så løsningen passer til jeres behov og tidsplan.",
+        "Leder I efter kundegaver til en bestemt sæson? Vi hjælper også med julegaver og hilsner til påske og sommer."
+      ],
+      "links": [
+        {
+          "label": "Se julegaver til kunder og samarbejdspartnere",
+          "href": "/firmajulegaver/"
+        },
+        {
+          "label": "Se sæsongaver til påske og sommer",
+          "href": "/firmagaver/saesongaver/"
+        }
+      ],
+      "cta": {
+        "label": "Tal med os om jeres kundegaver",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Spørgsmål om **kundegaver**",
+      "items": [
+        {
+          "question": "Hvad er en god kundegave?",
+          "answer": [
+            "En god kundegave passer til modtageren og den relation I har. Til en fast kontaktperson kan en gave til hjemmet eller fritiden være relevant. Til et team kan noget, der kan deles på arbejdspladsen, være en god løsning.",
+            "Vi hjælper jer med at vælge en gave, der giver mening ud fra anledningen og jeres budget."
+          ]
+        },
+        {
+          "question": "Kan vi få kundegaver med logo?",
+          "answer": [
+            "Ja, på udvalgte produkter er der mulighed for at tilføje logo. Metoden afhænger af produktet og materialet.",
+            "Vi rådgiver om placering og udtryk og hjælper også med alternativer, hvor logoet indgår på kortet eller indpakningen."
+          ]
+        },
+        {
+          "question": "Kan I hjælpe med at sende gaverne til kunderne?",
+          "answer": [
+            "Ja, vi hjælper med at planlægge pakning og forsendelse til jeres kunder. Fortæl os, hvor mange modtagere der er, hvor gaverne skal sendes hen, og hvornår de skal være fremme.",
+            "Så afklarer vi de praktiske detaljer og aftaler en løsning med jer."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for firmagaver",
+        "href": "/firmagaver/"
+      }
+    },
+    {
+      "type": "next",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud på kundegaver",
+          "text": "Skriv antal og deadline",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Julegaver",
+          "text": "Til kunder og medarbejdere",
+          "href": "/firmajulegaver/"
+        },
+        {
+          "title": "Jubilæumsgaver",
+          "text": "Fejr en milepæl",
+          "href": "/firmagaver/jubilaeumsgaver/"
+        },
+        {
+          "title": "Alle firmagaver",
+          "text": "Firmagaver",
+          "href": "/firmagaver/"
+        }
+      ]
+    }
+  ]
+}

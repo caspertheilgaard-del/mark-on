@@ -1,0 +1,37 @@
+---
+// Tegner en sides sektioner i rækkefølge. Ny sektionstype: tilføj skema i content.config.ts og komponent her.
+import type { Block } from '../lib/types';
+import Hero from './blocks/Hero.astro';
+import Cards from './blocks/Cards.astro';
+import Tiles from './blocks/Tiles.astro';
+import Band from './blocks/Band.astro';
+import Categories from './blocks/Categories.astro';
+import Logos from './blocks/Logos.astro';
+import Cases from './blocks/Cases.astro';
+import Quote from './blocks/Quote.astro';
+import Case from './blocks/Case.astro';
+import Features from './blocks/Features.astro';
+import Products from './blocks/Products.astro';
+import Split from './blocks/Split.astro';
+import Values from './blocks/Values.astro';
+import Team from './blocks/Team.astro';
+import Info from './blocks/Info.astro';
+import QuoteForm from './blocks/QuoteForm.astro';
+import Locations from './blocks/Locations.astro';
+import Product from './blocks/Product.astro';
+import Faq from './blocks/Faq.astro';
+import Next from './blocks/Next.astro';
+
+const components = {
+  hero: Hero, cards: Cards, tiles: Tiles, band: Band, categories: Categories, logos: Logos, cases: Cases,
+  quote: Quote, case: Case, features: Features, products: Products, split: Split, values: Values, team: Team,
+  info: Info, quoteForm: QuoteForm, locations: Locations, product: Product, faq: Faq, next: Next,
+} as const;
+
+interface Props { blocks: Block[] }
+const { blocks } = Astro.props;
+---
+{blocks.map((block) => {
+  const Component = components[block.type] as any;
+  return <Component block={block} />;
+})}

@@ -1,0 +1,202 @@
+{
+  "url": "/merchandise/messer-og-events/",
+  "seo": {
+    "title": "Merchandise til messer og events | MarkOn",
+    "description": "Giveaways, tøj til standen og merchandise til kick off og firmafester. MarkOn samler det hele, så alt er klar til tiden."
+  },
+  "scale": "large",
+  "menu": "Merchandise",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Merchandise",
+      "href": "/merchandise/"
+    },
+    {
+      "label": "Messer og events"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "large",
+      "eyebrow": "Messer · Kick off · Firmafester",
+      "heading": "Merchandise til **messer og events**",
+      "body": [
+        "Før en messe er der kort tid og mange ting at nå. Vi samler giveaways, tøj til standen og emballage i én pakke, så alt er klar til tiden."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud til messen",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "pair",
+        "align": "start",
+        "items": [
+          {
+            "image": {
+              "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+              "alt": "Messepakke med flaske, krus, æske og nøgleringe"
+            },
+            "shape": "portrait",
+            "grow": 1.3,
+            "offsetTop": 0,
+            "offsetBottom": 0
+          },
+          {
+            "image": {
+              "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
+              "alt": "Mulepose med tryk til messen"
+            },
+            "shape": "portrait",
+            "grow": 1.0,
+            "offsetTop": 96,
+            "offsetBottom": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "features",
+      "heading": "Det får I med **til eventet**",
+      "text": "Vælg det, I har brug for. Vi anbefaler de produkter, folk tager med hjem og bruger.",
+      "items": [
+        {
+          "image": {
+            "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
+            "alt": "Krus med logo"
+          },
+          "title": "Giveaways til standen",
+          "text": "Krus, flasker, muleposer og nøglesnore med jeres logo.",
+          "label": "Typisk antal",
+          "value": "[ANTAL] til [ANTAL] stk. pr. messe"
+        },
+        {
+          "image": {
+            "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
+            "alt": "T-shirt med tryk"
+          },
+          "title": "Tøj til jeres folk",
+          "text": "T-shirts, polo og jakker, så standen ser ens og professionel ud.",
+          "label": "Logometode",
+          "value": "Broderi eller tryk"
+        },
+        {
+          "image": {
+            "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
+            "alt": "Pastilæske med logo"
+          },
+          "title": "Kick off og firmafester",
+          "text": "Noget at samles om og tage med hjem, med dagens budskab på.",
+          "label": "Levering",
+          "value": "Til kontoret eller stedet for festen"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "variant": "large",
+      "heading": "Sådan når I det **til tiden**",
+      "body": [
+        "Jo før I kontakter os, jo flere muligheder har I. Men har I travlt, så ring. Det meste kan lade sig gøre."
+      ],
+      "steps": [
+        {
+          "kicker": "[8] uger før",
+          "title": "Rådgivning",
+          "text": "Vi taler om messen, målgruppen og budgettet."
+        },
+        {
+          "kicker": "[6] uger før",
+          "title": "Design godkendt",
+          "text": "I ser alt med logo og siger ja."
+        },
+        {
+          "kicker": "[3] uger før",
+          "title": "Produktion",
+          "text": "Tryk, broderi og pakning med kvalitetstjek."
+        },
+        {
+          "kicker": "[1] uge før",
+          "title": "Levering",
+          "text": "Til kontoret eller direkte til standen."
+        }
+      ]
+    },
+    {
+      "type": "case",
+      "variant": "banner",
+      "kicker": "Inspiration",
+      "title": "[KUNDE]: messepakke til [ANTAL] gæster på [ANTAL] uger",
+      "href": "#",
+      "linkLabel": "Se casen",
+      "image": {
+        "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+        "alt": "Outdoor sæt med flaske, krus, æske og nøgleringe"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I **tit om**",
+      "items": [
+        {
+          "question": "Hvor tidligt skal vi bestille før en messe?",
+          "answer": [
+            "Vi anbefaler [ANTAL] uger før. Så er der tid til design, produktion og levering uden ekspres."
+          ]
+        },
+        {
+          "question": "Kan I levere direkte til standen?",
+          "answer": [
+            "Ja. Giv os adressen og standnummeret, så aftaler vi levering med messen."
+          ]
+        },
+        {
+          "question": "Hvad er minimumsantallet?",
+          "answer": [
+            "Det afhænger af produktet. Skriv, hvor mange gæster I venter, så foreslår vi et antal."
+          ]
+        }
+      ],
+      "variant": "split",
+      "intro": "Vil du vide mere? Læs guiden om merchandise til messen.",
+      "link": {
+        "label": "Læs guiden",
+        "href": "#"
+      }
+    },
+    {
+      "type": "next",
+      "variant": "large",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud til messen",
+          "text": "Skriv dato og antal gæster",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Krus med logo",
+          "text": "Se produktet",
+          "href": "/merchandise/krus-med-logo/"
+        },
+        {
+          "title": "Tøj til standen",
+          "text": "Firmatøj",
+          "href": "#"
+        },
+        {
+          "title": "Alt merchandise",
+          "text": "Tilbage til området",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}

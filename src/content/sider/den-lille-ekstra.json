@@ -1,0 +1,162 @@
+{
+  "url": "/merchandise/den-lille-ekstra/",
+  "seo": {
+    "title": "Den lille ekstra | MarkOn",
+    "description": "[MANGLER: beskrivelse af kategorien]"
+  },
+  "menu": "Merchandise",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Merchandise",
+      "href": "/merchandise/"
+    },
+    {
+      "label": "[MANGLER: navn på kategorien]"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "standard",
+      "eyebrow": "Merchandise",
+      "heading": "[MANGLER: navn på kategorien] **[MANGLER: nøgleord]**",
+      "body": [
+        "[MANGLER: intro fra Carla, 2 til 3 sætninger om den lille ekstra kundeoplevelse, fx bolsjer, slik eller pastiller i webshoppakker]"
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "pair",
+        "align": "end",
+        "maxWidth": 500,
+        "items": [
+          {
+            "image": {
+              "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
+              "alt": "Pastilæske med kundens logo"
+            },
+            "shape": "tall",
+            "grow": 1.6,
+            "offsetBottom": 0,
+            "dot": true,
+            "shadow": true
+          },
+          {
+            "image": {
+              "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+              "alt": "Gavesæt med drikkedunk, krus og æske"
+            },
+            "shape": "circle",
+            "grow": 1.0,
+            "offsetBottom": 64,
+            "dot": false,
+            "shadow": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "tiles",
+      "heading": "[MANGLER: overskrift fra Carla] **[MANGLER: nøgleord]**",
+      "body": [
+        "[MANGLER: kort tekst fra Carla om, hvornår den lille ekstra giver mening: i webshoppakken, ved levering, til kunder og samarbejdspartnere]"
+      ],
+      "tiles": [
+        {
+          "title": "Pastiller",
+          "image": {
+            "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
+            "alt": "Pastilæske med kundens logo"
+          }
+        },
+        {
+          "title": "Bolsjer",
+          "image": {
+            "alt": "[BILLEDE: BOLSJER MED LOGO]",
+            "placeholder": "[BILLEDE: BOLSJER MED LOGO]"
+          }
+        },
+        {
+          "title": "I webshoppakken",
+          "image": {
+            "alt": "[BILLEDE: DEN LILLE EKSTRA I WEBSHOPPAKKEN]",
+            "placeholder": "[BILLEDE: DEN LILLE EKSTRA I WEBSHOPPAKKEN]",
+            "background": "white"
+          }
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "variant": "standard",
+      "heading": "[MANGLER: overskrift om logo og emballage] **[MANGLER: nøgleord]**",
+      "body": [
+        "[MANGLER: tekst fra Carla om logo på æske, papir eller etiket, antal og levering sammen med pakkerne]"
+      ],
+      "cta": {
+        "label": "Få et tilbud",
+        "href": "/kontakt/"
+      },
+      "links": []
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I **tit om**",
+      "items": [
+        {
+          "question": "[MANGLER: spørgsmål 1 fra Carla og Sigurd]",
+          "answer": [
+            "[MANGLER: svar]"
+          ]
+        },
+        {
+          "question": "[MANGLER: spørgsmål 2]",
+          "answer": [
+            "[MANGLER: svar]"
+          ]
+        },
+        {
+          "question": "[MANGLER: spørgsmål 3]",
+          "answer": [
+            "[MANGLER: svar]"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "next",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud",
+          "text": "Skriv antal og deadline",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Messer og events",
+          "text": "Se mere",
+          "href": "/merchandise/messer-og-events/"
+        },
+        {
+          "title": "Kundegaver",
+          "text": "Firmagaver",
+          "href": "/firmagaver/kundegaver/"
+        },
+        {
+          "title": "Alt merchandise",
+          "text": "Tilbage til området",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}

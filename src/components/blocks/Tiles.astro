@@ -1,0 +1,24 @@
+---
+// Intro og et gitter af billedkort med pille (områdesider).
+import ImageCard from '../ImageCard.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'tiles'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:128px">
+  <div class="text-col intro">
+    <h2 class="h2" set:html={rich(block.heading)} />
+    {block.body.map((p) => <p class="body-text">{p}</p>)}
+  </div>
+  <div class="cats">
+    {block.tiles.map((t) => <ImageCard {...t} />)}
+  </div>
+</section>
+
+<style>
+  .intro { margin-bottom: 56px; }
+  .cats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start; }
+  @media (max-width: 1100px) { .cats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .cats { grid-template-columns: minmax(0, 1fr); } }
+</style>

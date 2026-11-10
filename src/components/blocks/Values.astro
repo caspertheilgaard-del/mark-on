@@ -1,0 +1,58 @@
+---
+// Om os: værdier og historie til venstre, processen som lodret linje til højre.
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'values'> }
+const { block } = Astro.props;
+const delay = (i: number) => (-0.5 + i * 1.1).toFixed(1) + 's';
+---
+<section class="band">
+  <div class="container band-inner wrap" style="--pt:120px;--pb:120px">
+    <div class="left">
+      <h2 class="h2" set:html={rich(block.heading)} />
+      <p class="lead">{block.text}</p>
+      <h3 class="story-h">{block.storyHeading}</h3>
+      <p class="story">{block.story}</p>
+    </div>
+    <div class="right">
+      <h3 class="proc-h">{block.processHeading}</h3>
+      <div class="line-wrap">
+        <svg aria-hidden="true" viewBox="0 0 8 400" preserveAspectRatio="none" class="vline">
+          <line x1="4" y1="0" x2="4" y2="400" stroke="var(--c-line-process)" stroke-width="3" vector-effect="non-scaling-stroke"></line>
+          <line class="vdraw" pathLength="1000" x1="4" y1="0" x2="4" y2="400" stroke="var(--c-red)" stroke-width="3" vector-effect="non-scaling-stroke"></line>
+        </svg>
+        <ol>
+          {block.steps.map((s, i) => (
+            <li class="stepin" style={`animation-delay:${delay(i)}`}>
+              <span class="num">{i + 1}</span><span><b>{s.title}.</b> {s.text}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .wrap { display: flex; flex-wrap: wrap; gap: 72px; }
+  .left { flex: 1 1 420px; min-width: 0; }
+  .right { flex: 1 1 520px; min-width: 0; }
+  .lead { margin: 20px 0 0; font-size: var(--fs-lead); line-height: var(--lh-body); }
+  .story-h { margin: 40px 0 10px; font-size: 22px; font-weight: 600; }
+  .story { margin: 0; font-size: 16px; line-height: var(--lh-body); }
+  .proc-h { margin: 0 0 20px; font-size: 22px; font-weight: 600; }
+  .line-wrap { position: relative; padding-left: 40px; }
+  .vline { position: absolute; left: 10px; top: 30px; width: 8px; height: calc(100% - 60px); }
+  ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+  li { background: var(--c-surface); border-radius: var(--radius); padding: 22px 26px; display: flex; gap: 18px; align-items: baseline; }
+  .num { font-weight: 700; color: var(--c-red); }
+
+  @keyframes vdraw { 0% { stroke-dashoffset: 1000; } 55%, 100% { stroke-dashoffset: 0; } }
+  .vdraw { stroke-dasharray: 1000; animation: vdraw 7s ease-in-out infinite; }
+  @keyframes stepin { 0%, 6% { opacity: 0.3; transform: translateX(-8px); } 14%, 100% { opacity: 1; transform: none; } }
+  .stepin { animation: stepin 7s ease infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .vdraw, .stepin { animation: none; }
+    .vdraw { stroke-dasharray: none; }
+  }
+</style>

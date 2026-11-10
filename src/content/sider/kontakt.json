@@ -1,0 +1,129 @@
+{
+  "url": "/kontakt/",
+  "seo": {
+    "title": "Kontakt og få et tilbud | MarkOn",
+    "description": "Fortæl kort, hvad I har brug for, så vender en rådgiver tilbage med forslag og pris. Ring på 86 19 86 86 eller skriv til salg@markon.as."
+  },
+  "scale": "large",
+  "menu": "Kontakt",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Kontakt"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quoteForm",
+      "heading": "Få et **tilbud**",
+      "body": "Fortæl kort, hvad I har brug for. En rådgiver vender tilbage inden for [ANTAL] timer på hverdage, med forslag og pris.",
+      "channels": [
+        {
+          "icon": "phone",
+          "label": "Ring til os",
+          "value": "86 19 86 86",
+          "href": "tel:+4586198686"
+        },
+        {
+          "icon": "mail",
+          "label": "Skriv til os",
+          "value": "salg@markon.as",
+          "href": "mailto:salg@markon.as"
+        }
+      ],
+      "needs": [
+        {
+          "label": "Merchandise",
+          "checked": true
+        },
+        {
+          "label": "Firmagaver"
+        },
+        {
+          "label": "Firmatøj"
+        },
+        {
+          "label": "Ved ikke endnu"
+        }
+      ],
+      "note": "Du får en kvittering på mail med navnet på den rådgiver, der vender tilbage."
+    },
+    {
+      "type": "locations",
+      "items": [
+        {
+          "name": "Lystrup",
+          "lines": [
+            "Sønderskovvej 7 A",
+            "8520 Lystrup",
+            "Showroom og salg"
+          ]
+        },
+        {
+          "name": "Ikast",
+          "lines": [
+            "Merkurvej 4 B",
+            "7430 Ikast"
+          ],
+          "email": "lagerikast@markon.as"
+        }
+      ],
+      "card": {
+        "kicker": "Vil I se produkterne?",
+        "title": "Besøg vores showroom",
+        "href": "/om-os/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I **tit om**",
+      "items": [
+        {
+          "question": "Hvor hurtigt svarer I?",
+          "answer": [
+            "Inden for [ANTAL] timer på hverdage. Haster det, så ring på 86 19 86 86."
+          ]
+        },
+        {
+          "question": "Hvad skal vi have klar, før vi kontakter jer?",
+          "answer": [
+            "Antal og deadline er nok til at starte. Har I jeres logo som vektorfil, så send det gerne med."
+          ]
+        },
+        {
+          "question": "Sælger I til private?",
+          "answer": [
+            "Nej. MarkOn sælger kun til virksomheder, foreninger og organisationer."
+          ]
+        }
+      ],
+      "spaceAbove": 80,
+      "variant": "split"
+    },
+    {
+      "type": "next",
+      "variant": "large",
+      "kicker": "Vil du hellere kigge først?",
+      "items": [
+        {
+          "title": "Bladr i kataloget",
+          "text": "Se kataloger",
+          "href": "#"
+        },
+        {
+          "title": "Se hvad andre har fået lavet",
+          "text": "Inspiration",
+          "href": "#"
+        },
+        {
+          "title": "Mød rådgiverne",
+          "text": "Om os",
+          "href": "/om-os/"
+        }
+      ]
+    }
+  ]
+}

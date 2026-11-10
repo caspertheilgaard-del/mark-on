@@ -1,0 +1,15 @@
+{
+  "url": "/tak/",
+  "seo": { "title": "Tak for din forespørgsel | MarkOn", "description": "Vi har modtaget din forespørgsel." },
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Tak for din **forespørgsel**",
+      "body": [
+        "Vi har modtaget din forespørgsel. En rådgiver vender tilbage med forslag og pris.",
+        "Haster det, så ring på 86 19 86 86."
+      ],
+      "ctas": [{ "label": "Til forsiden", "href": "/" }]
+    }
+  ]
+}

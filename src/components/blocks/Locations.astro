@@ -1,0 +1,32 @@
+---
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'locations'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:112px;--pb:48px">
+  <div class="three">
+    {block.items.map((loc) => (
+      <div>
+        <h2>{loc.name}</h2>
+        <p>
+          {loc.lines.map((l, i) => <>{i > 0 && <br />}{l}</>)}
+          {loc.email && <><br /><a class="hit" href={`mailto:${loc.email}`}>{loc.email}</a></>}
+        </p>
+      </div>
+    ))}
+    <a class="go box card" href={block.card.href}>
+      <span class="kicker">{block.card.kicker}</span>
+      <span class="t">{block.card.title} <span class="arr" aria-hidden="true">→</span></span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; align-items: start; }
+  h2 { margin: 0 0 12px; font-size: 22px; font-weight: 600; color: var(--c-text); }
+  p { margin: 0; font-size: 16px; line-height: 1.7; }
+  .card { padding: 32px; color: var(--c-text); display: block; }
+  .card .kicker { display: block; }
+  .t { display: block; margin-top: 8px; font-size: 20px; font-weight: 600; }
+  @media (max-width: 760px) { .three { grid-template-columns: minmax(0, 1fr); } }
+</style>

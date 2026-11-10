@@ -1,0 +1,234 @@
+{
+  "url": "/om-os/",
+  "seo": {
+    "title": "Om MarkOn | MarkOn",
+    "description": "MarkOn er rådgivere, designere og lagerfolk i Lystrup og Ikast. Besøg vores showroom eller bladr i vores kataloger."
+  },
+  "scale": "large",
+  "menu": "Om os",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Om os"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "large",
+      "heading": "Om **MarkOn**",
+      "body": [
+        "Vi er rådgivere, designere og lagerfolk i Lystrup og Ikast. Siden [ÅRSTAL] har vi hjulpet virksomheder med tøj, gaver og merchandise, som folk faktisk bruger."
+      ],
+      "ctas": [],
+      "stats": [
+        {
+          "value": "[ANTAL]",
+          "label": "år i branchen"
+        },
+        {
+          "value": "[ANTAL]",
+          "label": "kunder om året"
+        },
+        {
+          "value": "[ANTAL]",
+          "label": "medarbejdere"
+        }
+      ],
+      "media": {
+        "kind": "pair",
+        "align": "end",
+        "items": [
+          {
+            "image": {
+              "alt": "[BILLEDE: HOLDET I SHOWROOMET]",
+              "placeholder": "[BILLEDE: HOLDET I SHOWROOMET]"
+            },
+            "shape": "portrait",
+            "grow": 1.3,
+            "offsetTop": 0,
+            "offsetBottom": 0
+          },
+          {
+            "image": {
+              "alt": "[BILLEDE: LAGERET I IKAST]",
+              "placeholder": "[BILLEDE: LAGERET I IKAST]",
+              "background": "white"
+            },
+            "shape": "circle",
+            "grow": 1.0,
+            "offsetTop": 0,
+            "offsetBottom": 72
+          }
+        ]
+      }
+    },
+    {
+      "type": "values",
+      "heading": "Vi gør brands **nærværende**",
+      "text": "Vi hjælper dig med at finde den rette løsning, sammen. Det betyder én kontakt, ærlige anbefalinger og et design, I godkender, før noget bliver lavet.",
+      "storyHeading": "Vores historie",
+      "story": "[KORT HISTORIE: HVEM STARTEDE MARKON, HVORNÅR OG HVORFOR. 2 TIL 3 SÆTNINGER.]",
+      "processHeading": "MarkOn og processen",
+      "steps": [
+        {
+          "title": "Rådgivning",
+          "text": "Anledning, budget, antal og tidsplan."
+        },
+        {
+          "title": "Design",
+          "text": "I ser produkterne med jeres logo, før I siger ja."
+        },
+        {
+          "title": "Produktion",
+          "text": "Tryk, broderi og pakning med kvalitetstjek."
+        },
+        {
+          "title": "Levering",
+          "text": "Samlet, til flere adresser eller hjem til hver medarbejder."
+        }
+      ]
+    },
+    {
+      "type": "team",
+      "heading": "Mød **os**",
+      "text": "Rådgiverne, der hjælper jer fra første snak til levering.",
+      "members": [
+        {
+          "photo": {
+            "alt": "[FOTO]",
+            "placeholder": "[FOTO]"
+          },
+          "name": "[NAVN]",
+          "role": "Rådgiver · Merchandise",
+          "link": {
+            "label": "Skriv til os",
+            "href": "/kontakt/"
+          }
+        },
+        {
+          "photo": {
+            "alt": "[FOTO]",
+            "placeholder": "[FOTO]",
+            "background": "white"
+          },
+          "name": "[NAVN]",
+          "role": "Rådgiver · Firmagaver",
+          "link": {
+            "label": "Skriv til os",
+            "href": "/kontakt/"
+          }
+        },
+        {
+          "photo": {
+            "alt": "[FOTO]",
+            "placeholder": "[FOTO]"
+          },
+          "name": "[NAVN]",
+          "role": "Rådgiver · Firmatøj",
+          "link": {
+            "label": "Skriv til os",
+            "href": "/kontakt/"
+          }
+        },
+        {
+          "photo": {
+            "alt": "[FOTO]",
+            "placeholder": "[FOTO]",
+            "background": "white"
+          },
+          "name": "[NAVN]",
+          "role": "Design og produktion",
+          "link": {
+            "label": "Skriv til os",
+            "href": "/kontakt/"
+          }
+        }
+      ]
+    },
+    {
+      "type": "info",
+      "cards": [
+        {
+          "heading": "Besøg vores showroom i Lystrup",
+          "text": "Se og mærk produkterne, før I vælger. Skriv til os, så aftaler vi et tidspunkt.",
+          "extra": "Sønderskovvej 7 A, 8520 Lystrup",
+          "cta": {
+            "label": "Kontakt os om et besøg",
+            "href": "/kontakt/"
+          }
+        },
+        {
+          "heading": "Kataloger",
+          "text": "Bladr i udvalget i ro og mag. Kataloget viser produkter og priser uden logo.",
+          "links": [
+            {
+              "label": "Merchandise [ÅR]",
+              "href": "#"
+            },
+            {
+              "label": "Firmagaver og julegaver [ÅR]",
+              "href": "#"
+            },
+            {
+              "label": "Firmatøj [ÅR]",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I **tit om**",
+      "items": [
+        {
+          "question": "Kan vi besøge jeres showroom?",
+          "answer": [
+            "Ja. Skriv til os, så aftaler vi et tidspunkt, og en rådgiver viser jer rundt i showroomet i Lystrup."
+          ]
+        },
+        {
+          "question": "Hvem bliver vores kontaktperson?",
+          "answer": [
+            "I får én fast rådgiver fra første snak til levering."
+          ]
+        },
+        {
+          "question": "Hvor sidder I?",
+          "answer": [
+            "Salg og showroom ligger i Lystrup ved Aarhus. Lageret ligger i Ikast."
+          ]
+        }
+      ],
+      "spaceAbove": 32,
+      "variant": "split"
+    },
+    {
+      "type": "next",
+      "variant": "large",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud",
+          "text": "Skriv antal og deadline",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Se hvad vi har lavet",
+          "text": "Inspiration",
+          "href": "#"
+        },
+        {
+          "title": "Find det rette produkt",
+          "text": "Merchandise",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}

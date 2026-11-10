@@ -1,0 +1,191 @@
+{
+  "url": "/firmagaver/saesongaver/",
+  "seo": {
+    "title": "Påskegaver og sommergaver til medarbejdere | MarkOn",
+    "description": "Sæsongaver til påske og sommer til medarbejdere, kunder og samarbejdspartnere. MarkOn hjælper med gave, hilsen og levering."
+  },
+  "menu": "Firmagaver",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Firmagaver",
+      "href": "/firmagaver/"
+    },
+    {
+      "label": "Sæsongaver"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "standard",
+      "heading": "Sæsongaver til **medarbejdere og kunder**",
+      "body": [
+        "En hilsen før en ferie eller en tak for indsatsen i løbet af året. Sæsongaver er en anledning til at glæde medarbejdere, kunder og samarbejdspartnere og vise, at I tænker på dem. Det kan for eksempel være en påskegave eller en sommergave.",
+        "Hos MarkOn hjælper vi jer med at finde sæsongaver, der passer til modtagerne og jeres budget. Vi rådgiver om gavevalg og hjælper med at få indhold, hilsen, indpakning og levering til at hænge sammen."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud på sæsongaver",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "image",
+        "image": {
+          "src": "../../assets/images/8bb3a7273f669f5d5f55c027b5d7dfb9.jpg",
+          "alt": "Drikkedunk holdt op i sommersol"
+        }
+      }
+    },
+    {
+      "type": "cards",
+      "heading": "Find en gave der passer til **påsken eller sommeren**",
+      "body": [
+        "En sæsongave kan være noget godt at dele, en ting til ferien eller et produkt, der bliver brugt i hverdagen. Det vigtigste er, at gaven giver mening for dem, der skal have den.",
+        "Vi tager udgangspunkt i anledningen, modtagerne og det, I gerne vil sige. Så hjælper vi jer med at vælge en gave, der passer til sæsonen og relationen."
+      ],
+      "cards": [
+        {
+          "heading": "Påskegaver til medarbejdere og kunder",
+          "body": [
+            "Ønsk god påske med en gave, der kan nydes i ferien eller deles på arbejdspladsen. Chokolade, påskeæg og andre søde sager kan være en enkel måde at sende en venlig hilsen på.",
+            "Vi hjælper jer med at finde en påskegave, der passer til antallet af modtagere og jeres budget. Det kan være en gave til hver medarbejder eller en fælles gave til et team hos en kunde."
+          ]
+        },
+        {
+          "heading": "Sommergaver til medarbejdere og samarbejdspartnere",
+          "body": [
+            "Sig tak for indsatsen eller samarbejdet, inden ferien begynder. En sommergave kan være noget til udelivet, strandturen eller en rolig stund derhjemme.",
+            "Det kan for eksempel være et strandhåndklæde, en køletaske eller en gave med noget godt at spise. Vi rådgiver om mulighederne og hjælper jer med at finde indhold, der passer til modtagerne."
+          ]
+        },
+        {
+          "heading": "En personlig hilsen og indpakning",
+          "body": [
+            "Et kort kan sætte ord på, hvorfor I giver gaven. Måske vil I takke medarbejderne for en travl periode eller ønske kunderne en god ferie.",
+            "Vi hjælper med at tænke hilsen og indpakning sammen med gaven. Jeres logo kan indgå på kortet, indpakningen eller udvalgte produkter, alt efter hvad der passer til løsningen."
+          ],
+          "link": {
+            "label": "Få inspiration til firmagaver",
+            "href": "#"
+          }
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "[BILLEDE: PÅSKEGAVE]",
+          "placeholder": "[BILLEDE: PÅSKEGAVE]"
+        },
+        {
+          "alt": "[BILLEDE: SOMMERGAVE MED KØLETASKE]",
+          "placeholder": "[BILLEDE: SOMMERGAVE MED KØLETASKE]"
+        },
+        {
+          "alt": "[BILLEDE: STRANDHÅNDKLÆDE]",
+          "placeholder": "[BILLEDE: STRANDHÅNDKLÆDE]"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "variant": "standard",
+      "heading": "Få sæsongaverne klar **inden ferien**",
+      "body": [
+        "Når gaverne skal gives inden en ferie, er tidspunktet en vigtig del af planlægningen. Måske skal alle medarbejdere have deres gave samme dag, eller måske skal en hilsen nå frem til kunder på flere adresser."
+      ],
+      "lead": "Fortæl os gerne:",
+      "steps": [
+        {
+          "title": "Hvem I vil glæde",
+          "text": "Medarbejdere, kunder eller samarbejdspartnere."
+        },
+        {
+          "title": "Antal og budget",
+          "text": "Hvor mange gaver I har brug for, og hvad budgettet er pr. gave."
+        },
+        {
+          "title": "Jeres ønsker til indhold",
+          "text": "Om gaven skal kunne spises, deles eller bruges over længere tid."
+        },
+        {
+          "title": "Hilsen og branding",
+          "text": "Om I ønsker et kort, logo eller særlig indpakning."
+        },
+        {
+          "title": "Dato og levering",
+          "text": "Hvornår og hvor gaverne skal være fremme."
+        }
+      ],
+      "after": [
+        "Vi kommer med konkrete forslag og afklarer de praktiske detaljer sammen med jer. Har I allerede en idé, tager vi udgangspunkt i den. Har I brug for inspiration, hjælper vi med at finde retningen."
+      ],
+      "links": [],
+      "cta": {
+        "label": "Tal med os om påske- og sommergaver",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Spørgsmål om påskegaver og **sommergaver**",
+      "items": [
+        {
+          "question": "Hvad kan vi give i påskegave eller sommergave?",
+          "answer": [
+            "Til påske kan chokolade og andre spiselige gaver være relevante. Til sommer kan I også overveje produkter til ferie og udeliv, for eksempel håndklæder eller køletasker.",
+            "Valget afhænger af modtagerne og jeres budget. Vi hjælper jer med at finde muligheder, der passer til anledningen."
+          ]
+        },
+        {
+          "question": "Kan vi få gaver med særlige ønsker til indholdet?",
+          "answer": [
+            "Fortæl os, hvis der er allergier, kosthensyn eller bestemte ønsker, vi skal tage højde for. Så undersøger vi mulighederne og afklarer indholdet med jer, inden I vælger gaven.",
+            "Det er også relevant at overveje, om gaven skal deles af flere eller gives til én person."
+          ]
+        },
+        {
+          "question": "Hvornår kan vi bestille sæsongaver?",
+          "answer": [
+            "Kontakt os gerne i god tid før påske eller sommerferien. Tidsplanen afhænger af gavevalget, antallet og jeres ønsker til branding, indpakning og levering.",
+            "Har I en bestemt dato, tager vi udgangspunkt i den og undersøger, hvad der kan lade sig gøre."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for firmagaver",
+        "href": "/firmagaver/"
+      }
+    },
+    {
+      "type": "next",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud på sæsongaver",
+          "text": "Skriv antal og deadline",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Julegaver",
+          "text": "Til medarbejdere og kunder",
+          "href": "/firmajulegaver/"
+        },
+        {
+          "title": "Kundegaver",
+          "text": "Tak for samarbejdet",
+          "href": "/firmagaver/kundegaver/"
+        },
+        {
+          "title": "Alle firmagaver",
+          "text": "Firmagaver",
+          "href": "/firmagaver/"
+        }
+      ]
+    }
+  ]
+}

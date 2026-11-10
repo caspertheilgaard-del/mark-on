@@ -1,0 +1,41 @@
+---
+// Tre hvide kort med rundt billede, tekst og en lille faktalinje (Messer og events).
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'features'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:136px">
+  <h2 class="h2" set:html={rich(block.heading)} />
+  <p class="intro">{block.text}</p>
+  <div class="three">
+    {block.items.map((item) => (
+      <div class="box item">
+        <Media {...item.image} ratio="1 / 1" circle class="icon" widths={[120, 240]} sizes="120px" />
+        <h3>{item.title}</h3>
+        <p class="txt">{item.text}</p>
+        <h4 class="kicker lbl">{item.label}</h4>
+        <p class="val">{item.value}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .h2 { margin-bottom: 14px; }
+  .intro { margin: 0 0 56px; font-size: var(--fs-lead); line-height: var(--lh-body); max-width: 600px; }
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; align-items: start; }
+  .item { padding: 36px; }
+  .item:nth-child(2) { margin-top: 56px; }
+  .item :global(.icon) { width: 120px; height: 120px; }
+  h3 { margin: 24px 0 10px; font-size: 22px; font-weight: 600; }
+  .txt { margin: 0 0 16px; font-size: 15px; line-height: var(--lh-body); }
+  .lbl { margin: 0 0 8px; letter-spacing: 2px; }
+  .val { margin: 0; font-size: 15px; }
+  @media (max-width: 760px) {
+    .three { grid-template-columns: minmax(0, 1fr); }
+    .item:nth-child(2) { margin-top: 0; }
+  }
+  @media (max-width: 640px) { .item { padding: 28px; } }
+</style>

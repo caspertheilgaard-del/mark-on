@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets';
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'hero'> }
+const { block } = Astro.props;
+const { variant, media } = block;
+const ratio = { portrait: '3 / 4', tall: '4 / 5', circle: '1 / 1' } as const;
+---
+<section class:list={['container', 'sec', 'hero', variant]} style="--pt:56px;--pb:128px">
+  <div class="text">
+    {block.eyebrow && <p class="kicker eyebrow">{block.eyebrow}</p>}
+    <h1 class="h1" set:html={rich(block.heading)} />
+    {block.body.map((p) => <p class="lead">{p}</p>)}
+    {block.stats && (
+      <dl class="stats">
+        {block.stats.map((s) => <div><dt>{s.value}</dt><dd>{s.label}</dd></div>)}
+      </dl>
+    )}
+    {block.ctas.length > 0 && (
+      <div class="ctas">{block.ctas.map((c) => <a class="btn" href={c.href}>{c.label}</a>)}</div>
+    )}
+  </div>
+
+  {media?.kind === 'image' && (
+    <div class="media"><div class="single"><Media {...media.image} eager shadow /></div></div>
+  )}
+
+  {media?.kind === 'swap' && (
+    <div class="media swap-wrap">
+      <div class="swap" role="img" aria-label={media.alt} style={`background:${media.background};--n:${media.images.length};--t:${media.interval}s`}>
+        {media.images.map((src, i) => (
+          <Image src={src} alt="" widths={[440, 880]} sizes="(max-width: 640px) 100vw, 440px" loading={i === 0 ? 'eager' : 'lazy'} style={`animation-delay:${i * media.interval}s`} />
+        ))}
+      </div>
+    </div>
+  )}
+
+  {media?.kind === 'collage' && (
+    <div class="media collage">
+      <div class="circle-bg" aria-hidden="true"></div>
+      <Media {...media.images[0]} ratio="3 / 4" class="c1" eager sizes="(max-width: 760px) 46vw, 300px" />
+      <div class="c2">
+        <Media {...media.images[1]} ratio="3 / 4" shadow eager sizes="(max-width: 760px) 40vw, 260px" />
+        <div class="dot" aria-hidden="true" style="right:-44px;bottom:-44px;width:130px;height:130px"></div>
+      </div>
+      <Media {...media.images[2]} ratio="1 / 1" circle class="c3" eager sizes="(max-width: 760px) 26vw, 170px" />
+    </div>
+  )}
+
+  {media?.kind === 'pair' && (
+    <div class:list={['media', 'pair', `align-${media.align}`]} style={media.maxWidth ? `max-width:${media.maxWidth}px;margin-left:auto` : ''}>
+      {media.items.map((item) => (
+        <div class="pair-item" style={`flex:${item.grow};margin-top:${item.offsetTop}px;margin-bottom:${item.offsetBottom}px`}>
+          <Media {...item.image} ratio={ratio[item.shape]} circle={item.shape === 'circle'} shadow={item.shadow} eager sizes="(max-width: 640px) 60vw, 300px" />
+          {item.dot && <div class="dot" aria-hidden="true" style="right:-44px;bottom:-44px;width:130px;height:130px"></div>}
+        </div>
+      ))}
+    </div>
+  )}
+</section>
+
+<style>
+  .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 80px; }
+  .text { flex: 1 1 560px; min-width: 0; max-width: 680px; }
+  .media { flex: 1 1 360px; min-width: 0; }
+  .eyebrow { margin-bottom: 24px; }
+  .lead { margin: 18px 0 0; font-size: var(--fs-lead); line-height: var(--lh-body); }
+  .h1 + .lead { margin-top: 32px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+
+  .large { gap: 72px; }
+  .large .text { flex: 1 1 520px; max-width: none; }
+  .large .lead { max-width: 520px; }
+  .large .media { flex: 1 1 400px; }
+
+  .front { gap: 64px; }
+  .front .text { flex: 1 1 460px; max-width: none; }
+  .front .lead { max-width: 480px; }
+  .front .media { flex: 1 1 520px; }
+
+  .stats { display: flex; flex-wrap: wrap; gap: 40px; margin: 40px 0 0; }
+  .stats dt { font-size: 40px; font-weight: 300; color: var(--c-red); }
+  .stats dd { margin: 0; font-size: 14px; font-weight: 600; }
+
+  .single { max-width: 440px; margin-left: auto; position: relative; }
+
+  .swap-wrap { position: relative; max-width: 480px; margin-left: auto; }
+  .swap {
+    width: 100%; max-width: 440px; aspect-ratio: 4 / 5; margin-left: auto; border-radius: var(--radius);
+    overflow: hidden; position: relative; box-shadow: var(--shadow-image);
+  }
+  /* Bløde skift mellem billederne. Tempo (sek. pr. billede) styres i indholdet. */
+  .swap img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0;
+    animation: swap calc(var(--t) * var(--n)) ease-in-out infinite;
+  }
+  .swap img:first-child { opacity: 1; }
+  @keyframes swap { 0% { opacity: 0; } 5% { opacity: 1; } 20% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .swap img { animation: none; }
+  }
+
+  .collage { position: relative; height: 600px; }
+  .circle-bg { position: absolute; left: 10%; top: 12%; width: 300px; height: 300px; border-radius: 50%; background: var(--c-surface); }
+  .collage :global(.c1) { position: absolute; left: 0; top: 0; width: 46%; }
+  .c2 { position: absolute; right: 0; top: 72px; width: 40%; isolation: isolate; }
+  .collage :global(.c3) { position: absolute; left: 36%; bottom: 0; width: 26%; }
+  .collage :global(img) { box-sizing: border-box; }
+
+  .pair { display: flex; gap: 24px; }
+  .align-start { align-items: flex-start; }
+  .align-end { align-items: flex-end; }
+  .pair-item { min-width: 0; position: relative; isolation: isolate; }
+
+  @media (max-width: 760px) {
+    .collage { height: 420px; }
+  }
+</style>

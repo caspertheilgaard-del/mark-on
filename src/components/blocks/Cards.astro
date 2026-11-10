@@ -1,0 +1,42 @@
+---
+// Intro, hvide tekstkort i to kolonner og evt. et billedgitter (firmagavesiderne).
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'cards'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:128px">
+  <div class="text-col intro" style={`margin-bottom:${block.cards.length ? 56 : 40}px`}>
+    <h2 class="h2" set:html={rich(block.heading)} />
+    {block.body.map((p) => <p class="body-text">{p}</p>)}
+  </div>
+  {block.cards.length > 0 && (
+    <div class="cards">
+      {block.cards.map((card) => (
+        <div class="card">
+          <h3>{card.heading}</h3>
+          {card.body.map((p) => <p>{p}</p>)}
+          {card.link && <p class="card-link"><a class="go" href={card.link.href}>{card.link.label} <span class="arr" aria-hidden="true">→</span></a></p>}
+        </div>
+      ))}
+    </div>
+  )}
+  {block.gallery.length > 0 && (
+    <div class="gallery">
+      {block.gallery.map((img) => <Media {...img} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" />)}
+    </div>
+  )}
+</section>
+
+<style>
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+  .card { background: var(--c-surface); border-radius: var(--radius); padding: 36px 36px 40px; }
+  .card h3 { margin: 0 0 12px; font-size: 22px; font-weight: 600; color: var(--c-text); }
+  .card p { margin: 12px 0 0; font-size: 16px; line-height: var(--lh-body); }
+  .card h3 + p { margin-top: 0; }
+  .card .card-link { margin-top: 20px; }
+  .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 32px; }
+  @media (max-width: 1100px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .cards, .gallery { grid-template-columns: minmax(0, 1fr); } }
+</style>

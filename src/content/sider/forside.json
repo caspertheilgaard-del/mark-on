@@ -1,0 +1,305 @@
+{
+  "url": "/",
+  "seo": {
+    "title": "Firmatøj, firmagaver og merchandise med logo | MarkOn",
+    "description": "MarkOn leverer firmatøj, firmagaver og merchandise med jeres logo. Én kontakt fra idé og design til tryk, pakning og levering."
+  },
+  "scale": "large",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "front",
+      "eyebrow": "Tøj · Gaver · Merchandise",
+      "heading": "Firmatøj, firmagaver og merchandise **med jeres logo**",
+      "body": [
+        "Hos MarkOn hjælper vi med alt fra idé og produktvalg til tryk, pakning og levering. I har én kontakt hele vejen, og I ser produktet med jeres logo, før det bliver lavet."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "collage",
+        "images": [
+          {
+            "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
+            "alt": "Stålkrus med logo"
+          },
+          {
+            "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+            "alt": "Drikkedunk, krus, æske og nøgleringe med logo"
+          },
+          {
+            "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
+            "alt": "Mulepose med tryk"
+          }
+        ]
+      }
+    },
+    {
+      "type": "logos",
+      "label": "Vi hjælper blandt andre",
+      "names": [
+        "SPX",
+        "SEGES",
+        "OK",
+        "AGF",
+        "Advodan",
+        "AgriNord",
+        "Norlys"
+      ]
+    },
+    {
+      "type": "categories",
+      "heading": "Hvad skal I **bruge?**",
+      "text": "Der er mange muligheder. Men bare rolig, vi hjælper dig med at vælge.",
+      "items": [
+        {
+          "title": "Merchandise",
+          "href": "/merchandise/",
+          "text": "Ting, folk bruger, så jeres brand bliver set. Til messen, de nye medarbejdere og det nye brand.",
+          "links": [
+            {
+              "label": "Messer og events",
+              "href": "/merchandise/messer-og-events/"
+            },
+            {
+              "label": "Welcome kits",
+              "href": "#"
+            },
+            {
+              "label": "Employer branding",
+              "href": "#"
+            }
+          ],
+          "more": "Se merchandise",
+          "image": {
+            "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
+            "alt": "Krus med logo"
+          },
+          "ratio": "portrait",
+          "offset": 0,
+          "pill": "bottom"
+        },
+        {
+          "title": "Firmagaver",
+          "href": "/firmagaver/",
+          "text": "Gaver, der bliver husket. Til jul, jubilæer, barsel og jeres bedste kunder.",
+          "links": [
+            {
+              "label": "Julegaver",
+              "href": "/firmajulegaver/"
+            },
+            {
+              "label": "Kundegaver",
+              "href": "/firmagaver/kundegaver/"
+            },
+            {
+              "label": "Jubilæumsgaver",
+              "href": "/firmagaver/jubilaeumsgaver/"
+            }
+          ],
+          "more": "Se firmagaver",
+          "image": {
+            "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+            "alt": "Gavesæt med flaske, krus og æske med logo"
+          },
+          "ratio": "tall",
+          "offset": 96,
+          "pill": "bottom"
+        },
+        {
+          "title": "Firmatøj",
+          "href": "#",
+          "text": "En ensartet og professionel profil i hverdagen, med broderi eller tryk.",
+          "links": [
+            {
+              "label": "Profiltøj",
+              "href": "#"
+            },
+            {
+              "label": "Arbejdstøj",
+              "href": "#"
+            },
+            {
+              "label": "Logo og broderi",
+              "href": "#"
+            }
+          ],
+          "more": "Se firmatøj",
+          "image": {
+            "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
+            "alt": "T-shirt med tryk"
+          },
+          "ratio": "portrait",
+          "offset": 32,
+          "pill": "top"
+        }
+      ],
+      "audiences": [
+        {
+          "kicker": "Arbejder du med marketing?",
+          "title": "Merch til messer, kampagner og nyt brand",
+          "href": "/merchandise/"
+        },
+        {
+          "kicker": "Arbejder du med HR?",
+          "title": "Velkomstpakker, julegaver og jubilæer",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "variant": "large",
+      "heading": "Sådan hjælper vi jer **hele vejen**",
+      "body": [
+        "Én kontakt fra første snak til levering på døren. I skal bare sige ja til designet."
+      ],
+      "steps": [
+        {
+          "title": "Rådgivning",
+          "text": "Anledning, budget, antal og tidsplan. En kort snak er nok."
+        },
+        {
+          "title": "Design",
+          "text": "I ser produkterne med jeres logo, før I siger ja."
+        },
+        {
+          "title": "Produktion",
+          "text": "Tryk, broderi og pakning med kvalitetstjek undervejs."
+        },
+        {
+          "title": "Levering",
+          "text": "Til tiden, samlet eller direkte hjem til hver medarbejder."
+        }
+      ],
+      "link": {
+        "label": "Se hele processen",
+        "href": "/om-os/"
+      }
+    },
+    {
+      "type": "cases",
+      "heading": "Det har vi lavet **sammen**",
+      "link": {
+        "label": "Se al inspiration",
+        "href": "#"
+      },
+      "items": [
+        {
+          "title": "Keepit · Julegave",
+          "text": "[KORT OM CASEN: OPGAVE, ANTAL OG TID]",
+          "href": "#",
+          "image": {
+            "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+            "alt": "Gavesæt med flaske, krus og æske"
+          },
+          "size": "large"
+        },
+        {
+          "title": "Norlys Energy",
+          "text": "[KORT OM CASEN]",
+          "href": "#",
+          "image": {
+            "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
+            "alt": "Pastilæske med Norlys Energy Trading logo"
+          },
+          "size": "small"
+        },
+        {
+          "title": "Systematic",
+          "text": "[KORT OM CASEN]",
+          "href": "#",
+          "image": {
+            "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
+            "alt": "T-shirt med tryk",
+            "position": "center 30%"
+          },
+          "size": "small"
+        },
+        {
+          "title": "Bech-Bruun",
+          "text": "[KORT OM CASEN]",
+          "href": "#",
+          "image": {
+            "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
+            "alt": "Mulepose med tryk"
+          },
+          "size": "wide"
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "text": "“[KUNDECITAT OM SAMARBEJDET MED MARKON]”",
+      "author": "[NAVN], [TITEL] hos [KUNDE]"
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I **tit om**",
+      "items": [
+        {
+          "question": "Hvad laver MarkOn?",
+          "answer": [
+            "Vi leverer firmatøj, firmagaver og merchandise med jeres logo. Vi hjælper fra idé og produktvalg til tryk, pakning og levering."
+          ]
+        },
+        {
+          "question": "Sælger I til private?",
+          "answer": [
+            "Nej. MarkOn sælger kun til virksomheder, foreninger og organisationer."
+          ]
+        },
+        {
+          "question": "Hvor hurtigt kan I levere?",
+          "answer": [
+            "Typisk [ANTAL] hverdage fra godkendt design. Har I en fast deadline, så skriv den. Det meste kan lade sig gøre."
+          ]
+        },
+        {
+          "question": "Kan vi se produktet med vores logo, før vi bestiller?",
+          "answer": [
+            "Ja. I får altid et design med jeres logo til godkendelse, før noget bliver trykt eller broderet."
+          ]
+        }
+      ],
+      "variant": "split",
+      "intro": "Har du spørgsmål? Vi sidder klar til at hjælpe dig.",
+      "cta": {
+        "label": "Skriv til os",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "next",
+      "variant": "large",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud",
+          "text": "Svar inden for [ANTAL] timer",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Ring til os",
+          "text": "86 19 86 86",
+          "href": "tel:+4586198686"
+        },
+        {
+          "title": "Bladr i kataloget",
+          "text": "Se kataloger",
+          "href": "#"
+        },
+        {
+          "title": "Besøg vores showroom",
+          "text": "Lystrup",
+          "href": "/om-os/"
+        }
+      ]
+    }
+  ]
+}
