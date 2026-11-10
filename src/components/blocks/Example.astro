@@ -1,0 +1,25 @@
+---
+// Et eksempel på et forløb i et hvidt kort. Noten gør klart, at det ikke er en kundecase.
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'example'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:128px">
+  <div class="text-col">
+    <h2 class="h2" set:html={rich(block.heading)} />
+    <div class="card">
+      <p class="kicker">{block.kicker}</p>
+      {block.body.map((p) => <p class="txt">{p}</p>)}
+      {block.note && <p class="note">{block.note}</p>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .card { background: var(--c-surface); border-radius: var(--radius); padding: 36px 36px 40px; margin-top: 32px; }
+  .kicker { margin-bottom: 16px; }
+  .txt { margin: 14px 0 0; font-size: var(--fs-body); line-height: var(--lh-body); }
+  .kicker + .txt { margin-top: 0; }
+  .note { margin: 18px 0 0; font-size: 14px; line-height: 1.5; }
+</style>

@@ -1,0 +1,47 @@
+---
+// Bånd med en tjekliste (flueben) eller en nummereret liste og en knap.
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'checklist'> }
+const { block } = Astro.props;
+const numbered = block.variant === 'numbered';
+const List = numbered ? 'ol' : 'ul';
+---
+<section class="band">
+  <div class:list={['container', 'band-inner', block.variant]}>
+    <div class="text-col">
+      <h2 class="h2" set:html={rich(block.heading)} />
+      {block.body.map((p) => <p class="body-text">{p}</p>)}
+      <List class="list">
+        {block.items.map((item, i) => (
+          <li>
+            <span class="mark" aria-hidden="true">
+              {numbered
+                ? i + 1
+                : <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg>}
+            </span>
+            {item.title
+              ? <span><span class="t">{item.title}</span><span class="x">{item.text}</span></span>
+              : <span class="plain">{item.text}</span>}
+          </li>
+        ))}
+      </List>
+      {block.cta && <a class="btn cta" href={block.cta.href}>{block.cta.label}</a>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 16px; }
+  li { display: flex; gap: 16px; align-items: flex-start; font-size: var(--fs-body); line-height: var(--lh-body); }
+  .mark { flex: 0 0 auto; width: 32px; height: 32px; border-radius: 50%; background: var(--c-sand); color: var(--c-red); display: grid; place-items: center; }
+  .plain { padding-top: 3px; }
+  .cta { margin-top: 40px; }
+
+  .numbered .list { margin-top: 40px; gap: 32px; }
+  .numbered li { gap: 24px; }
+  .numbered .mark { width: 48px; height: 48px; background: var(--c-red); color: #fff; font-size: 20px; font-weight: 700; }
+  .t { display: block; font-size: 20px; font-weight: 600; color: var(--c-red); }
+  .x { display: block; margin-top: 6px; font-size: 16px; line-height: var(--lh-body); }
+  .numbered .cta { margin-top: 48px; }
+</style>

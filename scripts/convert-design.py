@@ -2,6 +2,7 @@
 Engangskonvertering: trækker tekster, links og billeder ud af designfilerne i design/pages
 og skriver dem som content collection-filer i src/content/sider/. Teksterne kopieres ordret,
 så der ikke opstår tastefejl. Kør: python3 scripts/convert-design.py
+(Carlas testsider alene: python3 scripts/convert-design.py --kun-varianter)
 """
 import json, re, pathlib
 from bs4 import BeautifulSoup, NavigableString
@@ -216,7 +217,7 @@ def band(sec, variant='standard'):
                 block['cta'] = link(cta[0])
         nxt = steps.find_next_sibling('a')
         if nxt:
-            block['link'] = link(nxt)
+            block['cta' if is_cta(nxt) else 'link'] = link(nxt)
     else:
         cta = [a for a in inner.find_all('a') if is_cta(a)]
         if cta:
@@ -480,7 +481,118 @@ S_PAGES = {
     'S-OmOs.dc.html': ('om-os', 'Om MarkOn | MarkOn', 'MarkOn er rådgivere, designere og lagerfolk i Lystrup og Ikast. Besøg vores showroom eller bladr i vores kataloger.', page_omos),
 }
 
+# ---------- Carlas tekstvarianter (V-filerne), testsider med noindex ----------
+
+def checklist_band(sec):
+    inner = sec.find('div').find('div')
+    h2 = inner.find('h2')
+    lst = inner.find(['ul', 'ol'])
+    numbered = lst.name == 'ol'
+    items = []
+    for li in lst.find_all('li', recursive=False):
+        spans = li.find_all('span', recursive=False)
+        body = spans[1]
+        inner_spans = body.find_all('span', recursive=False)
+        if inner_spans:
+            items.append({'title': plain(inner_spans[0]), 'text': plain(inner_spans[1])})
+        else:
+            items.append({'text': plain(body)})
+    block = {'type': 'checklist', 'variant': 'numbered' if numbered else 'check', 'heading': txt(h2),
+             'body': [txt(p) for p in inner.find_all('p', recursive=False)]}
+    block['items'] = items
+    cta = [a for a in inner.find_all('a') if is_cta(a)]
+    if cta:
+        block['cta'] = link(cta[0])
+    return block
+
+def v_cards(sec):
+    intro = sec.find('h2').parent
+    block = {'type': 'cards', 'variant': 'airy', 'heading': txt(sec.find('h2')), 'body': paras(intro)}
+    pt = re.search(r'padding: (\d+)px', sec.get('style', ''))
+    if pt and int(pt.group(1)):
+        block['spaceAbove'] = int(pt.group(1))
+    cards = []
+    for c in sec.find(class_='cards').find_all('div', recursive=False):
+        card = {'heading': plain(c.find('h3'))}
+        ps = c.find_all('p', recursive=False)
+        body, cl_head = [], None
+        for p in ps:
+            if p.find('a'):
+                card['link'] = link(p.find('a'))
+            elif 'font-weight: 700' in p.get('style', ''):
+                cl_head = plain(p)
+            else:
+                body.append(txt(p))
+        card['body'] = body
+        ul = c.find('ul')
+        if ul:
+            card['checklist'] = {'heading': cl_head, 'items': [plain(li) for li in ul.find_all('li')]}
+        cards.append(card)
+    block['cards'] = cards
+    for d in sec.find_all('div', recursive=False):
+        h3 = d.find('h3', recursive=False)
+        if h3 and d is not intro:
+            a = d.find('a')
+            block['aside'] = {'heading': plain(h3), 'body': txt(h3.find_next_sibling('p')), **({'link': link(a)} if a else {})}
+    cats = sec.find(class_='cats')
+    if cats:
+        block['gallery'] = [img(el) for el in cats.find_all(recursive=False)]
+    return block
+
+def page_v(soup):
+    blocks = []
+    for s in sections(soup):
+        if s.find('h1'):
+            b = hero_standard(s)
+            media = s.find('h1').parent.find_next_sibling('div')
+            el = media.find('img') or media.find('div', attrs={'role': 'img'})
+            b['media'] = {'kind': 'image', 'image': img(el)}
+            blocks.append(b)
+        elif s.get('aria-label') == 'Videre herfra':
+            blocks.append(next_block(s))
+        elif s.find('details'):
+            blocks.append(faq(s))
+        elif 'border-top: 1px solid #efe5da' in s.get('style', ''):
+            if s.find(class_='steps'):
+                blocks.append(band(s))
+            else:
+                blocks.append(checklist_band(s))
+        elif s.find(class_='cards'):
+            blocks.append(v_cards(s))
+        elif s.find(string=re.compile('Et eksempel')):
+            card = s.find('h2').find_next_sibling('div')
+            ps = card.find_all('p', recursive=False)
+            blocks.append({'type': 'example', 'heading': txt(s.find('h2')), 'kicker': plain(ps[0]),
+                           'body': [txt(p) for p in ps[1:-1]], 'note': plain(ps[-1])})
+        else:
+            col = s.find('h2').parent
+            items = [{'heading': plain(h3), 'text': txt(h3.find_next_sibling('p'))} for h3 in col.find_all('h3')]
+            block = {'type': 'topics', 'heading': txt(s.find('h2')), 'items': items}
+            cats = s.find(class_='cats')
+            if cats:
+                block['gallery'] = [img(el) for el in cats.find_all(recursive=False)]
+            blocks.append(block)
+    return blocks
+
+V_PAGES = {
+    'V-Julegaver.dc.html': ('firmajulegaver-variant', '/firmajulegaver/variant/', 'Firmajulegaver, der er klar til tiden | MarkOn', 'Testside med Carlas tekstvariant til julegavesiden.'),
+    'V-Barselsgaver.dc.html': ('barselsgaver-variant', '/firmagaver/barselsgaver/variant/', 'Barselsgaver til medarbejdere | MarkOn', 'Testside med Carlas tekstvariant til barselsgavesiden.'),
+    'V-Jubilaeum.dc.html': ('jubilaeumsgaver-variant', '/firmagaver/jubilaeumsgaver/variant/', 'Jubilæumsgaver, der siger tak for årene | MarkOn', 'Testside med Carlas tekstvariant til jubilæumsgavesiden.'),
+}
+
+def convert_v():
+    for f, (slug, u, title, desc) in V_PAGES.items():
+        soup = soup_of(f)
+        cr = crumbs(soup)
+        data = {'url': u, 'noindex': True, 'seo': {'title': title, 'description': desc}, 'menu': cr[1]['label'], 'breadcrumbs': cr,
+                'blocks': page_v(soup)}
+        write(f, slug, data)
+
 if __name__ == '__main__':
+    import sys
+    if '--kun-varianter' in sys.argv:
+        convert_v()
+        sys.exit()
     OUT.mkdir(parents=True, exist_ok=True)
     for f, (slug, title, desc) in SEO.items():
         soup = soup_of(f)

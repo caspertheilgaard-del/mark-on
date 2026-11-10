@@ -6,7 +6,9 @@ import type { BlockOf } from '../../lib/types';
 interface Props { block: BlockOf<'band'> }
 const { block } = Astro.props;
 const large = block.variant === 'large';
-const hasAfter = Boolean(block.steps && (block.after.length || block.cta || block.links.length));
+const hasAfter = Boolean(block.steps && (block.after.length || block.links.length));
+// Kun en knap efter proceslinjen (ingen tekst): knappen står alene med luft over.
+const ctaAfterSteps = Boolean(block.steps && block.cta && !hasAfter);
 ---
 <section class="band">
   <div class:list={['container', 'band-inner', block.variant]} style={large ? '--pt:120px;--pb:112px' : ''}>
@@ -26,6 +28,8 @@ const hasAfter = Boolean(block.steps && (block.after.length || block.cta || bloc
       </div>
     )}
 
+    {ctaAfterSteps && <a class="btn steps-cta" href={block.cta!.href}>{block.cta!.label}</a>}
+
     {!block.steps && (
       <>
         {block.cta && <a class="btn solo-cta" href={block.cta.href}>{block.cta.label}</a>}
@@ -44,6 +48,7 @@ const hasAfter = Boolean(block.steps && (block.after.length || block.cta || bloc
   .link { margin: 16px 0 0; }
   .cta { margin-top: 28px; }
   .solo-cta { margin-top: 36px; }
+  .steps-cta { margin-top: 56px; }
   .solo-link { margin: 28px 0 0; }
   .after-steps { margin: 48px 0 0; }
 
