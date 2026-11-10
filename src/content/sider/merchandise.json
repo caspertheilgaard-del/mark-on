@@ -33,6 +33,7 @@
         "kind": "swap",
         "alt": "Muleposer med forskellige kunders logoer og tryk",
         "background": "#c4664e",
+        "interval": 0.3,
         "images": [
           "../../assets/images/5dc7f1a9bcdb4b3a24279a93e3634cc0.jpg",
           "../../assets/images/f343762a23249163b3bebf0f432508eb.jpg",
