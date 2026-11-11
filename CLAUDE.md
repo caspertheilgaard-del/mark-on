@@ -21,7 +21,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 
 ## Design (besluttet)
 - Font: Montserrat overalt. Overskrifter Light 300 med nøgleord i Bold 700. Menu Bold 700.
-- Farver: baggrund #F7F1EA (alle sider, også topbar), kort/formularer/mobilmenu #FFFFFF, footer og billedpladser #F0E5D9, tynde linjer #EFE5DA, rød #9D5656, tekst #6B3A3A, støvet rosa prik #C29A93.
+- Farver: baggrund #F7F1EA (alle sider, også topbar), kort/formularer/mobilmenu #FFFFFF, footer og billedpladser #F0E5D9, tynde linjer #EFE5DA, rød #9D5656, tekst #6B3A3A, støvet rosa prik #C29A93. Kundelogoerne på forsiden ("Vi hjælper blandt andre") er dæmpet mørkegrå: #6E6A67 med opacity 0,75 (kundeønske, godkendt af Casper 11. november 2026).
 - Logoets røde #AB1A2E bruges kun i selve logoet. Ikke for meget rød.
 - Kun to billedformer: kort med hjørne 24 px og cirkel. Ingen buer eller skåle.
 - Den rosa prik ligger bag billederne i toppen og titter frem ved kanten, aldrig oven på. Bløde rød-brune skygger under billederne i toppen.
