@@ -25,7 +25,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Farver: baggrund #F7F1EA (alle sider, også topbar), kort/formularer/mobilmenu #FFFFFF, footer og billedpladser #F0E5D9, tynde linjer #EFE5DA, rød #9D5656, tekst #6B3A3A, støvet rosa prik #C29A93. Kundelogoerne på forsiden ("Vi hjælper blandt andre") er dæmpet mørkegrå: #6E6A67 med opacity 0,75 (kundeønske, godkendt af Casper 11. november 2026).
 - Logoets røde #AB1A2E bruges kun i selve logoet. Ikke for meget rød.
 - Kun to billedformer: kort med hjørne 24 px og cirkel. Ingen buer eller skåle.
-- Den rosa prik ligger bag billederne i toppen og titter frem ved kanten, aldrig oven på. Bløde rød-brune skygger under billederne i toppen.
+- Den rosa prik ligger bag billederne i toppen og titter frem ved kanten, aldrig oven på. Den er falmet, ikke sløret: #C29A93 med 60 % dækning, ren kant og en blød skygge (kundeønske, 11. nov. 2026). Den store cirkel bag collagen på Forsiden er #F0E5D9, ikke hvid. Bløde rød-brune skygger under billederne i toppen.
 - Ro på siderne: billeder i gitter har ens format 4:5 og står på linje. Overskrift og brødtekst i én venstrestillet kolonne (max ca. 720 px). Case-bånd: ét billede og én linje (kunde, resultat, "Se casen").
 - Billeder flyver eller zoomer ikke. Undtagelse: toppen af Merchandise skifter hårdt (ingen toning) mellem fem muleposer på orange baggrund, ca. 0,3 sek. pr. billede (som på sugarcoat.com). Ved `prefers-reduced-motion` står det første billede stille.
 - Proceslinjen: linjen tegnes, prikkerne popper op, trinene toner frem. Vandret på desktop/tablet, lodret på mobil. Respektér `prefers-reduced-motion`.
