@@ -19,21 +19,7 @@
     {
       "type": "quoteForm",
       "heading": "Få et **tilbud**",
-      "body": "Fortæl kort, hvad I har brug for. En rådgiver vender tilbage inden for [ANTAL] timer på hverdage, med forslag og pris.",
-      "channels": [
-        {
-          "icon": "phone",
-          "label": "Ring til os",
-          "value": "86 19 86 86",
-          "href": "tel:+4586198686"
-        },
-        {
-          "icon": "mail",
-          "label": "Skriv til os",
-          "value": "salg@markon.as",
-          "href": "mailto:salg@markon.as"
-        }
-      ],
+      "body": "Fortæl kort, hvad I har brug for, så vender en rådgiver tilbage med forslag og pris.",
       "needs": [
         {
           "label": "Merchandise",
@@ -48,8 +34,7 @@
         {
           "label": "Ved ikke endnu"
         }
-      ],
-      "note": "Du får en kvittering på mail med navnet på den rådgiver, der vender tilbage."
+      ]
     },
     {
       "type": "locations",
@@ -82,9 +67,9 @@
       "heading": "Det spørger I **tit om**",
       "items": [
         {
-          "question": "Hvor hurtigt svarer I?",
+          "question": "Hvornår hører vi fra jer?",
           "answer": [
-            "Inden for [ANTAL] timer på hverdage. Haster det, så ring på 86 19 86 86."
+            "En rådgiver vender tilbage med forslag og pris, så snart vi har kigget på jeres forespørgsel. Haster det, så ring på 86 19 86 86."
           ]
         },
         {

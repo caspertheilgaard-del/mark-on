@@ -17,6 +17,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Sideopbygning: hver side er en JSON-fil i `src/content/sider/` med `url`, `seo`, `breadcrumbs` og en liste af sektioner (`blocks`). Hver sektionstype har et skema i `src/content.config.ts` og en komponent i `src/components/blocks/`. Menu, kontakt og footer ligger i `src/content/site/site.json`.
 - `scripts/convert-design.py` lavede sidernes JSON ud fra designfilerne (kræver Python med BeautifulSoup). Kør den kun igen, hvis designet ændres, og tjek forskellen bagefter: den overskriver sidernes JSON. Firmatøj, Inspiration og Tak er skrevet i hånden.
 - Formularer (Kontakt og produktsiden) sendes via Netlify Forms og viser `/tak/` bagefter.
+- Kontakt: ingen telefon og mail ved siden af formularen; de står i topbar og footer. Ingen løfter om svartid og ingen kvitteringsmail med rådgiverens navn (MarkOns ønske, godkendt af Casper 11. november 2026).
 - Muleposerne i toppen af Merchandise skifter hårdt (`step-end`); tempoet sættes med `interval` (sek. pr. billede, nu 0.3) i `merchandise.json`.
 
 ## Design (besluttet)

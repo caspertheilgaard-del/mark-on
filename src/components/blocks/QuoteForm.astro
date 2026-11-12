@@ -1,5 +1,5 @@
 ---
-// Kontakt: "Få et tilbud" med direkte kontakt til venstre og formular til højre.
+// Kontakt: "Få et tilbud" med tekst (og evt. direkte kontakt) til venstre og formular til højre.
 // Formularen sendes via Netlify Forms (navn: tilbud).
 import { rich } from '../../lib/rich';
 import type { BlockOf } from '../../lib/types';
@@ -10,6 +10,7 @@ const { block } = Astro.props;
   <div class="left">
     <h1 class="h1" set:html={rich(block.heading)} />
     <p class="lead">{block.body}</p>
+    {block.channels.length > 0 && (
     <div class="channels">
       {block.channels.map((c) => (
         <a class="channel" href={c.href}>
@@ -22,6 +23,7 @@ const { block } = Astro.props;
         </a>
       ))}
     </div>
+    )}
   </div>
 
   <form class="box form" name="tilbud" method="POST" action="/tak/" data-netlify="true" netlify-honeypot="bot-field">
@@ -43,7 +45,7 @@ const { block } = Astro.props;
     </div>
     <label class="fld">Fortæl kort om opgaven (valgfrit)<textarea name="opgave" placeholder="Fx velkomstpakker til 40 nye medarbejdere"></textarea></label>
     <button class="form-btn send" type="submit">Send forespørgsel</button>
-    <p class="note">{block.note}</p>
+    {block.note && <p class="note">{block.note}</p>}
   </form>
 </section>
 
