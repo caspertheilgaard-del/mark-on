@@ -31,6 +31,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Proceslinjen: linjen tegnes, prikkerne popper op, trinene toner frem. Vandret på desktop/tablet, lodret på mobil. Respektér `prefers-reduced-motion`.
 - Billeder, der leder videre: overskrift i lys pille på billedet; ved hover et rødligt lag med tekst og link; på touch står teksten under billedet.
 - Mega menuen skal være let. Under 1100 px bliver menuen til en burger-knap.
+- Dropdown i hovedmenuen (kundeønske, godkendt af Casper 12. november 2026): Merchandise og Firmagaver har en let dropdown med undersiderne (hvidt kort, hjørne 24, kun tekstlinks), der åbner ved hover, fokus eller klik på pilen og lukker med Escape. Undersiderne står i `children` (og linket nederst i `allLabel`) i `site.json`; tilføj kun sider, der findes. I mobilmenuen står undersiderne under punktet.
 - Ingen "Book et møde" nogen steder. Knapper fører til formularen ("Få et tilbud", "Skriv til os") eller telefonen. "Kun salg til erhverv" vises ikke i topbar, footer eller på produktside.
 
 ## Sitemap

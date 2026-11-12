@@ -4,8 +4,23 @@
   "phone": { "label": "86 19 86 86", "href": "tel:+4586198686" },
   "email": "salg@markon.as",
   "menu": [
-    { "label": "Merchandise", "href": "/merchandise/" },
-    { "label": "Firmagaver", "href": "/firmagaver/" },
+    {
+      "label": "Merchandise", "href": "/merchandise/", "allLabel": "Alt merchandise",
+      "children": [
+        { "label": "Messer og events", "href": "/merchandise/messer-og-events/" },
+        { "label": "Den lille ekstra", "href": "/merchandise/den-lille-ekstra/" }
+      ]
+    },
+    {
+      "label": "Firmagaver", "href": "/firmagaver/", "allLabel": "Alle firmagaver",
+      "children": [
+        { "label": "Julegaver", "href": "/firmajulegaver/" },
+        { "label": "Kundegaver", "href": "/firmagaver/kundegaver/" },
+        { "label": "Sæsongaver", "href": "/firmagaver/saesongaver/" },
+        { "label": "Barselsgaver", "href": "/firmagaver/barselsgaver/" },
+        { "label": "Jubilæumsgaver", "href": "/firmagaver/jubilaeumsgaver/" }
+      ]
+    },
     { "label": "Firmatøj", "href": "/firmatoej/" },
     { "label": "Inspiration", "href": "/inspiration/" },
     { "label": "Om os", "href": "/om-os/" },

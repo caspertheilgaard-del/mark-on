@@ -10,8 +10,23 @@ const site = (await getEntry('site', 'site'))!.data;
     <Image src={site.logo} alt="MarkOn, tøj, gaver, merchandise" width={200} densities={[1, 2]} loading="eager" />
   </a>
   <nav class="nav" aria-label="Hovedmenu">
-    {site.menu.map((item) => (
-      <a href={item.href} aria-current={item.label === current ? 'page' : undefined}>{item.label}</a>
+    {site.menu.map((item, i) => item.children?.length ? (
+      <div class="has-sub" data-sub>
+        <a class="top" href={item.href} aria-current={item.label === current ? 'page' : undefined}>{item.label}</a>
+        <button class="sub-toggle" type="button" aria-expanded="false" aria-controls={`undermenu-${i}`} aria-label={`Vis undersider til ${item.label}`} data-sub-toggle>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+        <div class="sub" id={`undermenu-${i}`}>
+          <div class="panel">
+            <ul>
+              {item.children.map((c) => <li><a href={c.href}>{c.label}</a></li>)}
+            </ul>
+            <a class="sub-all" href={item.href}>{item.allLabel ?? item.label} →</a>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <a class="top" href={item.href} aria-current={item.label === current ? 'page' : undefined}>{item.label}</a>
     ))}
   </nav>
   <div class="actions">
@@ -26,9 +41,16 @@ const site = (await getEntry('site', 'site'))!.data;
 <div class="container mmenu" id="mobilmenu" hidden>
   <nav aria-label="Menu">
     {site.menu.map((item) => (
-      <a class="mlink" href={item.href} aria-current={item.label === current ? 'page' : undefined}>
-        {item.label}<span aria-hidden="true">→</span>
-      </a>
+      <>
+        <a class:list={['mlink', { 'has-kids': item.children?.length }]} href={item.href} aria-current={item.label === current ? 'page' : undefined}>
+          {item.label}<span aria-hidden="true">→</span>
+        </a>
+        {item.children?.length && (
+          <ul class="mkids">
+            {item.children.map((c) => <li><a href={c.href}>{c.label}</a></li>)}
+          </ul>
+        )}
+      </>
     ))}
     <div class="mcta"><a class="btn" href={site.cta.href}>{site.cta.label}</a></div>
     <p class="mcontact">
@@ -52,6 +74,35 @@ const site = (await getEntry('site', 'site'))!.data;
     });
     matchMedia('(min-width: 1101px)').addEventListener('change', (e) => { if (e.matches) set(false); });
   }
+
+  // Dropdown i hovedmenuen: åbner ved hover og fokus (CSS) og med pilen (klik, touch, tastatur)
+  const subs = [...document.querySelectorAll<HTMLElement>('[data-sub]')];
+  const close = (except?: HTMLElement) => subs.forEach((s) => {
+    if (s === except) return;
+    s.classList.remove('open');
+    s.querySelector('[data-sub-toggle]')?.setAttribute('aria-expanded', 'false');
+  });
+  subs.forEach((s) => {
+    const t = s.querySelector<HTMLButtonElement>('[data-sub-toggle]');
+    t?.addEventListener('click', () => {
+      const open = !s.classList.contains('open');
+      close(s);
+      s.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', (e) => { if (!(e.target as Element).closest('[data-sub]')) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const openSub = subs.find((s) => s.classList.contains('open') || s.matches(':focus-within'));
+    close();
+    if (openSub) {
+      openSub.classList.add('esc');
+      openSub.querySelector<HTMLElement>('[data-sub-toggle]')?.focus();
+      openSub.addEventListener('mouseleave', () => openSub.classList.remove('esc'), { once: true });
+      openSub.addEventListener('focusout', () => openSub.classList.remove('esc'), { once: true });
+    }
+  });
 </script>
 
 <style>
@@ -60,12 +111,37 @@ const site = (await getEntry('site', 'site'))!.data;
   .logo img { width: 200px; height: auto; display: block; }
 
   .nav { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
-  .nav a {
+  .nav .top {
     color: var(--c-text); font-weight: 700; font-size: 16px; padding: 12px 0;
     background: linear-gradient(var(--c-red), var(--c-red)) left calc(100% - 4px) / 0% 2px no-repeat;
     transition: background-size 0.3s;
   }
-  .nav a:hover, .nav a[aria-current] { background-size: 100% 2px; color: var(--c-text); }
+  .nav .top:hover, .nav .top[aria-current] { background-size: 100% 2px; color: var(--c-text); }
+
+  /* Dropdown: let, hvidt kort med hjørne 24, kun tekstlinks */
+  .has-sub { position: relative; display: flex; align-items: center; gap: 2px; }
+  .sub-toggle {
+    width: 28px; height: 44px; margin-right: -10px; border: 0; padding: 0; background: none; color: var(--c-text);
+    display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px;
+  }
+  .sub-toggle svg { transition: transform 0.2s; }
+  .sub {
+    position: absolute; top: 100%; left: -28px; z-index: 50; min-width: 240px; padding-top: 10px;
+    opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s;
+  }
+  .panel { background: var(--c-surface); border-radius: var(--radius); box-shadow: var(--shadow-menu), 0 2px 10px rgba(90, 40, 40, 0.06); padding: 14px 28px 12px; }
+  .sub ul { list-style: none; margin: 0; padding: 0 0 6px; }
+  .sub li a { display: flex; align-items: center; min-height: var(--tap); font-size: 15px; font-weight: 600; color: var(--c-text); white-space: nowrap; }
+  .sub li a:hover { color: var(--c-red); }
+  .sub-all {
+    display: flex; align-items: center; min-height: var(--tap); padding-top: 4px;
+    font-size: 14px; font-weight: 700; color: var(--c-red); border-top: 1px solid var(--c-line);
+  }
+  .has-sub:hover .sub, .has-sub:focus-within .sub, .has-sub.open .sub { opacity: 1; visibility: visible; }
+  .has-sub.esc .sub { opacity: 0; visibility: hidden; }
+  .has-sub:hover .sub-toggle svg, .has-sub.open .sub-toggle svg { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }
+  @media (max-width: 1180px) { .nav { gap: 22px; } }
 
   .actions { display: flex; align-items: center; gap: 12px; }
   .hcta { background: var(--c-red); color: #fff; padding: 14px 24px; border-radius: var(--radius-pill); font-size: 15px; font-weight: 700; }
@@ -86,6 +162,9 @@ const site = (await getEntry('site', 'site'))!.data;
     border-bottom: 1px solid #f0e6db; font-size: 22px; font-weight: 600; color: var(--c-text);
   }
   .mlink[aria-current] { color: var(--c-red); }
+  .mlink.has-kids { border-bottom: 0; padding-bottom: 6px; }
+  .mkids { list-style: none; margin: 0; padding: 0 0 12px 16px; border-bottom: 1px solid #f0e6db; display: flex; flex-wrap: wrap; column-gap: 20px; }
+  .mkids a { display: inline-flex; align-items: center; min-height: var(--tap); font-size: 16px; font-weight: 600; color: var(--c-red); }
   .mlink span { color: var(--c-red); }
   .mcta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
   .mcta .btn { padding: 15px 24px; }
