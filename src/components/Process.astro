@@ -6,15 +6,20 @@ const { steps, size = 20 } = Astro.props;
 const n = steps.length;
 const x0 = 16, x1 = 1286, y = 40;
 // Som i designet: prikkerne står med fast afstand, og linjen løber et stykke videre efter sidste prik.
+// Med 4 trin står prikkerne præcis som i S-designet (Forside, Merchandise, Messer og events).
 const step = (x1 - x0) / (n - 0.125);
-const xs = steps.map((_, i) => x0 + step * i);
+const xs = n === 4 ? [16, 333, 667, 1000] : steps.map((_, i) => x0 + step * i);
 const points = [...xs, x1];
-let d = `M${x0} ${y}`;
+// Blød, sammenhængende bølge som i S-designet: første stykke er en kurve, de næste fortsætter
+// glat med S, så der ikke er knæk ved prikkerne (ønske oe-20261110102718-6dg9).
+let d = '';
 for (let i = 0; i < points.length - 1; i++) {
-  const from = points[i], to = points[i + 1];
-  const up = i % 2 === 0;
-  const c1 = from + (to - from) / 3, c2 = from + ((to - from) * 2) / 3;
-  d += ` C ${c1.toFixed(0)} ${up ? 0 : 80}, ${c2.toFixed(0)} ${up ? 80 : 0}, ${to.toFixed(0)} ${y}`;
+  const from = points[i], to = points[i + 1], len = to - from;
+  if (i === 0) {
+    d = `M${x0} ${y} C ${(from + len * 0.33).toFixed(0)} 0, ${(from + len * 0.675).toFixed(0)} 80, ${to.toFixed(0)} ${y}`;
+  } else {
+    d += ` S ${(from + len * 0.69).toFixed(0)} ${i % 2 === 1 ? 0 : 80}, ${to.toFixed(0)} ${y}`;
+  }
 }
 const delays = steps.map((_, i) => (-0.5 + (2.9 * i) / Math.max(n - 1, 1)).toFixed(2) + 's');
 ---
