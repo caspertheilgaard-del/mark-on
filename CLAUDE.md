@@ -17,7 +17,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Sideopbygning: hver side er en JSON-fil i `src/content/sider/` med `url`, `seo`, `breadcrumbs` og en liste af sektioner (`blocks`). Hver sektionstype har et skema i `src/content.config.ts` og en komponent i `src/components/blocks/`. Menu, kontakt og footer ligger i `src/content/site/site.json`.
 - `scripts/convert-design.py` lavede sidernes JSON ud fra designfilerne (kræver Python med BeautifulSoup). Kør den kun igen, hvis designet ændres, og tjek forskellen bagefter: den overskriver sidernes JSON. Firmatøj, Inspiration og Tak er skrevet i hånden.
 - Formularer (Kontakt og produktsiden) sendes via Netlify Forms og viser `/tak/` bagefter.
-- Muleposerne i toppen af Merchandise skifter hårdt (`step-end`); tempoet sættes med `interval` (sek. pr. billede, nu 0.3) i `merchandise.json`.
+- Muleposerne i toppen af Merchandise skifter hårdt (`step-end`); tempoet sættes med `interval` (sek. pr. billede, nu 0.4) i `merchandise.json`.
 
 ## Design (besluttet)
 - Font: Montserrat overalt. Overskrifter Light 300 med nøgleord i Bold 700. Menu Bold 700.
@@ -26,7 +26,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Kun to billedformer: kort med hjørne 24 px og cirkel. Ingen buer eller skåle.
 - Den rosa prik ligger bag billederne i toppen og titter frem ved kanten, aldrig oven på. Bløde rød-brune skygger under billederne i toppen.
 - Ro på siderne: billeder i gitter har ens format 4:5 og står på linje. Overskrift og brødtekst i én venstrestillet kolonne (max ca. 720 px). Case-bånd: ét billede og én linje (kunde, resultat, "Se casen").
-- Billeder flyver eller zoomer ikke. Undtagelse: toppen af Merchandise skifter hårdt (ingen toning) mellem fem muleposer på orange baggrund, ca. 0,3 sek. pr. billede (som på sugarcoat.com). Ved `prefers-reduced-motion` står det første billede stille.
+- Billeder flyver eller zoomer ikke. Undtagelse: toppen af Merchandise skifter hårdt (ingen toning) mellem fem muleposer på orange baggrund, ca. 0,4 sek. pr. billede (inspireret af sugarcoat.com, en tand langsommere). Ved `prefers-reduced-motion` står det første billede stille.
 - Proceslinjen: linjen tegnes, prikkerne popper op, trinene toner frem. Vandret på desktop/tablet, lodret på mobil. Respektér `prefers-reduced-motion`.
 - Billeder, der leder videre: overskrift i lys pille på billedet; ved hover et rødligt lag med tekst og link; på touch står teksten under billedet.
 - Mega menuen skal være let. Under 1100 px bliver menuen til en burger-knap.
