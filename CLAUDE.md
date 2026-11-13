@@ -42,6 +42,7 @@ Nyt website for MarkOn A/S (firmatøj, firmagaver og merchandise til erhverv, Ly
 - Foreløbige URL'er (afstemmes med migreringsplanen): `/merchandise/`, `/merchandise/messer-og-events/`, `/merchandise/den-lille-ekstra/`, `/merchandise/krus-med-logo/`, `/firmagaver/`, `/firmajulegaver/`, `/firmagaver/kundegaver/`, `/firmagaver/saesongaver/`, `/firmagaver/barselsgaver/`, `/firmagaver/jubilaeumsgaver/`, `/firmatoej/`, `/inspiration/`, `/om-os/`, `/kontakt/`.
 - Firmatøj og Inspiration er ikke tegnet endnu og vises som korte "på vej"-sider (besluttet af Casper).
 - F-versionerne af Julegaver, Barselsgaver og Jubilæum bruges, ikke V-varianterne (besluttet af Casper).
+- Carlas V-varianter ligger som testsider med noindex og uden links fra menuen: `/firmajulegaver/variant/`, `/firmagaver/barselsgaver/variant/`, `/firmagaver/jubilaeumsgaver/variant/`. Genereres med `python3 scripts/convert-design.py --kun-varianter`.
 
 ## Tekst
 - Tone: en dygtig, imødekommende og jordnær rådgiver. Du/I og vi/MarkOn. Bestil frem for køb, kan frem for skal. Ingen humor, emojis eller buzzwords.

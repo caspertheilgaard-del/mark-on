@@ -64,10 +64,49 @@ const sider = defineCollection({
 
     const cards = z.object({
       type: z.literal('cards'),
+      variant: z.enum(['standard', 'airy']).default('standard').describe('airy: mere luft til kort og billeder (Carlas varianter)'),
+      spaceAbove: z.number().optional(),
       heading: z.string(),
       body: z.array(z.string()).default([]),
-      cards: z.array(z.object({ heading: z.string(), body: z.array(z.string()), link: link.optional() })).default([]),
+      cards: z
+        .array(
+          z.object({
+            heading: z.string(),
+            body: z.array(z.string()),
+            checklist: z.object({ heading: z.string(), items: z.array(z.string()) }).optional(),
+            link: link.optional(),
+          }),
+        )
+        .default([]),
+      aside: z.object({ heading: z.string(), body: z.string(), link: link.optional() }).optional(),
       gallery: z.array(media).default([]),
+    });
+
+    // Et eksempel på et forløb i et hvidt kort (ikke en kundecase).
+    const example = z.object({
+      type: z.literal('example'),
+      heading: z.string(),
+      kicker: z.string(),
+      body: z.array(z.string()),
+      note: z.string().optional(),
+    });
+
+    // Overskrift efterfulgt af korte afsnit med hver sin mellemoverskrift, evt. billedgitter.
+    const topics = z.object({
+      type: z.literal('topics'),
+      heading: z.string(),
+      items: z.array(z.object({ heading: z.string(), text: z.string() })),
+      gallery: z.array(media).default([]),
+    });
+
+    // Bånd med tjekliste (flueben) eller nummereret liste og en knap.
+    const checklist = z.object({
+      type: z.literal('checklist'),
+      variant: z.enum(['check', 'numbered']).default('check'),
+      heading: z.string(),
+      body: z.array(z.string()).default([]),
+      items: z.array(z.object({ title: z.string().optional(), text: z.string() })),
+      cta: link.optional(),
     });
 
     const tiles = z.object({
@@ -239,12 +278,13 @@ const sider = defineCollection({
       url: z.string().describe('Sidens adresse, fx /firmajulegaver/'),
       seo: z.object({ title: z.string(), description: z.string() }),
       menu: z.string().optional().describe('Hovedmenupunkt der markeres som aktivt'),
+      noindex: z.boolean().default(false).describe('Testsider: skjules for søgemaskiner'),
       scale: z.enum(['standard', 'large']).default('standard').describe('Typografi: standard (44 px h2) eller large (48 px h2)'),
       breadcrumbs: z.array(z.object({ label: z.string(), href: z.string().optional() })).optional(),
       blocks: z.array(
         z.discriminatedUnion('type', [
           hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, features, products,
-          split, values, team, info, quoteForm, locations, product, faq, next,
+          split, values, team, info, quoteForm, locations, product, faq, next, example, topics, checklist,
         ]),
       ),
     });

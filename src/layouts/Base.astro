@@ -3,8 +3,8 @@ import '../styles/global.css';
 import Topbar from '../components/Topbar.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-interface Props { title: string; description: string; current?: string; scale?: 'standard' | 'large' }
-const { title, description, current, scale = 'standard' } = Astro.props;
+interface Props { title: string; description: string; current?: string; scale?: 'standard' | 'large'; noindex?: boolean }
+const { title, description, current, scale = 'standard', noindex = false } = Astro.props;
 ---
 <!doctype html>
 <html lang="da">
@@ -13,6 +13,7 @@ const { title, description, current, scale = 'standard' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={Astro.url.pathname} />
   </head>
   <body>

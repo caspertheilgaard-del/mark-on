@@ -1,0 +1,168 @@
+{
+  "url": "/firmagaver/barselsgaver/variant/",
+  "noindex": true,
+  "seo": {
+    "title": "Barselsgaver til medarbejdere | MarkOn",
+    "description": "Testside med Carlas tekstvariant til barselsgavesiden."
+  },
+  "menu": "Firmagaver",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Firmagaver",
+      "href": "/firmagaver/"
+    },
+    {
+      "label": "Barselsgaver"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "standard",
+      "heading": "Barselsgaver til **medarbejdere**",
+      "body": [
+        "En kollega bliver forælder, og I vil gerne sige tillykke fra hele arbejdspladsen. Vi hjælper med gaven, kortet og leveringen, så I kan gøre det personligt uden at bruge meget tid på det."
+      ],
+      "ctas": [
+        {
+          "label": "Kontakt os om barselsgaver",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "image",
+        "image": {
+          "alt": "Barselsgave",
+          "placeholder": "[BILLEDE: BARSELSGAVE]"
+        }
+      }
+    },
+    {
+      "type": "example",
+      "heading": "Sådan kan det **se ud**",
+      "kicker": "Et eksempel",
+      "body": [
+        "En medarbejder går på barsel om en måned. Kollegerne vil gerne give en fælles gave og skrive en hilsen hver. I fortæller os budget og dato.",
+        "Vi kommer med et par forslag til barnet og forældrene og sørger for kortet. Når I har valgt, pakker vi gaven og sender den hjem til familien."
+      ],
+      "note": "Eksemplet viser, hvordan et forløb kan se ud. Det er ikke en kundecase."
+    },
+    {
+      "type": "topics",
+      "heading": "Til barnet, forældrene **eller begge**",
+      "items": [
+        {
+          "heading": "Gaver til barnet",
+          "text": "En gave til barnet er en hilsen, familien kan tage med ind i den nye hverdag. Fortæl os jeres budget, så kommer vi med forslag og hjælper med indpakningen."
+        },
+        {
+          "heading": "Gaver til forældrene",
+          "text": "De første måneder med et lille barn er travle. En gave til forældrene kan give en pause i hverdagen, fx noget godt at spise eller noget til hjemmet."
+        },
+        {
+          "heading": "En hilsen fra kollegerne",
+          "text": "Et kort med hilsner fra kollegerne gør gaven personlig. Vi hjælper med kortet, så gave, kort og indpakning hænger sammen."
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "[BILLEDE: GAVE TIL BARNET]",
+          "placeholder": "[BILLEDE: GAVE TIL BARNET]"
+        },
+        {
+          "alt": "[BILLEDE: GAVE TIL FORÆLDRENE]",
+          "placeholder": "[BILLEDE: GAVE TIL FORÆLDRENE]"
+        },
+        {
+          "alt": "[BILLEDE: KORT FRA KOLLEGERNE]",
+          "placeholder": "[BILLEDE: KORT FRA KOLLEGERNE]"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "variant": "check",
+      "heading": "Det skal vi **vide fra jer**",
+      "body": [
+        "Fire ting, så kan vi komme med forslag:"
+      ],
+      "items": [
+        {
+          "text": "Budgettet, og om gaven er fra kollegerne, ledelsen eller begge"
+        },
+        {
+          "text": "Om gaven er til barnet, forældrene eller begge"
+        },
+        {
+          "text": "Om der skal et kort med hilsner med"
+        },
+        {
+          "text": "Hvornår og hvor gaven skal leveres"
+        }
+      ],
+      "cta": {
+        "label": "Kontakt os om barselsgaver",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Spørgsmål om **barselsgaver**",
+      "items": [
+        {
+          "question": "Hvornår skal vi give barselsgaven?",
+          "answer": [
+            "Det bestemmer I. Nogle giver gaven, før medarbejderen går på barsel, andre sender den hjem, når barnet er kommet. Fortæl os datoen, så planlægger vi leveringen efter den."
+          ]
+        },
+        {
+          "question": "Kan kollegerne skrive en hilsen med?",
+          "answer": [
+            "Ja. Vi hjælper med et kort, så kollegerne kan sende en personlig hilsen med gaven."
+          ]
+        },
+        {
+          "question": "Kan I sende gaven hjem til medarbejderen?",
+          "answer": [
+            "Ja. Fortæl os adressen og datoen, så aftaler vi pakning og levering, så gaven når frem til tiden."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for firmagaver",
+        "href": "/firmagaver/"
+      }
+    },
+    {
+      "type": "next",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Kontakt os om barselsgaver",
+          "text": "Skriv budget og dato",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Jubilæumsgaver",
+          "text": "Fejr en milepæl",
+          "href": "/firmagaver/jubilaeumsgaver/"
+        },
+        {
+          "title": "Julegaver",
+          "text": "Til medarbejdere",
+          "href": "/firmajulegaver/"
+        },
+        {
+          "title": "Alle firmagaver",
+          "text": "Firmagaver",
+          "href": "/firmagaver/"
+        }
+      ]
+    }
+  ]
+}

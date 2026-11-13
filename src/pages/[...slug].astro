@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 ---
-<Base title={page.seo.title} description={page.seo.description} current={page.menu} scale={page.scale}>
+<Base title={page.seo.title} description={page.seo.description} current={page.menu} scale={page.scale} noindex={page.noindex}>
   {page.breadcrumbs && <Breadcrumbs items={page.breadcrumbs} />}
   <Blocks blocks={page.blocks} />
 </Base>

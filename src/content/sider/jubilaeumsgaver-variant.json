@@ -1,0 +1,165 @@
+{
+  "url": "/firmagaver/jubilaeumsgaver/variant/",
+  "noindex": true,
+  "seo": {
+    "title": "Jubilæumsgaver, der siger tak for årene | MarkOn",
+    "description": "Testside med Carlas tekstvariant til jubilæumsgavesiden."
+  },
+  "menu": "Firmagaver",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Firmagaver",
+      "href": "/firmagaver/"
+    },
+    {
+      "label": "Jubilæumsgaver"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "standard",
+      "heading": "**Jubilæumsgaver**, der siger tak for årene",
+      "body": [
+        "Et jubilæum handler om de år, der ligger bag. Den rette gave viser, at I har lagt mærke til dem.",
+        "Hos MarkOn hjælper vi jer med at finde en gave, der passer til jubilaren og til det, I vil sige tak for."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud på jubilæumsgaver",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "image",
+        "image": {
+          "src": "../../assets/images/286bd7a92f2875f9e06b2004179dc3fc.jpg",
+          "alt": "Hvid drikkedunk med tryk på en stenbænk"
+        }
+      }
+    },
+    {
+      "type": "cards",
+      "variant": "airy",
+      "heading": "Hvem har **jubilæum**?",
+      "body": [
+        "Gaven afhænger af, om I fejrer en medarbejder eller en virksomhed."
+      ],
+      "cards": [
+        {
+          "heading": "En medarbejder",
+          "body": [
+            "Sig tak for engagementet og årene sammen. Vi finder en gave, der passer til medarbejderens interesser, og hjælper med en hilsen fra ledelsen og kollegerne."
+          ]
+        },
+        {
+          "heading": "En kunde eller samarbejdspartner",
+          "link": {
+            "label": "Se kundegaver",
+            "href": "/firmagaver/kundegaver/"
+          },
+          "body": [
+            "Fejr en virksomheds milepæl med en gave, der kan glæde jeres kontaktperson eller deles af flere på arbejdspladsen."
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "[BILLEDE: JUBILÆUMSGAVE TIL MEDARBEJDER]",
+          "placeholder": "[BILLEDE: JUBILÆUMSGAVE TIL MEDARBEJDER]"
+        },
+        {
+          "alt": "[BILLEDE: GAVE TIL VIRKSOMHEDSJUBILÆUM]",
+          "placeholder": "[BILLEDE: GAVE TIL VIRKSOMHEDSJUBILÆUM]"
+        },
+        {
+          "alt": "[BILLEDE: PERSONLIG HILSEN]",
+          "placeholder": "[BILLEDE: PERSONLIG HILSEN]"
+        }
+      ]
+    },
+    {
+      "type": "checklist",
+      "variant": "numbered",
+      "heading": "Tre ting, der gør gaven **personlig**",
+      "body": [],
+      "items": [
+        {
+          "title": "En gave, der passer til personen",
+          "text": "Noget til hjemmet, fritiden eller noget godt at nyde og dele, valgt ud fra det, I ved om jubilaren."
+        },
+        {
+          "title": "En hilsen med ord på",
+          "text": "Et kort fra ledelsen og kollegerne, der nævner det, I vil sige tak for."
+        },
+        {
+          "title": "Klar til dagen",
+          "text": "Fortæl os datoen, så planlægger vi gave, kort, indpakning og levering efter den."
+        }
+      ],
+      "cta": {
+        "label": "Få et tilbud på jubilæumsgaver",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Når jubilæet **nærmer sig**",
+      "items": [
+        {
+          "question": "Hvordan finder vi en gave, der passer til jubilaren?",
+          "answer": [
+            "Start med det, I ved om personen: interesser, hverdag og det, I vil sige tak for. Fortæl os det, så kommer vi med forslag inden for jeres budget."
+          ]
+        },
+        {
+          "question": "Hvor tidligt skal vi bestille jubilæumsgaven?",
+          "answer": [
+            "Kontakt os gerne nogle uger før dagen. Så er der tid til at vælge gave, skrive kortet og planlægge leveringen."
+          ]
+        },
+        {
+          "question": "Kan vi give en gave til en kundes jubilæum?",
+          "answer": [
+            "Ja. Vi rådgiver om gaver, der passer til relationen og kan glæde en kontaktperson eller deles af flere på arbejdspladsen."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for firmagaver",
+        "href": "/firmagaver/"
+      }
+    },
+    {
+      "type": "next",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud på jubilæumsgaver",
+          "text": "Skriv budget og dato",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Barselsgaver",
+          "text": "Når familien vokser",
+          "href": "/firmagaver/barselsgaver/"
+        },
+        {
+          "title": "Kundegaver",
+          "text": "Tak for samarbejdet",
+          "href": "/firmagaver/kundegaver/"
+        },
+        {
+          "title": "Alle firmagaver",
+          "text": "Firmagaver",
+          "href": "/firmagaver/"
+        }
+      ]
+    }
+  ]
+}

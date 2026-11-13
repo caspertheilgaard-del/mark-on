@@ -1,0 +1,206 @@
+{
+  "url": "/firmajulegaver/variant/",
+  "noindex": true,
+  "seo": {
+    "title": "Firmajulegaver, der er klar til tiden | MarkOn",
+    "description": "Testside med Carlas tekstvariant til julegavesiden."
+  },
+  "menu": "Firmagaver",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Firmagaver",
+      "href": "/firmagaver/"
+    },
+    {
+      "label": "Julegaver"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "standard",
+      "heading": "**Firmajulegaver**, der er klar til tiden",
+      "body": [
+        "December er travl, også uden julegaver. Vi samler gave, julehilsen, indpakning og levering i én plan, så I ved, hvad der sker hvornår.",
+        "I kan give alle den samme gave eller lade hver medarbejder vælge selv i en gaveshop. Vi hjælper med begge dele."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud på julegaver",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "image",
+        "image": {
+          "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+          "alt": "Gavesæt med drikkedunk, krus og æske"
+        }
+      }
+    },
+    {
+      "type": "band",
+      "variant": "standard",
+      "heading": "Sådan bliver **julegaverne klar**",
+      "body": [
+        "Jo før vi taler sammen, jo flere muligheder har I. Men har I travlt, så ring. Det meste kan lade sig gøre."
+      ],
+      "steps": [
+        {
+          "kicker": "[MANGLER: UGER FØR JUL]",
+          "title": "Første snak",
+          "text": "Hvem skal have en gave, hvor mange, og hvad er budgettet?"
+        },
+        {
+          "kicker": "[MANGLER: UGER FØR JUL]",
+          "title": "Forslag og valg",
+          "text": "I får konkrete forslag. Med en gaveshop vælger medarbejderne selv inden for en frist."
+        },
+        {
+          "kicker": "[MANGLER: UGER FØR JUL]",
+          "title": "Pakning og julehilsen",
+          "text": "Gave, kort og indpakning samles, så det hele passer sammen."
+        },
+        {
+          "kicker": "[MANGLER: UGER FØR JUL]",
+          "title": "Levering",
+          "text": "Samlet til jer, til flere adresser eller hjem til hver medarbejder."
+        }
+      ],
+      "cta": {
+        "label": "Tal med os om årets julegaver",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "cards",
+      "variant": "airy",
+      "heading": "Én gave til alle, eller **frit valg**?",
+      "body": [
+        "Begge dele kan være den rigtige løsning. Det afhænger af, hvor forskellige jeres medarbejdere er, og hvor meget I selv vil vælge."
+      ],
+      "spaceAbove": 128,
+      "cards": [
+        {
+          "heading": "Én gave til alle",
+          "body": [
+            "Alle får den samme gave og den samme hilsen. Vi kommer med forslag inden for jeres budget."
+          ],
+          "checklist": {
+            "heading": "Passer godt, når",
+            "items": [
+              "alle skal have gaven samme dag",
+              "I vil have logo eller en fælles hilsen med",
+              "gaven skal deles ud ved julefrokosten"
+            ]
+          }
+        },
+        {
+          "heading": "Gaveshop med frit valg",
+          "link": {
+            "label": "Læs om vores gaveshopløsninger",
+            "href": "#"
+          },
+          "body": [
+            "Medarbejderne vælger selv fra et udvalg, vi sammensætter med jer. Vi hjælper med bestillingsfrist og levering."
+          ],
+          "checklist": {
+            "heading": "Passer godt, når",
+            "items": [
+              "medarbejderne har forskellige ønsker",
+              "I vil være sikre på, at gaven bliver brugt",
+              "gaven skal sendes hjem til hver enkelt"
+            ]
+          }
+        }
+      ],
+      "aside": {
+        "heading": "Og til kunderne?",
+        "body": "En julegave til kunder og samarbejdspartnere er en tak for årets samarbejde. Vi hjælper med gaver til en bestemt kontaktperson eller noget, der kan deles på kontoret.",
+        "link": {
+          "label": "Se kundegaver",
+          "href": "/firmagaver/kundegaver/"
+        }
+      },
+      "gallery": [
+        {
+          "alt": "[BILLEDE: JULEGAVE TIL MEDARBEJDERE]",
+          "placeholder": "[BILLEDE: JULEGAVE TIL MEDARBEJDERE]"
+        },
+        {
+          "alt": "[BILLEDE: GAVESHOP PÅ MOBIL]",
+          "placeholder": "[BILLEDE: GAVESHOP PÅ MOBIL]"
+        },
+        {
+          "alt": "[BILLEDE: INDPAKNING OG JULEKORT]",
+          "placeholder": "[BILLEDE: INDPAKNING OG JULEKORT]"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "heading": "Det spørger I om **op til jul**",
+      "items": [
+        {
+          "question": "Hvornår skal vi senest bestille firmajulegaver?",
+          "answer": [
+            "[MANGLER: sidste bestillingsdato for jul]. Ved en gaveshop skal der også være tid til, at medarbejderne vælger. Skriv jeres leveringsdato i forespørgslen, så lægger vi planen ud fra den."
+          ]
+        },
+        {
+          "question": "Hvornår er en firmajulegave skattefri?",
+          "answer": [
+            "[MANGLER: kort svar fra guiden om skattefri firmajulegave og link til guiden]."
+          ]
+        },
+        {
+          "question": "Kan medarbejderne selv vælge deres julegave?",
+          "answer": [
+            "Ja. Med en gaveshop vælger medarbejderne blandt de gaver, der indgår i jeres udvalg. Vi sammensætter udvalget sammen med jer ud fra budget og ønsker."
+          ]
+        },
+        {
+          "question": "Kan I levere julegaven hjem til hver medarbejder?",
+          "answer": [
+            "Ja. Vi kan levere gaverne samlet til jer, til flere adresser eller direkte hjem til hver medarbejder. Fortæl os, hvor gaverne skal hen, og hvornår de skal være fremme."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for firmagaver",
+        "href": "/firmagaver/"
+      }
+    },
+    {
+      "type": "next",
+      "kicker": "Hvor vil du hen nu?",
+      "items": [
+        {
+          "title": "Få et tilbud på julegaver",
+          "text": "Skriv antal og deadline",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Kundegaver",
+          "text": "Tak for samarbejdet",
+          "href": "/firmagaver/kundegaver/"
+        },
+        {
+          "title": "Sæsongaver",
+          "text": "Påske og sommer",
+          "href": "/firmagaver/saesongaver/"
+        },
+        {
+          "title": "Alle firmagaver",
+          "text": "Firmagaver",
+          "href": "/firmagaver/"
+        }
+      ]
+    }
+  ]
+}
