@@ -259,7 +259,7 @@ const site = defineCollection({
       tagline: z.string(),
       phone: z.object({ label: z.string(), href: z.string() }),
       email: z.string(),
-      menu: z.array(link),
+      menu: z.array(link.extend({ allLabel: z.string().optional().describe('Linket nederst i dropdown-menuen'), children: z.array(link).optional().describe('Undersider i dropdown-menuen') })),
       cta: link,
       locations: z.array(
         z.object({ name: z.string(), lines: z.array(z.string()), phone: z.string().optional(), email: z.string().optional() }),
