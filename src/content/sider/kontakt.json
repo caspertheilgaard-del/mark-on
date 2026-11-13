@@ -18,23 +18,8 @@
   "blocks": [
     {
       "type": "quoteForm",
-      "heading": "Få et **tilbud**",
-      "body": "Fortæl kort, hvad I har brug for, så vender en rådgiver tilbage med forslag og pris.",
-      "needs": [
-        {
-          "label": "Merchandise",
-          "checked": true
-        },
-        {
-          "label": "Firmagaver"
-        },
-        {
-          "label": "Firmatøj"
-        },
-        {
-          "label": "Ved ikke endnu"
-        }
-      ]
+      "heading": "Hvordan kan vi **hjælpe?**",
+      "body": "Uanset om du søger firmagaver, merchandise, firmatøj eller en skræddersyet shopløsning, står vi klar med rådgivning og inspiration. Fortæl os om dit behov, så vender vi hurtigt tilbage."
     },
     {
       "type": "locations",
