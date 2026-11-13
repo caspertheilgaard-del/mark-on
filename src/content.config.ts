@@ -259,7 +259,18 @@ const site = defineCollection({
       tagline: z.string(),
       phone: z.object({ label: z.string(), href: z.string() }),
       email: z.string(),
-      menu: z.array(link.extend({ allLabel: z.string().optional().describe('Linket nederst i dropdown-menuen'), children: z.array(link).optional().describe('Undersider i dropdown-menuen') })),
+      menu: z.array(
+        link.extend({
+          allLabel: z.string().optional().describe('Linket under introen i mega menuen'),
+          intro: z.string().optional().describe('Kort tekst under overskriften i mega menuen'),
+          children: z.array(link).optional().describe('Undersider i mega menuen (kun sider, der findes)'),
+          cards: z
+            .array(z.object({ kicker: z.string(), title: z.string(), href: z.string(), image: z.object({ src: image(), alt: z.string() }) }))
+            .optional()
+            .describe('To billeder i højre side af mega menuen (4:5)'),
+        }),
+      ),
+      megaLinks: z.array(link).optional().describe('Små links under undersiderne i mega menuen'),
       cta: link,
       locations: z.array(
         z.object({ name: z.string(), lines: z.array(z.string()), phone: z.string().optional(), email: z.string().optional() }),

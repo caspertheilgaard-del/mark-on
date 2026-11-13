@@ -17,11 +17,37 @@ const site = (await getEntry('site', 'site'))!.data;
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
         </button>
         <div class="sub" id={`undermenu-${i}`}>
-          <div class="panel">
-            <ul>
-              {item.children.map((c) => <li><a href={c.href}>{c.label}</a></li>)}
-            </ul>
-            <a class="sub-all" href={item.href}>{item.allLabel ?? item.label} →</a>
+          <div class="mega">
+            <div class="container mega-in">
+              <div class="mega-intro">
+                <p class="mega-title">{item.label}</p>
+                {item.intro && <p class="mega-text">{item.intro}</p>}
+                <a class="mega-all" href={item.href}>{item.allLabel ?? item.label}</a>
+              </div>
+              <div class="mega-links">
+                <ul>
+                  {item.children.map((c) => <li><a href={c.href}>{c.label}</a></li>)}
+                </ul>
+                {site.megaLinks?.length && (
+                  <ul class="mega-more">
+                    {site.megaLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+                  </ul>
+                )}
+              </div>
+              {item.cards?.length && (
+                <ul class="mega-cards">
+                  {item.cards.map((c) => (
+                    <li>
+                      <a href={c.href}>
+                        <Image src={c.image.src} alt={c.image.alt} widths={[200, 400]} sizes="200px" loading="lazy" />
+                        <span class="mega-kicker">{c.kicker}</span>
+                        <span class="mega-name">{c.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -75,7 +101,7 @@ const site = (await getEntry('site', 'site'))!.data;
     matchMedia('(min-width: 1101px)').addEventListener('change', (e) => { if (e.matches) set(false); });
   }
 
-  // Dropdown i hovedmenuen: åbner ved hover og fokus (CSS) og med pilen (klik, touch, tastatur)
+  // Mega menu: åbner ved hover og fokus (CSS) og med pilen (klik, touch, tastatur). Escape lukker også, når den kun er åbnet med hover (WCAG 1.4.13)
   const subs = [...document.querySelectorAll<HTMLElement>('[data-sub]')];
   const close = (except?: HTMLElement) => subs.forEach((s) => {
     if (s === except) return;
@@ -94,11 +120,11 @@ const site = (await getEntry('site', 'site'))!.data;
   document.addEventListener('click', (e) => { if (!(e.target as Element).closest('[data-sub]')) close(); });
   document.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape') return;
-    const openSub = subs.find((s) => s.classList.contains('open') || s.matches(':focus-within'));
+    const openSub = subs.find((s) => s.classList.contains('open') || s.matches(':focus-within') || s.matches(':hover'));
     close();
     if (openSub) {
       openSub.classList.add('esc');
-      openSub.querySelector<HTMLElement>('[data-sub-toggle]')?.focus();
+      if (openSub.matches(':focus-within')) openSub.querySelector<HTMLElement>('[data-sub-toggle]')?.focus();
       openSub.addEventListener('mouseleave', () => openSub.classList.remove('esc'), { once: true });
       openSub.addEventListener('focusout', () => openSub.classList.remove('esc'), { once: true });
     }
@@ -118,29 +144,54 @@ const site = (await getEntry('site', 'site'))!.data;
   }
   .nav .top:hover, .nav .top[aria-current] { background-size: 100% 2px; color: var(--c-text); }
 
-  /* Dropdown: let, hvidt kort med hjørne 24, kun tekstlinks */
-  .has-sub { position: relative; display: flex; align-items: center; gap: 2px; }
+  /* Mega menu: fuld bredde under headeren som i designet. Intro til venstre, undersider i to kolonner, to billeder (4:5) til højre */
+  .header { position: relative; z-index: 40; }
+  .has-sub { display: flex; align-items: center; gap: 2px; }
+  .has-sub .top { position: relative; }
+  /* Usynlig bro mellem menupunktet og panelet, så det ikke lukker på vej ned */
+  .has-sub .top::after { content: ''; position: absolute; left: -16px; right: -44px; top: 100%; height: 34px; }
   .sub-toggle {
     width: 28px; height: 44px; margin-right: -10px; border: 0; padding: 0; background: none; color: var(--c-text);
     display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 8px;
   }
   .sub-toggle svg { transition: transform 0.2s; }
   .sub {
-    position: absolute; top: 100%; left: -28px; z-index: 50; min-width: 240px; padding-top: 10px;
-    opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s;
+    position: absolute; top: 100%; left: 50%; width: 100vw; margin-left: -50vw; z-index: 50;
+    opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0s linear 0.2s;
   }
-  .panel { background: var(--c-surface); border-radius: var(--radius); box-shadow: var(--shadow-menu), 0 2px 10px rgba(90, 40, 40, 0.06); padding: 14px 28px 12px; }
-  .sub ul { list-style: none; margin: 0; padding: 0 0 6px; }
-  .sub li a { display: flex; align-items: center; min-height: var(--tap); font-size: 15px; font-weight: 600; color: var(--c-text); white-space: nowrap; }
-  .sub li a:hover { color: var(--c-red); }
-  .sub-all {
-    display: flex; align-items: center; min-height: var(--tap); padding-top: 4px;
-    font-size: 14px; font-weight: 700; color: var(--c-red); border-top: 1px solid var(--c-line);
+  .mega {
+    background: var(--c-bg); border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line);
+    box-shadow: var(--shadow-menu);
   }
-  .has-sub:hover .sub, .has-sub:focus-within .sub, .has-sub.open .sub { opacity: 1; visibility: visible; }
-  .has-sub.esc .sub { opacity: 0; visibility: hidden; }
+  .mega-in {
+    display: grid; grid-template-columns: minmax(220px, 1fr) minmax(320px, 1.5fr) auto; gap: 48px;
+    padding-top: 40px; padding-bottom: 44px;
+  }
+  .mega-title { margin: 0 0 16px; font-size: 40px; line-height: 1.1; font-weight: 300; letter-spacing: -1px; color: var(--c-red); }
+  .mega-text { margin: 0 0 20px; font-size: 15px; line-height: 1.6; color: var(--c-text); max-width: 300px; }
+  .mega-all {
+    display: inline-flex; align-items: center; min-height: var(--tap); font-size: 15px; font-weight: 700; color: var(--c-text);
+    text-decoration: underline; text-decoration-color: var(--c-line-strong); text-underline-offset: 8px; text-decoration-thickness: 1px;
+  }
+  .mega-all:hover { color: var(--c-red); text-decoration-color: var(--c-red); }
+  .mega-links ul { list-style: none; margin: 0; padding: 0; }
+  .mega-links > ul:first-child { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+  .mega-links li a { display: flex; align-items: center; min-height: var(--tap); font-size: 16px; font-weight: 500; color: var(--c-text); }
+  .mega-links li a:hover { color: var(--c-red); }
+  .mega-more { display: flex; flex-wrap: wrap; column-gap: 24px; margin-top: 20px !important; padding-top: 12px !important; border-top: 1px solid var(--c-line); }
+  .mega-more li a { font-size: 13px; font-weight: 500; }
+  .mega-cards { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+  .mega-cards a { display: block; width: 180px; color: var(--c-text); }
+  .mega-cards img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); background: var(--c-sand); }
+  .mega-kicker { display: block; margin-top: 12px; font-size: 12px; font-weight: 600; color: var(--c-red); }
+  .mega-name { display: block; margin-top: 2px; font-size: 17px; font-weight: 300; line-height: 1.3; }
+  .mega-cards a:hover .mega-name { color: var(--c-red); }
+  .has-sub:hover .sub, .has-sub:focus-within .sub, .has-sub.open .sub { opacity: 1; visibility: visible; transition: opacity 0.2s, visibility 0s; }
+  .has-sub.esc .sub { opacity: 0; visibility: hidden; transition: none; }
   .has-sub:hover .sub-toggle svg, .has-sub.open .sub-toggle svg { transform: rotate(180deg); }
-  @media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none; } }
+  .has-sub.esc .sub-toggle svg { transform: none; }
+  @media (max-width: 1280px) { .mega-cards a { width: 150px; } .mega-in { gap: 36px; } }
+  @media (prefers-reduced-motion: reduce) { .sub, .sub-toggle svg { transition: none !important; } }
   @media (max-width: 1180px) { .nav { gap: 22px; } }
 
   .actions { display: flex; align-items: center; gap: 12px; }
