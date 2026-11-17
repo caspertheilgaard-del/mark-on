@@ -1,8 +1,8 @@
 {
-  "url": "/merchandise/den-lille-ekstra/",
+  "url": "/merchandise/en-lille-ekstra-ting/",
   "seo": {
-    "title": "Den lille ekstra | MarkOn",
-    "description": "[MANGLER: beskrivelse af kategorien]"
+    "title": "En lille ekstra ting med logo | MarkOn",
+    "description": "Bolsjer, pastiller og slik med jeres logo til webshoppakken, leveringen eller kunderne. MarkOn hjælper med emballage, antal og levering."
   },
   "menu": "Merchandise",
   "breadcrumbs": [
@@ -15,7 +15,7 @@
       "href": "/merchandise/"
     },
     {
-      "label": "[MANGLER: navn på kategorien]"
+      "label": "En lille ekstra ting"
     }
   ],
   "blocks": [
@@ -23,9 +23,10 @@
       "type": "hero",
       "variant": "standard",
       "eyebrow": "Merchandise",
-      "heading": "[MANGLER: navn på kategorien] **[MANGLER: nøgleord]**",
+      "heading": "En lille ekstra ting **med jeres logo**",
       "body": [
-        "[MANGLER: intro fra Carla, 2 til 3 sætninger om den lille ekstra kundeoplevelse, fx bolsjer, slik eller pastiller i webshoppakker]"
+        "Et bolsje eller en pastil i pakken gør leveringen lidt mere personlig. Med jeres logo på æsken, papiret eller etiketten er det tydeligt, hvem den lille ekstra ting kommer fra.",
+        "Hos MarkOn hjælper vi jer med at vælge slik, emballage og logo, så det passer til jeres pakker og jeres brand."
       ],
       "ctas": [
         {
@@ -65,9 +66,9 @@
     },
     {
       "type": "tiles",
-      "heading": "[MANGLER: overskrift fra Carla] **[MANGLER: nøgleord]**",
+      "heading": "Hvornår giver en lille ekstra ting **mening**?",
       "body": [
-        "[MANGLER: kort tekst fra Carla om, hvornår den lille ekstra giver mening: i webshoppakken, ved levering, til kunder og samarbejdspartnere]"
+        "I webshoppakken, ved levering af en ordre eller som en hilsen til kunder og samarbejdspartnere. Det er en lille ting, der gør pakken mere personlig."
       ],
       "tiles": [
         {
@@ -87,8 +88,8 @@
         {
           "title": "I webshoppakken",
           "image": {
-            "alt": "[BILLEDE: DEN LILLE EKSTRA I WEBSHOPPAKKEN]",
-            "placeholder": "[BILLEDE: DEN LILLE EKSTRA I WEBSHOPPAKKEN]",
+            "alt": "[BILLEDE: EN LILLE EKSTRA TING I WEBSHOPPAKKEN]",
+            "placeholder": "[BILLEDE: EN LILLE EKSTRA TING I WEBSHOPPAKKEN]",
             "background": "white"
           }
         }
@@ -97,9 +98,9 @@
     {
       "type": "band",
       "variant": "standard",
-      "heading": "[MANGLER: overskrift om logo og emballage] **[MANGLER: nøgleord]**",
+      "heading": "Jeres logo på **emballagen**",
       "body": [
-        "[MANGLER: tekst fra Carla om logo på æske, papir eller etiket, antal og levering sammen med pakkerne]"
+        "Logoet kan stå på æsken, papiret eller etiketten. Fortæl os, hvor mange I skal bruge, og hvornår de skal være klar. Så vender vi tilbage med forslag og pris."
       ],
       "cta": {
         "label": "Få et tilbud",
@@ -112,21 +113,21 @@
       "heading": "Det spørger I **tit om**",
       "items": [
         {
-          "question": "[MANGLER: spørgsmål 1 fra Carla og Sigurd]",
+          "question": "Kan vi få vores logo på bolsjer og pastiller?",
           "answer": [
-            "[MANGLER: svar]"
+            "Ja. Logoet kommer på emballagen, fx æsken, papiret eller etiketten. [MANGLER: kan logoet også stå på selve bolsjet eller pastillen?]"
           ]
         },
         {
-          "question": "[MANGLER: spørgsmål 2]",
+          "question": "Hvor mange skal vi mindst bestille?",
           "answer": [
-            "[MANGLER: svar]"
+            "[MANGLER: minimumsantal]. Skriv jeres antal i forespørgslen, så vender vi tilbage med forslag og pris."
           ]
         },
         {
-          "question": "[MANGLER: spørgsmål 3]",
+          "question": "Kan de være klar, når vi pakker vores webshopordrer?",
           "answer": [
-            "[MANGLER: svar]"
+            "Fortæl os, hvor mange pakker I sender, og hvornår I skal bruge dem. Så aftaler vi en leveringstid, der passer til jeres pakning."
           ]
         }
       ]
