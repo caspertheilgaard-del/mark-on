@@ -24,20 +24,6 @@
         "Vi er rådgivere, designere og lagerfolk i Lystrup og Ikast. Siden [ÅRSTAL] har vi hjulpet virksomheder med tøj, gaver og merchandise, som folk faktisk bruger."
       ],
       "ctas": [],
-      "stats": [
-        {
-          "value": "[ANTAL]",
-          "label": "år i branchen"
-        },
-        {
-          "value": "[ANTAL]",
-          "label": "kunder om året"
-        },
-        {
-          "value": "[ANTAL]",
-          "label": "medarbejdere"
-        }
-      ],
       "media": {
         "kind": "pair",
         "align": "end",
