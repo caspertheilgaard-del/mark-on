@@ -1,6 +1,6 @@
 ---
-// Kontakt: "Få et tilbud" med tekst (og evt. direkte kontakt) til venstre og formular til højre.
-// Formularen sendes via Netlify Forms (navn: tilbud).
+// Kontakt: "Hvordan kan vi hjælpe?" med tekst (og evt. direkte kontakt) til venstre og formular til højre.
+// Formularen sendes via Netlify Forms (navn: tilbud). Felter: Navn, Virksomhed, Mail, Telefon og en tekstboks (kundeønske 13. nov. 2026); valgene øverst vises kun, hvis needs er udfyldt.
 import { rich } from '../../lib/rich';
 import type { BlockOf } from '../../lib/types';
 interface Props { block: BlockOf<'quoteForm'> }
@@ -29,17 +29,17 @@ const { block } = Astro.props;
   <form class="box form" name="tilbud" method="POST" action="/tak/" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="tilbud" />
     <p class="hp"><label>Udfyld ikke dette felt <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+    {block.needs.length > 0 && (
     <fieldset>
       <legend>Hvad skal I bruge?</legend>
       <div class="chips">
         {block.needs.map((n) => <label class="chk"><input type="checkbox" name="behov" value={n.label} checked={n.checked} />{n.label}</label>)}
       </div>
     </fieldset>
+    )}
     <div class="two">
-      <label class="fld">Antal<input type="text" name="antal" placeholder="Fx 250 stk." /></label>
-      <label class="fld">Deadline<input type="text" name="deadline" placeholder="Fx 1. marts" /></label>
       <label class="fld">Navn<input type="text" name="navn" autocomplete="name" required /></label>
-      <label class="fld">Virksomhed<input type="text" name="virksomhed" autocomplete="organization" /></label>
+      <label class="fld">Virksomhed<input type="text" name="virksomhed" autocomplete="organization" required /></label>
       <label class="fld">Mail<input type="email" name="mail" autocomplete="email" required /></label>
       <label class="fld">Telefon (valgfrit)<input type="tel" name="telefon" autocomplete="tel" /></label>
     </div>

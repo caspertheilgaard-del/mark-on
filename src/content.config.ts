@@ -198,7 +198,7 @@ const sider = defineCollection({
       heading: z.string(),
       body: z.string(),
       channels: z.array(z.object({ icon: z.enum(['phone', 'mail']), label: z.string(), value: z.string(), href: z.string() })).default([]),
-      needs: z.array(z.object({ label: z.string(), checked: z.boolean().default(false) })),
+      needs: z.array(z.object({ label: z.string(), checked: z.boolean().default(false) })).default([]).describe('Valg øverst i formularen; tom = ingen valg'),
       note: z.string().optional(),
     });
 
