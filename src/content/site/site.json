@@ -8,7 +8,7 @@
       "label": "Merchandise", "href": "/merchandise/", "allLabel": "Alt merchandise",
       "children": [
         { "label": "Messer og events", "href": "/merchandise/messer-og-events/" },
-        { "label": "Den lille ekstra", "href": "/merchandise/den-lille-ekstra/" }
+        { "label": "En lille ekstra ting", "href": "/merchandise/en-lille-ekstra-ting/" }
       ]
     },
     {
