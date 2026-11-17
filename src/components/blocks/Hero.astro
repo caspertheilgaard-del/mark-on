@@ -102,10 +102,12 @@ const ratio = { portrait: '3 / 4', tall: '4 / 5', circle: '1 / 1' } as const;
     .swap img { animation: none; }
   }
 
-  .collage { position: relative; height: 600px; }
-  .circle-bg { position: absolute; left: 10%; top: 12%; width: 300px; height: 300px; border-radius: 50%; background: var(--c-sand); }
+  /* Collagen skalerer som én samlet figur (fast forhold 638:600 som på desktop),
+     så billederne og cirklen bliver på deres pladser i alle bredder. */
+  .collage { position: relative; width: 100%; max-width: 640px; aspect-ratio: 638 / 600; }
+  .circle-bg { position: absolute; left: 10%; top: 12%; width: 47%; aspect-ratio: 1 / 1; border-radius: 50%; background: var(--c-sand); }
   .collage :global(.c1) { position: absolute; left: 0; top: 0; width: 46%; }
-  .c2 { position: absolute; right: 0; top: 72px; width: 40%; isolation: isolate; }
+  .c2 { position: absolute; right: 0; top: 12%; width: 40%; isolation: isolate; }
   .collage :global(.c3) { position: absolute; left: 36%; bottom: 0; width: 26%; }
   .collage :global(img) { box-sizing: border-box; }
 
@@ -114,7 +116,4 @@ const ratio = { portrait: '3 / 4', tall: '4 / 5', circle: '1 / 1' } as const;
   .align-end { align-items: flex-end; }
   .pair-item { min-width: 0; position: relative; isolation: isolate; }
 
-  @media (max-width: 760px) {
-    .collage { height: 420px; }
-  }
 </style>
