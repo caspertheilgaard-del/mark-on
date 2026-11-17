@@ -5,14 +5,24 @@
   "email": "salg@markon.as",
   "menu": [
     {
-      "label": "Merchandise", "href": "/merchandise/", "allLabel": "Alt merchandise",
+      "label": "Merchandise", "href": "/merchandise/", "allLabel": "Se alt merchandise",
+      "intro": "Ting, folk bruger, så jeres brand bliver set. Til messen, de nye medarbejdere og det nye brand.",
+      "cards": [
+        { "kicker": "Case", "title": "Norlys Energy", "href": "/inspiration/", "image": { "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg", "alt": "Pastilæske med Norlys Energy Trading logo" } },
+        { "kicker": "Produkt", "title": "Krus med logo", "href": "/merchandise/krus-med-logo/", "image": { "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg", "alt": "Stålkrus med logo" } }
+      ],
       "children": [
         { "label": "Messer og events", "href": "/merchandise/messer-og-events/" },
         { "label": "Den lille ekstra", "href": "/merchandise/den-lille-ekstra/" }
       ]
     },
     {
-      "label": "Firmagaver", "href": "/firmagaver/", "allLabel": "Alle firmagaver",
+      "label": "Firmagaver", "href": "/firmagaver/", "allLabel": "Se alle firmagaver",
+      "intro": "Gaver, der bliver husket. Til jul, jubilæer, barsel og jeres bedste kunder.",
+      "cards": [
+        { "kicker": "Case", "title": "Keepit · Julegave", "href": "/inspiration/", "image": { "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg", "alt": "Gavesæt med drikkedunk, krus og æske" } },
+        { "kicker": "Firmagave", "title": "Jubilæumsgaver", "href": "/firmagaver/jubilaeumsgaver/", "image": { "src": "../../assets/images/286bd7a92f2875f9e06b2004179dc3fc.jpg", "alt": "Hvid drikkedunk med tryk på en stenbænk" } }
+      ],
       "children": [
         { "label": "Julegaver", "href": "/firmajulegaver/" },
         { "label": "Kundegaver", "href": "/firmagaver/kundegaver/" },
@@ -24,6 +34,11 @@
     { "label": "Firmatøj", "href": "/firmatoej/" },
     { "label": "Inspiration", "href": "/inspiration/" },
     { "label": "Om os", "href": "/om-os/" },
+    { "label": "Kontakt", "href": "/kontakt/" }
+  ],
+  "megaLinks": [
+    { "label": "Inspiration", "href": "/inspiration/" },
+    { "label": "Om MarkOn", "href": "/om-os/" },
     { "label": "Kontakt", "href": "/kontakt/" }
   ],
   "cta": { "label": "Få et tilbud", "href": "/kontakt/" },
