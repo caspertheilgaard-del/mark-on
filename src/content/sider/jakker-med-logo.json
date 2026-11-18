@@ -1,0 +1,164 @@
+{
+ "url": "/firmatoej/jakker-med-logo/",
+ "seo": {
+  "title": "Jakker og overtøj med logo | MarkOn",
+  "description": "Jakker og overtøj med logo til medarbejdere, der arbejder ude eller møder kunder. Tryk eller broderi, der passer til jakken. Få et tilbud hos MarkOn."
+ },
+ "menu": "Firmatøj",
+ "breadcrumbs": [
+  {
+   "label": "Forside",
+   "href": "/"
+  },
+  {
+   "label": "Firmatøj",
+   "href": "/firmatoej/"
+  },
+  {
+   "label": "Jakker og overtøj"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "heading": "Jakker og overtøj med logo – **til skiftende vejr og arbejdsdage**",
+   "body": [
+    "En jakke til korte ture mellem bilen og kunden skal kunne noget andet end overtøj til en hel dag udendørs. Det rette valg afhænger af, hvor længe medarbejderne er ude, hvor meget de bevæger sig, og hvad de har på indenunder.",
+    "Hos MarkOn hjælper vi jer med at finde jakker og overtøj, der passer til arbejdsdagen og repræsenterer jeres virksomhed. Fra lette veste til varme vinterjakker rådgiver vi om funktion, pasform og mulighederne for logo."
+   ],
+   "ctas": [
+    {
+     "label": "Find overtøj til jeres medarbejdere",
+     "href": "/kontakt/"
+    }
+   ],
+   "media": {
+    "kind": "image",
+    "image": {
+     "alt": "[BILLEDE: JAKKE MED LOGO]",
+     "placeholder": "[BILLEDE: JAKKE MED LOGO]"
+    }
+   }
+  },
+  {
+   "type": "cards",
+   "heading": "Hvad skal overtøjet **kunne holde til?**",
+   "body": [
+    "Vind, regn og kulde stiller forskellige krav til beklædningen. Derfor begynder vi med brugen: Skal jakken være let at tage med, give varme i pauserne eller beskytte mod vejret gennem længere tid?"
+   ],
+   "cards": [
+    {
+     "heading": "Softshell og lette jakker til en aktiv hverdag",
+     "body": [
+      "Til medarbejdere, der bevæger sig meget eller ofte går ind og ud, kan en softshell eller en let jakke være relevant. Her er bevægelsesfrihed og muligheden for at komme af med overskudsvarme værd at se på.",
+      "Vi hjælper med at vurdere modellerne ud fra jeres behov. Der er forskel på, hvor meget de enkelte jakker beskytter mod vind og regn."
+     ]
+    },
+    {
+     "heading": "Regnjakker og skaljakker til våde dage",
+     "body": [
+      "Når medarbejderne opholder sig ude i regnvejr, er det relevant at se på både materiale, sømme og lukninger. Hætte, justeringer og plads til lag indenunder har også betydning for, hvordan jakken fungerer i praksis.",
+      "Vi rådgiver om de konkrete modellers egenskaber, så I kan vælge ud fra den beskyttelse, arbejdsdagen kræver."
+     ]
+    },
+    {
+     "heading": "Vinterjakker og veste til de kolde måneder",
+     "body": [
+      "Ved stillestående arbejde kan behovet for varme være større end ved høj aktivitet. En vinterjakke kan være løsningen til kolde dage, mens en vest kan give ekstra varme omkring kroppen og samtidig holde armene fri.",
+      "Sammen ser vi på, hvordan overtøjet skal bruges og kombineres med resten af medarbejdernes beklædning."
+     ]
+    }
+   ],
+   "gallery": [
+    {
+     "alt": "[BILLEDE: SOFTSHELLJAKKE]",
+     "placeholder": "[BILLEDE: SOFTSHELLJAKKE]"
+    },
+    {
+     "alt": "[BILLEDE: REGNJAKKE]",
+     "placeholder": "[BILLEDE: REGNJAKKE]"
+    },
+    {
+     "alt": "[BILLEDE: VEST MED LOGO]",
+     "placeholder": "[BILLEDE: VEST MED LOGO]"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "heading": "Et synligt brand kræver **omtanke for detaljerne**",
+   "body": [
+    "Jakken er ofte det første, kunden ser. Farve, snit og logo er derfor med til at give et genkendeligt indtryk, også når resten af firmatøjet er dækket til.",
+    "Men logoets placering handler om mere end udseendet. Lommer, lynlåse, sømme og foret i jakken kan have betydning for, hvor og hvordan det kan påføres. Vi vurderer mulighederne på den valgte model og rådgiver om tryk eller broderi med hensyn til materialet og jakkens funktion.",
+    "Overvej også, hvad medarbejderne skal have plads til under jakken. En model, der sidder godt over en T-shirt, kan føles anderledes med en tyk sweatshirt indenunder. Vi rådgiver om størrelser og afklarer mulighederne for prøver."
+   ],
+   "links": [
+    {
+     "label": "Læs om logo, tryk og broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    }
+   ],
+   "cta": {
+    "label": "Få et tilbud på jakker med logo",
+    "href": "/kontakt/"
+   }
+  },
+  {
+   "type": "faq",
+   "heading": "Spørgsmål om **jakker og overtøj**",
+   "items": [
+    {
+     "question": "Kan vi bruge den samme jakke hele året?",
+     "answer": [
+      "Det afhænger af arbejdsforholdene. For nogle kan en skaljakke med forskellige lag indenunder fungere gennem flere sæsoner. Andre har brug for både en let sommerjakke og en varmere vintermodel.",
+      "Vi hjælper jer med at vurdere, om én løsning eller flere typer overtøj passer bedst til medarbejderne."
+     ]
+    },
+    {
+     "question": "Hvad er forskellen på vandafvisende og vandtæt?",
+     "answer": [
+      "Vandafvisende overtøj kan modstå lettere fugt og kortvarig regn. Vandtæt overtøj er lavet til at holde vand ude, men den samlede beskyttelse afhænger også af blandt andet sømme og lukninger.",
+      "Vi gennemgår egenskaberne for de modeller, I overvejer, og ser på dem i forhold til den tid, medarbejderne tilbringer udendørs."
+     ]
+    },
+    {
+     "question": "Skal alle medarbejdere have samme model?",
+     "answer": [
+      "I kan godt vælge forskellige modeller til forskellige funktioner. Medarbejdere på farten kan have andre behov end kolleger, der arbejder udendørs det meste af dagen.",
+      "Farver og logoplacering kan skabe sammenhæng, selvom overtøjet varierer. Vi hjælper jer med at finde den fælles retning."
+     ]
+    }
+   ],
+   "link": {
+    "label": "Se alle muligheder for firmatøj",
+    "href": "/firmatoej/"
+   }
+  },
+  {
+   "type": "next",
+   "items": [
+    {
+     "title": "Få et tilbud på jakker",
+     "text": "Skriv antal og deadline",
+     "href": "/kontakt/",
+     "primary": true
+    },
+    {
+     "title": "Arbejdstøj",
+     "text": "Til arbejdsdagen",
+     "href": "/firmatoej/arbejdstoej-med-logo/"
+    },
+    {
+     "title": "Accessories",
+     "text": "Huer, caps og tasker",
+     "href": "/firmatoej/accessories/"
+    },
+    {
+     "title": "Alt firmatøj",
+     "text": "Firmatøj",
+     "href": "/firmatoej/"
+    }
+   ]
+  }
+ ]
+}

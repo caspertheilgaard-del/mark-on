@@ -1,0 +1,199 @@
+{
+ "url": "/firmatoej/profiltoej/",
+ "seo": {
+  "title": "Profiltøj og profilbeklædning med logo | MarkOn",
+  "description": "Profiltøj og profilbeklædning med jeres logo til hele virksomheden. MarkOn hjælper med valg af tøj, tryk eller broderi, størrelser og levering."
+ },
+ "menu": "Firmatøj",
+ "breadcrumbs": [
+  {
+   "label": "Forside",
+   "href": "/"
+  },
+  {
+   "label": "Firmatøj",
+   "href": "/firmatoej/"
+  },
+  {
+   "label": "Profiltøj"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "heading": "Profiltøj med logo, **der passer til jeres hverdag**",
+   "body": [
+    "Giv medarbejderne et fælles udtryk med tøj, de har lyst til at tage på. Profiltøj med logo gør jeres virksomhed genkendelig på kontoret, i butikken og i mødet med kunder og samarbejdspartnere.",
+    "Hos MarkOn hjælper vi jer med at vælge profiltøj, der passer til medarbejderne og jeres brand. Vi rådgiver om modeller, materialer og pasform og hjælper med tryk, broderi og levering."
+   ],
+   "ctas": [
+    {
+     "label": "Få et tilbud på profiltøj",
+     "href": "/kontakt/"
+    }
+   ],
+   "media": {
+    "kind": "image",
+    "image": {
+     "alt": "[BILLEDE: SYSTEMATIC HOODIE, FOR OG BAG]",
+     "placeholder": "[BILLEDE: SYSTEMATIC HOODIE, FOR OG BAG]"
+    }
+   }
+  },
+  {
+   "type": "cards",
+   "heading": "Find profiltøj til medarbejdere **og anledninger**",
+   "body": [
+    "Nogle har brug for en polo til arbejdsdagen. Andre foretrækker en skjorte til kundemøder eller en sweatshirt til en mere uformel hverdag. I kan kombinere forskellige modeller og stadig skabe sammenhæng gennem farver og logo.",
+    "Vi hjælper jer med at sammensætte et udvalg, der passer til medarbejdernes opgaver og den måde, I gerne vil præsentere virksomheden på."
+   ],
+   "cards": [
+    {
+     "heading": "T-shirts og poloer med logo",
+     "body": [
+      "T-shirts og poloer kan bruges i hverdagen, på messer og til fælles arrangementer. De giver plads til både et diskret logo og et mere synligt budskab.",
+      "Vi rådgiver om materialer, snit og farver, så I kan vælge modeller, der fungerer til formålet. Det gælder også placeringen af logoet, som er med til at bestemme tøjets samlede udtryk."
+     ]
+    },
+    {
+     "heading": "Skjorter, strik og jakkesæt",
+     "body": [
+      "Skjorter, strik og jakkesæt kan skabe et professionelt og samlet udtryk til kundemøder, messer og arbejdsdagen. Vi hjælper jer med at finde modeller og pasformer, som medarbejderne føler sig godt tilpas i.",
+      "I kan kombinere jakkesæt med skjorter eller strik alt efter jeres stil. Vi rådgiver om farver, materialer og mulighederne for et diskret logo, hvor det passer til tøjet."
+     ]
+    },
+    {
+     "heading": "Sweatshirts og hoodies til en uformel stil",
+     "body": [
+      "En sweatshirt eller hoodie kan passe til arbejdspladsens hverdag og bruges til medarbejderdage, messer og andre aktiviteter. Her har både komfort, pasform og design betydning for, om tøjet bliver taget i brug igen.",
+      "Vi hjælper jer med at vælge modeller og branding, der afspejler jeres virksomhed og passer til modtagerne."
+     ],
+     "link": {
+      "label": "Få inspiration til profiltøj",
+      "href": "/inspiration/"
+     }
+    }
+   ],
+   "gallery": [
+    {
+     "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
+     "alt": "T-shirt med tryk",
+     "position": "center 30%"
+    },
+    {
+     "alt": "[BILLEDE: POLO MED BRODERET LOGO]",
+     "placeholder": "[BILLEDE: POLO MED BRODERET LOGO]"
+    },
+    {
+     "alt": "[BILLEDE: SKJORTE MED LOGO]",
+     "placeholder": "[BILLEDE: SKJORTE MED LOGO]"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "heading": "Fra valg af tøj **til placering af logo**",
+   "body": [
+    "Det er nemmere at vælge profiltøj, når I har overblik over mulighederne. Vi tager udgangspunkt i jeres behov og hjælper med at få tøjet og de praktiske detaljer på plads."
+   ],
+   "lead": "Sammen gennemgår vi blandt andet:",
+   "steps": [
+    {
+     "title": "Brug og anledning",
+     "text": "Skal tøjet bruges dagligt, til kundemøder eller ved bestemte arrangementer?"
+    },
+    {
+     "title": "Modeller og pasform",
+     "text": "Hvilke snit og størrelser passer til medarbejderne?"
+    },
+    {
+     "title": "Materialer",
+     "text": "Hvad er vigtigt for komfort, brug og vask?"
+    },
+    {
+     "title": "Farver og logo",
+     "text": "Hvordan skal tøjet afspejle jeres visuelle identitet?"
+    },
+    {
+     "title": "Antal, budget og levering",
+     "text": "Hvor meget har I brug for, og hvornår skal det være klar?"
+    }
+   ],
+   "after": [
+    "Vi rådgiver også om tryk og broderi. Valget afhænger blandt andet af tøjets materiale, logoets detaljer og den ønskede placering.",
+    "Har I løbende behov for profiltøj til nye medarbejdere eller flere afdelinger? Vi hjælper også med at afklare mulighederne for en lukket webshop med jeres udvalg."
+   ],
+   "links": [
+    {
+     "label": "Læs om logo, tryk og broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    },
+    {
+     "label": "Se mulighederne for shopløsninger",
+     "href": "/kontakt/"
+    }
+   ],
+   "cta": {
+    "label": "Tal med os om jeres profiltøj",
+    "href": "/kontakt/"
+   }
+  },
+  {
+   "type": "faq",
+   "heading": "Spørgsmål om **profiltøj med logo**",
+   "items": [
+    {
+     "question": "Hvad er profiltøj?",
+     "answer": [
+      "Profiltøj er tøj, der repræsenterer jeres virksomhed gennem for eksempel logo, farver eller et fælles design. Det kan være T-shirts, poloer, skjorter, strik og sweatshirts.",
+      "Det kan bruges som en del af medarbejdernes daglige påklædning eller til messer, events og andre anledninger, hvor I gerne vil være genkendelige."
+     ]
+    },
+    {
+     "question": "Kan vi vælge forskellige modeller til medarbejderne?",
+     "answer": [
+      "Ja. Et fælles udtryk behøver ikke betyde, at alle går i den samme model. I kan kombinere forskellige snit og typer af tøj og lade farver og logo skabe sammenhæng.",
+      "Vi hjælper jer med at finde et udvalg, der passer til både medarbejderne og jeres brand."
+     ]
+    },
+    {
+     "question": "Kan vi få hjælp til at vælge størrelse og pasform?",
+     "answer": [
+      "Ja. Vi rådgiver om størrelser og pasform på de valgte modeller og afklarer mulighederne for prøver, inden I bestiller.",
+      "Fortæl os gerne, hvor mange medarbejdere tøjet er til, og om I har særlige ønsker til pasformen. Så tager vi det med i udvælgelsen."
+     ]
+    }
+   ],
+   "link": {
+    "label": "Se alle muligheder for firmatøj",
+    "href": "/firmatoej/"
+   }
+  },
+  {
+   "type": "next",
+   "items": [
+    {
+     "title": "Få et tilbud på profiltøj",
+     "text": "Skriv antal og deadline",
+     "href": "/kontakt/",
+     "primary": true
+    },
+    {
+     "title": "Logo og broderi",
+     "text": "Tryk eller broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    },
+    {
+     "title": "Arbejdstøj",
+     "text": "Til arbejdsdagen",
+     "href": "/firmatoej/arbejdstoej-med-logo/"
+    },
+    {
+     "title": "Alt firmatøj",
+     "text": "Firmatøj",
+     "href": "/firmatoej/"
+    }
+   ]
+  }
+ ]
+}

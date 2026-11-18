@@ -1,0 +1,183 @@
+{
+ "url": "/firmatoej/sport-og-fritid/",
+ "seo": {
+  "title": "Sportstøj og fritidstøj med logo | MarkOn",
+  "description": "Sportstøj og fritidstøj med logo til firmaløb, medarbejderdage og events. MarkOn hjælper med tøj, tryk og levering. Få et tilbud."
+ },
+ "menu": "Firmatøj",
+ "breadcrumbs": [
+  {
+   "label": "Forside",
+   "href": "/"
+  },
+  {
+   "label": "Firmatøj",
+   "href": "/firmatoej/"
+  },
+  {
+   "label": "Sport og fritid"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "heading": "Sportstøj og fritidstøj **med jeres logo**",
+   "body": [
+    "Saml kollegerne i tøj, der passer til aktiviteten og er behageligt at have på. Sportstøj og fritidstøj med logo kan give jer et fælles udtryk til firmaløbet, medarbejderdagen og de uformelle stunder i hverdagen.",
+    "Hos MarkOn hjælper vi jer med at vælge modeller, materialer og branding, der passer til medarbejderne og jeres formål. Vi rådgiver fra den første idé til det færdige tøj med tryk eller broderi."
+   ],
+   "ctas": [
+    {
+     "label": "Få et tilbud på sportstøj og fritidstøj",
+     "href": "/kontakt/"
+    }
+   ],
+   "media": {
+    "kind": "image",
+    "image": {
+     "alt": "[BILLEDE: SPORTSTØJ MED LOGO]",
+     "placeholder": "[BILLEDE: SPORTSTØJ MED LOGO]"
+    }
+   }
+  },
+  {
+   "type": "cards",
+   "heading": "Find tøj til bevægelse **og fælles aktiviteter**",
+   "body": [
+    "Skal I deltage i et motionsløb, arrangere en aktiv medarbejderdag eller finde fritidstøj til kollegerne? Aktiviteten er med til at afgøre, hvad tøjet skal kunne.",
+    "Vi hjælper jer med at sammensætte et udvalg, hvor komfort, pasform og design hænger sammen. Med forskellige modeller og størrelser kan alle være med i det fælles udtryk."
+   ],
+   "cards": [
+    {
+     "heading": "Sportstøj til firmaløb og træning",
+     "body": [
+      "Til løb og træning er bevægelsesfrihed og materialer relevante at se på. Tøjet skal føles behageligt, både når medarbejderne går, løber og deltager i andre aktiviteter.",
+      "Vi rådgiver om blandt andet t-shirts, shorts og træningstøj, der passer til formålet. Jeres logo eller et budskab fra arrangementet kan indgå i designet."
+     ]
+    },
+    {
+     "heading": "Tøj til medarbejderdage og firmaevents",
+     "body": [
+      "En fælles T-shirt kan gøre det nemt at genkende kollegerne og samle deltagerne om dagens aktivitet. Skal arrangementet foregå udendørs, kan en sweatshirt eller et ekstra lag også være relevant.",
+      "Vi hjælper jer med at vælge tøj ud fra programmet, årstiden og jeres budget. Så passer beklædningen til det, I skal lave sammen."
+     ]
+    },
+    {
+     "heading": "Fritidstøj, der kan bruges bagefter",
+     "body": [
+      "En hoodie, sweatshirt eller et par fritidsbukser kan også være en gave til medarbejderne. Her er pasform og et design, der passer til modtagerne, et godt udgangspunkt.",
+      "Vi hjælper jer med at finde modeller og farver, der afspejler jeres brand. Logoet kan være diskret eller mere synligt, alt efter hvilket udtryk I ønsker."
+     ],
+     "link": {
+      "label": "Få inspiration til sportstøj og fritidstøj",
+      "href": "/inspiration/"
+     }
+    }
+   ],
+   "gallery": [
+    {
+     "alt": "[BILLEDE: LØBETØJ TIL FIRMALØB]",
+     "placeholder": "[BILLEDE: LØBETØJ TIL FIRMALØB]"
+    },
+    {
+     "alt": "[BILLEDE: T-SHIRT TIL MEDARBEJDERDAGEN]",
+     "placeholder": "[BILLEDE: T-SHIRT TIL MEDARBEJDERDAGEN]"
+    },
+    {
+     "alt": "[BILLEDE: HOODIE TIL FRITIDEN]",
+     "placeholder": "[BILLEDE: HOODIE TIL FRITIDEN]"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "heading": "Fra valg af modeller **til færdigt tøj med logo**",
+   "body": [
+    "I behøver ikke have valgt tøjet på forhånd. Fortæl os, hvem det er til, og hvordan det skal bruges. Så kommer vi med konkrete forslag."
+   ],
+   "lead": "Sammen gennemgår vi:",
+   "steps": [
+    {
+     "title": "Aktiviteten",
+     "text": "Skal tøjet bruges til sport, et arrangement eller i fritiden?"
+    },
+    {
+     "title": "Materialerne",
+     "text": "Er der behov for lav vægt, svedtransport eller et varmere lag?"
+    },
+    {
+     "title": "Pasformen",
+     "text": "Hvilke modeller og størrelser passer til deltagerne?"
+    },
+    {
+     "title": "Designet",
+     "text": "Hvordan skal farver, logo og eventuelle budskaber indgå?"
+    },
+    {
+     "title": "Antal og tidsplan",
+     "text": "Hvor meget har I brug for, og hvornår skal tøjet være klar?"
+    }
+   ],
+   "after": [
+    "Vi rådgiver om tryk og broderi ud fra det valgte materiale og placeringen af logoet. Det er særligt relevant på sportstøj, hvor branding og bevægelse skal fungere sammen.",
+    "Skal I også bruge et lag til turen ud eller pauserne mellem aktiviteterne? Vi hjælper med at finde jakker og veste, der passer til resten af tøjet."
+   ],
+   "links": [
+    {
+     "label": "Læs om logo, tryk og broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    },
+    {
+     "label": "Se jakker og overtøj",
+     "href": "/firmatoej/jakker-med-logo/"
+    }
+   ],
+   "cta": {
+    "label": "Tal med os om tøj til jeres næste aktivitet",
+    "href": "/kontakt/"
+   }
+  },
+  {
+   "type": "faq",
+   "heading": "Spørgsmål om **sportstøj og fritidstøj med logo**",
+   "items": [
+    {
+     "question": "Hvilket tøj passer til et firmaløb?",
+     "answer": [
+      "Det afhænger blandt andet af årstiden og deltagernes aktivitet. En let T[MANGLER: resten af svaret og spørgsmål 2 og 3; teksten i Word-filen stopper her]"
+     ]
+    }
+   ],
+   "link": {
+    "label": "Se alle muligheder for firmatøj",
+    "href": "/firmatoej/"
+   }
+  },
+  {
+   "type": "next",
+   "items": [
+    {
+     "title": "Få et tilbud på sportstøj",
+     "text": "Skriv antal og deadline",
+     "href": "/kontakt/",
+     "primary": true
+    },
+    {
+     "title": "Profiltøj",
+     "text": "Til hele virksomheden",
+     "href": "/firmatoej/profiltoej/"
+    },
+    {
+     "title": "Jakker og overtøj",
+     "text": "Til turen ud",
+     "href": "/firmatoej/jakker-med-logo/"
+    },
+    {
+     "title": "Alt firmatøj",
+     "text": "Firmatøj",
+     "href": "/firmatoej/"
+    }
+   ]
+  }
+ ]
+}
