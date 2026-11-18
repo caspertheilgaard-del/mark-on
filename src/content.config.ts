@@ -142,6 +142,15 @@ const sider = defineCollection({
       image: media,
     });
 
+    // Cases i et gitter: ét billede (4:5) og én linje pr. kunde (kunde, resultat og evt. "Se casen").
+    const caseList = z.object({
+      type: z.literal('caseList'),
+      heading: z.string().optional(),
+      items: z.array(
+        z.object({ customer: z.string(), result: z.string(), href: z.string().optional(), linkLabel: z.string().default('Se casen'), image: media }),
+      ),
+    });
+
     const features = z.object({
       type: z.literal('features'),
       heading: z.string(),
@@ -245,7 +254,7 @@ const sider = defineCollection({
       breadcrumbs: z.array(z.object({ label: z.string(), href: z.string().optional() })).optional(),
       blocks: z.array(
         z.discriminatedUnion('type', [
-          hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, features, products,
+          hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, caseList, features, products,
           split, values, team, info, quoteForm, locations, product, faq, next,
         ]),
       ),
