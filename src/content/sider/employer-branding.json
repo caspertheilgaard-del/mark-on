@@ -1,0 +1,216 @@
+{
+  "url": "/merchandise/employer-branding/",
+  "seo": {
+    "title": "Merchandise til employer branding | MarkOn",
+    "description": "Merchandise til employer branding, der gør jeres virksomhed synlig for medarbejdere og kandidater. MarkOn hjælper fra idé til levering."
+  },
+  "menu": "Merchandise",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Merchandise",
+      "href": "/merchandise/"
+    },
+    {
+      "label": "Employer branding"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Merchandise til **employer branding**",
+      "body": [
+        "Lad jeres merchandise afspejle den arbejdsplads I er. Tøj, tasker og andre produkter med logo kan gøre jeres brand synligt i medarbejdernes hverdag og i mødet med kommende kolleger.",
+        "Hos MarkOn hjælper vi jer med at finde merchandise til employer branding, der passer til jeres kultur, medarbejdere og budget. Vi rådgiver om produktvalg og branding og hjælper fra idé til pakning og levering."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud på merchandise",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "pair",
+        "align": "end",
+        "maxWidth": 500,
+        "items": [
+          {
+            "image": {
+              "src": "../../assets/images/systematic-hoodie-ryg.avif",
+              "alt": "Hoodie med Systematics budskab \"never stop developing\" på ryggen"
+            },
+            "shape": "tall",
+            "grow": 1.6,
+            "offsetBottom": 0,
+            "dot": true,
+            "shadow": true
+          },
+          {
+            "image": {
+              "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
+              "alt": "Mørkeblå mulepose med \"never stop developing\""
+            },
+            "shape": "circle",
+            "grow": 1.0,
+            "offsetBottom": 64,
+            "dot": false,
+            "shadow": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "heading": "Gør jeres arbejdsplads synlig **med produkter, der bliver brugt**",
+      "body": [
+        "Jeres employer branding tager afsæt i, hvordan det er at arbejde hos jer. Merchandise kan være med til at give den fortælling et konkret udtryk gennem produkter, som medarbejderne har glæde af og lyst til at bruge.",
+        "Det kan være en hoodie til arbejdsdagen, en taske til turen mellem hjem og kontor eller en drikkedunk til fælles aktiviteter. Vi hjælper jer med at vælge produkter, der passer til jeres hverdag og den måde, I gerne vil præsentere jer på."
+      ],
+      "cards": [
+        {
+          "heading": "Merchandise til medarbejdernes hverdag",
+          "body": [
+            "De produkter I vælger skal give mening for medarbejderne. Derfor tager vi udgangspunkt i deres arbejdsdag, behov og de ting, I allerede stiller til rådighed.",
+            "Det kan være krus og notesbøger til kontoret, tasker til kolleger på farten eller tøj med logo. Vi rådgiver om funktion, kvalitet og design, så produkterne passer til både medarbejderne og jeres visuelle udtryk."
+          ],
+          "link": {
+            "label": "Få inspiration til merchandise til medarbejdere",
+            "href": "/inspiration/"
+          }
+        },
+        {
+          "heading": "Merchandise til rekruttering og karrieremesser",
+          "body": [
+            "Når I møder mulige nye kolleger, kan merchandise være en anledning til at starte en samtale og give dem noget at huske jer for. En kuglepen, notesbog eller mulepose kan følge med videre efter mødet.",
+            "Vi hjælper jer med at finde produkter, der passer til målgruppen og den historie, I gerne vil fortælle om jer som arbejdsplads. Har I et budskab fra en rekrutteringskampagne, kan det også tænkes ind i designet."
+          ]
+        },
+        {
+          "heading": "Et fælles udtryk til medarbejderaktiviteter",
+          "body": [
+            "Til en medarbejderdag, et motionsløb eller en intern samling kan merchandise give deltagerne et fælles udtryk. Det kan være T-shirts til aktiviteten eller en drikkedunk, der kan bruges på dagen og bagefter.",
+            "Vi hjælper med at vælge produkter og branding, der passer til arrangementet. Så hænger anledningen, produkterne og jeres brand sammen."
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
+          "alt": "T-shirt med tryk",
+          "position": "center 30%"
+        },
+        {
+          "src": "../../assets/images/da786e6e4498fd2b3c6a9729f90a46a7.jpg",
+          "alt": "Muleposer med budskaber til medarbejdere fra OK og Urtekram"
+        },
+        {
+          "src": "../../assets/images/8bb3a7273f669f5d5f55c027b5d7dfb9.jpg",
+          "alt": "Drikkedunk med tryk"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "heading": "Fra jeres kultur **til valg af merchandise**",
+      "body": [
+        "Hvilke produkter passer til jer som arbejdsplads? Det finder vi ud af sammen. I behøver ikke have en færdig idé, før I kontakter os."
+      ],
+      "lead": "Vi tager blandt andet en snak om:",
+      "steps": [
+        {
+          "title": "Modtagerne",
+          "text": "Er produkterne til nuværende medarbejdere, kommende kolleger eller begge dele?"
+        },
+        {
+          "title": "Formålet",
+          "text": "Skal de bruges i hverdagen, til rekruttering eller ved en fælles aktivitet?"
+        },
+        {
+          "title": "Udtrykket",
+          "text": "Skal logoet stå tydeligt frem, eller ønsker I et mere diskret design?"
+        },
+        {
+          "title": "Budget og antal",
+          "text": "Hvor mange produkter har I brug for, og hvad er budgettet?"
+        },
+        {
+          "title": "Tidsplanen",
+          "text": "Hvornår skal produkterne være klar, og hvor skal de leveres?"
+        }
+      ],
+      "after": [
+        "Herfra rådgiver vi om produkter, materialer og mulighederne for tryk eller broderi. Vi hjælper også med pakning og levering, når det er en del af opgaven.",
+        "Skal I byde nye medarbejdere velkommen? Vi hjælper også med at sammensætte welcome kits, der kan indgå i jeres onboarding."
+      ],
+      "links": [
+        {
+          "label": "Læs om onboarding og welcome kits",
+          "href": "#"
+        }
+      ],
+      "cta": {
+        "label": "Tal med os om jeres idéer",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Spørgsmål om merchandise **til employer branding**",
+      "items": [
+        {
+          "question": "Hvordan kan merchandise bruges til employer branding?",
+          "answer": [
+            "Merchandise kan gøre jeres arbejdsplads synlig gennem produkter, som medarbejdere og kommende kolleger bruger. Valget af produkter, design og budskaber kan være med til at afspejle, hvem I er som virksomhed.",
+            "Det fungerer bedst, når produkterne hænger sammen med den arbejdsplads, medarbejderne kender, og den fortælling, I deler i jeres rekruttering."
+          ]
+        },
+        {
+          "question": "Hvilke produkter passer til vores medarbejdere?",
+          "answer": [
+            "Det afhænger af medarbejdernes hverdag og jeres formål. Tøj, tasker, krus og drikkedunke kan være relevante, men der er forskel på behovene på et kontor, i en butik og på en byggeplads. Vi hjælper jer med at vælge ud fra, hvor og hvordan produkterne skal bruges."
+          ]
+        },
+        {
+          "question": "Kan vi få et design med mere end vores logo?",
+          "answer": [
+            "Ja. Ud over logoet kan vi arbejde med jeres farver, grafiske elementer eller et budskab, der passer til anledningen. Mulighederne afhænger af produktet og den valgte metode til branding.",
+            "Vi rådgiver om, hvordan designet kan fungere på de forskellige produkter og skabe et samlet udtryk."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for merchandise",
+        "href": "/merchandise/"
+      }
+    },
+    {
+      "type": "next",
+      "items": [
+        {
+          "title": "Få et tilbud på merchandise",
+          "text": "Fortæl os om jeres idé",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Firmatøj",
+          "text": "Tøj med logo",
+          "href": "/firmatoej/"
+        },
+        {
+          "title": "Rebranding",
+          "text": "Nyt brand på merchandise",
+          "href": "/merchandise/rebranding/"
+        },
+        {
+          "title": "Alt merchandise",
+          "text": "Tilbage til området",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}

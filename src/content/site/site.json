@@ -13,7 +13,10 @@
       ],
       "children": [
         { "label": "Messer og events", "href": "/merchandise/messer-og-events/" },
-        { "label": "En lille ekstra ting", "href": "/merchandise/en-lille-ekstra-ting/" }
+        { "label": "En lille ekstra ting", "href": "/merchandise/en-lille-ekstra-ting/" },
+        { "label": "Employer branding", "href": "/merchandise/employer-branding/" },
+        { "label": "Rebranding", "href": "/merchandise/rebranding/" },
+        { "label": "Specialproduktion", "href": "/merchandise/specialproduktion/" }
       ]
     },
     {
