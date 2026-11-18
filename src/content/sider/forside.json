@@ -112,20 +112,20 @@
         },
         {
           "title": "Firmatøj",
-          "href": "#",
+          "href": "/firmatoej/",
           "text": "En ensartet og professionel profil i hverdagen, med broderi eller tryk.",
           "links": [
             {
               "label": "Profiltøj",
-              "href": "#"
+              "href": "/firmatoej/profiltoej/"
             },
             {
               "label": "Arbejdstøj",
-              "href": "#"
+              "href": "/firmatoej/arbejdstoej-med-logo/"
             },
             {
               "label": "Logo og broderi",
-              "href": "#"
+              "href": "/firmatoej/logo-og-broderi/"
             }
           ],
           "more": "Se firmatøj",

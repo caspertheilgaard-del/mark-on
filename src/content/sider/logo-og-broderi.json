@@ -1,0 +1,95 @@
+{
+ "url": "/firmatoej/logo-og-broderi/",
+ "seo": {
+  "title": "Logo på tøj: broderi og tryk | MarkOn",
+  "description": "Logo på tøj med broderi eller tryk. MarkOn rådgiver om metode, placering og farver, så logoet passer til tøjet. Få et tilbud."
+ },
+ "menu": "Firmatøj",
+ "breadcrumbs": [
+  {
+   "label": "Forside",
+   "href": "/"
+  },
+  {
+   "label": "Firmatøj",
+   "href": "/firmatoej/"
+  },
+  {
+   "label": "Logo og broderi"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "heading": "Logo og broderi **på firmatøj**",
+   "body": [
+    "Et diskret logo på brystet eller virksomhedens navn på ryggen? Placering, størrelse og udførelse er med til at bestemme, hvordan jeres firmatøj fremstår.",
+    "Hos MarkOn hjælper og rådgiver vi jer med at vælge en løsning, hvor logoet passer til både tøjet og jeres visuelle udtryk."
+   ],
+   "ctas": [
+    {
+     "label": "Få et tilbud",
+     "href": "/kontakt/"
+    }
+   ],
+   "media": {
+    "kind": "image",
+    "image": {
+     "alt": "[BILLEDE: LOGO BRODERET PÅ TØJ]",
+     "placeholder": "[BILLEDE: LOGO BRODERET PÅ TØJ]"
+    }
+   }
+  },
+  {
+   "type": "band",
+   "heading": "Broderi eller tryk – **hvad passer til tøjet?**",
+   "body": [
+    "Broderi giver logoet struktur og kan for eksempel bruges på poloer, skjorter og jakker. Tryk giver andre muligheder, blandt andet til større motiver og budskaber.",
+    "Vi anbefaler metoden ud fra materialet, logoets detaljer og den måde, tøjet skal bruges og vaskes på. Har I forskellige typer firmatøj, kan løsningen variere fra produkt til produkt."
+   ]
+  },
+  {
+   "type": "band",
+   "heading": "Send jeres logo, **så ser vi på mulighederne**",
+   "body": [
+    "Fortæl os, hvilket tøj I ønsker logo på, og om I har en placering i tankerne. Vi gennemgår mulighederne og rådgiver om størrelse, farver og eventuelle tilpasninger, så logoet er tydeligt og fungerer på tøjet."
+   ],
+   "links": [
+    {
+     "label": "Se alle muligheder for firmatøj",
+     "href": "/firmatoej/"
+    }
+   ],
+   "cta": {
+    "label": "Få rådgivning om logo på firmatøj",
+    "href": "/kontakt/"
+   }
+  },
+  {
+   "type": "next",
+   "items": [
+    {
+     "title": "Få et tilbud",
+     "text": "Skriv antal og deadline",
+     "href": "/kontakt/",
+     "primary": true
+    },
+    {
+     "title": "Profiltøj",
+     "text": "Til hele virksomheden",
+     "href": "/firmatoej/profiltoej/"
+    },
+    {
+     "title": "Arbejdstøj",
+     "text": "Til arbejdsdagen",
+     "href": "/firmatoej/arbejdstoej-med-logo/"
+    },
+    {
+     "title": "Alt firmatøj",
+     "text": "Firmatøj",
+     "href": "/firmatoej/"
+    }
+   ]
+  }
+ ]
+}

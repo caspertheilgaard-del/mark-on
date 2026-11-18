@@ -1,0 +1,197 @@
+{
+ "url": "/firmatoej/arbejdstoej-med-logo/",
+ "seo": {
+  "title": "Arbejdstøj med logo og broderi | MarkOn",
+  "description": "Arbejdstøj med logo til medarbejderne. Få rådgivning om tøj, der passer til jeres arbejde, og om tryk eller broderi. Få et tilbud hos MarkOn."
+ },
+ "menu": "Firmatøj",
+ "breadcrumbs": [
+  {
+   "label": "Forside",
+   "href": "/"
+  },
+  {
+   "label": "Firmatøj",
+   "href": "/firmatoej/"
+  },
+  {
+   "label": "Arbejdstøj"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "heading": "Arbejdstøj med logo **til jeres arbejdsdag**",
+   "body": [
+    "Arbejdstøj skal fungere, når medarbejderne bevæger sig, løfter, arbejder og møder kunder. Pasform, materialer og praktiske detaljer har betydning for, hvordan tøjet føles og bliver brugt gennem dagen.",
+    "Hos MarkOn hjælper vi jer med at finde arbejdstøj, der passer til medarbejdernes opgaver og giver virksomheden et samlet udtryk. Vi rådgiver om tøjvalg og branding og hjælper med tryk, broderi og levering."
+   ],
+   "ctas": [
+    {
+     "label": "Få et tilbud på arbejdstøj",
+     "href": "/kontakt/"
+    }
+   ],
+   "media": {
+    "kind": "image",
+    "image": {
+     "alt": "[BILLEDE: ARBEJDSTØJ MED LOGO]",
+     "placeholder": "[BILLEDE: ARBEJDSTØJ MED LOGO]"
+    }
+   }
+  },
+  {
+   "type": "cards",
+   "heading": "Find arbejdstøj, der passer **til opgaverne**",
+   "body": [
+    "Der er forskel på at arbejde på et lager, i en servicefunktion og udendørs. Derfor tager vi udgangspunkt i medarbejdernes hverdag, når vi hjælper jer med at vælge arbejdstøj.",
+    "Vi ser blandt andet på bevægelsesfrihed, slid, temperatur og behovet for lommer og andre funktioner. Så kan I vælge tøj ud fra de forhold, det skal bruges under."
+   ],
+   "cards": [
+    {
+     "heading": "Arbejdsbukser med praktiske detaljer",
+     "body": [
+      "Arbejdsbukser skal give plads til bevægelse og passe til opgaverne. Måske har medarbejderne brug for bestemte lommer, forstærkninger eller materialer med stræk.",
+      "Vi hjælper jer med at finde modeller, hvor pasform og funktion hænger sammen. Det gælder også, når medarbejderne har forskellige ønsker til snit og størrelser."
+     ]
+    },
+    {
+     "heading": "T-shirts, poloer og sweatshirts til arbejdsdagen",
+     "body": [
+      "T-shirts og poloer kan bruges alene eller under en sweatshirt, når temperaturen skifter. Vi rådgiver om materialer og modeller ud fra arbejdets karakter og den måde, tøjet bliver brugt og vasket på.",
+      "Med farver og logo kan I skabe sammenhæng på tværs af beklædningen, så medarbejderne er genkendelige i mødet med kunder."
+     ]
+    },
+    {
+     "heading": "Jakker og veste til skiftende forhold",
+     "body": [
+      "Arbejder medarbejderne udendørs eller mellem forskellige temperaturer, kan jakker og veste være en del af løsningen. Flere lag giver mulighed for at tilpasse påklædningen undervejs.",
+      "Vi hjælper jer med at vælge overtøj ud fra sæson, bevægelsesbehov og arbejdsforhold."
+     ],
+     "link": {
+      "label": "Se jakker og overtøj",
+      "href": "/firmatoej/jakker-med-logo/"
+     }
+    }
+   ],
+   "gallery": [
+    {
+     "alt": "[BILLEDE: ARBEJDSBUKSER]",
+     "placeholder": "[BILLEDE: ARBEJDSBUKSER]"
+    },
+    {
+     "alt": "[BILLEDE: POLO TIL ARBEJDSDAGEN]",
+     "placeholder": "[BILLEDE: POLO TIL ARBEJDSDAGEN]"
+    },
+    {
+     "alt": "[BILLEDE: VEST MED LOGO]",
+     "placeholder": "[BILLEDE: VEST MED LOGO]"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "heading": "Vi hjælper med **arbejdstøj og logo**",
+   "body": [
+    "I behøver ikke kende de enkelte modeller på forhånd. Fortæl os, hvordan medarbejdernes arbejdsdag ser ud, og hvad der fungerer godt eller mangler i jeres nuværende tøj."
+   ],
+   "lead": "Sammen afklarer vi:",
+   "steps": [
+    {
+     "title": "Opgaver og arbejdsforhold",
+     "text": "Hvor og hvordan skal tøjet bruges?"
+    },
+    {
+     "title": "Funktion og komfort",
+     "text": "Hvilke materialer, detaljer og pasformer er relevante?"
+    },
+    {
+     "title": "Vask og vedligeholdelse",
+     "text": "Hvordan bliver tøjet vasket, og hvor ofte?"
+    },
+    {
+     "title": "Farver og branding",
+     "text": "Hvordan skal logoet indgå i det samlede udtryk?"
+    },
+    {
+     "title": "Antal, budget og levering",
+     "text": "Hvor mange skal have tøj, og hvornår skal det være klar?"
+    }
+   ],
+   "after": [
+    "Vi rådgiver om tryk og broderi ud fra tøjets materiale, anvendelse og logoets placering. Så bliver branding tænkt sammen med tøjets funktion.",
+    "Har I løbende behov for arbejdstøj til nye medarbejdere eller flere afdelinger? Vi hjælper også med at afklare mulighederne for en lukket webshop med jeres udvalg."
+   ],
+   "links": [
+    {
+     "label": "Læs om logo, tryk og broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    },
+    {
+     "label": "Se mulighederne for shopløsninger",
+     "href": "/kontakt/"
+    }
+   ],
+   "cta": {
+    "label": "Tal med os om jeres arbejdstøj",
+    "href": "/kontakt/"
+   }
+  },
+  {
+   "type": "faq",
+   "heading": "Spørgsmål om **arbejdstøj med logo**",
+   "items": [
+    {
+     "question": "Hvordan finder vi det rette arbejdstøj?",
+     "answer": [
+      "Start med de opgaver, medarbejderne udfører, og de forhold, de arbejder under. Behov for bevægelse, lommer og beskyttelse mod vind og vejr er med til at afgøre valget.",
+      "Vi hjælper jer med at vurdere mulighederne og sammensætte tøj, der passer til arbejdsdagen. Har I særlige krav til beklædningen, tager vi dem med fra starten."
+     ]
+    },
+    {
+     "question": "Kan vi få logo på arbejdstøjet?",
+     "answer": [
+      "Ja. Vi hjælper med at vælge placering og metode på det valgte tøj. Mulighederne afhænger blandt andet af materialet, logoets detaljer og eventuelle funktioner, der skal tages hensyn til."
+     ]
+    },
+    {
+     "question": "Kan medarbejderne vælge forskellige modeller?",
+     "answer": [
+      "Ja. Forskellige opgaver og pasformer kan kræve forskellige modeller. Farver og logo kan stadig binde udvalget sammen og give jer et fælles udtryk.",
+      "Vi hjælper med at finde en løsning, der passer til både medarbejderne og virksomheden."
+     ]
+    }
+   ],
+   "link": {
+    "label": "Se alle muligheder for firmatøj",
+    "href": "/firmatoej/"
+   }
+  },
+  {
+   "type": "next",
+   "items": [
+    {
+     "title": "Få et tilbud på arbejdstøj",
+     "text": "Skriv antal og deadline",
+     "href": "/kontakt/",
+     "primary": true
+    },
+    {
+     "title": "Jakker og overtøj",
+     "text": "Til skiftende vejr",
+     "href": "/firmatoej/jakker-med-logo/"
+    },
+    {
+     "title": "Logo og broderi",
+     "text": "Tryk eller broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    },
+    {
+     "title": "Alt firmatøj",
+     "text": "Firmatøj",
+     "href": "/firmatoej/"
+    }
+   ]
+  }
+ ]
+}

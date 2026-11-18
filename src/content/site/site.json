@@ -31,7 +31,22 @@
         { "label": "Jubilæumsgaver", "href": "/firmagaver/jubilaeumsgaver/" }
       ]
     },
-    { "label": "Firmatøj", "href": "/firmatoej/" },
+    {
+      "label": "Firmatøj", "href": "/firmatoej/", "allLabel": "Se alt firmatøj",
+      "intro": "Godt firmatøj passer til både medarbejderne og det arbejde, de udfører.",
+      "cards": [
+        { "kicker": "Case", "title": "Systematic", "href": "/inspiration/", "image": { "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg", "alt": "T-shirt med tryk" } },
+        { "kicker": "Firmatøj", "title": "Accessories", "href": "/firmatoej/accessories/", "image": { "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg", "alt": "Mulepose med tryk" } }
+      ],
+      "children": [
+        { "label": "Profiltøj", "href": "/firmatoej/profiltoej/" },
+        { "label": "Arbejdstøj", "href": "/firmatoej/arbejdstoej-med-logo/" },
+        { "label": "Sport og fritid", "href": "/firmatoej/sport-og-fritid/" },
+        { "label": "Jakker og overtøj", "href": "/firmatoej/jakker-med-logo/" },
+        { "label": "Accessories", "href": "/firmatoej/accessories/" },
+        { "label": "Logo og broderi", "href": "/firmatoej/logo-og-broderi/" }
+      ]
+    },
     { "label": "Inspiration", "href": "/inspiration/" },
     { "label": "Om os", "href": "/om-os/" },
     { "label": "Kontakt", "href": "/kontakt/" }

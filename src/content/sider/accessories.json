@@ -1,0 +1,171 @@
+{
+ "url": "/firmatoej/accessories/",
+ "seo": {
+  "title": "Accessories med logo | MarkOn",
+  "description": "Accessories med logo, der passer til jeres firmatøj. MarkOn hjælper med udvalg, placering af logo og levering. Fortæl os, hvad I skal bruge."
+ },
+ "menu": "Firmatøj",
+ "breadcrumbs": [
+  {
+   "label": "Forside",
+   "href": "/"
+  },
+  {
+   "label": "Firmatøj",
+   "href": "/firmatoej/"
+  },
+  {
+   "label": "Accessories"
+  }
+ ],
+ "blocks": [
+  {
+   "type": "hero",
+   "heading": "Accessories med logo, **der fuldender jeres firmatøj**",
+   "body": [
+    "En hue til kolde morgener. En cap til udendørs aktiviteter. En taske, der følger medarbejderen mellem hjem, arbejde og kundemøder. Det rette tilbehør har en funktion og kan samtidig binde jeres firmatøj sammen.",
+    "Hos MarkOn hjælper vi jer med at vælge accessories, der passer til medarbejderne og det tøj, de allerede bruger. Vi tænker farver, materialer og logo med, så detaljerne bliver en del af et samlet udtryk."
+   ],
+   "ctas": [
+    {
+     "label": "Få forslag til accessories med logo",
+     "href": "/kontakt/"
+    }
+   ],
+   "media": {
+    "kind": "image",
+    "image": {
+     "alt": "[BILLEDE: BAUHAUS-RYGSÆK]",
+     "placeholder": "[BILLEDE: BAUHAUS-RYGSÆK]"
+    }
+   }
+  },
+  {
+   "type": "cards",
+   "heading": "Tilbehør med en plads **i hverdagen**",
+   "body": [
+    "Accessories kan supplere en eksisterende tøjkollektion eller indgå, når I sammensætter nyt firmatøj. Start med at se på, hvad medarbejderne mangler eller ofte har brug for. Så bliver det lettere at vælge tilbehør, der bliver taget i brug."
+   ],
+   "cards": [
+    {
+     "heading": "Caps til arbejdsdagen og fælles aktiviteter",
+     "body": [
+      "En cap kan være en del af medarbejdernes påklædning i butikken, på farten eller til firmaets udendørs arrangementer. Facon, skygge og justering har betydning for, hvordan den sidder og opleves at have på.",
+      "Vi hjælper jer med at finde modeller og farver, der passer til jeres stil. Logoet kan placeres, så det er tydeligt foran eller indgår mere diskret som en detalje."
+     ]
+    },
+    {
+     "heading": "Huer og halstørklæder til de kolde måneder",
+     "body": [
+      "Når temperaturen falder, kan huer og halstørklæder supplere jakkerne og give ekstra varme. Her er materialets følelse mod huden og tilbehørets pasform relevante at tage med i valget.",
+      "I kan vælge farver, der matcher overtøjet, eller lade en kontrastfarve fra jeres visuelle identitet gå igen. Vi rådgiver om mulighederne og hjælper med at skabe sammenhæng."
+     ],
+     "link": {
+      "label": "Se jakker og overtøj",
+      "href": "/firmatoej/jakker-med-logo/"
+     }
+    },
+    {
+     "heading": "Tasker til det, medarbejderne har med",
+     "body": [
+      "Skal der være plads til en computer, træningstøj eller udstyr til dagens opgaver? En taske fungerer bedst, når størrelse, rum og bærekomfort passer til indholdet og turen.",
+      "Vi hjælper med at finde tasker, der matcher anvendelsen. Det kan være en rygsæk til arbejdsdagen, en sportstaske til fælles aktiviteter eller en enkel mulepose til lettere indhold."
+     ],
+     "link": {
+      "label": "Få inspiration til accessories",
+      "href": "/inspiration/"
+     }
+    }
+   ],
+   "gallery": [
+    {
+     "alt": "[BILLEDE: CAP MED LOGO]",
+     "placeholder": "[BILLEDE: CAP MED LOGO]"
+    },
+    {
+     "alt": "[BILLEDE: RAINS-TASKE]",
+     "placeholder": "[BILLEDE: RAINS-TASKE]"
+    },
+    {
+     "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
+     "alt": "Mulepose med tryk"
+    }
+   ]
+  },
+  {
+   "type": "band",
+   "heading": "Lad farver og detaljer **skabe sammenhæng**",
+   "body": [
+    "I behøver ikke vælge præcis samme farve på alle dele for at få et genkendeligt udtryk. En farve fra logoet kan gå igen på en cap, mens tasken og overtøjet holdes i en mere neutral tone.",
+    "Vi ser på tilbehøret sammen med resten af jeres firmatøj. Måske er et lille logo nok. Måske skal det være mere synligt, fordi medarbejderne bruger produkterne på messer eller til arrangementer.",
+    "På accessories er pladsen til branding ofte en anden end på tøjet. Sømme, lommer, spænder og produktets form kan påvirke både placering og metode. Vi hjælper med at vælge en løsning, der fungerer på det konkrete produkt.",
+    "Send os gerne et billede af jeres nuværende firmatøj og fortæl, hvad I gerne vil supplere med. Så har vi et godt udgangspunkt for at komme med forslag."
+   ],
+   "links": [
+    {
+     "label": "Læs om logo, tryk og broderi",
+     "href": "/firmatoej/logo-og-broderi/"
+    }
+   ],
+   "cta": {
+    "label": "Tal med os om tilbehør til jeres firmatøj",
+    "href": "/kontakt/"
+   }
+  },
+  {
+   "type": "faq",
+   "heading": "Spørgsmål om **accessories med logo**",
+   "items": [
+    {
+     "question": "Kan vi bestille accessories uden at bestille nyt firmatøj?",
+     "answer": [
+      "Ja. I kan bruge accessories til at supplere det tøj, medarbejderne allerede har. Vi hjælper med at finde produkter, der passer til jeres eksisterende farver og udtryk."
+     ]
+    },
+    {
+     "question": "Kan vi få samme logo på forskellige accessories?",
+     "answer": [
+      "Ja, men logoet kan kræve tilpasning til de enkelte produkter. Et detaljeret logo fungerer ikke nødvendigvis på samme måde på en hue som på en taske.",
+      "Vi rådgiver om størrelse, placering og metode, så logoet fremstår tydeligt og hænger sammen på tværs."
+     ]
+    },
+    {
+     "question": "Kan accessories indgå i en velkomstpakke?",
+     "answer": [
+      "Ja. En taske, cap eller hue kan være en del af en velkomstpakke til nye medarbejdere, hvis det passer til deres hverdag. Vi hjælper med at sammensætte indholdet og tænker gerne pakning og en personlig hilsen med."
+     ]
+    }
+   ],
+   "link": {
+    "label": "Se alle muligheder for firmatøj",
+    "href": "/firmatoej/"
+   }
+  },
+  {
+   "type": "next",
+   "items": [
+    {
+     "title": "Få et tilbud på accessories",
+     "text": "Skriv antal og deadline",
+     "href": "/kontakt/",
+     "primary": true
+    },
+    {
+     "title": "Jakker og overtøj",
+     "text": "Til skiftende vejr",
+     "href": "/firmatoej/jakker-med-logo/"
+    },
+    {
+     "title": "Merchandise",
+     "text": "Med jeres logo",
+     "href": "/merchandise/"
+    },
+    {
+     "title": "Alt firmatøj",
+     "text": "Firmatøj",
+     "href": "/firmatoej/"
+    }
+   ]
+  }
+ ]
+}
