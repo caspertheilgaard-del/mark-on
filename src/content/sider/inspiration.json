@@ -14,6 +14,27 @@
       "ctas": [{ "label": "Få et tilbud", "href": "/kontakt/" }]
     },
     {
+      "type": "caseList",
+      "heading": "Udvalgte **cases**",
+      "items": [
+        {
+          "customer": "Keepit",
+          "result": "[OPGAVE, ANTAL OG TID]",
+          "image": { "src": "../../assets/images/keepit-julegave.avif", "alt": "Keepit-julegave med hovedtelefoner, mulepose og julekort" }
+        },
+        {
+          "customer": "Systematic",
+          "result": "[OPGAVE, ANTAL OG TID]",
+          "image": { "src": "../../assets/images/systematic-hoodie-case.avif", "alt": "Hoodie fra Systematic med tryk på ryggen" }
+        },
+        {
+          "customer": "Norlys Energy",
+          "result": "[OPGAVE, ANTAL OG TID]",
+          "image": { "src": "../../assets/images/norlys-mintaeske.avif", "alt": "Æske med pastiller og Norlys Energy Trading-logo" }
+        }
+      ]
+    },
+    {
       "type": "next",
       "items": [
         { "title": "Få et tilbud", "text": "Skriv antal og deadline", "href": "/kontakt/", "primary": true },

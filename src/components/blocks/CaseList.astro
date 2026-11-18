@@ -1,0 +1,35 @@
+---
+// Cases i et gitter: ét billede (4:5, hjørne 24) og én linje under: kunde, resultat og "Se casen", når casen har en side.
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'caseList'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:120px">
+  {block.heading && <h2 class="h2 head" set:html={rich(block.heading)} />}
+  <ul class="grid" role="list">
+    {block.items.map((c) => {
+      const line = (
+        <>
+          <Media {...c.image} ratio="4 / 5" sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 410px" />
+          <span class="line">
+            <span><strong>{c.customer}</strong> · {c.result}</span>
+            {c.href && <span class="lnk">{c.linkLabel} <span class="arr" aria-hidden="true">→</span></span>}
+          </span>
+        </>
+      );
+      return <li>{c.href ? <a class="item" href={c.href}>{line}</a> : <div class="item">{line}</div>}</li>;
+    })}
+  </ul>
+</section>
+
+<style>
+  .head { max-width: var(--text-col, 720px); margin: 0 0 48px; }
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .item { display: block; color: var(--c-text); }
+  .item :global(.media) { display: block; width: 100%; }
+  .line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; margin-top: 16px; font-size: 16px; line-height: 1.5; }
+  .lnk { font-weight: 700; color: var(--c-red); }
+  @media (max-width: 640px) { .grid { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
+</style>
