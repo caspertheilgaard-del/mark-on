@@ -1,0 +1,211 @@
+{
+  "url": "/merchandise/specialproduktion/",
+  "seo": {
+    "title": "Specialproduktion af merchandise med logo | MarkOn",
+    "description": "Specialproduktion af merchandise i jeres eget design, når standardprodukter ikke er nok. MarkOn hjælper med idé, design og produktion."
+  },
+  "menu": "Merchandise",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Merchandise",
+      "href": "/merchandise/"
+    },
+    {
+      "label": "Specialproduktion"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "**Specialproduktion** af merchandise til jeres brand",
+      "body": [
+        "Har I en idé til merchandise med en bestemt form, farve eller funktion? Med specialproduktion kan vi tage udgangspunkt i jeres ønsker og undersøge, hvordan de kan blive til et færdigt produkt.",
+        "Hos MarkOn hjælper vi jer med at udvikle merchandise, der passer til jeres brand og dem, der skal bruge det. Vi rådgiver om design, materialer og produktion og hjælper jer gennem processen fra den første idé til levering."
+      ],
+      "ctas": [
+        {
+          "label": "Tal med os om jeres idé",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "pair",
+        "align": "end",
+        "maxWidth": 500,
+        "items": [
+          {
+            "image": {
+              "src": "../../assets/images/flaske-fra-siden.avif",
+              "alt": "Elfenbensfarvet flaske med stregtegning, set fra siden"
+            },
+            "shape": "tall",
+            "grow": 1.6,
+            "offsetBottom": 0,
+            "dot": true,
+            "shadow": true
+          },
+          {
+            "image": {
+              "src": "../../assets/images/286bd7a92f2875f9e06b2004179dc3fc.jpg",
+              "alt": "Elfenbensfarvet flaske med stregtegning på en stenbænk"
+            },
+            "shape": "circle",
+            "grow": 1.0,
+            "offsetBottom": 64,
+            "dot": false,
+            "shadow": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "heading": "Merchandise med flere muligheder **for eget design**",
+      "body": [
+        "Specialproduktion giver mulighed for at arbejde med selve produktets udformning. Det kan være en taske med en særlig inddeling, en nøglering formet som jeres produkt eller emballage, der samler flere dele i én pakke.",
+        "Mulighederne afhænger af produktet, materialerne og antallet. Vi hjælper jer med at afklare, hvad der kan lade sig gøre, og hvilke valg der giver mening i forhold til jeres budget og tidsplan."
+      ],
+      "cards": [
+        {
+          "heading": "Form og funktion med et formål",
+          "body": [
+            "Et specialproduceret produkt kan tage afsæt i noget, der kendetegner jeres virksomhed. Måske skal formen afspejle et produkt, I sælger, eller måske mangler I en bestemt funktion i det merchandise, I allerede bruger.",
+            "Vi hjælper med at gøre idéen konkret og ser på, hvordan design og funktion kan hænge sammen. Målet er et produkt, der både passer til jeres brand og er relevant for modtageren."
+          ]
+        },
+        {
+          "heading": "Farver, materialer og detaljer",
+          "body": [
+            "Materialer og farver har betydning for, hvordan et produkt ser ud, føles og fungerer i hverdagen. Det samme gælder detaljer som lukninger, hanke, overflader og placeringen af jeres logo.",
+            "Vi rådgiver om mulighederne for det valgte produkt og hjælper jer med at prioritere de detaljer, der betyder mest. Så hænger udtrykket sammen med både anvendelsen og budgettet."
+          ]
+        },
+        {
+          "heading": "Indpakning som en del af løsningen",
+          "body": [
+            "Indpakningen kan være en del af oplevelsen, når modtageren får jeres merchandise. En æske med eget design eller en tilpasset indpakning kan samle produkterne og give plads til et budskab eller en personlig hilsen.",
+            "Vi hjælper jer med at tænke produkt og indpakning sammen. Det kan for eksempel være til en lancering, en kundegave eller et welcome kit til nye medarbejdere."
+          ],
+          "link": {
+            "label": "Få inspiration til merchandise",
+            "href": "/inspiration/"
+          }
+        }
+      ],
+      "gallery": [
+        {
+          "src": "../../assets/images/1a681f7f7515fc60399923ba959e3ee4.jpg",
+          "alt": "Elfenbensfarvet flaske med stregtegning holdt i hånden"
+        },
+        {
+          "alt": "[BILLEDE: FLASKEN FRA EN ANDEN VINKEL]",
+          "placeholder": "[BILLEDE: FLASKEN FRA EN ANDEN VINKEL]"
+        },
+        {
+          "alt": "[BILLEDE: ÆSKE MED EGET DESIGN]",
+          "placeholder": "[BILLEDE: ÆSKE MED EGET DESIGN]"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "heading": "Fra den første skitse **til færdig produktion**",
+      "body": [
+        "I behøver ikke have en færdig tegning for at komme i gang. En idé, et billede eller en beskrivelse af det, I gerne vil løse, er et godt udgangspunkt for en snak."
+      ],
+      "lead": "Vi begynder med at afklare:",
+      "steps": [
+        {
+          "title": "Formål og målgruppe",
+          "text": "Hvem skal bruge produktet, og hvad skal det kunne?"
+        },
+        {
+          "title": "Design og funktion",
+          "text": "Hvilke ønsker har I til form, farver, materialer og detaljer?"
+        },
+        {
+          "title": "Antal og budget",
+          "text": "Hvor mange har I brug for, og hvad er den økonomiske ramme?"
+        },
+        {
+          "title": "Tidsplan",
+          "text": "Hvornår skal produkterne være klar?"
+        },
+        {
+          "title": "Pakning og levering",
+          "text": "Hvordan skal produkterne præsenteres, pakkes og leveres?"
+        }
+      ],
+      "after": [
+        "Herefter undersøger vi produktionsmulighederne og rådgiver om en løsning. Afhængigt af produktet aftaler vi også, hvordan design, materialer og eventuelle prøver skal gennemgås og godkendes inden produktion.",
+        "I får overblik over de valg, der skal træffes, og vi holder jer opdateret undervejs."
+      ],
+      "links": [],
+      "cta": {
+        "label": "Kontakt os om specialproduktion",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Spørgsmål om **specialproduktion af merchandise**",
+      "items": [
+        {
+          "question": "Hvor mange produkter skal vi bestille?",
+          "answer": [
+            "Minimumsantallet afhænger blandt andet af produkttypen, materialerne og den måde, produktet skal fremstilles på. Der er derfor ikke ét minimumsantal, der gælder for al specialproduktion.",
+            "Fortæl os om jeres idé og det ønskede antal. Så undersøger vi mulighederne og rådgiver om, hvad der giver mening."
+          ]
+        },
+        {
+          "question": "Kan I hjælpe, hvis vi kun har en idé?",
+          "answer": [
+            "Ja. I kan komme med en løs idé, en skitse eller et konkret behov. Vi hjælper med at afklare design, funktion og materialer og undersøger, hvordan produktet kan fremstilles.",
+            "Har I allerede et færdigt design, tager vi udgangspunkt i det og gennemgår de praktiske muligheder med jer."
+          ]
+        },
+        {
+          "question": "Hvor lang tid tager specialproduktion?",
+          "answer": [
+            "Tidsplanen afhænger af produktet og omfanget af tilpasningerne. Udvikling, eventuelle prøver, godkendelse, produktion og transport har alle betydning for, hvornår produkterne kan være klar.",
+            "Kontakt os gerne tidligt, især hvis I har en fast dato for en lancering eller et arrangement. Så kan vi undersøge mulighederne ud fra jeres tidsplan."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for merchandise",
+        "href": "/merchandise/"
+      }
+    },
+    {
+      "type": "next",
+      "items": [
+        {
+          "title": "Tal med os om jeres idé",
+          "text": "Fortæl os, hvad I vil løse",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Rebranding",
+          "text": "Nyt brand på merchandise",
+          "href": "/merchandise/rebranding/"
+        },
+        {
+          "title": "Messer og events",
+          "text": "Merchandise til eventet",
+          "href": "/merchandise/messer-og-events/"
+        },
+        {
+          "title": "Alt merchandise",
+          "text": "Tilbage til området",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}

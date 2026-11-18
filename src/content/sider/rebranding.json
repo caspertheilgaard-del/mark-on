@@ -1,0 +1,211 @@
+{
+  "url": "/merchandise/rebranding/",
+  "seo": {
+    "title": "Merchandise til rebranding | MarkOn",
+    "description": "Merchandise til rebranding, så det nye udtryk står ens på tøj, krus, tasker og gaver. MarkOn samler det hele fra idé til levering."
+  },
+  "menu": "Merchandise",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Merchandise",
+      "href": "/merchandise/"
+    },
+    {
+      "label": "Rebranding"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "heading": "Merchandise til **rebranding**",
+      "body": [
+        "Skal jeres nye navn, logo eller visuelle identitet ud at leve? Merchandise kan gøre det nye udtryk synligt i hverdagen, hos medarbejderne og i mødet med kunder og samarbejdspartnere.",
+        "Hos MarkOn hjælper vi jer med at omsætte jeres nye identitet til produkter, der passer til jeres brand og målgruppe. Vi rådgiver om produktvalg, farver og branding og hjælper fra de første idéer til pakning og levering."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud på merchandise til rebranding",
+          "href": "/kontakt/"
+        }
+      ],
+      "media": {
+        "kind": "pair",
+        "align": "end",
+        "maxWidth": 500,
+        "items": [
+          {
+            "image": {
+              "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+              "alt": "HALO-serie med drikkedunk, krus, mintæske og nøglestropper"
+            },
+            "shape": "tall",
+            "grow": 1.6,
+            "offsetBottom": 0,
+            "dot": true,
+            "shadow": true
+          },
+          {
+            "image": {
+              "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
+              "alt": "Stålkrus med HALO-logo"
+            },
+            "shape": "circle",
+            "grow": 1.0,
+            "offsetBottom": 64,
+            "dot": false,
+            "shadow": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "cards",
+      "heading": "Giv jeres nye identitet **et samlet udtryk**",
+      "body": [
+        "En rebranding kan omfatte alt fra en justering af logoet til et nyt navn og en helt ny visuel retning. Uanset omfanget er det en god anledning til at se på, hvordan jeres merchandise afspejler den virksomhed I er i dag.",
+        "Vi hjælper jer med at vælge produkter og løsninger, hvor logo, farver og materialer hænger sammen. Det kan være en mindre serie til lanceringen eller produkter, som medarbejdere og kunder får glæde af over længere tid."
+      ],
+      "cards": [
+        {
+          "heading": "Præsenter det nye brand for medarbejderne",
+          "body": [
+            "Giv medarbejderne mulighed for at tage det nye udtryk i brug. En hoodie, en taske eller et krus med det nye logo kan indgå i en intern lancering og følge med videre i arbejdsdagen.",
+            "Vi hjælper jer med at sammensætte produkter, der passer til medarbejdernes hverdag. Skal de præsenteres som en samlet pakke, kan vi også hjælpe med indpakning og en hilsen, der fortæller om forandringen."
+          ]
+        },
+        {
+          "heading": "Lad kunder og samarbejdspartnere møde jeres nye udtryk",
+          "body": [
+            "En lancering kan være en anledning til at tage kontakt og fortælle, hvad der er nyt. Her kan merchandise supplere jeres budskab og give modtagerne noget konkret at tage med sig.",
+            "Det kan være en notesbog, en drikkedunk eller en taske med jeres nye identitet. Vi rådgiver om produkter, der passer til relationen, anledningen og det indtryk, I gerne vil efterlade."
+          ]
+        },
+        {
+          "heading": "Tænk det nye design ind i produktvalget",
+          "body": [
+            "Det samme logo fungerer ikke nødvendigvis ens på en kuglepen, en taske og en trøje. Produktets farve, materiale og pladsen til branding har betydning for resultatet.",
+            "Vi hjælper jer med at vurdere mulighederne for tryk, broderi og andre metoder. Så kan I vælge løsninger, hvor jeres nye design kommer til sin ret på tværs af produkterne."
+          ],
+          "link": {
+            "label": "Få inspiration til merchandise",
+            "href": "/inspiration/"
+          }
+        }
+      ],
+      "gallery": [
+        {
+          "alt": "[BILLEDE: HALO-NØGLEKÆDE PÅ RYGSÆK]",
+          "placeholder": "[BILLEDE: HALO-NØGLEKÆDE PÅ RYGSÆK]"
+        },
+        {
+          "alt": "[BILLEDE: HALO-KOP I VARMT UDENDØRSLYS]",
+          "placeholder": "[BILLEDE: HALO-KOP I VARMT UDENDØRSLYS]"
+        },
+        {
+          "alt": "[BILLEDE: NØGLER PÅ VANDRETUR VED SOLNEDGANG]",
+          "placeholder": "[BILLEDE: NØGLER PÅ VANDRETUR VED SOLNEDGANG]"
+        }
+      ]
+    },
+    {
+      "type": "band",
+      "heading": "Fra ny visuel identitet **til færdigt merchandise**",
+      "body": [
+        "I kan komme med en færdig designmanual eller tage os med i overvejelserne, mens I planlægger lanceringen. Vi hjælper med at afklare, hvordan jeres nye identitet kan bruges på merchandise, og hvilke produkter der passer til opgaven."
+      ],
+      "lead": "Sammen gennemgår vi blandt andet:",
+      "steps": [
+        {
+          "title": "Formål og modtagere",
+          "text": "Hvem skal møde jeres nye brand, og hvordan skal produkterne bruges?"
+        },
+        {
+          "title": "Design og logo",
+          "text": "Hvilke farver, logovarianter og grafiske elementer skal indgå?"
+        },
+        {
+          "title": "Produkter og antal",
+          "text": "Hvad har I brug for til lanceringen og i hverdagen bagefter?"
+        },
+        {
+          "title": "Budget",
+          "text": "Hvordan fordeler vi budgettet på produkter, branding og pakning?"
+        },
+        {
+          "title": "Tidsplan og levering",
+          "text": "Hvornår skal produkterne være klar, og hvor skal de leveres?"
+        }
+      ],
+      "after": [
+        "Har I allerede merchandise med det gamle logo, tager vi det med i dialogen. Måske skal nye produkter indføres løbende, eller måske skal det nye udtryk præsenteres samlet på en bestemt dato.",
+        "Vi rådgiver om mulighederne, så I kan planlægge overgangen ud fra jeres behov."
+      ],
+      "links": [],
+      "cta": {
+        "label": "Tal med os om jeres rebranding",
+        "href": "/kontakt/"
+      }
+    },
+    {
+      "type": "faq",
+      "heading": "Spørgsmål om merchandise **til rebranding**",
+      "items": [
+        {
+          "question": "Skal vi udskifte alt merchandise ved en rebranding?",
+          "answer": [
+            "Det afhænger af jeres plan for det nye brand og de produkter I allerede har. Nogle virksomheder vælger en samlet overgang, mens andre indfører det nye udtryk løbende.",
+            "Vi hjælper jer med at prioritere, hvilke produkter der er relevante at starte med, og hvordan de passer ind i jeres tidsplan og budget."
+          ]
+        },
+        {
+          "question": "Hvad har I brug for, før vi går i gang?",
+          "answer": [
+            "Send gerne jeres nye logo og designmanual, hvis I har en. Oplys også, hvem produkterne er til, hvor mange I har brug for, og hvornår de skal være klar.",
+            "Er alle detaljer endnu ikke på plads, kan vi begynde med at tale om produktvalg og muligheder. Så afklarer vi, hvad der er brug for undervejs."
+          ]
+        },
+        {
+          "question": "Kan I hjælpe med merchandise til en fast lanceringsdato?",
+          "answer": [
+            "Ja, vi hjælper med at undersøge mulighederne ud fra jeres dato. Tidsplanen afhænger blandt andet af produkterne, antallet, den valgte branding og eventuel pakning.",
+            "Kontakt os gerne tidligt i forløbet, så vi kan rådgive om løsninger og planlægge leveringen sammen med jer."
+          ]
+        }
+      ],
+      "link": {
+        "label": "Se alle muligheder for merchandise",
+        "href": "/merchandise/"
+      }
+    },
+    {
+      "type": "next",
+      "items": [
+        {
+          "title": "Få et tilbud på rebranding",
+          "text": "Fortæl os om jeres nye brand",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Employer branding",
+          "text": "Merchandise til medarbejdere",
+          "href": "/merchandise/employer-branding/"
+        },
+        {
+          "title": "Specialproduktion",
+          "text": "Merchandise i eget design",
+          "href": "/merchandise/specialproduktion/"
+        },
+        {
+          "title": "Alt merchandise",
+          "text": "Tilbage til området",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}
