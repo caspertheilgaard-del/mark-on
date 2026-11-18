@@ -137,6 +137,26 @@
     },
     {
       "type": "info",
+      "gallery": {
+        "large": {
+          "src": "../../assets/images/showroom-lystrup.avif",
+          "alt": "MarkOns showroom i Lystrup med køkken- og boligprodukter på hylder og borde"
+        },
+        "items": [
+          {
+            "src": "../../assets/images/showroom-reoler.avif",
+            "alt": "Reoler i showroomet med merchandise og gaveæsker med kunders logoer"
+          },
+          {
+            "src": "../../assets/images/showroom-hjoerne.avif",
+            "alt": "Hjørne i showroomet med lænestol, puder, plaider og tøj"
+          },
+          {
+            "src": "../../assets/images/showroom-hylder.avif",
+            "alt": "Lamper, vaser og lysestager på hylder i showroomet"
+          }
+        ]
+      },
       "cards": [
         {
           "heading": "Besøg vores showroom i Lystrup",
