@@ -68,8 +68,8 @@
       "items": [
         {
           "image": {
-            "src": "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
-            "alt": "Krus med logo"
+            "src": "../../assets/images/puslekube-messe.avif",
+            "alt": "Puslekube med logo i hænderne på en messegæst"
           },
           "title": "Giveaways til standen",
           "text": "Krus, flasker, muleposer og nøglesnore med jeres logo.",
@@ -78,8 +78,9 @@
         },
         {
           "image": {
-            "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
-            "alt": "T-shirt med tryk"
+            "src": "../../assets/images/hoodie-forfra-stand.avif",
+            "alt": "Kvinde i mørkeblå hættetrøje med lynlås og et lille broderet logo på brystet",
+            "position": "50% 25%"
           },
           "title": "Tøj til jeres folk",
           "text": "T-shirts, polo og jakker, så standen ser ens og professionel ud.",
@@ -88,8 +89,8 @@
         },
         {
           "image": {
-            "src": "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
-            "alt": "Pastilæske med logo"
+            "src": "../../assets/images/chokolader-skaal.avif",
+            "alt": "Skål med chokolader i farvet folie"
           },
           "title": "Kick off og firmafester",
           "text": "Noget at samles om og tage med hjem, med dagens budskab på.",
