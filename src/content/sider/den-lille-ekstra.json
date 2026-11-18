@@ -81,16 +81,15 @@
         {
           "title": "Bolsjer",
           "image": {
-            "alt": "[BILLEDE: BOLSJER MED LOGO]",
-            "placeholder": "[BILLEDE: BOLSJER MED LOGO]"
+            "src": "../../assets/images/bolsjer-hjelm-noeglering.avif",
+            "alt": "Sorte bolsjer med kundens logo på papiret og en nøglering formet som en gul hjelm"
           }
         },
         {
           "title": "I webshoppakken",
           "image": {
-            "alt": "[BILLEDE: EN LILLE EKSTRA TING I WEBSHOPPAKKEN]",
-            "placeholder": "[BILLEDE: EN LILLE EKSTRA TING I WEBSHOPPAKKEN]",
-            "background": "white"
+            "src": "../../assets/images/vingummi-webshoppakke.avif",
+            "alt": "En lille pose vingummi lagt oven på en trøje i en åben forsendelsesæske"
           }
         }
       ]
