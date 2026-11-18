@@ -200,8 +200,8 @@ const sider = defineCollection({
           links: z.array(link).default([]),
         }),
       ),
-      // Billeder over kortene: ét stort i toppen og op til tre i et gitter (4:5) nedenunder.
-      gallery: z.object({ large: media, items: z.array(media).max(3).default([]) }).optional(),
+      // Billeder over kortene: op til fire små billeder (4:5) på én række; klik viser billedet større, højst i dets egen størrelse.
+      gallery: z.array(media).max(4).default([]),
     });
 
     const quoteForm = z.object({

@@ -1,20 +1,34 @@
 ---
-// To hvide kort side om side (showroom og kataloger), evt. med billeder over.
+// To hvide kort side om side (showroom og kataloger), evt. med op til fire små billeder over.
+// Klik på et billede åbner det større i et vindue, men aldrig større end billedets egne pixels.
+import { getImage } from 'astro:assets';
 import Media from '../Media.astro';
 import type { BlockOf } from '../../lib/types';
 interface Props { block: BlockOf<'info'> }
 const { block } = Astro.props;
+const shots = await Promise.all(
+  block.gallery.map(async (m) => {
+    if (!m.src) return { m, full: null };
+    const img = await getImage({ src: m.src, format: 'webp' });
+    return { m, full: { src: img.src, w: m.src.width, h: m.src.height } };
+  }),
+);
 ---
 <section class="container sec" style="--pt:0px;--pb:120px">
-  {block.gallery && (
-    <div class="gallery">
-      <Media {...block.gallery.large} ratio="16 / 9" class="large" widths={[640, 960, 1280, 1600]} sizes="(max-width: 1280px) 100vw, 1200px" />
-      {block.gallery.items.length > 0 && (
-        <div class="three">
-          {block.gallery.items.map((m) => <Media {...m} ratio="4 / 5" sizes="(max-width: 1280px) 33vw, 390px" />)}
-        </div>
-      )}
-    </div>
+  {shots.length > 0 && (
+    <ul class="row" role="list">
+      {shots.map(({ m, full }) => (
+        <li>
+          {full ? (
+            <a class="zoom" href={full.src} data-w={full.w} data-h={full.h} data-alt={m.alt} aria-label={`Se billedet større: ${m.alt}`}>
+              <Media {...m} ratio="4 / 5" sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 300px" />
+            </a>
+          ) : (
+            <Media {...m} ratio="4 / 5" />
+          )}
+        </li>
+      ))}
+    </ul>
   )}
   <div class="two">
     {block.cards.map((c) => (
@@ -33,9 +47,41 @@ const { block } = Astro.props;
   </div>
 </section>
 
+{shots.length > 0 && (
+  <dialog class="lightbox" aria-label="Billede i større størrelse">
+    <img alt="" />
+    <button type="button" class="close" aria-label="Luk">×</button>
+  </dialog>
+)}
+
+<script>
+  const box = document.querySelector<HTMLDialogElement>('dialog.lightbox');
+  if (box) {
+    const img = box.querySelector('img')!;
+    document.querySelectorAll<HTMLAnchorElement>('a.zoom').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        img.src = a.href;
+        img.alt = a.dataset.alt ?? '';
+        img.width = Number(a.dataset.w);
+        img.height = Number(a.dataset.h);
+        box.showModal();
+      });
+    });
+    box.querySelector('.close')!.addEventListener('click', () => box.close());
+    box.addEventListener('click', (e) => { if (e.target === box) box.close(); });
+  }
+</script>
+
 <style>
-  .gallery { display: grid; gap: 24px; margin-bottom: 24px; }
-  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; }
+  .row { list-style: none; margin: 0 0 24px; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+  .zoom { display: block; border-radius: 24px; cursor: zoom-in; }
+  .zoom :global(.media) { display: block; width: 100%; transition: opacity .2s; }
+  .zoom:hover :global(.media) { opacity: .9; }
+  .lightbox { padding: 0; border: 0; border-radius: 24px; background: transparent; max-width: 92vw; max-height: 92vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(107, 58, 58, .6); }
+  .lightbox img { display: block; width: auto; height: auto; max-width: min(100%, 92vw); max-height: 92vh; border-radius: 24px; }
+  .close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: var(--c-text); font-size: 26px; line-height: 1; cursor: pointer; }
   .two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
   .card { padding: 40px; }
   h2 { margin: 0 0 10px; font-size: 22px; font-weight: 600; color: var(--c-text); }
@@ -48,7 +94,6 @@ const { block } = Astro.props;
   @media (max-width: 760px) { .two { grid-template-columns: minmax(0, 1fr); } }
   @media (max-width: 640px) {
     .card { padding: 28px; }
-    .gallery :global(.large) { aspect-ratio: 4 / 3 !important; }
-    .gallery, .three { gap: 12px; }
+    .row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   }
 </style>
