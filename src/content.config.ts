@@ -191,6 +191,8 @@ const sider = defineCollection({
           links: z.array(link).default([]),
         }),
       ),
+      // Billeder over kortene: ét stort i toppen og op til tre i et gitter (4:5) nedenunder.
+      gallery: z.object({ large: media, items: z.array(media).max(3).default([]) }).optional(),
     });
 
     const quoteForm = z.object({
