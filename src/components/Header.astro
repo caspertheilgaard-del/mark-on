@@ -146,6 +146,11 @@ const site = (await getEntry('site', 'site'))!.data;
 
   /* Mega menu: fuld bredde under headeren som i designet. Intro til venstre, undersider i to kolonner, to billeder (4:5) til højre */
   .header { position: relative; z-index: 40; }
+  /* Lille, falmet streg under menuen i MarkOns røde farve (erstatter topbaren med telefon og mail; ønske oe-20261119131416-1zda, godkendt af Emma 19. nov. 2026) */
+  .header::after {
+    content: ''; position: absolute; left: var(--gutter); right: var(--gutter); bottom: 0; height: 1px; pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgb(157 86 86 / 0.35) 20%, rgb(157 86 86 / 0.35) 80%, transparent);
+  }
   .has-sub { display: flex; align-items: center; gap: 2px; }
   .has-sub .top { position: relative; }
   /* Usynlig bro mellem menupunktet og panelet, så det ikke lukker på vej ned */
