@@ -1,0 +1,62 @@
+---
+// "Mød holdet": medarbejderne i cirkler, grupperet efter funktion. Salg står først på én linje.
+// Runde 2 (godkendt af Emma 20. nov.): hver funktion på sin egen linje og mere luft mellem medarbejderne.
+// Holdet ligger ét sted (staff i site.json) og vises på Om os og Kontakt (ønske oe-20261119092334-sp2).
+import { getEntry } from 'astro:content';
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'staff'> }
+const { block } = Astro.props;
+const groups = (await getEntry('site', 'site'))!.data.staff;
+---
+<section class="container sec" style="--pt:120px;--pb:120px">
+  <div class="head">
+    <h2 class="h2" set:html={rich(block.heading)} />
+    {block.text && <p>{block.text}</p>}
+  </div>
+  <div class="groups">
+  {groups.map((g) => (
+    <div class="group">
+      <h3 class="kicker">{g.title}</h3>
+      <ul class="people" role="list">
+        {g.people.map((p) => (
+          <li>
+            <Media
+              {...(p.photo ?? { alt: `[FOTO: ${p.name}]`, placeholder: '[FOTO]' })}
+              ratio="1 / 1" circle widths={[200, 360]} sizes="(max-width: 640px) 45vw, (max-width: 1100px) 30vw, 190px"
+            />
+            <p class="name">{p.name}</p>
+            {p.role && <p class="role">{p.role}</p>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+  </div>
+</section>
+
+<style>
+  .head { max-width: var(--text-col, 720px); margin-bottom: 56px; }
+  .head p { margin: 16px 0 0; font-size: var(--fs-body); line-height: var(--lh-body); }
+  /* Hver funktion står på sin egen linje. Alle grupper bruger samme gitter (6 / 3 / 2 kolonner),
+     så cirklerne er lige store og står på linje under hinanden, også når en gruppe kun har 1-2 personer. */
+  .groups { display: flex; flex-direction: column; gap: 80px; }
+  .group { min-width: 0; }
+  .group .kicker { margin-bottom: 28px; }
+  .people { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 48px 56px; align-items: start; }
+  .people :global(.media) { width: 100%; }
+  .people :global(.ph) { font-size: 12px; }
+  .name { margin: 16px 0 0; font-size: 16px; font-weight: 600; line-height: 1.35; }
+  .role { margin: 4px 0 0; font-size: 14px; line-height: 1.4; }
+  @media (max-width: 1100px) {
+    .groups { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .group { grid-column: span var(--t); }
+    .groups { gap: 64px; }
+    .people { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 48px; }
+  }
+  @media (max-width: 640px) {
+    .groups { gap: 56px; }
+    .people { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 28px; }
+  }
+</style>
