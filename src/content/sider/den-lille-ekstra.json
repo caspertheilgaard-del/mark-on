@@ -2,7 +2,7 @@
   "url": "/merchandise/en-lille-ekstra-ting/",
   "seo": {
     "title": "En lille ekstra ting med logo | MarkOn",
-    "description": "Bolsjer, pastiller og slik med jeres logo til webshoppakken, leveringen eller kunderne. MarkOn hjælper med emballage, antal og levering."
+    "description": "Bolcher, pastiller og slik med jeres logo til webshoppakken, leveringen eller kunderne. MarkOn hjælper med emballage, antal og levering."
   },
   "menu": "Merchandise",
   "breadcrumbs": [
@@ -25,7 +25,7 @@
       "eyebrow": "Merchandise",
       "heading": "En lille ekstra ting **med jeres logo**",
       "body": [
-        "Et bolsje eller en pastil i pakken gør leveringen lidt mere personlig. Med jeres logo på æsken, papiret eller etiketten er det tydeligt, hvem den lille ekstra ting kommer fra.",
+        "Et bolche eller en pastil i pakken gør leveringen lidt mere personlig. Med jeres logo på æsken, papiret eller etiketten er det tydeligt, hvem den lille ekstra ting kommer fra.",
         "Hos MarkOn hjælper vi jer med at vælge slik, emballage og logo, så det passer til jeres pakker og jeres brand."
       ],
       "ctas": [
@@ -79,10 +79,10 @@
           }
         },
         {
-          "title": "Bolsjer",
+          "title": "Bolcher",
           "image": {
             "src": "../../assets/images/bolsjer-hjelm-noeglering.avif",
-            "alt": "Sorte bolsjer med kundens logo på papiret og en nøglering formet som en gul hjelm"
+            "alt": "Sorte bolcher med kundens logo på papiret og en nøglering formet som en gul hjelm"
           }
         },
         {
@@ -112,9 +112,9 @@
       "heading": "Det spørger I **tit om**",
       "items": [
         {
-          "question": "Kan vi få vores logo på bolsjer og pastiller?",
+          "question": "Kan vi få vores logo på bolcher og pastiller?",
           "answer": [
-            "Ja. Logoet kommer på emballagen, fx æsken, papiret eller etiketten. [MANGLER: kan logoet også stå på selve bolsjet eller pastillen?]"
+            "Ja. Logoet kommer på emballagen, fx æsken, papiret eller etiketten. [MANGLER: kan logoet også stå på selve bolchet eller pastillen?]"
           ]
         },
         {
