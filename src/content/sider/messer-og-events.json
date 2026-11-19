@@ -99,6 +99,33 @@
       ]
     },
     {
+      "type": "productGroups",
+      "heading": "Det kan vi levere **til messen**",
+      "body": ["Et udvalg af de produkter, vi leverer til messer og events. Skriv, hvad I har brug for, så finder vi det, der passer til jeres stand."],
+      "items": [
+        {
+          "title": "Til standen",
+          "text": "Kuglepenne, notesbøger, nøglesnore og USB-stik.",
+          "image": { "alt": "Kuglepenne og notesbog med logo", "placeholder": "[BILLEDE MANGLER: KUGLEPENNE OG NOTESBOG MED LOGO]" }
+        },
+        {
+          "title": "Noget at smage på",
+          "text": "Bolcher, slik og tyggegummi.",
+          "image": { "src": "../../assets/images/bolsjer-hjelm-noeglering.avif", "alt": "Bolcher i sort papir og en gul nøglering formet som en hjelm" }
+        },
+        {
+          "title": "Med hjem",
+          "text": "Muleposer, drikkedunke, caps, nøgleringe, lommelygter, multitools og regnslag.",
+          "image": { "src": "../../assets/images/54d96e6350ad20c771d88d30e4f06bd4.jpg", "alt": "Mulepose med PowerCon-logo båret over skulderen" }
+        },
+        {
+          "title": "Til at lege med",
+          "text": "Puslekuber med jeres logo.",
+          "image": { "src": "../../assets/images/puslekube-logo.avif", "alt": "Puslekube med rødt logo" }
+        }
+      ]
+    },
+    {
       "type": "band",
       "variant": "large",
       "heading": "Sådan når I det **til tiden**",
