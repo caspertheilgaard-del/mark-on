@@ -1,7 +1,8 @@
 ---
-// Kundebåndet "Vi hjælper blandt andre": navnene kører roligt og kontinuerligt (karrusel).
+// Kundebåndet "Brands vi hjælper": navnene kører kontinuerligt (karrusel).
 // Undtagelse fra "intet bevæger sig", godkendt af Casper 13. nov. 2026 (kundeønske).
-// Pause ved hover, fokus og med knappen; står stille ved prefers-reduced-motion.
+// Ingen pauseknap (ønske oe-20261119131419-z3bn): båndet stopper, når musen holdes over det, eller ved fokus;
+// det står stille ved prefers-reduced-motion.
 import type { BlockOf } from '../../lib/types';
 interface Props { block: BlockOf<'logos'> }
 const { block } = Astro.props;
@@ -15,24 +16,9 @@ const { block } = Astro.props;
         <ul aria-hidden="true">{block.names.map((n) => <li>{n}</li>)}</ul>
       </div>
     </div>
-    <button class="pause" type="button" aria-pressed="false" aria-label="Sæt kundenavnene på pause" data-marquee-pause>
-      <svg class="i-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>
-      <svg class="i-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10-6.5a1 1 0 0 0 0-1.7l-10-6.5A1 1 0 0 0 8 5.5z"></path></svg>
-    </button>
   </div>
 </section>
 
-<script>
-  document.querySelectorAll<HTMLButtonElement>('[data-marquee-pause]').forEach((b) => {
-    const m = b.parentElement?.querySelector<HTMLElement>('[data-marquee]');
-    b.addEventListener('click', () => {
-      const paused = b.getAttribute('aria-pressed') !== 'true';
-      b.setAttribute('aria-pressed', String(paused));
-      b.setAttribute('aria-label', paused ? 'Start kundenavnene igen' : 'Sæt kundenavnene på pause');
-      m?.classList.toggle('paused', paused);
-    });
-  });
-</script>
 
 <style>
   .logos { border-top: 1px solid var(--c-line-strong); border-bottom: 1px solid var(--c-line-strong); }
@@ -44,24 +30,17 @@ const { block } = Astro.props;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   }
-  .track { display: flex; width: max-content; animation: logos-run 40s linear infinite; }
-  .marquee:hover .track, .logos:focus-within .track, .marquee.paused .track { animation-play-state: paused; }
+  .track { display: flex; width: max-content; animation: logos-run 30s linear infinite; }
+  .marquee:hover .track, .logos:focus-within .track { animation-play-state: paused; }
   ul { display: flex; margin: 0; padding: 0; list-style: none; }
   li { padding-right: 64px; font-size: 20px; font-weight: 700; line-height: 44px; white-space: nowrap; color: var(--c-logo); opacity: 0.75; }
   @keyframes logos-run { to { transform: translateX(-50%); } }
 
-  .pause {
-    flex: 0 0 auto; width: 44px; height: 44px; border: 0; border-radius: 50%; padding: 0; cursor: pointer;
-    background: var(--c-sand); color: var(--c-text); display: inline-flex; align-items: center; justify-content: center;
-  }
-  .pause .i-play, .pause[aria-pressed='true'] .i-pause { display: none; }
-  .pause[aria-pressed='true'] .i-play { display: block; }
 
-  /* Tablet og mobil: overskriften og pauseknappen på egen linje over båndet */
+  /* Tablet og mobil: overskriften på egen linje over båndet */
   @media (max-width: 1100px) {
     .inner { flex-wrap: wrap; row-gap: 12px; column-gap: 16px; }
     .kicker { flex: 1 1 auto; }
-    .pause { order: 2; }
     .marquee { order: 3; flex: 1 0 100%; }
     li { padding-right: 48px; font-size: 18px; }
   }
@@ -72,6 +51,5 @@ const { block } = Astro.props;
     .marquee { -webkit-mask-image: none; mask-image: none; }
     .track ul:first-child { flex-wrap: wrap; column-gap: 0; }
     .track ul[aria-hidden] { display: none; }
-    .pause { display: none; }
   }
 </style>
