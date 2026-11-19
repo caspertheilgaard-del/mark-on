@@ -72,7 +72,7 @@
             "alt": "Krus med logo"
           },
           "title": "Giveaways til standen",
-          "text": "Krus, flasker, muleposer og nøglesnore med jeres logo.",
+          "text": "Kuglepenne, notesbøger, drikkedunke, muleposer og nøglesnore med jeres logo. Vi hjælper jer med at vælge det, gæsterne tager med hjem og bruger.",
           "label": "Typisk antal",
           "value": "[ANTAL] til [ANTAL] stk. pr. messe"
         },
@@ -82,7 +82,7 @@
             "alt": "T-shirt med tryk"
           },
           "title": "Tøj til jeres folk",
-          "text": "T-shirts, polo og jakker, så standen ser ens og professionel ud.",
+          "text": "T-shirts, polo og jakker, så standen ser ens og professionel ud. Vi hjælper med modeller og størrelser til hele holdet.",
           "label": "Logometode",
           "value": "Broderi eller tryk"
         },
@@ -92,7 +92,7 @@
             "alt": "Pastilæske med logo"
           },
           "title": "Kick off og firmafester",
-          "text": "Noget at samles om og tage med hjem, med dagens budskab på.",
+          "text": "Noget at samles om og tage med hjem, med dagens budskab på. Fx caps, drikkedunke eller slik i en æske med jeres logo.",
           "label": "Levering",
           "value": "Til kontoret eller stedet for festen"
         }
