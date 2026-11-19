@@ -47,20 +47,6 @@
           "shape": "square"
         }
       ],
-      "facts": [
-        {
-          "label": "Fra",
-          "value": "[PRIS] kr."
-        },
-        {
-          "label": "Minimum",
-          "value": "[ANTAL] stk."
-        },
-        {
-          "label": "Levering",
-          "value": "ca. [X] dage"
-        }
-      ],
       "formHeading": "Få et tilbud på krus"
     },
     {
