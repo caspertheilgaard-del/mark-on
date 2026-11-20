@@ -1,0 +1,33 @@
+---
+// Produkter i grupper: overskrift og intro i én kolonne, derunder fire små billeder (4:5, hjørne 24) med titel og produkter under.
+// Mangler et billede, står en synlig pladsholder (Messer og events, ønske 19. nov.).
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'productGroups'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:128px">
+  <div class="text-col intro">
+    <h2 class="h2" set:html={rich(block.heading)} />
+    {block.body.map((p) => <p class="body-text">{p}</p>)}
+  </div>
+  <ul class="grid" role="list">
+    {block.items.map((g) => (
+      <li>
+        <Media {...g.image} ratio="4 / 5" widths={[300, 600]} sizes="(max-width: 640px) 50vw, (max-width: 1100px) 25vw, 300px" />
+        <h3>{g.title}</h3>
+        <p>{g.text}</p>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .intro { margin-bottom: 48px; }
+  .grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  h3 { margin: 20px 0 8px; font-size: 20px; font-weight: 600; }
+  p { margin: 0; font-size: var(--fs-small); line-height: var(--lh-body); }
+  @media (max-width: 1100px) { .grid { gap: 20px; } h3 { font-size: 18px; } }
+  @media (max-width: 640px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; } h3 { margin-top: 14px; font-size: 16px; } p { font-size: 14px; } }
+</style>

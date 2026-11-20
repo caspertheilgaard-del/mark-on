@@ -158,6 +158,13 @@ const sider = defineCollection({
       items: z.array(z.object({ image: media, title: z.string(), text: z.string(), label: z.string(), value: z.string() })),
     });
 
+    const productGroups = z.object({
+      type: z.literal('productGroups'),
+      heading: z.string(),
+      body: z.array(z.string()).default([]),
+      items: z.array(z.object({ title: z.string(), text: z.string(), image: media })),
+    });
+
     const products = z.object({
       type: z.literal('products'),
       heading: z.string(),
@@ -254,7 +261,7 @@ const sider = defineCollection({
       breadcrumbs: z.array(z.object({ label: z.string(), href: z.string().optional() })).optional(),
       blocks: z.array(
         z.discriminatedUnion('type', [
-          hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, caseList, features, products,
+          hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, caseList, features, productGroups, products,
           split, values, team, info, quoteForm, locations, product, faq, next,
         ]),
       ),
