@@ -45,7 +45,7 @@ const ratio = { portrait: '3 / 4', tall: '4 / 5', circle: '1 / 1' } as const;
         <Media {...media.images[1]} ratio="3 / 4" shadow eager sizes="(max-width: 760px) 40vw, 260px" />
         <div class="dot" aria-hidden="true" style="right:-44px;bottom:-44px;width:130px;height:130px"></div>
       </div>
-      <Media {...media.images[2]} ratio="1 / 1" circle class="c3" eager sizes="(max-width: 760px) 26vw, 170px" />
+      <Media {...media.images[2]} ratio="1 / 1" circle class="c3" eager sizes="(max-width: 760px) 32vw, 200px" />
     </div>
   )}
 
@@ -108,7 +108,8 @@ const ratio = { portrait: '3 / 4', tall: '4 / 5', circle: '1 / 1' } as const;
   .circle-bg { position: absolute; left: 10%; top: 12%; width: 47%; aspect-ratio: 1 / 1; border-radius: 50%; background: var(--c-sand); }
   .collage :global(.c1) { position: absolute; left: 0; top: 0; width: 46%; }
   .c2 { position: absolute; right: 0; top: 12%; width: 40%; isolation: isolate; }
-  .collage :global(.c3) { position: absolute; left: 36%; bottom: 0; width: 26%; }
+  /* Muleposen i cirklen: 200 px når collagen er fuld bredde (638 px), skalerer med på tablet og mobil; stadig mindre end de to andre (ønske oe-20261119131420-aj1r, runde 2) */
+  .collage :global(.c3) { position: absolute; left: 33.4%; bottom: 0; width: 31.35%; }
   .collage :global(img) { box-sizing: border-box; }
 
   .pair { display: flex; gap: 24px; }
