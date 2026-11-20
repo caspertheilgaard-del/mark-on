@@ -53,9 +53,17 @@
       "tiles": [
         {
           "title": "Event merchandise",
-          "image": {
-            "src": "../../assets/images/54d96e6350ad20c771d88d30e4f06bd4.jpg",
-            "alt": "Mulepose med PowerCon-logo"
+          "swap": {
+            "alt": "Tyggegummipakker med logoer fra Kamstrup, PowerCon, Svanehøj, Link Mobility, Muehlhan Wind Service, Trifork og Dbio",
+            "images": [
+              "../../assets/images/tyggegummi-kamstrup.avif",
+              "../../assets/images/tyggegummi-powercon.avif",
+              "../../assets/images/tyggegummi-svanehoej.avif",
+              "../../assets/images/tyggegummi-link-mobility.avif",
+              "../../assets/images/tyggegummi-muehlhan.avif",
+              "../../assets/images/tyggegummi-trifork.avif",
+              "../../assets/images/tyggegummi-dbio.avif"
+            ]
           },
           "text": "Giv deltagerne noget at tage med hjem fra jeres messe, konference eller event. Vi hjælper jer med at finde merchandise, der passer til arrangementet og giver modtagerne en anledning til at huske jer.",
           "linkLabel": "Se mulighederne for event merchandise",
@@ -104,9 +112,9 @@
         {
           "title": "Har I en anden anledning?",
           "swap": {
-            "alt": "Drikkedunke og pastilæsker med logo",
+            "alt": "Krus, drikkedunke og pastilæsker med logo",
             "images": [
-              "../../assets/images/286bd7a92f2875f9e06b2004179dc3fc.jpg",
+              "../../assets/images/f05a367bff5d383692ffbf90bed6b80e.jpg",
               "../../assets/images/1a681f7f7515fc60399923ba959e3ee4.jpg",
               "../../assets/images/b544b0965caa3888485ba28f507ac933.jpg",
               "../../assets/images/8bb3a7273f669f5d5f55c027b5d7dfb9.jpg"

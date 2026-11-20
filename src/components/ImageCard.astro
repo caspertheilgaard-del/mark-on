@@ -18,7 +18,7 @@ const sizes = '(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px';
 <div class="lt">
   <div class="pic">
     {swap
-      ? <div class="swap4" role="img" aria-label={swap.alt}>
+      ? <div class:list={['swap4', { n7: swap.images.length === 7 }]} role="img" aria-label={swap.alt}>
           {swap.images.map((src, i) => <Image src={src} alt="" widths={[400, 800]} sizes={sizes} style={`animation-delay:${i * 2 - 0.5}s`} />)}
         </div>
       : image && <Media {...image} sizes={sizes} />}
@@ -62,6 +62,9 @@ const sizes = '(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px';
     animation: swap4 8s ease-in-out infinite;
   }
   @keyframes swap4 { 0% { opacity: 0; } 6% { opacity: 1; } 25% { opacity: 1; } 31% { opacity: 0; } 100% { opacity: 0; } }
+  /* Syv billeder: samme tempo (2 sek. pr. billede og blød toning), bare en længere runde. */
+  .n7 img { animation-name: swap7; animation-duration: 14s; }
+  @keyframes swap7 { 0% { opacity: 0; } 3.4% { opacity: 1; } 14.3% { opacity: 1; } 17.7% { opacity: 0; } 100% { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {
     .swap4 img { animation: none; }
     .swap4 img:first-child { opacity: 1; }
