@@ -231,7 +231,7 @@ const sider = defineCollection({
       heading: z.string(),
       body: z.string(),
       gallery: z.array(media.extend({ shape: z.enum(['square', 'circle']).default('square') })),
-      facts: z.array(z.object({ label: z.string(), value: z.string() })),
+      facts: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
       formHeading: z.string(),
     });
 
