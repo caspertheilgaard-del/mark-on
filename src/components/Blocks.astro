@@ -23,11 +23,13 @@ import Locations from './blocks/Locations.astro';
 import Product from './blocks/Product.astro';
 import Faq from './blocks/Faq.astro';
 import Next from './blocks/Next.astro';
+import Packs from './blocks/Packs.astro';
 
 const components = {
   hero: Hero, cards: Cards, tiles: Tiles, band: Band, categories: Categories, logos: Logos, cases: Cases,
   quote: Quote, case: Case, caseList: CaseList, features: Features, productGroups: ProductGroups, products: Products, split: Split, values: Values, team: Team,
   info: Info, quoteForm: QuoteForm, locations: Locations, product: Product, faq: Faq, next: Next,
+  packs: Packs,
 } as const;
 
 interface Props { blocks: Block[] }
