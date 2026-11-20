@@ -39,7 +39,10 @@ const shots = await Promise.all(
         {c.cta && <a class="btn" href={c.cta.href}>{c.cta.label}</a>}
         {c.links.length > 0 && (
           <ul class="links">
-            {c.links.map((l) => <li><a class="go" href={l.href}><span>{l.label}</span><span class="arr" aria-hidden="true">→</span></a></li>)}
+            {c.links.map((l) => {
+              const ext = /^https?:\/\//.test(l.href);
+              return <li><a class="go" href={l.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}><span>{l.label}{ext && <span class="visually-hidden"> (åbner i en ny fane)</span>}</span><span class="arr" aria-hidden="true">→</span></a></li>;
+            })}
           </ul>
         )}
       </div>
