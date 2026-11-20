@@ -48,8 +48,8 @@
     {
      "title": "Profiltøj",
      "image": {
-      "alt": "[BILLEDE: SYSTEMATIC HOODIE]",
-      "placeholder": "[BILLEDE: SYSTEMATIC HOODIE]"
+      "src": "../../assets/images/systematic-hoodie-portraet.avif",
+      "alt": "Medarbejder i mørkeblå hoodie med Systematic-logo"
      },
      "text": "T-shirts, poloer, skjorter og sweatshirts med logo kan gøre jeres virksomhed synlig på kontoret, i butikken og på messer. Vi hjælper jer med at vælge profiltøj, der passer til jeres stil, og som medarbejderne har lyst til at tage på.",
      "linkLabel": "Se mulighederne for profiltøj",
@@ -68,8 +68,8 @@
     {
      "title": "Sport og fritid",
      "image": {
-      "alt": "[BILLEDE: SPORT OG FRITID]",
-      "placeholder": "[BILLEDE: SPORT OG FRITID]"
+      "src": "../../assets/images/systematic-hoodie-ryg.avif",
+      "alt": "Hoodie med tryk på ryggen til fritiden"
      },
      "text": "Skab et fælles udtryk til motionsløbet, medarbejderdagen eller træningen efter arbejde. Vi hjælper med at finde sportstøj og fritidstøj, der passer til aktiviteten og kan bruges bagefter.",
      "linkLabel": "Se tøj til sport og fritid",
@@ -88,8 +88,8 @@
     {
      "title": "Accessories",
      "image": {
-      "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
-      "alt": "Mulepose med tryk"
+      "src": "../../assets/images/bauhaus-rygsaek.avif",
+      "alt": "Grå rygsæk med præget BAUHAUS-logo på remmen"
      },
      "text": "Caps, huer og andet tilbehør kan supplere firmatøjet og være praktiske i hverdagen. Vi rådgiver om accessories, der passer til medarbejdernes behov og resten af jeres tøj.",
      "linkLabel": "Se accessories til firmatøj",

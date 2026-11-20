@@ -84,8 +84,8 @@
      "placeholder": "[BILLEDE: T-SHIRT TIL MEDARBEJDERDAGEN]"
     },
     {
-     "alt": "[BILLEDE: HOODIE TIL FRITIDEN]",
-     "placeholder": "[BILLEDE: HOODIE TIL FRITIDEN]"
+     "src": "../../assets/images/systematic-hoodie-ryg.avif",
+     "alt": "Hoodie med tryk på ryggen til fritiden"
     }
    ]
   },

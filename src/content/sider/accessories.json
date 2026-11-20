@@ -35,8 +35,8 @@
    "media": {
     "kind": "image",
     "image": {
-     "alt": "[BILLEDE: BAUHAUS-RYGSÆK]",
-     "placeholder": "[BILLEDE: BAUHAUS-RYGSÆK]"
+     "src": "../../assets/images/bauhaus-rygsaek.avif",
+     "alt": "Grå rygsæk med præget BAUHAUS-logo på remmen"
     }
    }
   },
@@ -83,8 +83,8 @@
      "placeholder": "[BILLEDE: CAP MED LOGO]"
     },
     {
-     "alt": "[BILLEDE: RAINS-TASKE]",
-     "placeholder": "[BILLEDE: RAINS-TASKE]"
+     "src": "../../assets/images/rains-messengertaske.avif",
+     "alt": "Sort RAINS-messengertaske med Comwell-logo"
     },
     {
      "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
