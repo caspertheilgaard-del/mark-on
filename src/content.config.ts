@@ -147,7 +147,14 @@ const sider = defineCollection({
       type: z.literal('caseList'),
       heading: z.string().optional(),
       items: z.array(
-        z.object({ customer: z.string(), result: z.string(), href: z.string().optional(), linkLabel: z.string().default('Se casen'), image: media }),
+        z.object({
+          customer: z.string(),
+          result: z.string(),
+          hoverText: z.string().optional().describe('Kort tekst, der toner frem på billedet ved mouse-over (på touch under linjen)'),
+          href: z.string().optional(),
+          linkLabel: z.string().default('Se casen'),
+          image: media,
+        }),
       ),
     });
 
