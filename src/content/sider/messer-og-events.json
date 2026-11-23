@@ -157,6 +157,90 @@
       ]
     },
     {
+      "type": "packs",
+      "heading": "Eksempler på **pakker til messer og events**",
+      "body": [
+        "Vi har ikke faste pakker. I vælger selv, hvad der skal med, og vi sætter det sammen efter jeres event, jeres gæster og jeres budget.",
+        "Her er nogle eksempler på, hvordan en pakke kan se ud. Brug dem som udgangspunkt, og fortæl os, hvad der passer til jer."
+      ],
+      "items": [
+        {
+          "title": "Messepakker",
+          "text": "Alt til standen samlet i én levering, så I ikke skal holde styr på flere leverandører.",
+          "listLabel": "Kan fx indeholde",
+          "list": [
+            "Giveaways med logo, fx krus, flasker og nøglesnore",
+            "Muleposer, som gæsterne kan samle tingene i",
+            "Ens tøj til jeres folk på standen"
+          ],
+          "image": {
+            "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
+            "alt": "Messepakke med flaske, krus, æske og nøgleringe"
+          }
+        },
+        {
+          "title": "Velkomstposer til gæster",
+          "text": "En pose, gæsterne får i hånden, når de kommer til jeres stand eller jeres event.",
+          "listLabel": "Kan fx indeholde",
+          "list": [
+            "Mulepose med jeres logo",
+            "Pastiller eller bolcher med logo",
+            "Noget, de bruger igen, fx en flaske eller et krus"
+          ],
+          "image": {
+            "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
+            "alt": "Mulepose med tryk til messen"
+          }
+        },
+        {
+          "title": "Tøj til holdet bag standen",
+          "text": "Så I ser ens ud og er lette at finde, både på standen og ved eventet.",
+          "listLabel": "Kan fx indeholde",
+          "list": [
+            "T-shirts eller polo med logo",
+            "Jakker til udendørs events",
+            "Broderi eller tryk efter jeres ønske"
+          ],
+          "image": {
+            "alt": "[BILLEDE: TØJ PÅ STANDEN]",
+            "placeholder": "[BILLEDE: TØJ PÅ STANDEN]"
+          }
+        },
+        {
+          "title": "Kick off-pakker",
+          "text": "Noget at samles om på dagen, med dagens tema eller budskab på.",
+          "listLabel": "Kan fx indeholde",
+          "list": [
+            "T-shirts med dagens tema",
+            "Krus eller flasker til hver deltager",
+            "Pastiller eller bolcher på bordene"
+          ],
+          "image": {
+            "alt": "[BILLEDE: KICK OFF]",
+            "placeholder": "[BILLEDE: KICK OFF]"
+          }
+        },
+        {
+          "title": "Firmafestpakker",
+          "text": "En lille ting at tage med hjem, når festen er slut.",
+          "listLabel": "Kan fx indeholde",
+          "list": [
+            "En lille gave ved hver kuvert",
+            "En æske eller mulepose at bære den i",
+            "Jeres logo eller festens budskab på det hele"
+          ],
+          "image": {
+            "alt": "[BILLEDE: FIRMAFEST]",
+            "placeholder": "[BILLEDE: FIRMAFEST]"
+          }
+        }
+      ],
+      "cta": {
+        "label": "Få et tilbud på jeres pakke",
+        "href": "/kontakt/"
+      }
+    },
+    {
       "type": "case",
       "variant": "banner",
       "kicker": "Inspiration",
