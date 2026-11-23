@@ -180,3 +180,10 @@ p > .go::after { content: ''; position: absolute; left: -4px; right: -4px; top: 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* Midlertidig: pladsholdere ([ANTAL], [MANGLER: ...] osv.) står skriggrønne, så det er let at se, hvad der mangler.
+   Sættes af src/middleware.ts (ønske oe-20261123072150-vhsm). Fjernes, når alt er udfyldt. */
+mark.mangler {
+  background: #39ff14; color: #000; font-weight: 700; padding: 0.05em 0.25em; border-radius: 0;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
