@@ -142,14 +142,14 @@ const sider = defineCollection({
       image: media,
     });
 
-    // Cases i et gitter: ét billede (4:5) og én linje pr. kunde (kunde, resultat og evt. "Se casen").
+    // Cases i et gitter: ét billede (4:5) og én linje pr. kunde (kunde, evt. resultat og evt. "Se casen").
     const caseList = z.object({
       type: z.literal('caseList'),
       heading: z.string().optional(),
       items: z.array(
         z.object({
           customer: z.string(),
-          result: z.string(),
+          result: z.string().optional(),
           hoverText: z.string().optional().describe('Kort tekst, der toner frem på billedet ved mouse-over (på touch under linjen)'),
           href: z.string().optional(),
           linkLabel: z.string().default('Se casen'),

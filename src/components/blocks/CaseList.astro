@@ -1,5 +1,5 @@
 ---
-// Cases i et gitter: ét billede (4:5, hjørne 24) og én linje under: kunde, resultat og "Se casen", når casen har en side.
+// Cases i et gitter: ét billede (4:5, hjørne 24) og én linje under: kunde, evt. resultat og "Se casen", når casen har en side.
 // Har casen en kort tekst (hoverText), toner den frem i et rødligt lag på billedet ved mouse-over/fokus. På touch står den under linjen.
 import Media from '../Media.astro';
 import { rich } from '../../lib/rich';
@@ -18,7 +18,7 @@ const { block } = Astro.props;
             {c.hoverText && <span class="ov" aria-hidden="true"><span>{c.hoverText}</span></span>}
           </span>
           <span class="line">
-            <span><strong>{c.customer}</strong> · {c.result}</span>
+            <span><strong>{c.customer}</strong>{c.result && <> · {c.result}</>}</span>
             {c.href && <span class="lnk">{c.linkLabel} <span class="arr" aria-hidden="true">→</span></span>}
           </span>
           {c.hoverText && <span class="touch">{c.hoverText}</span>}
