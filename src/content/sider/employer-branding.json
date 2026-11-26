@@ -64,7 +64,7 @@
     },
     {
       "type": "cards",
-      "variant": "points",
+      "variant": "images",
       "heading": "Gør jeres arbejdsplads synlig **med produkter, der bliver brugt**",
       "body": [
         "Jeres employer branding tager afsæt i, hvordan det er at arbejde hos jer. Merchandise kan være med til at give den fortælling et konkret udtryk gennem produkter, som medarbejderne har glæde af og lyst til at bruge.",
@@ -72,46 +72,41 @@
       ],
       "cards": [
         {
-          "heading": "Merchandise til medarbejdernes hverdag",
+          "heading": "Medarbejdernes hverdag",
           "body": [
-            "De produkter I vælger skal give mening for medarbejderne. Derfor tager vi udgangspunkt i deres arbejdsdag, behov og de ting, I allerede stiller til rådighed.",
-            "Det kan være krus og notesbøger til kontoret, tasker til kolleger på farten eller tøj med logo. Vi rådgiver om funktion, kvalitet og design, så produkterne passer til både medarbejderne og jeres visuelle udtryk."
+            "De produkter I vælger skal give mening for medarbejderne. Derfor tager vi udgangspunkt i deres arbejdsdag, behov og de ting, I allerede stiller til rådighed."
           ],
-          "link": {
-            "label": "Få inspiration til merchandise til medarbejdere",
-            "href": "/inspiration/"
+          "image": {
+            "src": "../../assets/images/8bb3a7273f669f5d5f55c027b5d7dfb9.jpg",
+            "alt": "Drikkedunk med tryk"
           }
         },
         {
-          "heading": "Merchandise til rekruttering og karrieremesser",
+          "heading": "Rekruttering og karrieremesser",
           "body": [
-            "Når I møder mulige nye kolleger, kan merchandise være en anledning til at starte en samtale og give dem noget at huske jer for. En kuglepen, notesbog eller mulepose kan følge med videre efter mødet.",
-            "Vi hjælper jer med at finde produkter, der passer til målgruppen og den historie, I gerne vil fortælle om jer som arbejdsplads. Har I et budskab fra en rekrutteringskampagne, kan det også tænkes ind i designet."
-          ]
+            "Når I møder mulige nye kolleger, kan merchandise være en anledning til at starte en samtale og give dem noget at huske jer for. En kuglepen, notesbog eller mulepose kan følge med videre efter mødet."
+          ],
+          "image": {
+            "src": "../../assets/images/da786e6e4498fd2b3c6a9729f90a46a7.jpg",
+            "alt": "Muleposer med budskaber til medarbejdere fra OK og Urtekram"
+          }
         },
         {
-          "heading": "Et fælles udtryk til medarbejderaktiviteter",
+          "heading": "Medarbejderaktiviteter",
           "body": [
-            "Til en medarbejderdag, et motionsløb eller en intern samling kan merchandise give deltagerne et fælles udtryk. Det kan være T-shirts til aktiviteten eller en drikkedunk, der kan bruges på dagen og bagefter.",
-            "Vi hjælper med at vælge produkter og branding, der passer til arrangementet. Så hænger anledningen, produkterne og jeres brand sammen."
-          ]
+            "Til en medarbejderdag, et motionsløb eller en intern samling kan merchandise give deltagerne et fælles udtryk. Det kan være T-shirts til aktiviteten eller en drikkedunk, der kan bruges på dagen og bagefter."
+          ],
+          "image": {
+            "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
+            "alt": "T-shirt med tryk",
+            "position": "center 30%"
+          }
         }
       ],
-      "gallery": [
-        {
-          "src": "../../assets/images/e8615e7d7fd91b1746d56ebbd091f289.jpg",
-          "alt": "T-shirt med tryk",
-          "position": "center 30%"
-        },
-        {
-          "src": "../../assets/images/da786e6e4498fd2b3c6a9729f90a46a7.jpg",
-          "alt": "Muleposer med budskaber til medarbejdere fra OK og Urtekram"
-        },
-        {
-          "src": "../../assets/images/8bb3a7273f669f5d5f55c027b5d7dfb9.jpg",
-          "alt": "Drikkedunk med tryk"
-        }
-      ]
+      "link": {
+        "label": "Få inspiration til merchandise til medarbejdere",
+        "href": "/inspiration/"
+      }
     },
     {
       "type": "band",
