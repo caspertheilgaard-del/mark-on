@@ -48,6 +48,10 @@
       }
     },
     {
+      "type": "staff",
+      "heading": "Mød **holdet**"
+    },
+    {
       "type": "faq",
       "heading": "Det spørger I **tit om**",
       "items": [

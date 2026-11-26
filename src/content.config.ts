@@ -206,6 +206,12 @@ const sider = defineCollection({
       members: z.array(z.object({ photo: media, name: z.string(), role: z.string(), link: link })),
     });
 
+    const staff = z.object({
+      type: z.literal('staff'),
+      heading: z.string(),
+      text: z.string().optional(),
+    });
+
     const info = z.object({
       type: z.literal('info'),
       cards: z.array(
@@ -282,7 +288,7 @@ const sider = defineCollection({
       blocks: z.array(
         z.discriminatedUnion('type', [
           hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, caseList, features, productGroups, products,
-          split, values, team, info, quoteForm, locations, product, faq, next,
+          split, values, team, staff, info, quoteForm, locations, product, faq, next,
           carousel,
         ]),
       ),
@@ -315,6 +321,16 @@ const site = defineCollection({
         z.object({ name: z.string(), lines: z.array(z.string()), phone: z.string().optional(), email: z.string().optional() }),
       ),
       legal: z.array(z.object({ label: z.string(), href: z.string().optional() })),
+      staff: z
+        .array(
+          z.object({
+            title: z.string(),
+            people: z.array(
+              z.object({ name: z.string(), role: z.string().optional(), photo: z.object({ src: image(), alt: z.string() }).optional() }),
+            ),
+          }),
+        )
+        .describe('Medarbejderne på Om os og Kontakt (Mød holdet). Salg først.'),
     }),
 });
 

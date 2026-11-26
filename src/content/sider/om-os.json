@@ -79,61 +79,8 @@
       ]
     },
     {
-      "type": "team",
-      "heading": "Mød **os**",
-      "text": "Rådgiverne, der hjælper jer fra første snak til levering.",
-      "members": [
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]"
-          },
-          "name": "[NAVN]",
-          "role": "Rådgiver · Merchandise",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        },
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]",
-            "background": "white"
-          },
-          "name": "[NAVN]",
-          "role": "Rådgiver · Firmagaver",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        },
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]"
-          },
-          "name": "[NAVN]",
-          "role": "Rådgiver · Firmatøj",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        },
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]",
-            "background": "white"
-          },
-          "name": "[NAVN]",
-          "role": "Design og produktion",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        }
-      ]
+      "type": "staff",
+      "heading": "Mød **holdet**"
     },
     {
       "type": "info",
@@ -167,19 +114,23 @@
         },
         {
           "heading": "Kataloger",
-          "text": "Bladr i udvalget i ro og mag. Kataloget viser produkter og priser uden logo.",
+          "text": "Bladr i udvalget i ro og mag. I katalogerne kan I se produkter og priser.",
           "links": [
             {
-              "label": "Merchandise [ÅR]",
-              "href": "#"
+              "label": "Julegavekatalog",
+              "href": "https://indd.adobe.com/view/79a326f1-86e3-48cb-9e38-56e9c88f118c"
             },
             {
-              "label": "Firmagaver og julegaver [ÅR]",
-              "href": "#"
+              "label": "Julekalendere og kundegaver",
+              "href": "https://indd.adobe.com/view/46652411-7e9e-4385-9acf-2541d376a040"
             },
             {
-              "label": "Firmatøj [ÅR]",
-              "href": "#"
+              "label": "Løbekatalog",
+              "href": "https://indd.adobe.com/view/e8d53ea2-773e-494e-9a47-8bf0bd85a25c"
+            },
+            {
+              "label": "Merchandise",
+              "href": "https://viewer.xdcollection.com/xd/dk/markon/main/"
             }
           ]
         }
