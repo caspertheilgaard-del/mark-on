@@ -70,5 +70,13 @@
     { "label": "Privatlivspolitik" },
     { "label": "CSR" },
     { "label": "Code of conduct" }
+  ],
+  "staff": [
+    {"title": "Salg", "people": [{"name": "Rasmus Kjær Nielsen"}, {"name": "Henrik Overgaard", "photo": {"src": "../../assets/images/portraet-henrik-overgaard.avif", "alt": "Portræt af Henrik Overgaard"}}, {"name": "Heidi Hoffmann", "photo": {"src": "../../assets/images/portraet-heidi-hoffmann.avif", "alt": "Portræt af Heidi Hoffmann"}}, {"name": "Tina Dalsgaard", "photo": {"src": "../../assets/images/portraet-tina-dalsgaard.avif", "alt": "Portræt af Tina Dalsgaard"}}, {"name": "Lars Reintoft"}, {"name": "Kasper Kvist"}]},
+    {"title": "Indkøb", "people": [{"name": "Hanne N. Erdal"}, {"name": "Betina Vinkler Holm", "photo": {"src": "../../assets/images/portraet-betina-vinkler-holm.avif", "alt": "Portræt af Betina Vinkler Holm"}}]},
+    {"title": "Marketing og digital", "people": [{"name": "Anisette Dejgaard", "role": "Digital koordinator"}, {"name": "Søren Munk", "role": "Webshop manager"}, {"name": "Jeanette Søgaard", "role": "Grafisk designer"}, {"name": "Thomas Tuure Lindholm", "role": "IT-koordinator"}]},
+    {"title": "Lager og logistik", "people": [{"name": "Tim Schmidt Caspersen", "role": "Lagerchef", "photo": {"src": "../../assets/images/portraet-tim-schmidt-caspersen.avif", "alt": "Portræt af Tim Schmidt Caspersen"}}, {"name": "Oguzhan Kekec", "role": "Lager- og logistikmedarbejder"}]},
+    {"title": "Økonomi", "people": [{"name": "Lone Andersen", "role": "Regnskabschef"}, {"name": "Dilman Kamal Majid", "role": "Regnskabsmedhjælper"}]},
+    {"title": "Ledelse", "people": [{"name": "Lars Erdal", "role": "Adm. direktør og partner"}]}
   ]
 }

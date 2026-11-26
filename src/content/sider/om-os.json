@@ -79,61 +79,8 @@
       ]
     },
     {
-      "type": "team",
-      "heading": "Mød **os**",
-      "text": "Rådgiverne, der hjælper jer fra første snak til levering.",
-      "members": [
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]"
-          },
-          "name": "[NAVN]",
-          "role": "Rådgiver · Merchandise",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        },
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]",
-            "background": "white"
-          },
-          "name": "[NAVN]",
-          "role": "Rådgiver · Firmagaver",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        },
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]"
-          },
-          "name": "[NAVN]",
-          "role": "Rådgiver · Firmatøj",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        },
-        {
-          "photo": {
-            "alt": "[FOTO]",
-            "placeholder": "[FOTO]",
-            "background": "white"
-          },
-          "name": "[NAVN]",
-          "role": "Design og produktion",
-          "link": {
-            "label": "Skriv til os",
-            "href": "/kontakt/"
-          }
-        }
-      ]
+      "type": "staff",
+      "heading": "Mød **holdet**"
     },
     {
       "type": "info",
