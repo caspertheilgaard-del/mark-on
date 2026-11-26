@@ -64,11 +64,12 @@ const sider = defineCollection({
 
     const cards = z.object({
       type: z.literal('cards'),
-      // boxes: hvide tekstkort i to kolonner. points: tekstpunkter uden kasse, og billederne står 3 på række ned til 760 px (aldrig 2+1).
-      variant: z.enum(['boxes', 'points']).default('boxes'),
+      // boxes: hvide tekstkort i to kolonner. images: billedkort (4:5, overskrift i pille, tekst under), 3 på række ned til 760 px (aldrig 2+1).
+      variant: z.enum(['boxes', 'images']).default('boxes'),
       heading: z.string(),
       body: z.array(z.string()).default([]),
-      cards: z.array(z.object({ heading: z.string(), body: z.array(z.string()), link: link.optional() })).default([]),
+      cards: z.array(z.object({ heading: z.string(), body: z.array(z.string()), link: link.optional(), image: media.optional() })).default([]),
+      link: link.optional().describe('Link under kortene (variant images)'),
       gallery: z.array(media).default([]),
     });
 
