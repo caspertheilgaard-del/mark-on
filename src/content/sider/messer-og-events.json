@@ -26,7 +26,7 @@
       "eyebrow": "Messer · Kick off · Firmafester",
       "heading": "Merchandise til **messer og events**",
       "body": [
-        "Før en messe er der kort tid og mange ting at nå. Vi samler giveaways, tøj til standen og emballage i én pakke, så alt er klar til tiden."
+        "Før en messe er der kort tid og mange ting at nå. Vi samler giveaways, tøj til standen og emballage i én levering, så alt er klar til tiden."
       ],
       "ctas": [
         {
@@ -67,64 +67,86 @@
       "text": "Vælg det, I har brug for. Vi anbefaler de produkter, folk tager med hjem og bruger.",
       "items": [
         {
-          "image": {
-            "src": "../../assets/images/puslekube-messe.avif",
-            "alt": "Puslekube med logo i hænderne på en messegæst"
-          },
-          "title": "Giveaways til standen",
-          "text": "Kuglepenne, notesbøger, drikkedunke, muleposer og nøglesnore med jeres logo. Vi hjælper jer med at vælge det, gæsterne tager med hjem og bruger.",
+          "title": "Hjælp til at vælge",
+          "text": "Vi hjælper jer med at vælge det, gæsterne tager med hjem og bruger. Skriv, hvor mange gæster I venter, så foreslår vi et antal.",
           "label": "Typisk antal",
           "value": "[ANTAL] til [ANTAL] stk. pr. messe"
         },
         {
-          "image": {
-            "src": "../../assets/images/hoodie-forfra-stand.avif",
-            "alt": "Kvinde i mørkeblå hættetrøje med lynlås og et lille broderet logo på brystet",
-            "position": "50% 25%"
-          },
-          "title": "Tøj til jeres folk",
-          "text": "T-shirts, polo og jakker, så standen ser ens og professionel ud. Vi hjælper med modeller og størrelser til hele holdet.",
+          "title": "Jeres logo på det hele",
+          "text": "Vi sætter jeres logo eller dagens budskab på, og I ser alt med logo, før det bliver produceret.",
           "label": "Logometode",
           "value": "Broderi eller tryk"
         },
         {
-          "image": {
-            "src": "../../assets/images/chokolader-skaal.avif",
-            "alt": "Skål med chokolader i farvet folie"
-          },
-          "title": "Kick off og firmafester",
-          "text": "Noget at samles om og tage med hjem, med dagens budskab på. Fx caps, drikkedunke eller slik i en æske med jeres logo.",
+          "title": "Samlet i én levering",
+          "text": "Alt til standen kommer i én levering, så I ikke skal holde styr på flere leverandører.",
           "label": "Levering",
-          "value": "Til kontoret eller stedet for festen"
+          "value": "Til kontoret, stedet for festen eller direkte til standen"
         }
       ]
     },
     {
-      "type": "productGroups",
-      "heading": "Det kan vi levere **til messen**",
-      "body": ["Et udvalg af de produkter, vi leverer til messer og events. Skriv, hvad I har brug for, så finder vi det, der passer til jeres stand."],
+      "type": "carousel",
+      "heading": "Det kan vi levere **til messer og events**",
+      "body": [
+        "Et udvalg af de produkter, vi leverer til messer og events. Skriv, hvad I har brug for, så finder vi det, der passer til jeres stand eller jeres event."
+      ],
       "items": [
         {
-          "title": "Til standen",
-          "text": "Kuglepenne, notesbøger, nøglesnore og USB-stik.",
-          "image": { "alt": "Kuglepenne og notesbog med logo", "placeholder": "[BILLEDE MANGLER: KUGLEPENNE OG NOTESBOG MED LOGO]" }
+          "title": "Giveaways til standen",
+          "text": "Kuglepenne, notesbøger, nøglesnore og USB-stik med jeres logo.",
+          "image": {
+            "alt": "Kuglepenne og notesbog med logo",
+            "placeholder": "[BILLEDE MANGLER: KUGLEPENNE OG NOTESBOG MED LOGO]"
+          }
         },
         {
           "title": "Noget at smage på",
           "text": "Bolcher, slik og tyggegummi.",
-          "image": { "src": "../../assets/images/bolcher-hjelm-noeglering.avif", "alt": "Bolcher i sort papir og en gul nøglering formet som en hjelm" }
+          "image": {
+            "src": "../../assets/images/bolcher-hjelm-noeglering.avif",
+            "alt": "Bolcher i sort papir og en gul nøglering formet som en hjelm"
+          }
         },
         {
-          "title": "Med hjem",
+          "title": "Med hjem fra standen",
           "text": "Muleposer, drikkedunke, caps, nøgleringe, lommelygter, multitools og regnslag.",
-          "image": { "src": "../../assets/images/54d96e6350ad20c771d88d30e4f06bd4.jpg", "alt": "Mulepose med PowerCon-logo båret over skulderen" }
+          "image": {
+            "src": "../../assets/images/54d96e6350ad20c771d88d30e4f06bd4.jpg",
+            "alt": "Mulepose med PowerCon-logo båret over skulderen"
+          }
         },
         {
           "title": "Til at lege med",
           "text": "Puslekuber med jeres logo.",
-          "image": { "src": "../../assets/images/puslekube-logo.avif", "alt": "Puslekube med rødt logo" }
+          "image": {
+            "src": "../../assets/images/puslekube-logo.avif",
+            "alt": "Puslekube med rødt logo"
+          }
+        },
+        {
+          "title": "Tøj til holdet bag standen",
+          "text": "T-shirts, polo og jakker, så standen ser ens og professionel ud. Vi hjælper med modeller og størrelser til hele holdet.",
+          "image": {
+            "src": "../../assets/images/hoodie-forfra-stand.avif",
+            "alt": "Kvinde i mørkeblå hættetrøje med lynlås og et lille broderet logo på brystet",
+            "position": "50% 25%"
+          }
+        },
+        {
+          "title": "Til kick off og firmafester",
+          "text": "Noget at samles om og tage med hjem, med dagens budskab på. Fx caps, drikkedunke eller slik i en æske med jeres logo.",
+          "image": {
+            "src": "../../assets/images/chokolader-skaal.avif",
+            "alt": "Skål med chokolader i farvet folie"
+          }
         }
-      ]
+      ],
+      "cta": {
+        "label": "Få et tilbud til messen",
+        "href": "/kontakt/"
+      }
     },
     {
       "type": "band",
@@ -157,94 +179,10 @@
       ]
     },
     {
-      "type": "packs",
-      "heading": "Eksempler på **pakker til messer og events**",
-      "body": [
-        "Vi har ikke faste pakker. I vælger selv, hvad der skal med, og vi sætter det sammen efter jeres event, jeres gæster og jeres budget.",
-        "Her er nogle eksempler på, hvordan en pakke kan se ud. Brug dem som udgangspunkt, og fortæl os, hvad der passer til jer."
-      ],
-      "items": [
-        {
-          "title": "Messepakker",
-          "text": "Alt til standen samlet i én levering, så I ikke skal holde styr på flere leverandører.",
-          "listLabel": "Kan fx indeholde",
-          "list": [
-            "Giveaways med logo, fx krus, flasker og nøglesnore",
-            "Muleposer, som gæsterne kan samle tingene i",
-            "Ens tøj til jeres folk på standen"
-          ],
-          "image": {
-            "src": "../../assets/images/faef2588aada4d1845fca61180e61b99.jpg",
-            "alt": "Messepakke med flaske, krus, æske og nøgleringe"
-          }
-        },
-        {
-          "title": "Velkomstposer til gæster",
-          "text": "En pose, gæsterne får i hånden, når de kommer til jeres stand eller jeres event.",
-          "listLabel": "Kan fx indeholde",
-          "list": [
-            "Mulepose med jeres logo",
-            "Pastiller eller bolcher med logo",
-            "Noget, de bruger igen, fx en flaske eller et krus"
-          ],
-          "image": {
-            "src": "../../assets/images/6dc18bbe0f583acb25d290b008a572e7.jpg",
-            "alt": "Mulepose med tryk til messen"
-          }
-        },
-        {
-          "title": "Tøj til holdet bag standen",
-          "text": "Så I ser ens ud og er lette at finde, både på standen og ved eventet.",
-          "listLabel": "Kan fx indeholde",
-          "list": [
-            "T-shirts eller polo med logo",
-            "Jakker til udendørs events",
-            "Broderi eller tryk efter jeres ønske"
-          ],
-          "image": {
-            "alt": "[BILLEDE: TØJ PÅ STANDEN]",
-            "placeholder": "[BILLEDE: TØJ PÅ STANDEN]"
-          }
-        },
-        {
-          "title": "Kick off-pakker",
-          "text": "Noget at samles om på dagen, med dagens tema eller budskab på.",
-          "listLabel": "Kan fx indeholde",
-          "list": [
-            "T-shirts med dagens tema",
-            "Krus eller flasker til hver deltager",
-            "Pastiller eller bolcher på bordene"
-          ],
-          "image": {
-            "alt": "[BILLEDE: KICK OFF]",
-            "placeholder": "[BILLEDE: KICK OFF]"
-          }
-        },
-        {
-          "title": "Firmafestpakker",
-          "text": "En lille ting at tage med hjem, når festen er slut.",
-          "listLabel": "Kan fx indeholde",
-          "list": [
-            "En lille gave ved hver kuvert",
-            "En æske eller mulepose at bære den i",
-            "Jeres logo eller festens budskab på det hele"
-          ],
-          "image": {
-            "alt": "[BILLEDE: FIRMAFEST]",
-            "placeholder": "[BILLEDE: FIRMAFEST]"
-          }
-        }
-      ],
-      "cta": {
-        "label": "Få et tilbud på jeres pakke",
-        "href": "/kontakt/"
-      }
-    },
-    {
       "type": "case",
       "variant": "banner",
       "kicker": "Inspiration",
-      "title": "[KUNDE]: messepakke til [ANTAL] gæster på [ANTAL] uger",
+      "title": "[KUNDE]: [PRODUKT] til [EVENT]",
       "href": "#",
       "linkLabel": "Se casen",
       "image": {

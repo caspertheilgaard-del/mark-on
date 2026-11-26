@@ -64,6 +64,8 @@ const sider = defineCollection({
 
     const cards = z.object({
       type: z.literal('cards'),
+      // boxes: hvide tekstkort i to kolonner. points: tekstpunkter uden kasse, og billederne står 3 på række ned til 760 px (aldrig 2+1).
+      variant: z.enum(['boxes', 'points']).default('boxes'),
       heading: z.string(),
       body: z.array(z.string()).default([]),
       cards: z.array(z.object({ heading: z.string(), body: z.array(z.string()), link: link.optional() })).default([]),
@@ -161,8 +163,9 @@ const sider = defineCollection({
     const features = z.object({
       type: z.literal('features'),
       heading: z.string(),
-      text: z.string(),
-      items: z.array(z.object({ image: media, title: z.string(), text: z.string(), label: z.string(), value: z.string() })),
+      text: z.string().optional(),
+      // Tekstpunkter: ingen billeder (én sektion med billedkort pr. side)
+      items: z.array(z.object({ title: z.string(), text: z.string(), label: z.string().optional(), value: z.string().optional() })),
     });
 
     const productGroups = z.object({
@@ -225,11 +228,12 @@ const sider = defineCollection({
     });
 
     // Karrusel med eksempler på pakker (Messer og events): hvide kort, man selv bladrer igennem.
-    const packs = z.object({
-      type: z.literal('packs'),
+    // Karrusel med billedkort (4:5, overskrift i pille, tekst under). Pilene sidder ude i siderne, midt på billederne.
+    const carousel = z.object({
+      type: z.literal('carousel'),
       heading: z.string(),
-      body: z.array(z.string()),
-      items: z.array(z.object({ title: z.string(), text: z.string(), listLabel: z.string().optional(), list: z.array(z.string()).default([]), image: media.optional() })),
+      body: z.array(z.string()).default([]),
+      items: z.array(z.object({ title: z.string(), text: z.string(), image: media })),
       cta: link.optional(),
     });
 
@@ -285,7 +289,7 @@ const sider = defineCollection({
         z.discriminatedUnion('type', [
           hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, caseList, features, productGroups, products,
           split, values, team, staff, info, quoteForm, locations, product, faq, next,
-          packs,
+          carousel,
         ]),
       ),
     });

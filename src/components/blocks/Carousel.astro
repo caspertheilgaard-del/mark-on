@@ -1,0 +1,116 @@
+---
+// Karrusel med billedkort (Messer og events): billede 4:5 med overskriften i en lys pille og teksten under.
+// Pilene sidder ude i siderne, midt på billederne, så de er lette at se (ønske 26. nov. 2026).
+// Intet bevæger sig af sig selv. Pilene flytter ét kort; på touch kan man swipe.
+import Media from '../Media.astro';
+import { rich } from '../../lib/rich';
+import type { BlockOf } from '../../lib/types';
+interface Props { block: BlockOf<'carousel'> }
+const { block } = Astro.props;
+---
+<section class="container sec" style="--pt:0px;--pb:136px" aria-roledescription="karrusel" aria-label={block.heading.replace(/\*\*/g, '')} data-carousel>
+  <div class="text-col intro">
+    <h2 class="h2" set:html={rich(block.heading)} />
+    {block.body.map((p) => <p class="body-text">{p}</p>)}
+  </div>
+  <div class="stage">
+    <ul class="track" data-track tabindex="0" aria-label="Kort i karrusellen">
+      {block.items.map((item, i) => (
+        <li class="card" aria-roledescription="kort" aria-label={`${i + 1} af ${block.items.length}: ${item.title}`}>
+          <div class="pic">
+            <Media {...item.image} ratio="4 / 5" widths={[300, 600]} sizes="(max-width: 640px) 80vw, (max-width: 1100px) 45vw, 380px" />
+            <h3 class="ttl">{item.title}</h3>
+          </div>
+          <p class="txt">{item.text}</p>
+        </li>
+      ))}
+    </ul>
+    <div class="arrows">
+      <button class="arrow prev" type="button" aria-label="Forrige" data-prev>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+      </button>
+      <button class="arrow next" type="button" aria-label="Næste" data-next>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+      </button>
+    </div>
+  </div>
+  {block.cta && <p class="cta"><a class="btn" href={block.cta.href}>{block.cta.label}</a></p>}
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach((sec) => {
+    const track = sec.querySelector<HTMLElement>('[data-track]');
+    const prev = sec.querySelector<HTMLButtonElement>('[data-prev]');
+    const next = sec.querySelector<HTMLButtonElement>('[data-next]');
+    if (!track || !prev || !next) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const step = () => {
+      const card = track.querySelector<HTMLElement>('.card');
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return card ? card.offsetWidth + gap : track.clientWidth;
+    };
+    // Pilene markeres kun som inaktive (aria-disabled), de bliver aldrig helt slået fra.
+    // Så kan de altid klikkes, også hvis en browser (fx Safari) måler, før siden er færdig med at blive vist.
+    const set = (btn: HTMLButtonElement, off: boolean) => btn.setAttribute('aria-disabled', String(off));
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      set(prev, track.scrollLeft <= 2);
+      set(next, max <= 2 || track.scrollLeft >= max - 2);
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: reduce ? 'auto' : 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: reduce ? 'auto' : 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    window.addEventListener('load', update);
+    document.fonts?.ready.then(update);
+    if ('ResizeObserver' in window) {
+      const ro = new ResizeObserver(update);
+      ro.observe(track);
+    }
+    update();
+  });
+</script>
+
+<style>
+  .intro { margin-bottom: 48px; }
+  /* Kortets bredde. Lidt af det næste kort titter frem i kanten, så man kan se, at der er flere. */
+  .stage { --gap: 32px; --card: calc((100% - 2 * var(--gap)) / 3.25); position: relative; }
+  .track {
+    margin: 0; padding: 0 0 8px; list-style: none;
+    display: flex; gap: var(--gap); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+  }
+  .track::-webkit-scrollbar { display: none; }
+  .card { flex: 0 0 var(--card); scroll-snap-align: start; }
+  .pic { position: relative; }
+  .ttl {
+    position: absolute; left: 20px; bottom: 20px; margin: 0; max-width: calc(100% - 40px);
+    background: var(--c-cream); color: var(--c-text); padding: 10px 18px; border-radius: var(--radius-pill);
+    font-weight: 700; font-size: 17px; line-height: 1.3;
+  }
+  .txt { margin: 16px 0 0; font-size: var(--fs-small); line-height: var(--lh-body); }
+
+  /* Pilene: et lag lige så højt som billederne (padding i % regnes af bredden), pilene midt på det. */
+  .arrows {
+    position: absolute; top: 0; left: 0; right: 0; height: 0; padding-top: calc(var(--card) * 1.25);
+    pointer-events: none;
+  }
+  .arrow {
+    position: absolute; top: 50%; transform: translateY(-50%); pointer-events: auto;
+    width: var(--tap); height: var(--tap); border-radius: 50%; border: 2px solid var(--c-red); background: var(--c-surface);
+    color: var(--c-red); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;
+    box-shadow: 0 6px 18px rgba(107, 58, 58, 0.18);
+  }
+  .prev { left: calc(var(--gutter) * -0.5 - 6px); }
+  .next { right: calc(var(--gutter) * -0.5 - 6px); }
+  .arrow:hover:not([aria-disabled='true']) { background: var(--c-red); color: #fff; }
+  .arrow[aria-disabled='true'] { opacity: 0.45; cursor: default; box-shadow: none; }
+  .cta { margin: 40px 0 0; }
+
+  @media (max-width: 1100px) { .stage { --gap: 24px; --card: calc((100% - var(--gap)) / 2.25); } }
+  @media (max-width: 640px) {
+    .stage { --gap: 16px; --card: 80%; }
+    .prev { left: -8px; }
+    .next { right: -8px; }
+    .ttl { left: 14px; bottom: 14px; max-width: calc(100% - 28px); font-size: 15px; padding: 8px 14px; }
+  }
+</style>
