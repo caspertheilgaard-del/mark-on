@@ -280,7 +280,7 @@
       "items": [
         {
           "title": "Få et tilbud",
-          "text": "Svar inden for [ANTAL] timer",
+          "text": "Skriv antal og deadline",
           "href": "/kontakt/",
           "primary": true
         },

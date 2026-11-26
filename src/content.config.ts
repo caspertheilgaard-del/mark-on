@@ -224,6 +224,15 @@ const sider = defineCollection({
       gallery: z.array(media).max(4).default([]),
     });
 
+    // Karrusel med eksempler på pakker (Messer og events): hvide kort, man selv bladrer igennem.
+    const packs = z.object({
+      type: z.literal('packs'),
+      heading: z.string(),
+      body: z.array(z.string()),
+      items: z.array(z.object({ title: z.string(), text: z.string(), listLabel: z.string().optional(), list: z.array(z.string()).default([]), image: media.optional() })),
+      cta: link.optional(),
+    });
+
     const quoteForm = z.object({
       type: z.literal('quoteForm'),
       heading: z.string(),
@@ -276,6 +285,7 @@ const sider = defineCollection({
         z.discriminatedUnion('type', [
           hero, cards, tiles, band, categories, logos, cases, quote, caseBlock, caseList, features, productGroups, products,
           split, values, team, staff, info, quoteForm, locations, product, faq, next,
+          packs,
         ]),
       ),
     });
