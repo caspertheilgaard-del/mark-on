@@ -17,7 +17,10 @@ const { block } = Astro.props;
         <div class="card">
           <h3>{card.heading}</h3>
           {card.body.map((p) => <p>{p}</p>)}
-          {card.link && <p class="card-link"><a class="go" href={card.link.href}>{card.link.label} <span class="arr" aria-hidden="true">→</span></a></p>}
+          {card.link && (() => {
+            const ext = /^https?:\/\//.test(card.link.href);
+            return <p class="card-link"><a class="go" href={card.link.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{card.link.label}{ext && <span class="visually-hidden"> (åbner i en ny fane)</span>} <span class="arr" aria-hidden="true">→</span></a></p>;
+          })()}
         </div>
       ))}
     </div>
