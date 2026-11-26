@@ -1,17 +1,24 @@
 ---
 // Intro, hvide tekstkort i to kolonner og evt. et billedgitter (firmagavesiderne).
+// variant "points" (Employer branding): tekstpunkter uden kasse, og billederne står 3 på række ned til 760 px,
+// så 3 aldrig deler sig i 2+1 (regel godkendt af Casper 26. nov. 2026).
 import Media from '../Media.astro';
+import Points from '../Points.astro';
 import { rich } from '../../lib/rich';
 import type { BlockOf } from '../../lib/types';
 interface Props { block: BlockOf<'cards'> }
 const { block } = Astro.props;
+const points = block.variant === 'points';
 ---
 <section class="container sec" style="--pt:0px;--pb:128px">
   <div class="text-col intro" style={`margin-bottom:${block.cards.length ? 56 : 40}px`}>
     <h2 class="h2" set:html={rich(block.heading)} />
     {block.body.map((p) => <p class="body-text">{p}</p>)}
   </div>
-  {block.cards.length > 0 && (
+  {points && block.cards.length > 0 && (
+    <Points items={block.cards.map((c) => ({ title: c.heading, body: c.body, link: c.link }))} />
+  )}
+  {!points && block.cards.length > 0 && (
     <div class="cards">
       {block.cards.map((card) => (
         <div class="card">
@@ -23,8 +30,8 @@ const { block } = Astro.props;
     </div>
   )}
   {block.gallery.length > 0 && (
-    <div class="gallery">
-      {block.gallery.map((img) => <Media {...img} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px" />)}
+    <div class:list={['gallery', { keep3: points }]}>
+      {block.gallery.map((img) => <Media {...img} sizes={points ? '(max-width: 760px) 100vw, 400px' : '(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 400px'} />)}
     </div>
   )}
 </section>
@@ -39,4 +46,7 @@ const { block } = Astro.props;
   .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 32px; }
   @media (max-width: 1100px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 640px) { .cards, .gallery { grid-template-columns: minmax(0, 1fr); } }
+  .keep3 { margin-top: 56px; }
+  @media (max-width: 1100px) { .gallery.keep3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+  @media (max-width: 760px) { .gallery.keep3 { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
 </style>
