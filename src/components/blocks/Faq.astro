@@ -15,7 +15,7 @@ const pt = block.spaceAbove ?? (split ? 136 : 128);
   </div>
   <div class="list">
     {block.items.map((item, i) => (
-      <details open={i === 0}>
+      <details>
         <summary><h3>{item.question}</h3><span class="pl" aria-hidden="true">+</span></summary>
         {item.answer.map((p) => <p>{p}</p>)}
       </details>
