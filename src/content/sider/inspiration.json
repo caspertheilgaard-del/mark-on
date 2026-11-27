@@ -18,6 +18,13 @@
       "heading": "Udvalgte **cases**",
       "items": [
         {
+          "customer": "Bech-Bruun",
+          "result": "Merchandise-sæt til rebranding",
+          "hoverText": "Et merchandise-sæt til alle medarbejdere, der gør Bech-Bruuns nye identitet synlig i hverdagen.",
+          "href": "/inspiration/bech-bruun/",
+          "image": { "src": "../../assets/images/bech-bruun-computersleeve.avif", "alt": "Sort computersleeve med Bech-Bruuns logo og teksten To the Point. Together." }
+        },
+        {
           "customer": "Keepit",
           "result": "[OPGAVE, ANTAL OG TID]",
           "hoverText": "[KORT TEKST OM CASEN]",
