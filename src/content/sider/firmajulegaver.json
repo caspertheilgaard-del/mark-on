@@ -92,8 +92,8 @@
           "placeholder": "[BILLEDE: JULEGAVE TIL MEDARBEJDERE]"
         },
         {
-          "alt": "[BILLEDE: GAVESHOP PÅ MOBIL]",
-          "placeholder": "[BILLEDE: GAVESHOP PÅ MOBIL]"
+          "src": "../../assets/images/gaveregn-mobil.avif",
+          "alt": "Gaveshoppen Gaveregn åbnet på en mobiltelefon"
         },
         {
           "alt": "[BILLEDE: INDPAKNING OG JULEKORT]",
