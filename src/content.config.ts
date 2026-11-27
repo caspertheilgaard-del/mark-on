@@ -327,11 +327,17 @@ const site = defineCollection({
           z.object({
             title: z.string(),
             people: z.array(
-              z.object({ name: z.string(), role: z.string().optional(), photo: z.object({ src: image(), alt: z.string() }).optional() }),
+              z.object({
+                name: z.string(),
+                role: z.string().optional(),
+                photo: z.object({ src: image(), alt: z.string() }).optional(),
+                phone: z.object({ label: z.string(), number: z.string() }).optional(),
+                email: z.string().optional(),
+              }),
             ),
           }),
         )
-        .describe('Medarbejderne på Om os og Kontakt (Mød holdet). Salg først.'),
+        .describe('Medarbejderne på Om os og Kontakt (Mød holdet). "Ledelse og salg" først.'),
     }),
 });
 
