@@ -1,5 +1,5 @@
 ---
-// "Hvor vil du hen nu?": kort der leder videre. Det primære kort er rødt.
+// "Hvor vil du hen nu?": kort der leder videre. Alle kort er ens: hvide uden mus, røde med mus (ønske oe-20261123091140-h5og, runde 3).
 import type { BlockOf } from '../../lib/types';
 interface Props { block: BlockOf<'next'> }
 const { block } = Astro.props;
@@ -29,8 +29,6 @@ const cols = block.items.length;
   }
   .t { font-size: 22px; font-weight: 600; line-height: 1.25; }
   .s { font-size: 15px; color: var(--c-red); font-weight: 700; }
-  .primary { background: var(--c-red); color: #fff; }
-  .primary .s { color: #fff; font-weight: 400; }
 
   .large .kicker { margin-bottom: 32px; }
   .large .card { border-radius: 40px; padding: 32px; min-height: 264px; }
