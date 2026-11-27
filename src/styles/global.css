@@ -161,11 +161,10 @@ p > .go::after { content: ''; position: absolute; left: -4px; right: -4px; top: 
 .go .arr { display: inline-block; transition: transform 0.3s; }
 .go:hover .arr { transform: translateX(6px); }
 /* Kasser, der er links ("Hvor vil du hen nu?", showroom-kortet på Kontakt, målgrupperne på Forsiden):
-   ens hovereffekt alle steder. Hvide kasser bliver røde med hvid tekst; den røde kasse bliver mørkere rød. */
+   ens hovereffekt alle steder. Alle kasser er hvide og bliver røde med hvid tekst ved mus eller fokus, med en blød overgang. */
 a.go:is(.card, .box) { transition: background-color 0.2s, color 0.2s; }
 a.go:is(.card, .box):is(:hover, :focus-visible) { background: var(--c-red); color: #fff; }
 a.go:is(.card, .box):is(:hover, :focus-visible) :is(.kicker, .t, .s, .arr) { color: #fff; }
-a.go.primary:is(.card, .box):is(:hover, :focus-visible) { background: var(--c-red-hover); }
 
 /* Klikflade på mindst 44 px uden at ændre layoutet (små tekstlinks) */
 .hit { position: relative; }
