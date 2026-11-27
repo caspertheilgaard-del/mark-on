@@ -10,7 +10,6 @@ const hasAfter = Boolean(block.steps && (block.after.length || block.cta || bloc
 ---
 <section class="band">
   <div class:list={['container', 'band-inner', block.variant]} style={large ? '--pt:120px;--pb:112px' : ''}>
-    <div class:list={{ 'red-box': Boolean(block.steps) }}>
     <div class="text-col intro" style={block.steps && !large ? 'margin-bottom:32px' : ''}>
       <h2 class="h2" set:html={rich(block.heading)} />
       {block.body.map((p) => <p class="body-text">{p}</p>)}
@@ -35,7 +34,6 @@ const hasAfter = Boolean(block.steps && (block.after.length || block.cta || bloc
     )}
 
     {block.link && <p class="after-steps"><a class="go" href={block.link.href}>{block.link.label} <span class="arr" aria-hidden="true">→</span></a></p>}
-    </div>
   </div>
 </section>
 
@@ -53,17 +51,4 @@ const hasAfter = Boolean(block.steps && (block.after.length || block.cta || bloc
   .large .intro { max-width: none; }
   .large .h2 { margin-bottom: 14px; }
   .large .body-text { margin: 0 0 48px; font-size: var(--fs-lead); max-width: 600px; }
-
-  /* Afsnit med proceslinjen ("Hele vejen") ligger i en rød kasse med creme tekst (ønske oe-20261119131422-qd63).
-     Linjen, prikkerne og teksten er de samme; kun farverne skiftes lokalt, så de står på den røde flade. */
-  .red-box {
-    --c-red: var(--c-cream); --c-red-hover: #ffffff; --c-text: var(--c-cream);
-    --c-line: rgba(255, 250, 245, 0.28); --c-line-process: rgba(255, 250, 245, 0.35);
-    background: var(--c-red-bg); color: var(--c-cream); border-radius: var(--radius); padding: 72px 64px;
-  }
-  .red-box :global(.btn) { color: var(--c-red-bg); }
-  .red-box :global(.btn:hover) { color: var(--c-red-bg); }
-  .red-box :global(a:hover) { color: #ffffff; }
-  @media (max-width: 1100px) { .red-box { padding: 56px 40px; } }
-  @media (max-width: 640px) { .red-box { padding: 40px 24px; } }
 </style>

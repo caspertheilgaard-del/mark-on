@@ -17,7 +17,6 @@
   --c-text: #6b3a3a;
   --c-rose: #c29a93;
   --c-cream: #fffaf5;
-  --c-red-bg: var(--c-red); /* rød flade (fx proceskassen); følger med, selv om --c-red skiftes lokalt */
   --c-logo: #6e6a67; /* kundelogoer på forsiden: dæmpet mørkegrå (ønske 10. nov.) */
   --c-overlay: rgba(157, 86, 86, 0.92);
   --shadow-image: 0 34px 60px -28px rgba(90, 40, 40, 0.45);
