@@ -1,0 +1,109 @@
+{
+  "url": "/inspiration/bech-bruun/",
+  "seo": {
+    "title": "Bech-Bruun: merchandise til rebranding | MarkOn",
+    "description": "Se hvordan MarkOn lavede et merchandise-sæt til alle medarbejdere, der gjorde Bech-Bruuns nye visuelle identitet synlig i hverdagen."
+  },
+  "menu": "Inspiration",
+  "breadcrumbs": [
+    {
+      "label": "Forside",
+      "href": "/"
+    },
+    {
+      "label": "Inspiration",
+      "href": "/inspiration/"
+    },
+    {
+      "label": "Bech-Bruun"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "hero",
+      "eyebrow": "Case · Bech-Bruun",
+      "heading": "Merchandise som en del af en stærk **rebranding**",
+      "body": [
+        "Når et nyt brand lanceres, handler det om mere end et nyt logo. Det handler om at skabe ejerskab, engagement og en fælles identitet på tværs af organisationen.",
+        "I forbindelse med Bech-Bruuns nye visuelle identitet har vi leveret et skræddersyet merchandise-koncept, der understøtter virksomhedens brandrejse og gør den nye identitet synlig i hverdagen. Målet er at skabe en stærk medarbejderoplevelse og sikre, at brandet forankres internt fra dag ét."
+      ],
+      "ctas": [
+        {
+          "label": "Få et tilbud",
+          "href": "/kontakt/"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "variant": "images",
+      "heading": "Et merchandise-sæt med gennemført **branding**",
+      "body": [
+        "Løsningen består af et eksklusivt merchandise-sæt til alle medarbejdere, hvor hvert produkt er nøje udvalgt med fokus på kvalitet, funktionalitet og visuel sammenhæng.",
+        "Det nye logo og designunivers integreres på tværs af produkterne og skaber et ensartet udtryk, der afspejler Bech-Bruuns brand."
+      ],
+      "cards": [
+        {
+          "heading": "Computersleeve",
+          "body": [],
+          "image": {
+            "src": "../../assets/images/bech-bruun-computersleeve.avif",
+            "alt": "Sort computersleeve med Bech-Bruuns logo og teksten To the Point. Together., foran en lille figur og en dåse med slik"
+          }
+        },
+        {
+          "heading": "Notesblok og pen",
+          "body": [],
+          "image": {
+            "src": "../../assets/images/bech-bruun-notesaet.avif",
+            "alt": "Notesblok, papirkubus og pen med Bech-Bruuns logo på lavendelfarvet baggrund",
+            "position": "60% 50%"
+          }
+        },
+        {
+          "heading": "Paraply",
+          "body": [],
+          "image": {
+            "src": "../../assets/images/bech-bruun-paraply.avif",
+            "alt": "Sort paraply med Bech-Bruun i hvid skrift",
+            "position": "60% 50%"
+          }
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "Mere end **produkter**",
+      "body": [
+        "Merchandise fungerer som et vigtigt redskab i den interne kommunikation og bidrager til at gøre rebrandingen nærværende og håndgribelig. Når medarbejderne modtager et gennemført merchandise-sæt, bliver de en aktiv del af fortællingen om virksomhedens nye identitet.",
+        "Et vellykket rebrandingprojekt handler ikke kun om et nyt logo, men om at gøre den nye identitet levende for medarbejderne. Med et gennemtænkt merchandise-koncept er Bech-Bruuns nye brand blevet synligt og nærværende fra dag ét."
+      ]
+    },
+    {
+      "type": "next",
+      "items": [
+        {
+          "title": "Få et tilbud",
+          "text": "Skriv antal og deadline",
+          "href": "/kontakt/",
+          "primary": true
+        },
+        {
+          "title": "Re-branding",
+          "text": "Merchandise til nyt brand",
+          "href": "/merchandise/rebranding/"
+        },
+        {
+          "title": "Inspiration",
+          "text": "Flere cases",
+          "href": "/inspiration/"
+        },
+        {
+          "title": "Merchandise",
+          "text": "Med jeres logo",
+          "href": "/merchandise/"
+        }
+      ]
+    }
+  ]
+}
