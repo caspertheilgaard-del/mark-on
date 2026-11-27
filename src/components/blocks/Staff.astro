@@ -1,5 +1,6 @@
 ---
-// "Mød holdet": medarbejderne i cirkler, grupperet efter funktion. Salg står først på én linje.
+// "Mød holdet": medarbejderne i cirkler, grupperet efter funktion. "Ledelse og salg" står øverst (runde 5).
+// Telefon og mail fra MarkOns personaleliste står under hver medarbejder som klikbare links.
 // Runde 2 (godkendt af Emma 20. nov.): hver funktion på sin egen linje og mere luft mellem medarbejderne.
 // Holdet ligger ét sted (staff i site.json) og vises på Om os og Kontakt (ønske oe-20261119092334-sp2).
 import { getEntry } from 'astro:content';
@@ -28,6 +29,12 @@ const groups = (await getEntry('site', 'site'))!.data.staff;
             />
             <p class="name">{p.name}</p>
             {p.role && <p class="role">{p.role}</p>}
+            {(p.phone || p.email) && (
+              <ul class="contact" role="list">
+                {p.phone && <li><a href={`tel:+45${p.phone.number.replace(/\s/g, '')}`}>{p.phone.label} {p.phone.number}</a></li>}
+                {p.email && <li><a href={`mailto:${p.email}`}>{p.email}</a></li>}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
@@ -49,6 +56,10 @@ const groups = (await getEntry('site', 'site'))!.data.staff;
   .people :global(.ph) { font-size: 12px; }
   .name { margin: 16px 0 0; font-size: 16px; font-weight: 600; line-height: 1.35; }
   .role { margin: 4px 0 0; font-size: 14px; line-height: 1.4; }
+  /* Telefon og mail i lille tekst under rollen; klikflade mindst 44 px høj. */
+  .contact { list-style: none; margin: 4px 0 0; padding: 0; }
+  .contact a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; line-height: 1.3; color: inherit; text-decoration: underline; text-decoration-color: var(--c-line, #EFE5DA); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  .contact a:hover { text-decoration-color: currentColor; }
   @media (max-width: 1100px) {
     .groups { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .group { grid-column: span var(--t); }
