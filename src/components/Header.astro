@@ -219,8 +219,9 @@ const site = (await getEntry('site', 'site'))!.data;
   }
   .mlink[aria-current] { color: var(--c-red); }
   .mlink.has-kids { border-bottom: 0; padding-bottom: 6px; }
-  .mkids { list-style: none; margin: 0; padding: 0 0 12px 16px; border-bottom: 1px solid #f0e6db; display: flex; flex-wrap: wrap; column-gap: 20px; }
-  .mkids a { display: inline-flex; align-items: center; min-height: var(--tap); font-size: 16px; font-weight: 600; color: var(--c-red); }
+  /* Undersiderne står én pr. linje i en lodret række under punktet (ønske #10, runde 4), så man hurtigt får overblik. */
+  .mkids { list-style: none; margin: 0; padding: 0 0 12px 16px; border-bottom: 1px solid #f0e6db; display: flex; flex-direction: column; }
+  .mkids a { display: flex; align-items: center; min-height: var(--tap); font-size: 16px; font-weight: 600; color: var(--c-red); }
   .mlink span { color: var(--c-red); }
   .mcta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
   .mcta .btn { padding: 15px 24px; }
